@@ -8,7 +8,7 @@ We present a novel strategy encompassing a hybrid convolutional network RAG-Net<
 ![RAG-Netv2](/images/Picture10.png) 
 <p align="center"> Block Diagram of the Proposed Framework</p>
 
-This repository contains the source code of our paper currently under review in IEEE Transactions on Biomedical Engineering. The proposed framework is developed using <b>TensorFlow 2.3.0</b> and <b>Keras APIs</b> with <b>Python 3.8.5</b>. Moreover, the results are compiled through <b>MATLAB R2020a</b>. The detailed steps for installing and running the code are presented below:
+This repository contains the source code of our paper currently under review in IEEE Transactions on Biomedical Engineering. The proposed framework is developed using <b>TensorFlow 2.3.0</b> and <b>Keras APIs</b> with <b>Python 3.7.8</b>. Moreover, the results are compiled through <b>MATLAB R2020a</b>. The detailed steps for installing and running the code are presented below:
 
 ## Installation
 To run the codebase, following libraries are required. Although, the framework is developed using Anaconda. But it should be compatable with other platforms.
@@ -44,7 +44,7 @@ The proposed framework has been tested on the following public datasets:
 10) Run 'ragClassifier.py' script to classify the preprocessed test scans as normal or glaucomic. The results are saved as a mat file in '…\testingDataset\diagnosisResults' folder. Note: step 10 can only be done once the step 9 is finished because the model trained in step 9 is required in step 10. 
 11) Once step 10 is completed, run 'trainSVM.m' script to train the SVM model for grading the severity of the classified glaucomic scans.
 12) Once the SVM is trained, run 'glaucomaGrader.m' to get the grading results.
-13) The trained models can also be ported to MATLAB using ‘kerasConverter.m’ (this step is optional and only designed to facilitate MATLAB users if they want to avoid python analysis).
+13) The trained models can also be ported to MATLAB using ‘kerasConverter.m’ (this step is optional and only designed to facilitate MATLAB users if they want to avoid Python analysis).
 14) Some additional results (both qualitative and quantitative) of the proposed framework are also presented in the '…\results' folder. 
 
 <b>For Fundus Analysis</b>
