@@ -29,7 +29,7 @@ The proposed framework has been tested on the following public datasets:
 2) ORIGA Dataset [URL](https://drive.google.com/drive/folders/1VPCvVsPgrfPNIl932xgU3XC_WFLUsXJR) (contains fundus images of healthy and glaucomic patients)
 
 ## Steps 
-
+<p align="justify">
 <b>For OCT Analysis</b>
 
 1) Download the AFIO dataset
@@ -55,7 +55,7 @@ The proposed framework has been tested on the following public datasets:
 18) Put the test scans in '…\testingDataset\fundus_test_images' folder.
 19) Uncomment the path at line 44 within the 'ragClassifier.py' file. Note: if you want to perform OCT analysis again, this line has to be commented again
 20) Run 'ragClassifier.py' to produce classify normal and glaucomic fundus scans. The results will saved in a mat file within  '…\testingDataset\diagnosisResults' folder once the analysis is completed. Note: Before running 'ragClassifier.py', please make sure you have the saved 'model.h5' file generated through step 9 because RAG-Net<sub>v2</sub> classification model initially adapts the weights of the trained RAG-Net<sub>v2</sub> segmentation unit for faster convergence.
-
+</p>
 ## Results
 We have provided both the quantitative and qualitative results in the 'results' folder. Please contact us if you want to get the trained model instances.
 
