@@ -14,8 +14,8 @@ This repository contains the source code of our paper currently under review in 
 To run the codebase, following libraries are required. Although, the framework is developed using Anaconda. But it should be compatable with other platforms.
 
 1) TensorFlow 2.3.0 
-2) Keras 2.3.1 or above
-3) OpenCV 4.2
+2) Keras 2.3.1 
+3) OpenCV 4.4.0
 4) Imgaug 0.2.9 or above
 5) Tqdm
 6) Matplotlib
