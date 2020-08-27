@@ -68,7 +68,7 @@ If you use RAG-Net<sub>v2</sub> (or any part of this code in your research), ple
   title   = {Clinically Verified Hybrid Deep Learning System for Retinal Ganglion Cells Aware Grading of Glaucomatous Progression},
   author  = {Hina Raja and Taimur Hassan and Muhammad Usman Akram and Naoufel Werghi},
   journal = {Submitted in IEEE Transactions on Biomedical Engineering},
-  year={2020}
+  year = {2020}
 }
 ```
 
