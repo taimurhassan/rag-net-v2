@@ -2,9 +2,9 @@ clc
 clear all
 close all
 
-workingDir = 'C:\tbme\testingDataset\test_images\';
+workingDir = 'testingDataset\test_images\';
 
-pn = 'C:\tbme\testingDataset\segmentation_results\';
+pn = 'testingDataset\segmentation_results\';
 
 imageNames = dir(fullfile(pn,'*.png'));
 imageNames = {imageNames.name}';
