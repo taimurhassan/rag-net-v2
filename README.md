@@ -30,7 +30,7 @@ The proposed framework has been tested on the following public datasets:
 
 ## Steps 
 
-For OCT Analysis
+<b>For OCT Analysis</b>
 
 1) Download the AFIO dataset
 2) Use 'preprocessor.m' or 'structure_tensor_get.py' to preprocess the input scans
@@ -47,7 +47,7 @@ For OCT Analysis
 13) The trained models can also be ported to MATLAB using ‘kerasConverter.m’ (this step is optional and only designed to facilitate MATLAB users if they want to avoid python analysis).
 14) Some additional results (both qualitative and quantitative) of the proposed framework are also presented in the '…\results' folder. 
 
-For Fundus Analysis
+<b>For Fundus Analysis</b>
 
 15) Download the desired dataset
 16) Put the training scans in '…\codebase\models\trainingSet\glaucoma' and '…\codebase\models\trainingSet\normal' folders
@@ -60,7 +60,7 @@ For Fundus Analysis
 We have provided both the quantitative and qualitative results in the 'results' folder. Please contact us if you want to get the trained model instances.
 
 ## Citation
-If you use RAG-Net<sub>v2</sub> (or any part of this code in this research), please cite the following papers:
+If you use RAG-Net<sub>v2</sub> (or any part of this code in your research), please cite the following paper:
 
 ```
 @article{ragnetv2,
