@@ -2,6 +2,7 @@ clc
 clear all
 close all
 
+% edit the path as per your settings
 pn = 'C:\tbme\trainingDataset\train_images\';
 
 imagefiles = dir([pn '*.png']);
