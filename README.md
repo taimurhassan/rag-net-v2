@@ -8,12 +8,12 @@ We present a novel strategy encompassing a hybrid convolutional network RAG-Net<
 ![RAG-Netv2](/images/Picture10.png) 
 <p align="center"> Block Diagram of the Proposed Framework</p>
 
-This repository contains the source code of our paper currently under review in IEEE Transactions on Biomedical Engineering. The proposed framework is developed using <b>TensorFlow 2.3.0</b> and <b>Keras APIs</b> with <b>Python 3.7.8</b>. Moreover, the results are compiled through <b>MATLAB R2020a</b>. The detailed steps for installing and running the code are presented below:
+This repository contains the source code of our paper published in IEEE Transactions on Biomedical Engineering. The proposed framework is developed using <b>TensorFlow 2.3.1</b> and <b>Keras APIs</b> with <b>Python 3.7.8</b>. Moreover, the results are compiled through <b>MATLAB R2020a</b>. The detailed steps for installing and running the code are presented below:
 
 ## Installation
 To run the codebase, following libraries are required. Although, the framework is developed using Anaconda. But it should be compatable with other platforms.
 
-1) TensorFlow 2.3.0 
+1) TensorFlow 2.3.1 
 2) Keras 2.3.1 
 3) OpenCV 4.4.0
 4) imgaug 0.2.9 or above
