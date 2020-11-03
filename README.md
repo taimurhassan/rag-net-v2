@@ -33,7 +33,7 @@ The proposed framework has been tested on the following public datasets:
 <b>For OCT Analysis</b>
 
 1) Download the AFIO dataset
-2) Use 'preprocessor.m' or 'structure_tensor_get.py' to preprocess the input scans
+2) Use 'preprocessor2.m' or 'structure_tensor_get.py' to preprocess the input scans
 3) Use 'augmentation.py' or 'augmentor.m' to augment the training scans
 4) Put the augmented training images in '…\trainingDataset\train_images' and '…\codebase\models\trainingSet' folders. The former one is used for segmentation and the latter one is used for the classification purposes.
 5) Put the training annotations (for segmentation) in '…\trainingDataset\train_annotations' folder
