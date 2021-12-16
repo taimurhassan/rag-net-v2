@@ -1,0 +1,19 @@
+operator: tf
+docker:
+  image: rag-net-v2
+  dockerfile: ./Dockerfile
+  context: .
+spec:
+  image: rag-net-v2
+  command: python trainer.py
+  types:
+    Worker:
+      replicas: 1
+      cpus: 2
+      # optional: number of GPUs wanted
+      gpus: 2
+      # mandatory (if gpus amount is > 0): gpu type wanted
+      gpuType: gpu
+      # mandatory (must be >= 2): RAM ratio wanted (in GB)
+      ramRatio: 2
+      gpuProduct: NVIDIA-GeForce-RTX-2080-Ti
