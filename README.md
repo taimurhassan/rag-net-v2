@@ -58,7 +58,7 @@ The proposed framework has been tested on the following public datasets:
 </p>
 
 ## Results
-We have provided both the quantitative and qualitative results in the 'results' folder. Please contact us if you want to get the trained model instances.
+We have provided the quantitative andresults in the 'results' folder. Please contact us if you want to get the trained model instances.
 
 ## Citation
 If you use RAG-Net<sub>v2</sub> (or any part of this code in your research), please cite the following paper:
