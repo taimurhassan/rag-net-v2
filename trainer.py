@@ -14,7 +14,7 @@ import tensorflow as tf
 
 print("Num GPUs Available: ", len(tf.config.experimental.list_physical_devices('GPU')))
 
-config = tf.compat.v1.ConfigProto(gpu_options = 
+config = tf.compat.v1.ConfigProto(gpu_options =
                          tf.compat.v1.GPUOptions(per_process_gpu_memory_fraction=0.8)
 # device_count = {'GPU': 1}
 )
@@ -29,7 +29,7 @@ model.train(
     train_annotations = "trainingDataset/train_annotations/",
 	val_images =  "trainingDataset/val_images/",
     val_annotations = "trainingDataset/val_annotations/",
-    checkpoints_path = None , epochs=1, validate=True
+    checkpoints_path = None , epochs=40, validate=True
 )
 
 model.summary()
@@ -41,5 +41,5 @@ for filename in os.listdir(folder):
 	out = model.predict_segmentation(inp=os.path.join(folder,filename),
 	out_fname=os.path.join("testingDataset/segmentation_results/",filename))
 
-print(model.evaluate_segmentation( inp_images_dir="testingDataset/test_images/"  , 
+print(model.evaluate_segmentation( inp_images_dir="testingDataset/test_images/"  ,
 	annotations_dir="testingDataset/test_annotations/" ) )
