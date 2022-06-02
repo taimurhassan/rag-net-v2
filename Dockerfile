@@ -6,5 +6,5 @@ ADD requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # add the source code
-WORKDIR src/
-ADD src/ .
+WORKDIR /
+ADD .
