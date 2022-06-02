@@ -7,4 +7,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # add the source code
 WORKDIR /
-ADD .
+ADD . .
