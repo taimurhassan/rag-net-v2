@@ -9,11 +9,11 @@ spec:
   types:
     Worker:
       replicas: 1
-      cpus: 2
+      cpus: 12
       # optional: number of GPUs wanted
-      gpus: 2
+      gpus: 1
       # mandatory (if gpus amount is > 0): gpu type wanted
-      gpuType: gpu
+      gpuType: mig-3g.20gb
+      gpuProduct: A100-SXM4-40GB
       # mandatory (must be >= 2): RAM ratio wanted (in GB)
       ramRatio: 2
-      gpuProduct: NVIDIA-GeForce-RTX-2080-Ti
