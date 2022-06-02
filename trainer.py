@@ -29,7 +29,7 @@ model.train(
     train_annotations = "trainingDataset/train_annotations/",
 	val_images =  "trainingDataset/val_images/",
     val_annotations = "trainingDataset/val_annotations/",
-    checkpoints_path = None , epochs=40, validate=True
+    checkpoints_path = None , epochs=1, validate=True
 )
 
 model.summary()
