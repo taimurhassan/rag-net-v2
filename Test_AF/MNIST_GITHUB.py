@@ -21,7 +21,7 @@ input_size = image_size * image_size
 x_train = np.reshape(x_train, [-1, input_size])
 x_train = x_train.astype('float32') / 255
 x_test = np.reshape(x_test, [-1, input_size])
-x_test = x_test.astype('float32') / 255
+x_test = x_test.astype('float32') / 255 
 
 batch_size = 128
 hidden_units = 256
@@ -41,6 +41,6 @@ model.compile(loss='categorical_crossentropy',
               optimizer='adam',
               metrics=['accuracy'])
 
-model.fit(x_train, y_train, epochs=2, batch_size=batch_size)
+model.fit(x_train, y_train, epochs=20, batch_size=batch_size)
 loss, acc = model.evaluate(x_test, y_test, batch_size=batch_size)
 print("\nTest accuracy: %.1f%%" % (100.0 * acc))
