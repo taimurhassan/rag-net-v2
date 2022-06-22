@@ -21,11 +21,11 @@ input_size = image_size * image_size
 x_train = np.reshape(x_train, [-1, input_size])
 x_train = x_train.astype('float32') / 255
 x_test = np.reshape(x_test, [-1, input_size])
-x_test = x_test.astype('float32') / 255 
+x_test = x_test.astype('float32') / 255
 
 batch_size = 128
 hidden_units = 256
-dropout = 0.45
+dropout = 0.2
 
 model = Sequential()
 model.add(Dense(hidden_units, input_dim=input_size))
