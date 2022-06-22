@@ -1,4 +1,4 @@
-FROM nvidia/tensorflow:21.08-tf2-py3
+FROM nvcr.io/nvidia/tensorflow:21.08-tf2-py3
 
 # install python requirements
 RUN pip install pip==21.0.1
