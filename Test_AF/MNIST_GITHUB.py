@@ -23,7 +23,7 @@ x_train = x_train.astype('float32') / 255
 x_test = np.reshape(x_test, [-1, input_size])
 x_test = x_test.astype('float32') / 255
 
-batch_size = 32
+batch_size = 16 
 hidden_units = 256
 dropout = 0.2
 
