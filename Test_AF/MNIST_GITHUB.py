@@ -25,9 +25,7 @@ x_test = x_test.astype('float32') / 255
 
 batch_size = 128
 hidden_units = 256
-dropout = 0.1
-
-
+dropout = 0.2
 
 
 
