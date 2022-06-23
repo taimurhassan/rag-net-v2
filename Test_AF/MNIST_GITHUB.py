@@ -10,6 +10,7 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Activation, Dropout
 from tensorflow.keras.utils import to_categorical, plot_model
 
+
 (x_train, y_train),(x_test, y_test) = mnist.load_data()
 unique, counts = np.unique(y_train, return_counts=True)
 num_labels = len(np.unique(y_train))
@@ -23,7 +24,7 @@ x_train = x_train.astype('float32') / 255
 x_test = np.reshape(x_test, [-1, input_size])
 x_test = x_test.astype('float32') / 255
 
-batch_size = 128  
+batch_size = 128
 hidden_units = 256
 dropout = 0.2
 
