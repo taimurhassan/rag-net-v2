@@ -12,7 +12,7 @@ spec:
   types:
     Worker:
       replicas: 1
-      cpus: 12
+      cpus: 11
       # optional: number of GPUs wanted
       gpus: 1
       # mandatory (if gpus amount is > 0): gpu type wanted
