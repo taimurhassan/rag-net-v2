@@ -3,3 +3,4 @@ opencv-python
 imgaug
 tqdm
 matplotlib
+tensorboard --logdir /path/to/logs --load_fast true
