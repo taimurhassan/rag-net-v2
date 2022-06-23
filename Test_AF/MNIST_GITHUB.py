@@ -43,6 +43,6 @@ model.compile(loss='categorical_crossentropy',
               optimizer='adam',
               metrics=['accuracy'])
 
-model.fit(x_train, y_train, epochs=20, batch_size=batch_size)
+model.fit(x_train, y_train, epochs=500, batch_size=batch_size)
 loss, acc = model.evaluate(x_test, y_test, batch_size=batch_size)
 print("\nTest accuracy: %.1f%%" % (100.0 * acc))
