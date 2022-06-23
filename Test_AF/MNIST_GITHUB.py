@@ -12,6 +12,7 @@ from tensorflow.keras.utils import to_categorical, plot_model
 
 
 
+
 (x_train, y_train),(x_test, y_test) = mnist.load_data()
 unique, counts = np.unique(y_train, return_counts=True)
 num_labels = len(np.unique(y_train))

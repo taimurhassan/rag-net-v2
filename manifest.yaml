@@ -14,9 +14,9 @@ spec:
       replicas: 1
       cpus: 12
       # optional: number of GPUs wanted
-      gpus: 4
+      gpus: 1
       # mandatory (if gpus amount is > 0): gpu type wanted
-      gpuType: mig-3g.20gb
-      gpuProduct: A100-SXM4-40GB
+      gpuType: gpu
+      gpuProduct: Tesla-V100-SXM3-32GB
       # mandatory (must be >= 2): RAM ratio wanted (in GB)
       ramRatio: 2
