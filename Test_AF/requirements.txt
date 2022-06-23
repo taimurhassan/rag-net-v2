@@ -3,4 +3,7 @@ opencv-python
 imgaug
 tqdm
 matplotlib
-tensorboard --logdir /path/to/logs --load_fast true
+tensorboard==2.8.0
+tensorboard-data-server==0.6.1
+tensorboard-plugin-profile==2.8.0
+tensorboard-plugin-wit==1.8.1
