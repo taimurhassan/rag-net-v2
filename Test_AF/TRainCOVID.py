@@ -19,12 +19,16 @@ from tensorflow.keras.applications.resnet import ResNet50
 from tensorflow.keras.applications.inception_v3 import InceptionV3
 from tensorflow.keras.applications.inception_resnet_v2 import InceptionResNetV2
 from tensorflow.keras.applications.xception import Xception
+from pathlib import Path
+import pandas as p
+
+task_dataset_folder = os.environ.get("ICHOR_INPUT_DATASET", "/COMPASS-XP")
+
+train_dir = pickle.load(open(os.path.join(task_dataset_folder, "task_dataset.pkl"), "rb"))
 
 
-original_dataset_dir = r'C:\Users\fta71\PycharmProjects\pythonProject2\Tumor_Dataset\Test1'
-
-train_dir =os.path.join(original_dataset_dir+"\\Training")
-test_dir =os.path.join(original_dataset_dir+"\\Testing")
+# train_dir =os.path.join(original_dataset_dir+"\\Training")
+# test_dir =os.path.join(original_dataset_dir+"\\Testing")
 
 
 n=1
@@ -91,17 +95,17 @@ train_datagen = ImageDataGenerator(rescale=1./255, rotation_range=40,
         horizontal_flip=True,
         fill_mode='nearest')
 
-val_datagen = ImageDataGenerator(rescale=1./255)
+# val_datagen = ImageDataGenerator(rescale=1./255)
 
 
 train_generator = train_datagen.flow_from_directory(train_dir, target_size=(120, 120),batch_size= 32,
                                                         class_mode='binary')
 
-Test_generator = val_datagen.flow_from_directory(test_dir, target_size=(120, 120),
-                                                           class_mode='binary')
+# Test_generator = val_datagen.flow_from_directory(test_dir, target_size=(120, 120),
+#                                                            class_mode='binary')
 
 
-history = model.fit_generator(train_generator, epochs=1)
+history = model.fit_generator(train_generator, epochs=100)
 
 # acc = history.history['acc']
 # val_acc = history.history['val_acc']
@@ -119,9 +123,4 @@ history = model.fit_generator(train_generator, epochs=1)
 # plt.legend()
 # plt.show()
 
-print(model.evaluate(Test_generator))
-
-
-
-
-
+print(model.evaluate(train_generator))
