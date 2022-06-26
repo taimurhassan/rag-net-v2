@@ -25,7 +25,7 @@ import pickle
 
 
 
-task_dataset_folder = os.environ.get("ICHOR_INPUT_DATASET", "/COMPASS-XP")
+task_dataset_folder = os.environ.get("ICHOR_INPUT_DATASET")
 
 train_dir = pickle.load(open(os.path.join(task_dataset_folder, "COMPASS-XP"), "rb"))
 
