@@ -22,6 +22,7 @@ from tensorflow.keras.applications.xception import Xception
 from pathlib import Path
 import pandas as p
 
+
 task_dataset_folder = os.environ.get("ICHOR_INPUT_DATASET", "/COMPASS-XP")
 
 train_dir = pickle.load(open(os.path.join(task_dataset_folder, "task_dataset.pkl"), "rb"))
