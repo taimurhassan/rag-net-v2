@@ -21,6 +21,8 @@ from tensorflow.keras.applications.inception_resnet_v2 import InceptionResNetV2
 from tensorflow.keras.applications.xception import Xception
 from pathlib import Path
 import pandas as p
+import pickle
+
 
 
 task_dataset_folder = os.environ.get("ICHOR_INPUT_DATASET", "/COMPASS-XP")
