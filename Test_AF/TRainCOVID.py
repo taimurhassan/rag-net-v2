@@ -23,9 +23,8 @@ from pathlib import Path
 import pandas as p
 import pickle
 
-# task_dataset_folder = os.environ.get("ICHOR_INPUT_DATASET", "/COMPASS-XP")
-task_dataset_folder = 'ICHOR_INPUT_DATASET'
-file = pickle.load(open(os.path.join(task_dataset_folder, "COMPASS-XP"), "rb"))
+task_dataset_folder = os.environ.get("ICHOR_INPUT_DATASET")
+file = pickle.load(open(os.path.join(task_dataset_folder, "COMPASS-XP/"), "rb"))
 
 train_dir = pickle.load(file)
 
