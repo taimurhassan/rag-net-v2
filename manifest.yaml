@@ -8,7 +8,7 @@ docker:
 spec:
   operator: tf
   image: rag-net-v2
-  command: python Test_AF/TRainCOVID.py
+  command: python vit.py
   types:
     Worker:
       replicas: 1
