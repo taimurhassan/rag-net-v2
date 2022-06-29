@@ -1,5 +1,5 @@
 tensorflow-gpu==2.2.0
-tensorflow-addons
+tensorflow-addons==0.17.1
 opencv-python
 imgaug
 tqdm
