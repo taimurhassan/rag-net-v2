@@ -4,7 +4,7 @@ from tensorflow import keras
 from tensorflow.keras import layers
 import tensorflow_addons as tfa
 
-num_classes = 100
+num_classes = 100 
 input_shape = (32, 32, 3)
 
 (x_train, y_train), (x_test, y_test) = keras.datasets.cifar100.load_data()
@@ -48,8 +48,8 @@ def mlp(x, hidden_units, dropout_rate):
         x = layers.Dense(units, activation=tf.nn.gelu)(x)
         x = layers.Dropout(dropout_rate)(x)
     return x
-	
-	
+
+
 class Patches(layers.Layer):
     def __init__(self, patch_size):
         super(Patches, self).__init__()
@@ -67,8 +67,8 @@ class Patches(layers.Layer):
         patch_dims = patches.shape[-1]
         patches = tf.reshape(patches, [batch_size, -1, patch_dims])
         return patches
-		
-		
+
+
 import matplotlib.pyplot as plt
 
 plt.figure(figsize=(4, 4))
@@ -92,8 +92,8 @@ for i, patch in enumerate(patches[0]):
     patch_img = tf.reshape(patch, (patch_size, patch_size, 3))
     plt.imshow(patch_img.numpy().astype("uint8"))
     plt.axis("off")
-	
-	
+
+
 class PatchEncoder(layers.Layer):
     def __init__(self, num_patches, projection_dim):
         super(PatchEncoder, self).__init__()
@@ -107,8 +107,8 @@ class PatchEncoder(layers.Layer):
         positions = tf.range(start=0, limit=self.num_patches, delta=1)
         encoded = self.projection(patch) + self.position_embedding(positions)
         return encoded
-		
-		
+
+
 def create_vit_classifier():
     inputs = layers.Input(shape=input_shape)
     # Augment data.
@@ -146,7 +146,7 @@ def create_vit_classifier():
     # Create the Keras model.
     model = keras.Model(inputs=inputs, outputs=logits)
     return model
-	
+
 def run_experiment(model):
     optimizer = tfa.optimizers.AdamW(
         learning_rate=learning_rate, weight_decay=weight_decay
