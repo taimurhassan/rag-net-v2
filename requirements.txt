@@ -1,9 +1,9 @@
-tensorflow-gpu==2.2.0
+tensorflow-gpu
 tensorflow-addons==0.17.1
 opencv-python
 imgaug
 tqdm
 matplotlib
-tensorboard==2.2.0
-tensorboard-data-server==0.6.1
-tensorboard-plugin-wit==1.8.1
+tensorboard
+tensorboard-data-server
+tensorboard-plugin-wit
