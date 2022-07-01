@@ -29,6 +29,7 @@ dropout = 0.2
 
 
 
+
 model = Sequential()
 model.add(Dense(hidden_units, input_dim=input_size))
 model.add(Activation('relu'))
