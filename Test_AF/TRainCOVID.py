@@ -29,7 +29,7 @@ import pandas as p
 import pickle
 
 
-dangerous_dir = Path(os.environ["ICHOR_INPUT_DATASET"]) / "COMPASS-X" / "Dangerous"
+dangerous_dir = Path(os.environ["ICHOR_INPUT_DATASET"]) / "COMPASS-XP" / "Dangerous"
 
 for dirs in os.listdir(dangerous_dir):
     for sub_class in os.listdir(dangerous_dir / dirs):
