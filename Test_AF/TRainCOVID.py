@@ -22,108 +22,125 @@ from tensorflow.keras.applications.xception import Xception
 from pathlib import Path
 import pandas as p
 import pickle
+from PIL import Image
+import os
+from pathlib import Path
+import pandas as p
+import pickle
 
 
-task_dataset_folder = os.environ.get("ICHOR_INPUT_DATASET", "/COMPASS-XP")
-file = pickle.load(open(os.path.join(task_dataset_folder, "COMPASS-XP"), "rb"))
+dangerous_dir = Path(os.environ["ICHOR_INPUT_DATASET"]) / "COMPASS-X" / "Dangerous"
 
-train_dir = pickle.load(file)
+for dirs in os.listdir(dangerous_dir):
+    for sub_class in os.listdir(dangerous_dir / dirs):
+        for image_file in os.listdir(dangerous_dir / dirs / sub_class):
+            im = Image.open(dangerous_dir / dirs / sub_class / image_file, 'r', encoding="utf-8")
+            print(f'Processing for dir {dirs}, subdir {sub_class}, file {image_file}.')
+
+print(im)
 
 
-# train_dir =os.path.join(original_dataset_dir+"\\Training")
-# test_dir =os.path.join(original_dataset_dir+"\\Testing")
-
-
-n=1
-
-# conv_base =DenseNet201(input_shape = (120, 120, 3), # Shape of our images
-#                   include_top = False, # Leave out the last fully connected layer
-#                   weights = 'imagenet')
-
-# conv_base = ResNet50(input_shape=(120, 120, 3),  # Shape of our images
-#                      include_top=False,  # Leave out the last fully connected layer
-#                      weights='imagenet')
-
-# conv_base = VGG19(input_shape = (120, 120, 3), # Shape of our images
-#                   include_top = False, # Leave out the last fully connected layer
-#                   weights = 'imagenet')
-
-conv_base = VGG16(input_shape=(120, 120, 3),  # Shape of our images
-                  include_top=False,  # Leave out the last fully connected layer
-                  weights='imagenet')
-
-# conv_base = InceptionV3(input_shape=(120, 120, 3),  # Shape of our images
+#
+# task_dataset_folder = os.environ.get("ICHOR_INPUT_DATASET", "/COMPASS-XP")
+# file = pickle.load(open(os.path.join(task_dataset_folder, "COMPASS-XP"), "rb"))
+#
+# train_dir = pickle.load(file)
+#
+#
+# # train_dir =os.path.join(original_dataset_dir+"\\Training")
+# # test_dir =os.path.join(original_dataset_dir+"\\Testing")
+#
+#
+# n=1
+#
+# # conv_base =DenseNet201(input_shape = (120, 120, 3), # Shape of our images
+# #                   include_top = False, # Leave out the last fully connected layer
+# #                   weights = 'imagenet')
+#
+# # conv_base = ResNet50(input_shape=(120, 120, 3),  # Shape of our images
+# #                      include_top=False,  # Leave out the last fully connected layer
+# #                      weights='imagenet')
+#
+# # conv_base = VGG19(input_shape = (120, 120, 3), # Shape of our images
+# #                   include_top = False, # Leave out the last fully connected layer
+# #                   weights = 'imagenet')
+#
+# conv_base = VGG16(input_shape=(120, 120, 3),  # Shape of our images
 #                   include_top=False,  # Leave out the last fully connected layer
 #                   weights='imagenet')
-
-# conv_base = InceptionResNetV2(input_shape=(120, 120, 3),  # Shape of our images
-#                   include_top=False,  # Leave out the last fully connected layer
-#                   weights='imagenet')
-
-# conv_base = Xception(input_shape=(120, 120, 3),  # Shape of our images
-#                   include_top=False,  # Leave out the last fully connected layer
-#                   weights='imagenet')
-
-conv_base.trainable = False
-
-
-# conv_base.trainable = True
-# set_trainable = False
-# for layer in conv_base.layers:
-#     if layer.name == 'block5_conv1' and layer.name == 'block5_conv2' and layer.name == 'block5_conv3'  and layer.name == 'block4_conv1' and layer.name == 'block4_conv2' and layer.name == 'block4_conv3':
-#         set_trainable = True
-#     if set_trainable:
-#         layer.trainable = True
-#     else:
-#         layer.trainable = False
-
-
-model = models.Sequential()
-
-model.add(conv_base)
-model.add(layers.Flatten())
-model.add(layers.Dropout(0.1))
-model.add(layers.Dense(64, activation='relu'))
-model.add(layers.Dense(n, activation='sigmoid'))
-model.compile(loss='binary_crossentropy',
-              optimizer=tensorflow.keras.optimizers.Adam(learning_rate=0.01, name="Adam", ), metrics=['acc'])
-
-
-
-train_datagen = ImageDataGenerator(rescale=1./255, rotation_range=40,
-        width_shift_range=0.2,
-        height_shift_range=0.2,
-        shear_range=0.2,
-        zoom_range=0.2,
-        horizontal_flip=True,
-        fill_mode='nearest')
-
-# val_datagen = ImageDataGenerator(rescale=1./255)
-
-
-train_generator = train_datagen.flow_from_directory(train_dir, target_size=(120, 120),batch_size= 32,
-                                                        class_mode='binary')
-
-# Test_generator = val_datagen.flow_from_directory(test_dir, target_size=(120, 120),
-#                                                            class_mode='binary')
-
-
-history = model.fit_generator(train_generator, epochs=100)
-
-# acc = history.history['acc']
-# val_acc = history.history['val_acc']
-# loss = history.history['loss']
-# val_loss = history.history['val_loss']
-# epochs = range(1, len(acc) + 1)
-# plt.plot(epochs, acc, 'bo', label='Training acc')
-# plt.plot(epochs, val_acc, 'b', label='Validation acc')
-# plt.title('Training and validation accuracy')
-# plt.legend()
-# plt.figure()
-# plt.plot(epochs, loss, 'bo', label='Training loss')
-# plt.plot(epochs, val_loss, 'b', label='Validation loss')
-# plt.title('Training and validation loss')
-# plt.legend()
-# plt.show()
-
-print(model.evaluate(train_generator))
+#
+# # conv_base = InceptionV3(input_shape=(120, 120, 3),  # Shape of our images
+# #                   include_top=False,  # Leave out the last fully connected layer
+# #                   weights='imagenet')
+#
+# # conv_base = InceptionResNetV2(input_shape=(120, 120, 3),  # Shape of our images
+# #                   include_top=False,  # Leave out the last fully connected layer
+# #                   weights='imagenet')
+#
+# # conv_base = Xception(input_shape=(120, 120, 3),  # Shape of our images
+# #                   include_top=False,  # Leave out the last fully connected layer
+# #                   weights='imagenet')
+#
+# conv_base.trainable = False
+#
+#
+# # conv_base.trainable = True
+# # set_trainable = False
+# # for layer in conv_base.layers:
+# #     if layer.name == 'block5_conv1' and layer.name == 'block5_conv2' and layer.name == 'block5_conv3'  and layer.name == 'block4_conv1' and layer.name == 'block4_conv2' and layer.name == 'block4_conv3':
+# #         set_trainable = True
+# #     if set_trainable:
+# #         layer.trainable = True
+# #     else:
+# #         layer.trainable = False
+#
+#
+# model = models.Sequential()
+#
+# model.add(conv_base)
+# model.add(layers.Flatten())
+# model.add(layers.Dropout(0.1))
+# model.add(layers.Dense(64, activation='relu'))
+# model.add(layers.Dense(n, activation='sigmoid'))
+# model.compile(loss='binary_crossentropy',
+#               optimizer=tensorflow.keras.optimizers.Adam(learning_rate=0.01, name="Adam", ), metrics=['acc'])
+#
+#
+#
+# train_datagen = ImageDataGenerator(rescale=1./255, rotation_range=40,
+#         width_shift_range=0.2,
+#         height_shift_range=0.2,
+#         shear_range=0.2,
+#         zoom_range=0.2,
+#         horizontal_flip=True,
+#         fill_mode='nearest')
+#
+# # val_datagen = ImageDataGenerator(rescale=1./255)
+#
+#
+# train_generator = train_datagen.flow_from_directory(train_dir, target_size=(120, 120),batch_size= 32,
+#                                                         class_mode='binary')
+#
+# # Test_generator = val_datagen.flow_from_directory(test_dir, target_size=(120, 120),
+# #                                                            class_mode='binary')
+#
+#
+# history = model.fit_generator(train_generator, epochs=100)
+#
+# # acc = history.history['acc']
+# # val_acc = history.history['val_acc']
+# # loss = history.history['loss']
+# # val_loss = history.history['val_loss']
+# # epochs = range(1, len(acc) + 1)
+# # plt.plot(epochs, acc, 'bo', label='Training acc')
+# # plt.plot(epochs, val_acc, 'b', label='Validation acc')
+# # plt.title('Training and validation accuracy')
+# # plt.legend()
+# # plt.figure()
+# # plt.plot(epochs, loss, 'bo', label='Training loss')
+# # plt.plot(epochs, val_loss, 'b', label='Validation loss')
+# # plt.title('Training and validation loss')
+# # plt.legend()
+# # plt.show()
+#
+# print(model.evaluate(train_generator))
