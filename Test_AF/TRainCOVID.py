@@ -36,7 +36,6 @@ for dirs in os.listdir(dangerous_dir):
         for image_file in os.listdir(dangerous_dir / dirs / sub_class):
             im = Image.open(dangerous_dir / dirs / sub_class / image_file, 'r', encoding="utf-8")
             print(f'Processing for dir {dirs}, subdir {sub_class}, file {image_file}.')
-
 print(im)
 
 
