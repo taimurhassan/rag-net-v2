@@ -34,7 +34,7 @@ dangerous_dir = Path(os.environ["ICHOR_INPUT_DATASET"]) / "COMPASS-XP" / "Danger
 for dirs in os.listdir(dangerous_dir):
     for image_file in os.listdir(dangerous_dir):
         im = Image.open(dangerous_dir / image_file, 'r', encoding="utf-8")
-        print(f'Processing for dir {dirs}, subdir {sub_class}, file {image_file}.')
+        print(f'Processing for dir {dirs}, file {image_file}.')
 print(im)
 
 
