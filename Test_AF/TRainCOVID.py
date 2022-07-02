@@ -27,15 +27,25 @@ import os
 from pathlib import Path
 import pandas as p
 import pickle
+from matplotlib import image
 
 
 dangerous_dir = Path(os.environ["ICHOR_INPUT_DATASET"]) / "COMPASS-XP" / "Dangerous"
 
-for dirs in os.listdir(dangerous_dir):
-    for image_file in os.listdir(dangerous_dir):
-        im = Image.open(dangerous_dir / image_file, 'r', "utf-8")
-        print(f'Processing for dir {dirs}, file {image_file}.')
+
+for image_file in os.listdir(dangerous_dir):
+    im = Image.open(dangerous_dir / image_file, 'r', "utf-8")
+    print(f'Processing for file {image_file}.')
 print(im)
+
+
+# loaded_images = list()
+# for filename in listdir('images'):
+# 	# load image
+# 	img_data = image.imread('images/' + filename)
+# 	# store loaded image
+# 	loaded_images.append(img_data)
+# 	print('> loaded %s %s' % (filename, img_data.shape))
 
 
 #
