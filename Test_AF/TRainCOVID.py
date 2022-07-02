@@ -34,7 +34,7 @@ dangerous_dir = Path(os.environ["ICHOR_INPUT_DATASET"]) / "COMPASS-XP" / "Danger
 
 
 for image_file in os.listdir(dangerous_dir):
-    im = Image.open(dangerous_dir / image_file, 'r', "utf-8")
+    im = image.imread(dangerous_dir / image_file)
     print(f'Processing for file {image_file}.')
 print(im)
 
