@@ -32,10 +32,9 @@ import pickle
 dangerous_dir = Path(os.environ["ICHOR_INPUT_DATASET"]) / "COMPASS-XP" / "Dangerous"
 
 for dirs in os.listdir(dangerous_dir):
-    for sub_class in os.listdir(dangerous_dir / dirs):
-        for image_file in os.listdir(dangerous_dir / dirs / sub_class):
-            im = Image.open(dangerous_dir / dirs / sub_class / image_file, 'r', encoding="utf-8")
-            print(f'Processing for dir {dirs}, subdir {sub_class}, file {image_file}.')
+    for image_file in os.listdir(dangerous_dir):
+        im = Image.open(dangerous_dir / image_file, 'r', encoding="utf-8")
+        print(f'Processing for dir {dirs}, subdir {sub_class}, file {image_file}.')
 print(im)
 
 
