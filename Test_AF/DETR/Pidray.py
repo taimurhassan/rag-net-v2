@@ -29,6 +29,7 @@ class TrainConfig(TrainingConfig):
         # self.normalized_method = 'tf_resnet'
 
 
+
 train_config = TrainConfig()
 train_iterator, class_names = load_coco_dataset(train_config, train_config.batch_size, augmentation=True)
 
