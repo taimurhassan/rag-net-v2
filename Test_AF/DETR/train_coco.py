@@ -34,7 +34,7 @@ def build_model(config):
     we do not add new layers since the pretrained model is already trained on coco.
     See examples/finetuning_voc.py to add new layers.
     """
-    # Load detr model without weight. 
+    # Load detr model without weight.
     # Use the tensorflow backbone with the imagenet weights
     detr = get_detr_model(config, include_top=True, weights=None, tf_backbone=True)
     detr.summary()
@@ -45,7 +45,6 @@ def run_finetuning(config):
 
     # Load the model with the new layers to finetune
     detr = build_model(config)
-
     # Load the training and validation dataset
     train_dt, coco_class_names = load_coco_dataset(
         config, config.batch_size, augmentation=True, img_dir="train2017", ann_fil="annotations/instances_train2017.json")
@@ -78,11 +77,6 @@ if __name__ == "__main__":
 
     if config.log:
         wandb.init(project="detr-tensorflow", reinit=True)
-        
+
     # Run training
     run_finetuning(config)
-
-
-
-
-

@@ -1,6 +1,6 @@
 import sys
 # Set the path to the repository here
-sys.path.append("C:/Users/mohda/Documents/GitHub/rag-net-v2/Test_AF/DETR/detr_tf")
+# sys.path.append("C:/Users/mohda/Documents/GitHub/rag-net-v2/Test_AF/DETR/detr_tf")
 
 import sys
 import numpy as np
@@ -22,10 +22,12 @@ from detr_tf.inference import get_model_inference, numpy_bbox_to_image
 class TrainConfig(TrainingConfig):
     def __init__(self):
         super().__init__()
-        self.data_dir = "C:/Users/mohda/Downloads/DETR Deep Learning/Main pidray/pidray"
+        self.data_dir = Path(os.environ["ICHOR_INPUT_DATASET"]) / "pidray"
+        # self.data_dir = "C:/Users/mohda/Downloads/DETR Deep Learning/Main pidray/pidray"
         self.data = DataConfig(data_dir=self.data_dir, img_dir="train", ann_file="annotations/xray_train.json")
         self.image_size = (500, 500)
         # self.normalized_method = 'tf_resnet'
+
 
 train_config = TrainConfig()
 train_iterator, class_names = load_coco_dataset(train_config, train_config.batch_size, augmentation=True)
@@ -33,7 +35,8 @@ train_iterator, class_names = load_coco_dataset(train_config, train_config.batch
 class ValidConfig(TrainingConfig):
     def __init__(self):
         super().__init__()
-        self.data_dir = "C:/Users/mohda/Downloads/DETR Deep Learning/Main pidray/pidray"
+        self.data_dir = Path(os.environ["ICHOR_INPUT_DATASET"]) / "pidray"
+        # self.data_dir = "C:/Users/mohda/Downloads/DETR Deep Learning/Main pidray/pidray"
         self.data = DataConfig(data_dir=self.data_dir, img_dir="easy", ann_file="annotations/xray_test_easy.json")
         self.image_size = (500, 500)
         # self.normalized_method = 'tf_resnet'
