@@ -1,13 +1,12 @@
-tensorflow-gpu==2.2.0
+tensorflow-gpu
 opencv-python
 imgaug
 tqdm
 matplotlib
-tensorboard==2.2.0
-tensorboard-data-server==0.6.1
-tensorboard-plugin-wit==1.8.1
+tensorboard
+tensorboard-data-server
+tensorboard-plugin-wit
 wandb
-numpy
 pycocotools
 scikit-image
 imageio

@@ -11,7 +11,7 @@ from pathlib import Path
 import pandas as p
 import pickle
 from matplotlib import image
-import os 
+import os
 import detr_tf
 from detr_tf.data import load_coco_dataset
 from detr_tf.networks.detr import get_detr_model
@@ -20,7 +20,7 @@ from detr_tf.inference import numpy_bbox_to_image
 from detr_tf.optimizers import setup_optimizers
 from detr_tf import training
 from detr_tf.inference import get_model_inference, numpy_bbox_to_image
-
+ 
 class TrainConfig(TrainingConfig):
     def __init__(self):
         super().__init__()
