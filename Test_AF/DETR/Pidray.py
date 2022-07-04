@@ -6,18 +6,15 @@ import sys
 import numpy as np
 import tensorflow as tf
 import matplotlib.pyplot as plt
-
 from os.path import expanduser
 import detr_tf
 from detr_tf.data import load_coco_dataset
 from detr_tf.networks.detr import get_detr_model
-
 from detr_tf.training_config import TrainingConfig, DataConfig
 from detr_tf.inference import numpy_bbox_to_image
 from detr_tf.optimizers import setup_optimizers
 from detr_tf import training
 from detr_tf.inference import get_model_inference, numpy_bbox_to_image
-
 
 class TrainConfig(TrainingConfig):
     def __init__(self):
@@ -27,8 +24,6 @@ class TrainConfig(TrainingConfig):
         self.data = DataConfig(data_dir=self.data_dir, img_dir="train", ann_file="annotations/xray_train.json")
         self.image_size = (500, 500)
         # self.normalized_method = 'tf_resnet'
-
-
 
 train_config = TrainConfig()
 train_iterator, class_names = load_coco_dataset(train_config, train_config.batch_size, augmentation=True)
@@ -44,8 +39,6 @@ class ValidConfig(TrainingConfig):
 
 valid_config = ValidConfig()
 valid_iterator, class_names = load_coco_dataset(valid_config, valid_config.batch_size, augmentation=None)
-
-
 
 for images, target_bbox, target_class in train_iterator:
     print("images.shape", images.shape)
@@ -64,9 +57,7 @@ for images, target_bbox, target_class in train_iterator:
     plt.imshow(image)
     break
 
-
 class_names
-
 
 detr = get_detr_model(train_config, include_top=False, nb_class=14, weights="detr", tf_backbone=True)
 # detr.summary()
