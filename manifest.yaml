@@ -8,7 +8,7 @@ docker:
 spec:
   operator: tf
   image: rag-net-v2
-  command: python Divs/VIT_AFFINITY_YTRUE.py
+  command: python Test_AF/DETR/Pidray.py
   types:
     Worker:
       replicas: 1

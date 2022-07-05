@@ -11,5 +11,4 @@ pycocotools
 scikit-image
 imageio
 pandas
-torch
 nvidia_smi
