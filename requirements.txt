@@ -11,4 +11,4 @@ pycocotools
 scikit-image
 imageio
 pandas
-pytorch
+torch

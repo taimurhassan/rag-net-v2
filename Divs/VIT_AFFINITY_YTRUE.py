@@ -27,6 +27,7 @@ from sklearn.metrics import f1_score
 import torch
 
 
+
 class Affinity_Loss(nn.Module):
     def __init__(self, lambd):
         super(Affinity_Loss, self).__init__()
