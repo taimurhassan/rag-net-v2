@@ -17,6 +17,8 @@ from detr_tf.optimizers import setup_optimizers
 from detr_tf import training
 from detr_tf.inference import get_model_inference, numpy_bbox_to_image
 
+
+
 import nvidia_smi
 
 nvidia_smi.nvmlInit()
