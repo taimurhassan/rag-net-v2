@@ -81,5 +81,27 @@ optimzers = setup_optimizers(detr, train_config)
 detr.trainable = True
 # detr.summary()
 
-for epoch in range(100):
+for epoch in range(300):
     training.fit(detr, train_iterator, optimzers, train_config, epoch_nb=epoch, class_names=class_names)
+
+
+for valid_images, target_bbox, target_class in valid_iterator:    
+    m_outputs = detr(valid_images, training=False)
+    predicted_bbox, predicted_labels, predicted_scores = get_model_inference(m_outputs, valid_config.background_class, bbox_format="xy_center")
+    print(predicted_bbox)
+    print(predicted_labels)
+    print(predicted_scores)
+
+    result = numpy_bbox_to_image(
+        np.array(valid_images[0]),
+        np.array(predicted_bbox),
+        np.array(predicted_labels),
+        scores=np.array(predicted_scores),
+        class_name=class_names, 
+        config=valid_config
+    )
+    plt.imshow(result)
+    plt.show()
+    break
+
+detr.save_weights("DETR_300_weights.ckpt")
