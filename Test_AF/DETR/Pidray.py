@@ -1,8 +1,4 @@
 import sys
-# Set the path to the repository here
-# sys.path.append("C:/Users/mohda/Documents/GitHub/rag-net-v2/Test_AF/DETR/detr_tf")
-
-import sys
 import numpy as np
 import tensorflow as tf
 import matplotlib.pyplot as plt
