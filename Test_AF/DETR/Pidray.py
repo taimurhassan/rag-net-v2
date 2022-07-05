@@ -18,8 +18,6 @@ from detr_tf import training
 from detr_tf.inference import get_model_inference, numpy_bbox_to_image
 
 
-
-
 class TrainConfig(TrainingConfig):
     def __init__(self):
         super().__init__()
