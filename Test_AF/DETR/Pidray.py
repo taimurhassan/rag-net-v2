@@ -17,27 +17,16 @@ from detr_tf.optimizers import setup_optimizers
 from detr_tf import training
 from detr_tf.inference import get_model_inference, numpy_bbox_to_image
 
-import nvidia_smi
+import subprocess as sp
+import os
 
-nvidia_smi.nvmlInit()
+def get_gpu_memory():
+    command = "nvidia-smi --query-gpu=memory.free --format=csv"
+    memory_free_info = sp.check_output(command.split()).decode('ascii').split('\n')[:-1][1:]
+    memory_free_values = [int(x.split()[0]) for i, x in enumerate(memory_free_info)]
+    return memory_free_values
 
-handle = nvidia_smi.nvmlDeviceGetHandleByIndex(0)
-# card id 0 hardcoded here, there is also a call to get all available card ids, so we could iterate
-
-info = nvidia_smi.nvmlDeviceGetMemoryInfo(handle)
-
-print("Total memory:", info.total)
-print("Free memory:", info.free)
-print("Used memory:", info.used)
-
-nvidia_smi.nvmlShutdown()
-
-physical_devices = tf.config.list_physical_devices('GPU')
-if len(physical_devices) == 1:
-    tf.config.experimental.set_memory_growth(physical_devices[0], True)
-print(physical_devices)
-
-print(len(physical_devices))
+print(get_gpu_memory())
 
 # class TrainConfig(TrainingConfig):
 #     def __init__(self):
