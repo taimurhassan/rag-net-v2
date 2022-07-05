@@ -28,6 +28,8 @@ def get_gpu_memory():
 
 print(get_gpu_memory())
 
+
+
 # class TrainConfig(TrainingConfig):
 #     def __init__(self):
 #         super().__init__()
