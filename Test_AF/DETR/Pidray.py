@@ -16,6 +16,7 @@ from detr_tf.inference import numpy_bbox_to_image
 from detr_tf.optimizers import setup_optimizers
 from detr_tf import training
 from detr_tf.inference import get_model_inference, numpy_bbox_to_image
+
 import nvidia_smi
 
 nvidia_smi.nvmlInit()
@@ -31,13 +32,12 @@ print("Used memory:", info.used)
 
 nvidia_smi.nvmlShutdown()
 
-
-
-
 physical_devices = tf.config.list_physical_devices('GPU')
 if len(physical_devices) == 1:
     tf.config.experimental.set_memory_growth(physical_devices[0], True)
 print(physical_devices)
+
+print(len(physical_devices))
 
 # class TrainConfig(TrainingConfig):
 #     def __init__(self):

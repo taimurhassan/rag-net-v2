@@ -5,3 +5,4 @@ pycocotools
 scikit-image
 imageio
 pandas
+nvidia-ml-py3
