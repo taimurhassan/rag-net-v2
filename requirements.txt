@@ -11,4 +11,9 @@ pycocotools
 scikit-image
 imageio
 pandas
+torch
 nvidia_smi
+torchvision
+timm
+random
+shutil
