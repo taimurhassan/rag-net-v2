@@ -11,7 +11,7 @@ import torch
 import numpy as np
 import gc
 import os
-import time 
+import time
 import random
 from datetime import datetime
 import shutil
@@ -26,7 +26,7 @@ from torch.optim.lr_scheduler import ReduceLROnPlateau
 from sklearn.metrics import f1_score
 import torch
 
-
+ 
 class Affinity_Loss(nn.Module):
     def __init__(self, lambd):
         super(Affinity_Loss, self).__init__()
