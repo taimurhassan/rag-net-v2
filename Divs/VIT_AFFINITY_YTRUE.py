@@ -24,9 +24,9 @@ import torchvision.datasets as datasets
 import torch.nn.functional as F
 from torch.optim.lr_scheduler import ReduceLROnPlateau
 from sklearn.metrics import f1_score
-import torch
+import torch 
 
- 
+
 class Affinity_Loss(nn.Module):
     def __init__(self, lambd):
         super(Affinity_Loss, self).__init__()
