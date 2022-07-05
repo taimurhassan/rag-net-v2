@@ -26,7 +26,7 @@ from torch.optim.lr_scheduler import ReduceLROnPlateau
 from sklearn.metrics import f1_score
 import torch
 
- 
+
 class Affinity_Loss(nn.Module):
     def __init__(self, lambd):
         super(Affinity_Loss, self).__init__()
@@ -175,8 +175,10 @@ class FocalLoss(nn.Module):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    train_folder = r'C:\Users\fta71\PycharmProjects\pythonProject2\SIXray10\Training'
-    test_folder = r'C:\Users\fta71\PycharmProjects\pythonProject2\SIXray10\Training'
+    train_folder = Path(os.environ["ICHOR_INPUT_DATASET"]) / "SIXray10" / "Training"
+    test_folder =Path(os.environ["ICHOR_INPUT_DATASET"]) / "SIXray10" / "Testing"
+    # train_folder = r'C:\Users\fta71\PycharmProjects\pythonProject2\SIXray10\Training'
+    # test_folder = r'C:\Users\fta71\PycharmProjects\pythonProject2\SIXray10\Training'
 
     train_loader = load_data(train_folder, 8, phase='train', train_val_split=False)
     val_loader = load_data(test_folder, 8, phase='test', train_val_split=False)
