@@ -1,7 +1,6 @@
 """ Example on how to train on COCO from scratch
 """
 
-
 import argparse
 import matplotlib.pyplot as plt
 import tensorflow as tf

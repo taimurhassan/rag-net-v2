@@ -17,6 +17,7 @@ from detr_tf.optimizers import setup_optimizers
 from detr_tf import training
 from detr_tf.inference import get_model_inference, numpy_bbox_to_image
 
+
 import nvidia_smi
 
 nvidia_smi.nvmlInit()
@@ -29,7 +30,7 @@ info = nvidia_smi.nvmlDeviceGetMemoryInfo(handle)
 print("Total memory:", info.total)
 print("Free memory:", info.free)
 print("Used memory:", info.used)
- 
+
 nvidia_smi.nvmlShutdown()
 
 physical_devices = tf.config.list_physical_devices('GPU')
