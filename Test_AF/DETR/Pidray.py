@@ -29,7 +29,7 @@ info = nvidia_smi.nvmlDeviceGetMemoryInfo(handle)
 print("Total memory:", info.total)
 print("Free memory:", info.free)
 print("Used memory:", info.used)
-
+ 
 nvidia_smi.nvmlShutdown()
 
 physical_devices = tf.config.list_physical_devices('GPU')
