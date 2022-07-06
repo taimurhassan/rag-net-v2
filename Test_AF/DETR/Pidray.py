@@ -60,5 +60,5 @@ detr.trainable = True
 for epoch in range(1):
     training.fit(detr, train_iterator, optimzers, train_config, epoch_nb=epoch, class_names=class_names)
 
-
+ 
 detr.save_weights("DETR_300_weights.ckpt")
