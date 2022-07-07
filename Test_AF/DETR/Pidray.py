@@ -60,6 +60,8 @@ detr.trainable = True
 for epoch in range(1):
     training.fit(detr, train_iterator, optimzers, train_config, epoch_nb=epoch, class_names=class_names)
 
-wei = Path(os.environ["ICHOR_INPUT_DATASET"]) / "pidray/weights/"
+Path(os.environ["ICHOR_OUTPUT_DATASET"]).mkdir(exist_ok=True)
+Path(os.environ["ICHOR_LOGS"]).mkdir(exist_ok=True)
 
-detr.save_weights(wei + "DETR_300_weights.ckpt")
+
+detr.save_weights(Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "DETR_1_weights.ckpt")
