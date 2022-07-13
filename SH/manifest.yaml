@@ -1,0 +1,22 @@
+# yaml-language-server: $schema=https://develop.ichor.kao.instadeep.io/schema/latest/manifest.schema.json
+kind: IchorManifest
+version: 0.0.2
+docker:
+  image: rag-net-v2
+  dockerfile: ./Dockerfile
+  context: .
+spec:
+  operator: tf
+  image: rag-net-v2
+  command: python vit.py
+  types:
+    Worker:
+      replicas: 1
+      cpus: 11
+      # optional: number of GPUs wanted
+      gpus: 1
+      # mandatory (if gpus amount is > 0): gpu type wanted
+      gpuType: gpu
+      gpuProduct: Tesla-V100-SXM3-32GB
+      # mandatory (must be >= 2): RAM ratio wanted (in GB)
+      ramRatio: 2
