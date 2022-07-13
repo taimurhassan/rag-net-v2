@@ -8,7 +8,7 @@ docker:
 spec:
   operator: tf
   image: rag-net-v2
-  command: python vit.py
+  command: python unk.py
   types:
     Worker:
       replicas: 1
