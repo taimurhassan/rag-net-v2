@@ -69,7 +69,6 @@ Path(os.environ["ICHOR_LOGS"]).mkdir(exist_ok=True, parents=True)
 # load json module
 import json
 
-
 # python dictionary with key value pairs
 dict = {'Python' : '.py', 'C++' : '.cpp', 'Java' : '.java'}
 
