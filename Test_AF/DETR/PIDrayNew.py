@@ -18,7 +18,7 @@ from tensorflow.keras.callbacks import ModelCheckpoint
 
 # Initilization
 
-data_set_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "pidray"
+data_set_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "PIDray-Splitted"
 img_height = 224
 img_width= 224
 batch_size= 72
@@ -68,7 +68,6 @@ resnet_model.add(Flatten())
 resnet_model.add(Dense(512, activation='relu'))
 resnet_model.add(Dense(12, activation='softmax'))
 # resnet_model.summary()
-
 
 # 3. Train Model
 resnet_model.compile(optimizer=Adadelta(), loss='categorical_crossentropy', metrics=['accuracy'])
