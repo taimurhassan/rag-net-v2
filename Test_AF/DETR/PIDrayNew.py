@@ -18,7 +18,8 @@ from tensorflow.keras.callbacks import ModelCheckpoint
 
 # Initilization
 
-data_set_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "PIDray-Splitted"
+train_data_set_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "PIDray-Splitted/train"
+test_data_set_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "PIDray-Splitted/test"
 img_height = 224
 img_width= 224
 batch_size= 72
@@ -44,7 +45,7 @@ test_datagen = ImageDataGenerator(
 
 # Takes the path to a train directory & generates batches of augmented data.
 train_generator = train_datagen.flow_from_directory(
-  data_set_path + "/train",
+  train_data_set_path,
   target_size=(img_height, img_width),
   batch_size=batch_size,
   class_mode='categorical'
@@ -52,7 +53,7 @@ train_generator = train_datagen.flow_from_directory(
 
 # Takes the path to a test directory & generates batches.
 test_generator = test_datagen.flow_from_directory(
-  data_set_path + "/test",
+  test_data_set_path,
   target_size=(img_height, img_width),
   batch_size=batch_size,
   class_mode='categorical'
