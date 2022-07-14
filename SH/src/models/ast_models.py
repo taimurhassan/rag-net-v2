@@ -1,9 +1,4 @@
-# -*- coding: utf-8 -*-
-# @Time    : 6/10/21 5:04 PM
-# @Author  : Yuan Gong
-# @Affiliation  : Massachusetts Institute of Technology
-# @Email   : yuangong@mit.edu
-# @File    : ast_models.py
+
 
 import torch
 import torch.nn as nn
