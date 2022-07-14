@@ -2,12 +2,12 @@
 # import numpy as np
 # import tensorflow as tf
 # import matplotlib.pyplot as plt
-# from os.path import expanduser
-# from pathlib import Path
+from os.path import expanduser
+from pathlib import Path
 # import pandas as p
-# import pickle
+import pickle
 # from matplotlib import image
-# import os
+import os
 # import detr_tf
 # from detr_tf.data import load_coco_dataset
 # from detr_tf.networks.detr import get_detr_model
@@ -60,8 +60,8 @@
 # for epoch in range(1):
 #     training.fit(detr, train_iterator, optimzers, train_config, epoch_nb=epoch, class_names=class_names)
 
-# Path(os.environ["ICHOR_OUTPUT_DATASET"]).mkdir(exist_ok=True)
-# Path(os.environ["ICHOR_LOGS"]).mkdir(exist_ok=True)
+Path(os.environ["ICHOR_OUTPUT_DATASET"]).mkdir(exist_ok=True, parents=True)
+Path(os.environ["ICHOR_LOGS"]).mkdir(exist_ok=True, parents=True)
 
 
 # detr.save_weights(Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "DETR_1_weights.ckpt")
@@ -69,14 +69,16 @@
 # load json module
 import json
 
+
 # python dictionary with key value pairs
 dict = {'Python' : '.py', 'C++' : '.cpp', 'Java' : '.java'}
 
 # create json object from dictionary
 json = json.dumps(dict)
 
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict.json"
 # open file for writing, "w" 
-f = open("dict.json","w")
+f = open(fil,"w")
 
 # write json object to file
 f.write(json)
