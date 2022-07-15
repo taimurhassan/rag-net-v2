@@ -94,7 +94,8 @@ history = resnet_model.fit_generator(train_generator, steps_per_epoch=1217, epoc
 # # create json object from dictionary
 # json = json.dumps(dict)
 
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "model.json"
+x = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "model.h5"
 # # open file for writing, "w" 
 # f = open(fil,"w")
 
@@ -107,10 +108,13 @@ history = resnet_model.fit_generator(train_generator, steps_per_epoch=1217, epoc
 
 # serialize model to JSON
 model_json = resnet_model.to_json()
-with open("model.json", "w") as json_file:
+
+with open((fil), "w") as json_file:
     json_file.write(model_json)
+    json_file.close()
 # serialize weights to HDF5
-resnet_model.save_weights("model.h5")
+
+resnet_model.save_weights(x)
 
 
 # x = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "PIDrayCNN.h5"
