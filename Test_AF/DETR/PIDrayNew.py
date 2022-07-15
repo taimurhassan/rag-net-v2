@@ -77,12 +77,42 @@ Path(os.environ["ICHOR_OUTPUT_DATASET"]).mkdir(exist_ok=True, parents=True)
 Path(os.environ["ICHOR_LOGS"]).mkdir(exist_ok=True, parents=True)
 
 
-checkpoint_filepath = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "PIDrayCheckPoint.h5"
-callback = ModelCheckpoint(filepath=checkpoint_filepath, monitor='loss', mode='min', save_best_only=True, save_weights_only=True, verbose=1)
+# checkpoint_filepath = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "PIDrayCheckPoint.h5"
+# callback = ModelCheckpoint(filepath=checkpoint_filepath, monitor='loss', mode='min', save_best_only=True, save_weights_only=True, verbose=1)
 
 # fit_generator is used when either we have a huge dataset to fit into our memory or when data augmentation needs to be applied.
-history = resnet_model.fit_generator(train_generator, steps_per_epoch=1217, epochs=1, callbacks=callback)
+# history = resnet_model.fit_generator(train_generator, steps_per_epoch=1217, epochs=1, callbacks=callback)
+history = resnet_model.fit_generator(train_generator, steps_per_epoch=1217, epochs=1)
 
-x = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "PIDrayCNN.h5"
 
-resnet_model.save(x)
+# # load json module
+# import json
+
+# # python dictionary with key value pairs
+# dict = {'Python' : '.py', 'C++' : '.cpp', 'Java' : '.java'}
+
+# # create json object from dictionary
+# json = json.dumps(dict)
+
+# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict.json"
+# # open file for writing, "w" 
+# f = open(fil,"w")
+
+# # write json object to file
+# f.write(json)
+
+# # close file
+# f.close()
+
+
+# serialize model to JSON
+model_json = resnet_model.to_json()
+with open("model.json", "w") as json_file:
+    json_file.write(model_json)
+# serialize weights to HDF5
+resnet.save_weights("model.h5")
+
+
+# x = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "PIDrayCNN.h5"
+
+# resnet_model.save(x)
