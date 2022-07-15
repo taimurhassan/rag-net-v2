@@ -80,4 +80,4 @@ history = resnet_model.fit(train_generator, steps_per_epoch=1217, epochs=1)
 
 h = Path(os.environ["ICHOR_OUTPUT_DATASET"])
 
-resnet_model.save(h)
+resnet_model.save(h, save_format = 'h5')
