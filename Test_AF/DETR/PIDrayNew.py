@@ -110,7 +110,7 @@ model_json = resnet_model.to_json()
 with open("model.json", "w") as json_file:
     json_file.write(model_json)
 # serialize weights to HDF5
-resnet.save_weights("model.h5")
+resnet_model.save_weights("model.h5")
 
 
 # x = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "PIDrayCNN.h5"
