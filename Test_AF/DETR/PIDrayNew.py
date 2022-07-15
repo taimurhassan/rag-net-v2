@@ -82,37 +82,36 @@ Path(os.environ["ICHOR_LOGS"]).mkdir(exist_ok=True, parents=True)
 
 # fit_generator is used when either we have a huge dataset to fit into our memory or when data augmentation needs to be applied.
 # history = resnet_model.fit_generator(train_generator, steps_per_epoch=1217, epochs=1, callbacks=callback)
-history = resnet_model.fit_generator(train_generator, steps_per_epoch=1217, epochs=1)
+history = resnet_model.fit(train_generator, steps_per_epoch=1217, epochs=1)
 
 
 # # load json module
-# import json
+import json
 
-# # python dictionary with key value pairs
-# dict = {'Python' : '.py', 'C++' : '.cpp', 'Java' : '.java'}
-
-# # create json object from dictionary
-# json = json.dumps(dict)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "model.json"
 x = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "model.h5"
-# # open file for writing, "w" 
-# f = open(fil,"w")
-
-# # write json object to file
-# f.write(json)
-
-# # close file
-# f.close()
 
 
 # serialize model to JSON
-model_json = resnet_model.to_json()
+# model_json = resnet_model.to_json()
 
-with open((fil), "w") as json_file:
-    json_file.write(model_json)
-    json_file.close()
-# serialize weights to HDF5
+json = json.dumps(resnet_model)
+
+# open file for writing, "w" 
+f = open(fil,"w")
+
+# write json object to file
+f.write(json)
+
+# close file
+f.close()
+
+
+# with open((fil), "w") as json_file:
+#     json_file.write(model_json)
+#     json_file.close()
+# # serialize weights to HDF5
 
 resnet_model.save_weights(x)
 
