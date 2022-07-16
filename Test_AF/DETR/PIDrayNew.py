@@ -76,8 +76,8 @@ resnet_model.compile(optimizer=Adadelta(), loss='categorical_crossentropy', metr
 Path(os.environ["ICHOR_OUTPUT_DATASET"]).mkdir(exist_ok=True, parents=True)
 Path(os.environ["ICHOR_LOGS"]).mkdir(exist_ok=True, parents=True)
 
-history = resnet_model.fit(train_generator, steps_per_epoch=1217, epochs=1)
+history = resnet_model.fit(train_generator, steps_per_epoch=1217, epochs=100)
 
 h = Path(os.environ["ICHOR_OUTPUT_DATASET"])
 
-resnet_model.save(h, save_format = 'h5')
+resnet_model.save(h)
