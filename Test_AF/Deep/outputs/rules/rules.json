@@ -1,0 +1,7 @@
+[
+{"current_level": 1, "leaf_id": "6a4af229-00f2-11ed-b121-99b299a1c992", "parents": "root", "rule": "else: return 'Yes'", "feature_idx": -1, "feature_name": "", "instances": 4932, "metric": 0, "return_statement": 0, "tree_id": 0}, 
+{"current_level": 1, "leaf_id": "6af3b074-00f2-11ed-b6b8-99b299a1c992", "parents": "root", "rule": "if obj[0]>1.0187:", "feature_idx": 0, "feature_name": "distance", "instances": 4932, "metric": 0.0, "return_statement": 0, "tree_id": 0}, 
+{"current_level": 2, "leaf_id": "6af3b075-00f2-11ed-bf91-99b299a1c992", "parents": "6af3b074-00f2-11ed-b6b8-99b299a1c992", "rule": "return 'Yes'", "feature_idx": 0, "feature_name": "distance", "instances": 4932, "metric": 0, "return_statement": 1, "tree_id": 0}, 
+{"current_level": 1, "leaf_id": "6af3b074-00f2-11ed-b8a2-99b299a1c992", "parents": "root", "rule": "if obj[0]<=1.0187:", "feature_idx": 0, "feature_name": "distance", "instances": 4932, "metric": 0.0, "return_statement": 0, "tree_id": 0}, 
+{"current_level": 2, "leaf_id": "6af3b075-00f2-11ed-83c3-99b299a1c992", "parents": "6af3b074-00f2-11ed-b8a2-99b299a1c992", "rule": "return 'Yes'", "feature_idx": 0, "feature_name": "distance", "instances": 4932, "metric": 0, "return_statement": 1, "tree_id": 0}
+]
