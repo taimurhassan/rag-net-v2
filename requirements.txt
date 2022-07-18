@@ -7,12 +7,6 @@ tensorboard
 tensorboard-data-server
 tensorboard-plugin-wit
 wandb
-pycocotools
 scikit-image
 imageio
 pandas
-
-
-mtcnn>=0.1.0
-retina-face>=0.0.1
-mediapipe>=0.8.7.3
