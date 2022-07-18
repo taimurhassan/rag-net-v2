@@ -8,13 +8,13 @@ docker:
 spec:
   operator: tf
   image: rag-net-v2
-  command: python Test_AF/DETR/Pidray.py
+  command: python Test_AF/Deep/Active_Even_L2_Results.py
   types:
     Worker:
       replicas: 1
       cpus: 11
       # optional: number of GPUs wanted
-      gpus: 1
+      gpus: 5
       # mandatory (if gpus amount is > 0): gpu type wanted
       gpuType: gpu
       gpuProduct: Tesla-V100-SXM3-32GB
