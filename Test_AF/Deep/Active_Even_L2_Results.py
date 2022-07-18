@@ -80,6 +80,7 @@ distance_metric = "euclidean_l2"
 detector_backend = 'retinaface'
 
 
+
 resp_obj1 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 
 
