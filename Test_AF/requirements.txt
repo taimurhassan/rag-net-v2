@@ -9,3 +9,6 @@ tensorboard-plugin-wit
 wandb
 scikit-image
 imageio
+gdown
+chefboost
+retina-face

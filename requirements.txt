@@ -10,3 +10,6 @@ wandb
 scikit-image
 imageio
 pandas
+gdown
+chefboost
+retina-face
