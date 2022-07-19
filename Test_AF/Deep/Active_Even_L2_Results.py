@@ -66,8 +66,8 @@ import os
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/1/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 instances = negatives[["file_x", "file_y"]].values.tolist()
@@ -80,9 +80,9 @@ distance_metric = "euclidean_l2"
 detector_backend = 'retinaface'
 
 
-
+print("P1")
 resp_obj1 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P1 Done")
 
 
 Path(os.environ["ICHOR_OUTPUT_DATASET"]).mkdir(exist_ok=True, parents=True)
@@ -243,8 +243,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/2/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 
@@ -255,9 +255,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
+print("P2")
 resp_obj2 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P2 Done")
 
 
 
@@ -437,8 +437,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/3/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 
@@ -449,9 +449,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
+print("P3")
 resp_obj3 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P3 Done")
 
 
 
@@ -630,8 +630,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/4/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 
@@ -642,8 +642,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
+print("P4")
 resp_obj4 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
+print("P4 Done")
 
 
 
@@ -816,15 +817,15 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/5/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
-
+print("P5")
 resp_obj5 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P5 Done")
 
 
 
@@ -1001,8 +1002,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/6/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 instances = negatives[["file_x", "file_y"]].values.tolist()
@@ -1010,9 +1011,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
+print("P6")
 resp_obj6 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P6 Done")
 
 
 
@@ -1188,8 +1189,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/7/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 instances = negatives[["file_x", "file_y"]].values.tolist()
@@ -1197,9 +1198,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
+print("P7")
 resp_obj7 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P7 Done")
 
 
 
@@ -1378,8 +1379,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/8/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 instances = negatives[["file_x", "file_y"]].values.tolist()
@@ -1387,9 +1388,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
+print("P8")
 resp_obj8 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P8 Done")
 
 
 
@@ -1567,8 +1568,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/9/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 
@@ -1579,9 +1580,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
+print("P9")
 resp_obj9 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P9 Done")
 
 
 
@@ -1589,7 +1590,7 @@ resp_obj9 = DeepFace.verify(instances, model_name = model_name, distance_metric 
 # create json object from dictionary
 json = json.dumps(resp_obj9)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict91.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict9.json"
 
 # open file for writing, "w" 
 f = open(fil,"w")
@@ -1758,17 +1759,17 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/10/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
 
-
+print("P10")
 resp_obj10 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P10 Done")
 
 
 
@@ -1946,8 +1947,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/11/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 
@@ -1957,9 +1958,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
+print("P11")
 resp_obj11 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P11 Done")
 
 
 
@@ -2137,8 +2138,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/12/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 
@@ -2148,9 +2149,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
+print("P12")
 resp_obj12 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P12 Done")
 
 
 
@@ -2330,8 +2331,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/13/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 
@@ -2341,10 +2342,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
-
+print("P13")
 resp_obj13 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P13 Done")
 
 
 
@@ -2522,8 +2522,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/14/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 
@@ -2534,9 +2534,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
+print("P14")
 resp_obj14 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P14 Done")
 
 
 
@@ -2715,8 +2715,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/15/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 
@@ -2727,9 +2727,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
+print("P15")
 resp_obj15 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P15 Done")
 
 
 
@@ -2908,8 +2908,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/16/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 
@@ -2920,9 +2920,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
+print("P16")
 resp_obj16 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P16 Done")
 
 
 
@@ -3102,8 +3102,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/17/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 
@@ -3113,9 +3113,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
+print("P17")
 resp_obj17 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P17 Done")
 
 
 
@@ -3295,8 +3295,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/18/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 
@@ -3306,10 +3306,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
-
+print("P18")
 resp_obj18 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P18 Done")
 
 
 
@@ -3488,8 +3487,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/19/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 
@@ -3500,9 +3499,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
+print("P19")
 resp_obj19 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P19 Done")
 
 
 
@@ -3681,8 +3680,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/20/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 
@@ -3692,9 +3691,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
+print("P20")
 resp_obj20 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P20 Done")
 
 
 
@@ -3871,8 +3870,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/21/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 
@@ -3883,9 +3882,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
+print("P21")
 resp_obj21 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P21 Done")
 
 
 
@@ -4065,8 +4064,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/22/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 
@@ -4075,16 +4074,15 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
-
+print("P22")
 resp_obj22 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P22 Done")
 
 
 
 
 # create json object from dictionary
-json = json.dumps(resp_ob22)
+json = json.dumps(resp_obj22)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict22.json"
 
@@ -4257,8 +4255,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/23/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 
@@ -4268,10 +4266,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
+print("P23")
 resp_obj23 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
-
+print("P23 Done")
 
 
 
@@ -4449,8 +4446,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/24/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 
@@ -4460,9 +4457,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
+print("P24")
 resp_obj24 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P24 Done")
 
 
 
@@ -4639,8 +4636,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/25/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 
@@ -4651,9 +4648,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
+print("P25")
 resp_obj25 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P25 Done")
 
 
 
@@ -4830,8 +4827,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/26/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 
@@ -4840,9 +4837,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
+print("P26")
 resp_obj26 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P26 Done")
 
 
 
@@ -5021,8 +5018,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/27/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 
@@ -5031,9 +5028,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
+print("P27")
 resp_obj27 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P27 Done")
 
 
 
@@ -5212,8 +5209,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/28/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 
@@ -5223,9 +5220,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
+print("P28")
 resp_obj28 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P28 Done")
 
 
 
@@ -5403,8 +5400,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/29/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 
@@ -5414,9 +5411,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
+print("P29")
 resp_obj29 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P29 Done")
 
 
 
@@ -5594,8 +5591,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/30/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 
@@ -5604,9 +5601,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
+print("P30")
 resp_obj30 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P30 Done")
 
 
 
@@ -5785,8 +5782,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/31/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 
@@ -5796,9 +5793,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
+print("P31")
 resp_obj31 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P31 Done")
 
 
 
@@ -5976,8 +5973,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/32/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 
@@ -5987,9 +5984,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
+print("P32")
 resp_obj32 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P32 Done")
 
 
 
@@ -6167,8 +6164,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/33/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 
@@ -6178,9 +6175,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
+print("P33")
 resp_obj33 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P33 Done")
 
 
 
@@ -6361,8 +6358,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/34/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 
@@ -6371,9 +6368,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
+print("P34")
 resp_obj34 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P34 Done")
 
 
 
@@ -6550,8 +6547,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/35/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 
@@ -6562,9 +6559,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
+print("P35")
 resp_obj35 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P35 Done")
 
 
 
@@ -6742,8 +6739,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/36/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 
@@ -6753,9 +6750,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
+print("P36")
 resp_obj36 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P36 Done")
 
 
 
@@ -6899,8 +6896,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/37/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 
@@ -6908,10 +6905,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
-
+print("P37")
 resp_obj37 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P37 Done")
 
 
 
@@ -7089,8 +7085,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/38/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 
@@ -7101,9 +7097,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
+print("P38")
 resp_obj38 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P38 Done")
 
 
 
@@ -7279,8 +7275,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/39/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 
@@ -7289,9 +7285,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
+print("P39")
 resp_obj39 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P39 Done")
 
 
 
@@ -7469,8 +7465,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/40/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 
@@ -7479,9 +7475,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
+print("P40")
 resp_obj40 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P40 Done")
 
 
 
@@ -7660,8 +7656,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/41/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 
@@ -7670,9 +7666,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
+print("P41")
 resp_obj41 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P41 Done")
 
 
 
@@ -7851,8 +7847,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/42/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 
@@ -7862,9 +7858,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
+print("P42")
 resp_obj42 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P42 Done")
 
 
 # create json object from dictionary
@@ -8041,8 +8037,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/43/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 
@@ -8052,9 +8048,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
+print("P43")
 resp_obj43 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P43 Done")
 
 
 
@@ -8231,8 +8227,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/44/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 
@@ -8243,9 +8239,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
+print("P44")
 resp_obj44 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P44 Done")
 
 
 
@@ -8422,8 +8418,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/45/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 
@@ -8434,9 +8430,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
+print("P45")
 resp_obj45 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P45 Done")
 
 
 
@@ -8614,8 +8610,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/46/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 
@@ -8626,9 +8622,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
+print("P46")
 resp_obj46 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P46 Done")
 
 
 
@@ -8805,8 +8801,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/47/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 
@@ -8817,9 +8813,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
+print("P47")
 resp_obj47 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P47 Done")
 
 
 
@@ -8997,8 +8993,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/48/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 
@@ -9009,9 +9005,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
+print("P48")
 resp_obj48 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P48 Done")
 
 
 
@@ -9190,8 +9186,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/49/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 
@@ -9202,9 +9198,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
+print("P49")
 resp_obj49 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P49 Done")
 
 
 
@@ -9382,8 +9378,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/50/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 
@@ -9393,9 +9389,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
+print("P50")
 resp_obj50 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P50 Done")
 
 
 
@@ -9574,8 +9570,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/51/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 
@@ -9586,9 +9582,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
+print("P51")
 resp_obj51 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P51 Done")
 
 
 
@@ -9768,8 +9764,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/52/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 
@@ -9779,10 +9775,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
-
+print("P52")
 resp_obj52 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P52 Done")
 
 
 
@@ -9961,8 +9956,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/53/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 
@@ -9973,9 +9968,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
+print("P53")
 resp_obj53 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P53 Done")
 
 
 
@@ -10154,8 +10149,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/54/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 
@@ -10166,9 +10161,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
+print("P54")
 resp_obj54 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P54 Done")
 
 
 
@@ -10348,8 +10343,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/55/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 
@@ -10359,9 +10354,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
+print("P55")
 resp_obj55 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P55 Done")
 
 
 
@@ -10540,8 +10535,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/56/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 
@@ -10552,9 +10547,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
+print("P56")
 resp_obj56 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P56 Done")
 
 
 
@@ -10735,8 +10730,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/57/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 
@@ -10746,9 +10741,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
+print("P57")
 resp_obj57 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P57 Done")
 
 
 
@@ -10929,8 +10924,8 @@ negatives.decision.value_counts()
 
 dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/58/"
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+negatives.file_x = dataset_path / negatives.file_x
+negatives.file_y = dataset_path / negatives.file_y
 
 
 
@@ -10940,9 +10935,9 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
+print("P58")
 resp_obj58 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-
+print("P58 Done")
 
 
 
