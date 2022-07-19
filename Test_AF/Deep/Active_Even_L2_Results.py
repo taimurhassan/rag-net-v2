@@ -182,7 +182,6 @@ print("Accuracy: ", 100*accuracy,"%")
 # negatives.to_csv(fil, index = False)
 
 
-
 # P2
 idendities = {
     "1": ["down.jpg", "front.jpg", "sideleft.jpg", "sideright.jpg"],
