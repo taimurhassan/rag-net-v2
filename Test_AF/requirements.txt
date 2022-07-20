@@ -11,3 +11,4 @@ scikit-image
 imageio
 gdown
 chefboost
+retina-face

@@ -82,7 +82,7 @@ from deepface import DeepFace
  
 model_name = "ArcFace"
 distance_metric = "euclidean_l2"
-detector_backend = 'opencv'
+detector_backend = 'retinaface'
 
 
 print("P1")
