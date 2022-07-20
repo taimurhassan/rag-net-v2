@@ -59,10 +59,10 @@ from tqdm import tqdm
 
 # negatives.decision.value_counts()
 
-from os.path import expanduser
-from pathlib import Path
-import pickle
-import os
+# from os.path import expanduser
+# from pathlib import Path
+# import pickle
+# import os
 
 # dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/1/"
 
@@ -289,87 +289,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj2["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj2["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -488,87 +488,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj3["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj3["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -688,87 +688,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj4["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj4["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -873,87 +873,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj5["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj5["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -1066,87 +1066,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj6["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj6["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -1261,87 +1261,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj7["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj7["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -1457,87 +1457,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj8["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj8["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -1655,87 +1655,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj9["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj9["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -1849,87 +1849,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj10["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj10["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -2047,87 +2047,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj11["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj11["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -2244,87 +2244,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj12["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj12["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -2442,87 +2442,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj13["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj13["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -2641,87 +2641,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj14["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj14["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -2840,87 +2840,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj15["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj15["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -3039,87 +3039,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj16["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj16["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -3238,87 +3238,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj17["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj17["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -3437,87 +3437,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj18["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj18["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -3635,87 +3635,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj19["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj19["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -3831,87 +3831,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj20["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj20["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -4030,87 +4030,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj21["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj21["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -4226,87 +4226,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj22["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj22["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -4423,87 +4423,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj23["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj23["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -4620,87 +4620,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj24["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj24["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -4817,87 +4817,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj25["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj25["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -5012,87 +5012,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj26["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj26["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -5209,87 +5209,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj27["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj27["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -5406,87 +5406,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj28["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj28["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -5604,87 +5604,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj29["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj29["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -5800,87 +5800,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj30["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj30["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -5998,87 +5998,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj31["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj31["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -6194,87 +6194,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj32["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj32["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -6392,87 +6392,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj33["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj33["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -6591,87 +6591,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj34["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj34["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -6788,87 +6788,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj35["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj35["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -6985,54 +6985,54 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj36["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj36["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
+
+
+
+
+
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
@@ -7146,87 +7146,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj37["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj37["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -7343,87 +7343,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj38["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj38["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -7537,87 +7537,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj39["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj39["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -7734,87 +7734,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj40["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj40["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -7930,87 +7930,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj41["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj41["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -8126,87 +8126,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj42["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj42["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -8323,87 +8323,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj43["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj43["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -8519,87 +8519,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj44["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj44["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -8717,87 +8717,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj45["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj45["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -8914,87 +8914,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj46["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj46["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -9112,87 +9112,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj47["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj47["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -9311,87 +9311,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj48["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj48["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -9509,87 +9509,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj49["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj49["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -9707,87 +9707,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj50["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj50["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -9906,87 +9906,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj51["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj51["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -10105,87 +10105,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj52["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj52["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -10304,87 +10304,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj53["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj53["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -10503,87 +10503,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj54["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj54["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -10702,87 +10702,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj55["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj55["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -10901,87 +10901,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj56["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj56["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -11100,87 +11100,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj57["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj57["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
@@ -11300,87 +11300,87 @@ f.close()
 
 
 
-# distances = []
-# for i in range(0, len(instances)):
-#     distance = round(resp_obj58["pair_%s" % (i+1)]["distance"], 4)
-#     distances.append(distance)
+distances = []
+for i in range(0, len(instances)):
+    distance = round(resp_obj58["pair_%s" % (i+1)]["distance"], 4)
+    distances.append(distance)
 
-# negatives["distance"] = distances
+negatives["distance"] = distances
 
-# j=0
-# k=0
-# for i in range(0, len(instances)):
-#     if negatives.decision[i] == "Yes":
-#         j = j + 1
-#     else:
-#         k = k + 1
+j=0
+k=0
+for i in range(0, len(instances)):
+    if negatives.decision[i] == "Yes":
+        j = j + 1
+    else:
+        k = k + 1
 
-# print("Number of true positive: ", j)
-# print("Number of false positive: ", k)
+print("Number of true positive: ", j)
+print("Number of false positive: ", k)
 
-# tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
-# tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
-# fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
-# fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
+tp_mean = round(negatives[negatives.decision == "Yes"].mean().values[0], 4)
+tp_std = round(negatives[negatives.decision == "Yes"].std().values[0], 4)
+fp_mean = round(negatives[negatives.decision == "No"].mean().values[0], 4)
+fp_std = round(negatives[negatives.decision == "No"].std().values[0], 4)
 
-# print("Mean of true positives: ", tp_mean)
-# print("Std of true positives: ", tp_std)
-# print("Mean of false positives: ", fp_mean)
-# print("Std of false positives: ", fp_std)
-
-
-
-
-
-# config = {'algorithm': 'C4.5'}
-
-# tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
-# model = chef.fit(tmp_df, config)
+print("Mean of true positives: ", tp_mean)
+print("Std of true positives: ", tp_std)
+print("Mean of false positives: ", fp_mean)
+print("Std of false positives: ", fp_std)
 
 
 
 
 
-# negatives[negatives.decision == 'Yes'].distance.max()
+config = {'algorithm': 'C4.5'}
+
+tmp_df = negatives[['distance', 'decision']].rename(columns = {"decision": "Decision"}).copy()
+model = chef.fit(tmp_df, config)
 
 
 
 
 
-# negatives[negatives.decision == 'No'].distance.min()
+negatives[negatives.decision == 'Yes'].distance.max()
 
 
 
 
 
-# negatives["prediction"] = "No"
-
-# idx = negatives[negatives.distance <= threshold].index
-# negatives.loc[idx, 'prediction'] = 'Yes'
+negatives[negatives.decision == 'No'].distance.min()
 
 
 
 
 
-# cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
-# cm
+negatives["prediction"] = "No"
+
+idx = negatives[negatives.distance <= threshold].index
+negatives.loc[idx, 'prediction'] = 'Yes'
 
 
 
 
 
-# tn, fp, fn, tp = cm.ravel()
-# print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+cm = confusion_matrix(negatives.decision.values, negatives.prediction.values)
+cm
 
-# recall = tp / (tp + fn)
-# precision = tp / (tp + fp)
-# accuracy = (tp + tn)/(tn + fp +  fn + tp)
-# f1 = 2 * (precision * recall) / (precision + recall)
 
-# print("Precision: ", 100*precision,"%")
-# print("Recall: ", 100*recall,"%")
-# print("F1 score ",100*f1, "%")
-# print("Accuracy: ", 100*accuracy,"%")
+
+
+
+tn, fp, fn, tp = cm.ravel()
+print('True Negative = {0}\nFalse Positive = {1}\nFalse Negative = {2}\nTrue Positive = {3}'.format(tn, fp, fn, tp))
+
+recall = tp / (tp + fn)
+precision = tp / (tp + fp)
+accuracy = (tp + tn)/(tn + fp +  fn + tp)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+print("Precision: ", 100*precision,"%")
+print("Recall: ", 100*recall,"%")
+print("F1 score ",100*f1, "%")
+print("Accuracy: ", 100*accuracy,"%")
 
 
 
