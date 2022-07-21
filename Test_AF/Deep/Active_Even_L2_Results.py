@@ -274,7 +274,7 @@ print("P2 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj2)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict2.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict2.json"
 
 
 with open(fil, "w") as outfile:
@@ -477,7 +477,7 @@ print("P3 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj3)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict3.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict3.json"
 
 with open(fil, "w") as outfile:
     json.dump(resp_obj3, outfile)
@@ -680,7 +680,7 @@ print("P4 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj4)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict4.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict4.json"
 
 with open(fil, "w") as outfile:
     json.dump(resp_obj4, outfile)
@@ -868,7 +868,7 @@ print("P5 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj5)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict5.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict5.json"
 
 with open(fil, "w") as outfile:
     json.dump(resp_obj5, outfile)
@@ -1064,7 +1064,7 @@ print("P6 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj6)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict6.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict6.json"
 
 with open(fil, "w") as outfile:
     json.dump(resp_obj6, outfile)
@@ -1262,7 +1262,7 @@ print("P7 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj7)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict7.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict7.json"
 
 
 with open(fil, "w") as outfile:
@@ -1462,7 +1462,7 @@ print("P8 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj8)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict8.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict8.json"
 
 with open(fil, "w") as outfile:
     json.dump(resp_obj8, outfile)
@@ -1663,7 +1663,7 @@ print("P9 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj9)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict9.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict9.json"
 
 
 with open(fil, "w") as outfile:
@@ -1862,7 +1862,7 @@ print("P10 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj10)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict10.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict10.json"
 
 with open(fil, "w") as outfile:
     json.dump(resp_obj10, outfile)
@@ -2063,7 +2063,7 @@ print("P11 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj11)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict11.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict11.json"
 
 with open(fil, "w") as outfile:
     json.dump(resp_obj11, outfile)
@@ -2262,7 +2262,7 @@ print("P12 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj12)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict12.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict12.json"
 
 with open(fil, "w") as outfile:
     json.dump(resp_obj12, outfile)
@@ -2462,7 +2462,7 @@ print("P13 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj13)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict13.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict13.json"
 
 with open(fil, "w") as outfile:
     json.dump(resp_obj13, outfile)
@@ -2663,7 +2663,7 @@ print("P14 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj14)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict14.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict14.json"
 
 
 with open(fil, "w") as outfile:
@@ -2865,7 +2865,7 @@ print("P15 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj15)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict15.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict15.json"
 
 with open(fil, "w") as outfile:
     json.dump(resp_obj15, outfile)
@@ -3066,7 +3066,7 @@ print("P16 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj16)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict16.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict16.json"
 
 with open(fil, "w") as outfile:
     json.dump(resp_obj16, outfile)
@@ -3267,7 +3267,7 @@ print("P17 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj17)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict17.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict17.json"
 
 with open(fil, "w") as outfile:
     json.dump(resp_obj17, outfile)
@@ -3468,7 +3468,7 @@ print("P18 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj18)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict18.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict18.json"
 
 with open(fil, "w") as outfile:
     json.dump(resp_obj18, outfile)
@@ -3668,7 +3668,7 @@ print("P19 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj19)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict19.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict19.json"
 
 with open(fil, "w") as outfile:
     json.dump(resp_obj19, outfile)
@@ -3867,7 +3867,7 @@ print("P20 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj20)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict20.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict20.json"
 
 with open(fil, "w") as outfile:
     json.dump(resp_obj20, outfile)
@@ -4067,7 +4067,7 @@ print("P21 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj21)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict21.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict21.json"
 
 with open(fil, "w") as outfile:
     json.dump(resp_obj21, outfile)
@@ -4266,7 +4266,7 @@ print("P22 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj22)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict22.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict22.json"
 
 with open(fil, "w") as outfile:
     json.dump(resp_obj22, outfile)
@@ -4464,7 +4464,7 @@ print("P23 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj23)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict23.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict23.json"
 
 with open(fil, "w") as outfile:
     json.dump(resp_obj23, outfile)
@@ -4665,7 +4665,7 @@ print("P24 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj24)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict24.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict24.json"
 
 with open(fil, "w") as outfile:
     json.dump(resp_obj24, outfile)
@@ -4863,7 +4863,7 @@ print("P25 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj25)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict25.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict25.json"
 
 with open(fil, "w") as outfile:
     json.dump(resp_obj25, outfile)
@@ -5061,7 +5061,7 @@ print("P26 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj26)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict26.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict26.json"
 
 
 with open(fil, "w") as outfile:
@@ -5263,7 +5263,7 @@ print("P27 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj27)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict27.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict27.json"
 
 with open(fil, "w") as outfile:
     json.dump(resp_obj27, outfile)
@@ -5463,7 +5463,7 @@ print("P28 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj28)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict28.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict28.json"
 
 with open(fil, "w") as outfile:
     json.dump(resp_obj28, outfile)
@@ -5664,7 +5664,7 @@ print("P29 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj29)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict29.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict29.json"
 
 
 with open(fil, "w") as outfile:
@@ -5865,7 +5865,7 @@ print("P30 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj30)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict30.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict30.json"
 
 with open(fil, "w") as outfile:
     json.dump(resp_obj30, outfile)
@@ -6067,7 +6067,7 @@ print("P31 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj31)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict31.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict31.json"
 
 with open(fil, "w") as outfile:
     json.dump(resp_obj31, outfile)
@@ -6268,7 +6268,7 @@ print("P32 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj32)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict32.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict32.json"
 
 with open(fil, "w") as outfile:
     json.dump(resp_obj32, outfile)
@@ -6469,7 +6469,7 @@ print("P33 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj33)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict33.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict33.json"
 
 with open(fil, "w") as outfile:
     json.dump(resp_obj33, outfile)
@@ -6672,7 +6672,7 @@ print("P34 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj34)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict34.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict34.json"
 
 with open(fil, "w") as outfile:
     json.dump(resp_obj34, outfile)
@@ -6872,7 +6872,7 @@ print("P35 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj35)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict35.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict35.json"
 
 with open(fil, "w") as outfile:
     json.dump(resp_obj35, outfile)
@@ -7072,7 +7072,7 @@ print("P36 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj36)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict36.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict36.json"
 
 with open(fil, "w") as outfile:
     json.dump(resp_obj36, outfile)
@@ -7236,7 +7236,7 @@ print("P37 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj37)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict37.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict37.json"
 
 with open(fil, "w") as outfile:
     json.dump(resp_obj37, outfile)
@@ -7436,7 +7436,7 @@ print("P38 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj38)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict38.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict38.json"
 
 with open(fil, "w") as outfile:
     json.dump(resp_obj38, outfile)
@@ -7633,7 +7633,7 @@ print("P39 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj39)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict39.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict39.json"
 
 with open(fil, "w") as outfile:
     json.dump(resp_obj39, outfile)
@@ -7833,7 +7833,7 @@ print("P40 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj40)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict40.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict40.json"
 
 with open(fil, "w") as outfile:
     json.dump(resp_obj40, outfile)
@@ -8034,7 +8034,7 @@ print("P41 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj41)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict41.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict41.json"
 
 with open(fil, "w") as outfile:
     json.dump(resp_obj41, outfile)
@@ -8233,7 +8233,7 @@ print("P42 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj42)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict42.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict42.json"
 
 with open(fil, "w") as outfile:
     json.dump(resp_obj42, outfile)
@@ -8433,7 +8433,7 @@ print("P43 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj43)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict43.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict43.json"
 
 with open(fil, "w") as outfile:
     json.dump(resp_obj43, outfile)
@@ -8632,7 +8632,7 @@ print("P44 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj44)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict44.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict44.json"
 
 with open(fil, "w") as outfile:
     json.dump(resp_obj44, outfile)
@@ -8832,7 +8832,7 @@ print("P45 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj45)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict45.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict45.json"
 
 with open(fil, "w") as outfile:
     json.dump(resp_obj45, outfile)
@@ -9035,7 +9035,7 @@ print("P46 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj46)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict46.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict46.json"
 
 with open(fil, "w") as outfile:
     json.dump(resp_obj46, outfile)
@@ -9236,7 +9236,7 @@ print("P47 Done")
 
 
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict47.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict47.json"
 
 with open(fil, "w") as outfile:
     json.dump(resp_obj47, outfile)
@@ -9438,7 +9438,7 @@ print("P48 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj48)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict48.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict48.json"
 
 with open(fil, "w") as outfile:
     json.dump(resp_obj48, outfile)
@@ -9640,7 +9640,7 @@ print("P49 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj49)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict49.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict49.json"
 
 with open(fil, "w") as outfile:
     json.dump(resp_obj49, outfile)
@@ -9840,7 +9840,7 @@ print("P50 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj50)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict50.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict50.json"
 
 with open(fil, "w") as outfile:
     json.dump(resp_obj50, outfile)
@@ -10042,7 +10042,7 @@ print("P51 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj51)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict51.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict51.json"
 
 with open(fil, "w") as outfile:
     json.dump(resp_obj51, outfile)
@@ -10244,7 +10244,7 @@ print("P52 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj52)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict52.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict52.json"
 
 with open(fil, "w") as outfile:
     json.dump(resp_obj52, outfile)
@@ -10446,7 +10446,7 @@ print("P53 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj53)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict53.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict53.json"
 
 with open(fil, "w") as outfile:
     json.dump(resp_obj53, outfile)
@@ -10648,7 +10648,7 @@ print("P54 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj54)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict54.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict54.json"
 
 with open(fil, "w") as outfile:
     json.dump(resp_obj54, outfile)
@@ -10850,7 +10850,7 @@ print("P55 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj55)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict55.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict55.json"
 
 with open(fil, "w") as outfile:
     json.dump(resp_obj55, outfile)
@@ -11052,7 +11052,7 @@ print("P56 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj56)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict56.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict56.json"
 
 with open(fil, "w") as outfile:
     json.dump(resp_obj56, outfile)
@@ -11254,7 +11254,7 @@ print("P57 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj57)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict57.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict57.json"
 
 with open(fil, "w") as outfile:
     json.dump(resp_obj57, outfile)
@@ -11457,7 +11457,7 @@ print("P58 Done")
 # create json object from dictionary
 # json = json.dumps(resp_obj58)
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict58.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict58.json"
 
 with open(fil, "w") as outfile:
     json.dump(resp_obj58, outfile)
