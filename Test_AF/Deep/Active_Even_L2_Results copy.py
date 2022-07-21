@@ -59,10 +59,10 @@ from tqdm import tqdm
 
 # negatives.decision.value_counts()
 
-# from os.path import expanduser
-# from pathlib import Path
-# import pickle
-# import os
+from os.path import expanduser
+from pathlib import Path
+import pickle
+import os
 
 # dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/1/"
 
