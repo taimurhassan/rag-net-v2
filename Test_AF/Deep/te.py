@@ -11,6 +11,7 @@ Path(os.environ["ICHOR_LOGS"]).mkdir(exist_ok=True, parents=True)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict2.json"
 
+
 # Data to be written
 dictionary = {
     "name": "sathiyajith",
