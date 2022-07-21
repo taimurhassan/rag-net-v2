@@ -90,8 +90,8 @@ detector_backend = 'opencv'
 # print("P1 Done")
 
 
-Path(os.environ["ICHOR_OUTPUT_DATASET"]).mkdir(exist_ok=True, parents=True)
-Path(os.environ["ICHOR_LOGS"]).mkdir(exist_ok=True, parents=True)
+# Path(os.environ["ICHOR_OUTPUT_DATASET"]).mkdir(exist_ok=True, parents=True)
+# Path(os.environ["ICHOR_LOGS"]).mkdir(exist_ok=True, parents=True)
 
 
 # # load json module

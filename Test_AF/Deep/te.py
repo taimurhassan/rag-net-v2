@@ -5,12 +5,12 @@ import pickle
 import os
 
 
-Path(os.environ["ICHOR_OUTPUT_DATASET"]).mkdir(exist_ok=True, parents=True)
-Path(os.environ["ICHOR_LOGS"]).mkdir(exist_ok=True, parents=True)
+# Path(os.environ["ICHOR_OUTPUT_DATASET"]).mkdir(exist_ok=True, parents=True)
+# Path(os.environ["ICHOR_LOGS"]).mkdir(exist_ok=True, parents=True)
 
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict2.json"
-fil1 = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict3.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict2.json"
+fil1 = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict3.json"
 
 
 # Data to be written
