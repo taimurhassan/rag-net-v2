@@ -272,19 +272,23 @@ print("P2 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj2)
+# json = json.dumps(resp_obj2)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict2.json"
 
+
+with open(fil, "w") as outfile:
+    json.dump(resp_obj2, outfile)
+
+
 # open file for writing, "w" 
-f = open(fil,"w")
+# f = open(fil,"w")
 
 # write json object to file
-f.write(json)
+# f.write(json)
 
 # close file
-f.close()
-
+# f.close()
 
 
 
@@ -471,18 +475,21 @@ print("P3 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj3)
+# json = json.dumps(resp_obj3)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict3.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
+with open(fil, "w") as outfile:
+    json.dump(resp_obj3, outfile)
 
-# write json object to file
-f.write(json)
+# # open file for writing, "w" 
+# f = open(fil,"w")
 
-# close file
-f.close()
+# # write json object to file
+# f.write(json)
+
+# # close file
+# f.close()
 
 
 
@@ -671,18 +678,21 @@ print("P4 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj4)
+# json = json.dumps(resp_obj4)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict4.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
+with open(fil, "w") as outfile:
+    json.dump(resp_obj4, outfile)
 
-# write json object to file
-f.write(json)
+# # open file for writing, "w" 
+# f = open(fil,"w")
 
-# close file
-f.close()
+# # write json object to file
+# f.write(json)
+
+# # close file
+# f.close()
 
 
 
@@ -856,18 +866,21 @@ print("P5 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj5)
+# json = json.dumps(resp_obj5)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict5.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
+with open(fil, "w") as outfile:
+    json.dump(resp_obj5, outfile)
 
-# write json object to file
-f.write(json)
+# # open file for writing, "w" 
+# f = open(fil,"w")
 
-# close file
-f.close()
+# # write json object to file
+# f.write(json)
+
+# # close file
+# f.close()
 
 
 
@@ -1049,18 +1062,21 @@ print("P6 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj6)
+# json = json.dumps(resp_obj6)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict6.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
+with open(fil, "w") as outfile:
+    json.dump(resp_obj6, outfile)
 
-# write json object to file
-f.write(json)
+# # open file for writing, "w" 
+# f = open(fil,"w")
 
-# close file
-f.close()
+# # write json object to file
+# f.write(json)
+
+# # close file
+# f.close()
 
 
 
@@ -1244,18 +1260,22 @@ print("P7 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj7)
+# json = json.dumps(resp_obj7)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict7.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
 
-# write json object to file
-f.write(json)
+with open(fil, "w") as outfile:
+    json.dump(resp_obj7, outfile)
 
-# close file
-f.close()
+# # open file for writing, "w" 
+# f = open(fil,"w")
+
+# # write json object to file
+# f.write(json)
+
+# # close file
+# f.close()
 
 
 
@@ -1440,18 +1460,21 @@ print("P8 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj8)
+# json = json.dumps(resp_obj8)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict8.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
+with open(fil, "w") as outfile:
+    json.dump(resp_obj8, outfile)
 
-# write json object to file
-f.write(json)
+# # open file for writing, "w" 
+# f = open(fil,"w")
 
-# close file
-f.close()
+# # write json object to file
+# f.write(json)
+
+# # close file
+# f.close()
 
 
 
@@ -1638,18 +1661,23 @@ print("P9 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj9)
+# json = json.dumps(resp_obj9)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict9.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
 
-# write json object to file
-f.write(json)
+with open(fil, "w") as outfile:
+    json.dump(resp_obj9, outfile)
 
-# close file
-f.close()
+
+# # open file for writing, "w" 
+# f = open(fil,"w")
+
+# # write json object to file
+# f.write(json)
+
+# # close file
+# f.close()
 
 
 
@@ -1832,18 +1860,21 @@ print("P10 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj10)
+# json = json.dumps(resp_obj10)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict10.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
+with open(fil, "w") as outfile:
+    json.dump(resp_obj10, outfile)
 
-# write json object to file
-f.write(json)
+# # open file for writing, "w" 
+# f = open(fil,"w")
 
-# close file
-f.close()
+# # write json object to file
+# f.write(json)
+
+# # close file
+# f.close()
 
 
 
@@ -2030,18 +2061,20 @@ print("P11 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj11)
+# json = json.dumps(resp_obj11)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict11.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
+with open(fil, "w") as outfile:
+    json.dump(resp_obj11, outfile)
+# # open file for writing, "w" 
+# f = open(fil,"w")
 
-# write json object to file
-f.write(json)
+# # write json object to file
+# f.write(json)
 
-# close file
-f.close()
+# # close file
+# f.close()
 
 
 
@@ -2227,18 +2260,20 @@ print("P12 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj12)
+# json = json.dumps(resp_obj12)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict12.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
+with open(fil, "w") as outfile:
+    json.dump(resp_obj12, outfile)
+# # open file for writing, "w" 
+# f = open(fil,"w")
 
-# write json object to file
-f.write(json)
+# # write json object to file
+# f.write(json)
 
-# close file
-f.close()
+# # close file
+# f.close()
 
 
 
@@ -2425,18 +2460,20 @@ print("P13 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj13)
+# json = json.dumps(resp_obj13)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict13.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
+with open(fil, "w") as outfile:
+    json.dump(resp_obj13, outfile)
+# # open file for writing, "w" 
+# f = open(fil,"w")
 
-# write json object to file
-f.write(json)
+# # write json object to file
+# f.write(json)
 
-# close file
-f.close()
+# # close file
+# f.close()
 
 
 
@@ -2624,18 +2661,21 @@ print("P14 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj14)
+# json = json.dumps(resp_obj14)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict14.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
 
-# write json object to file
-f.write(json)
+with open(fil, "w") as outfile:
+    json.dump(resp_obj14, outfile)
+# # open file for writing, "w" 
+# f = open(fil,"w")
 
-# close file
-f.close()
+# # write json object to file
+# f.write(json)
+
+# # close file
+# f.close()
 
 
 
@@ -2823,18 +2863,20 @@ print("P15 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj15)
+# json = json.dumps(resp_obj15)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict15.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
+with open(fil, "w") as outfile:
+    json.dump(resp_obj15, outfile)
+# # open file for writing, "w" 
+# f = open(fil,"w")
 
-# write json object to file
-f.write(json)
+# # write json object to file
+# f.write(json)
 
-# close file
-f.close()
+# # close file
+# f.close()
 
 
 
@@ -3022,18 +3064,20 @@ print("P16 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj16)
+# json = json.dumps(resp_obj16)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict16.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
+with open(fil, "w") as outfile:
+    json.dump(resp_obj16, outfile)
+# # open file for writing, "w" 
+# f = open(fil,"w")
 
-# write json object to file
-f.write(json)
+# # write json object to file
+# f.write(json)
 
-# close file
-f.close()
+# # close file
+# f.close()
 
 
 
@@ -3221,18 +3265,20 @@ print("P17 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj17)
+# json = json.dumps(resp_obj17)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict17.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
+with open(fil, "w") as outfile:
+    json.dump(resp_obj17, outfile)
+# # open file for writing, "w" 
+# f = open(fil,"w")
 
-# write json object to file
-f.write(json)
+# # write json object to file
+# f.write(json)
 
-# close file
-f.close()
+# # close file
+# f.close()
 
 
 
@@ -3420,18 +3466,20 @@ print("P18 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj18)
+# json = json.dumps(resp_obj18)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict18.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
+with open(fil, "w") as outfile:
+    json.dump(resp_obj18, outfile)
+# # open file for writing, "w" 
+# f = open(fil,"w")
 
-# write json object to file
-f.write(json)
+# # write json object to file
+# f.write(json)
 
-# close file
-f.close()
+# # close file
+# f.close()
 
 
 
@@ -3618,18 +3666,20 @@ print("P19 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj19)
+# json = json.dumps(resp_obj19)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict19.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
+with open(fil, "w") as outfile:
+    json.dump(resp_obj19, outfile)
+# # open file for writing, "w" 
+# f = open(fil,"w")
 
-# write json object to file
-f.write(json)
+# # write json object to file
+# f.write(json)
 
-# close file
-f.close()
+# # close file
+# f.close()
 
 
 
@@ -3815,18 +3865,20 @@ print("P20 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj20)
+# json = json.dumps(resp_obj20)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict20.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
+with open(fil, "w") as outfile:
+    json.dump(resp_obj20, outfile)
+# # open file for writing, "w" 
+# f = open(fil,"w")
 
-# write json object to file
-f.write(json)
+# # write json object to file
+# f.write(json)
 
-# close file
-f.close()
+# # close file
+# f.close()
 
 
 
@@ -4013,18 +4065,20 @@ print("P21 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj21)
+# json = json.dumps(resp_obj21)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict21.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
+with open(fil, "w") as outfile:
+    json.dump(resp_obj21, outfile)
+# # open file for writing, "w" 
+# f = open(fil,"w")
 
-# write json object to file
-f.write(json)
+# # write json object to file
+# f.write(json)
 
-# close file
-f.close()
+# # close file
+# f.close()
 
 
 
@@ -4210,18 +4264,20 @@ print("P22 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj22)
+# json = json.dumps(resp_obj22)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict22.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
+with open(fil, "w") as outfile:
+    json.dump(resp_obj22, outfile)
+# # open file for writing, "w" 
+# f = open(fil,"w")
 
-# write json object to file
-f.write(json)
+# # write json object to file
+# f.write(json)
 
-# close file
-f.close()
+# # close file
+# f.close()
 
 
 
@@ -4406,18 +4462,21 @@ print("P23 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj23)
+# json = json.dumps(resp_obj23)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict23.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
+with open(fil, "w") as outfile:
+    json.dump(resp_obj23, outfile)
 
-# write json object to file
-f.write(json)
+# # open file for writing, "w" 
+# f = open(fil,"w")
 
-# close file
-f.close()
+# # write json object to file
+# f.write(json)
+
+# # close file
+# f.close()
 
 
 
@@ -4604,18 +4663,20 @@ print("P24 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj24)
+# json = json.dumps(resp_obj24)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict24.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
+with open(fil, "w") as outfile:
+    json.dump(resp_obj24, outfile)
+# # open file for writing, "w" 
+# f = open(fil,"w")
 
-# write json object to file
-f.write(json)
+# # write json object to file
+# f.write(json)
 
-# close file
-f.close()
+# # close file
+# f.close()
 
 
 
@@ -4800,18 +4861,21 @@ print("P25 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj25)
+# json = json.dumps(resp_obj25)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict25.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
+with open(fil, "w") as outfile:
+    json.dump(resp_obj25, outfile)
 
-# write json object to file
-f.write(json)
+# # open file for writing, "w" 
+# f = open(fil,"w")
 
-# close file
-f.close()
+# # write json object to file
+# f.write(json)
+
+# # close file
+# f.close()
 
 
 
@@ -4995,18 +5059,23 @@ print("P26 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj26)
+# json = json.dumps(resp_obj26)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict26.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
 
-# write json object to file
-f.write(json)
+with open(fil, "w") as outfile:
+    json.dump(resp_obj26, outfile)
 
-# close file
-f.close()
+
+# # open file for writing, "w" 
+# f = open(fil,"w")
+
+# # write json object to file
+# f.write(json)
+
+# # close file
+# f.close()
 
 
 
@@ -5192,18 +5261,21 @@ print("P27 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj27)
+# json = json.dumps(resp_obj27)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict27.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
+with open(fil, "w") as outfile:
+    json.dump(resp_obj27, outfile)
 
-# write json object to file
-f.write(json)
+# # open file for writing, "w" 
+# f = open(fil,"w")
 
-# close file
-f.close()
+# # write json object to file
+# f.write(json)
+
+# # close file
+# f.close()
 
 
 
@@ -5389,18 +5461,21 @@ print("P28 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj28)
+# json = json.dumps(resp_obj28)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict28.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
+with open(fil, "w") as outfile:
+    json.dump(resp_obj28, outfile)
 
-# write json object to file
-f.write(json)
+# # open file for writing, "w" 
+# f = open(fil,"w")
 
-# close file
-f.close()
+# # write json object to file
+# f.write(json)
+
+# # close file
+# f.close()
 
 
 
@@ -5587,18 +5662,23 @@ print("P29 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj29)
+# json = json.dumps(resp_obj29)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict29.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
 
-# write json object to file
-f.write(json)
+with open(fil, "w") as outfile:
+    json.dump(resp_obj29, outfile)
 
-# close file
-f.close()
+
+# # open file for writing, "w" 
+# f = open(fil,"w")
+
+# # write json object to file
+# f.write(json)
+
+# # close file
+# f.close()
 
 
 
@@ -5783,18 +5863,22 @@ print("P30 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj30)
+# json = json.dumps(resp_obj30)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict30.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
+with open(fil, "w") as outfile:
+    json.dump(resp_obj30, outfile)
 
-# write json object to file
-f.write(json)
 
-# close file
-f.close()
+# # open file for writing, "w" 
+# f = open(fil,"w")
+
+# # write json object to file
+# f.write(json)
+
+# # close file
+# f.close()
 
 
 
@@ -5981,18 +6065,22 @@ print("P31 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj31)
+# json = json.dumps(resp_obj31)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict31.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
+with open(fil, "w") as outfile:
+    json.dump(resp_obj31, outfile)
 
-# write json object to file
-f.write(json)
 
-# close file
-f.close()
+# # open file for writing, "w" 
+# f = open(fil,"w")
+
+# # write json object to file
+# f.write(json)
+
+# # close file
+# f.close()
 
 
 
@@ -6178,18 +6266,22 @@ print("P32 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj32)
+# json = json.dumps(resp_obj32)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict32.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
+with open(fil, "w") as outfile:
+    json.dump(resp_obj32, outfile)
 
-# write json object to file
-f.write(json)
 
-# close file
-f.close()
+# # open file for writing, "w" 
+# f = open(fil,"w")
+
+# # write json object to file
+# f.write(json)
+
+# # close file
+# f.close()
 
 
 
@@ -6375,18 +6467,22 @@ print("P33 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj33)
+# json = json.dumps(resp_obj33)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict33.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
+with open(fil, "w") as outfile:
+    json.dump(resp_obj33, outfile)
 
-# write json object to file
-f.write(json)
 
-# close file
-f.close()
+# # open file for writing, "w" 
+# f = open(fil,"w")
+
+# # write json object to file
+# f.write(json)
+
+# # close file
+# f.close()
 
 
 
@@ -6574,18 +6670,21 @@ print("P34 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj34)
+# json = json.dumps(resp_obj34)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict34.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
+with open(fil, "w") as outfile:
+    json.dump(resp_obj34, outfile)
 
-# write json object to file
-f.write(json)
+# # open file for writing, "w" 
+# f = open(fil,"w")
 
-# close file
-f.close()
+# # write json object to file
+# f.write(json)
+
+# # close file
+# f.close()
 
 
 
@@ -6771,18 +6870,21 @@ print("P35 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj35)
+# json = json.dumps(resp_obj35)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict35.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
+with open(fil, "w") as outfile:
+    json.dump(resp_obj35, outfile)
 
-# write json object to file
-f.write(json)
+# # open file for writing, "w" 
+# f = open(fil,"w")
 
-# close file
-f.close()
+# # write json object to file
+# f.write(json)
+
+# # close file
+# f.close()
 
 
 
@@ -6968,18 +7070,21 @@ print("P36 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj36)
+# json = json.dumps(resp_obj36)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict36.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
+with open(fil, "w") as outfile:
+    json.dump(resp_obj36, outfile)
 
-# write json object to file
-f.write(json)
+# # open file for writing, "w" 
+# f = open(fil,"w")
 
-# close file
-f.close()
+# # write json object to file
+# f.write(json)
+
+# # close file
+# f.close()
 
 
 
@@ -7129,18 +7234,21 @@ print("P37 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj37)
+# json = json.dumps(resp_obj37)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict37.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
+with open(fil, "w") as outfile:
+    json.dump(resp_obj37, outfile)
 
-# write json object to file
-f.write(json)
+# # open file for writing, "w" 
+# f = open(fil,"w")
 
-# close file
-f.close()
+# # write json object to file
+# f.write(json)
+
+# # close file
+# f.close()
 
 
 
@@ -7326,18 +7434,21 @@ print("P38 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj38)
+# json = json.dumps(resp_obj38)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict38.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
+with open(fil, "w") as outfile:
+    json.dump(resp_obj38, outfile)
 
-# write json object to file
-f.write(json)
+# # open file for writing, "w" 
+# f = open(fil,"w")
 
-# close file
-f.close()
+# # write json object to file
+# f.write(json)
+
+# # close file
+# f.close()
 
 
 
@@ -7520,18 +7631,21 @@ print("P39 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj39)
+# json = json.dumps(resp_obj39)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict39.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
+with open(fil, "w") as outfile:
+    json.dump(resp_obj39, outfile)
 
-# write json object to file
-f.write(json)
+# # open file for writing, "w" 
+# f = open(fil,"w")
 
-# close file
-f.close()
+# # write json object to file
+# f.write(json)
+
+# # close file
+# f.close()
 
 
 
@@ -7717,18 +7831,22 @@ print("P40 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj40)
+# json = json.dumps(resp_obj40)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict40.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
+with open(fil, "w") as outfile:
+    json.dump(resp_obj40, outfile)
 
-# write json object to file
-f.write(json)
 
-# close file
-f.close()
+# # open file for writing, "w" 
+# f = open(fil,"w")
+
+# # write json object to file
+# f.write(json)
+
+# # close file
+# f.close()
 
 
 
@@ -7914,18 +8032,21 @@ print("P41 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj41)
+# json = json.dumps(resp_obj41)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict41.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
+with open(fil, "w") as outfile:
+    json.dump(resp_obj41, outfile)
 
-# write json object to file
-f.write(json)
+# # open file for writing, "w" 
+# f = open(fil,"w")
 
-# close file
-f.close()
+# # write json object to file
+# f.write(json)
+
+# # close file
+# f.close()
 
 
 
@@ -8110,18 +8231,21 @@ print("P42 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj42)
+# json = json.dumps(resp_obj42)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict42.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
+with open(fil, "w") as outfile:
+    json.dump(resp_obj42, outfile)
 
-# write json object to file
-f.write(json)
+# # open file for writing, "w" 
+# f = open(fil,"w")
 
-# close file
-f.close()
+# # write json object to file
+# f.write(json)
+
+# # close file
+# f.close()
 
 
 
@@ -8307,18 +8431,21 @@ print("P43 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj43)
+# json = json.dumps(resp_obj43)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict43.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
+with open(fil, "w") as outfile:
+    json.dump(resp_obj43, outfile)
 
-# write json object to file
-f.write(json)
+# # open file for writing, "w" 
+# f = open(fil,"w")
 
-# close file
-f.close()
+# # write json object to file
+# f.write(json)
+
+# # close file
+# f.close()
 
 
 
@@ -8503,18 +8630,21 @@ print("P44 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj44)
+# json = json.dumps(resp_obj44)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict44.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
+with open(fil, "w") as outfile:
+    json.dump(resp_obj44, outfile)
 
-# write json object to file
-f.write(json)
+# # open file for writing, "w" 
+# f = open(fil,"w")
 
-# close file
-f.close()
+# # write json object to file
+# f.write(json)
+
+# # close file
+# f.close()
 
 
 
@@ -8700,18 +8830,22 @@ print("P45 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj45)
+# json = json.dumps(resp_obj45)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict45.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
+with open(fil, "w") as outfile:
+    json.dump(resp_obj45, outfile)
 
-# write json object to file
-f.write(json)
 
-# close file
-f.close()
+# # open file for writing, "w" 
+# f = open(fil,"w")
+
+# # write json object to file
+# f.write(json)
+
+# # close file
+# f.close()
 
 
 
@@ -8899,18 +9033,21 @@ print("P46 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj46)
+# json = json.dumps(resp_obj46)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict46.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
+with open(fil, "w") as outfile:
+    json.dump(resp_obj46, outfile)
 
-# write json object to file
-f.write(json)
+# # open file for writing, "w" 
+# f = open(fil,"w")
 
-# close file
-f.close()
+# # write json object to file
+# f.write(json)
+
+# # close file
+# f.close()
 
 
 
@@ -9095,18 +9232,23 @@ print("P47 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj47)
+# json = json.dumps(resp_obj47)
+
+
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict47.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
+with open(fil, "w") as outfile:
+    json.dump(resp_obj47, outfile)
 
-# write json object to file
-f.write(json)
+# # open file for writing, "w" 
+# f = open(fil,"w")
 
-# close file
-f.close()
+# # write json object to file
+# f.write(json)
+
+# # close file
+# f.close()
 
 
 
@@ -9294,18 +9436,21 @@ print("P48 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj48)
+# json = json.dumps(resp_obj48)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict48.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
+with open(fil, "w") as outfile:
+    json.dump(resp_obj48, outfile)
 
-# write json object to file
-f.write(json)
+# # open file for writing, "w" 
+# f = open(fil,"w")
 
-# close file
-f.close()
+# # write json object to file
+# f.write(json)
+
+# # close file
+# f.close()
 
 
 
@@ -9493,18 +9638,21 @@ print("P49 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj49)
+# json = json.dumps(resp_obj49)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict49.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
+with open(fil, "w") as outfile:
+    json.dump(resp_obj49, outfile)
 
-# write json object to file
-f.write(json)
+# # open file for writing, "w" 
+# f = open(fil,"w")
 
-# close file
-f.close()
+# # write json object to file
+# f.write(json)
+
+# # close file
+# f.close()
 
 
 
@@ -9690,18 +9838,21 @@ print("P50 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj50)
+# json = json.dumps(resp_obj50)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict50.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
+with open(fil, "w") as outfile:
+    json.dump(resp_obj50, outfile)
 
-# write json object to file
-f.write(json)
+# # open file for writing, "w" 
+# f = open(fil,"w")
 
-# close file
-f.close()
+# # write json object to file
+# f.write(json)
+
+# # close file
+# f.close()
 
 
 
@@ -9889,18 +10040,21 @@ print("P51 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj51)
+# json = json.dumps(resp_obj51)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict51.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
+with open(fil, "w") as outfile:
+    json.dump(resp_obj51, outfile)
 
-# write json object to file
-f.write(json)
+# # open file for writing, "w" 
+# f = open(fil,"w")
 
-# close file
-f.close()
+# # write json object to file
+# f.write(json)
+
+# # close file
+# f.close()
 
 
 
@@ -10088,18 +10242,21 @@ print("P52 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj52)
+# json = json.dumps(resp_obj52)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict52.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
+with open(fil, "w") as outfile:
+    json.dump(resp_obj52, outfile)
 
-# write json object to file
-f.write(json)
+# # open file for writing, "w" 
+# f = open(fil,"w")
 
-# close file
-f.close()
+# # write json object to file
+# f.write(json)
+
+# # close file
+# f.close()
 
 
 
@@ -10287,18 +10444,21 @@ print("P53 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj53)
+# json = json.dumps(resp_obj53)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict53.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
+with open(fil, "w") as outfile:
+    json.dump(resp_obj53, outfile)
 
-# write json object to file
-f.write(json)
+# # open file for writing, "w" 
+# f = open(fil,"w")
 
-# close file
-f.close()
+# # write json object to file
+# f.write(json)
+
+# # close file
+# f.close()
 
 
 
@@ -10486,18 +10646,21 @@ print("P54 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj54)
+# json = json.dumps(resp_obj54)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict54.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
+with open(fil, "w") as outfile:
+    json.dump(resp_obj54, outfile)
 
-# write json object to file
-f.write(json)
+# # open file for writing, "w" 
+# f = open(fil,"w")
 
-# close file
-f.close()
+# # write json object to file
+# f.write(json)
+
+# # close file
+# f.close()
 
 
 
@@ -10685,18 +10848,21 @@ print("P55 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj55)
+# json = json.dumps(resp_obj55)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict55.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
+with open(fil, "w") as outfile:
+    json.dump(resp_obj55, outfile)
 
-# write json object to file
-f.write(json)
+# # open file for writing, "w" 
+# f = open(fil,"w")
 
-# close file
-f.close()
+# # write json object to file
+# f.write(json)
+
+# # close file
+# f.close()
 
 
 
@@ -10884,18 +11050,21 @@ print("P56 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj56)
+# json = json.dumps(resp_obj56)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict56.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
+with open(fil, "w") as outfile:
+    json.dump(resp_obj56, outfile)
 
-# write json object to file
-f.write(json)
+# # open file for writing, "w" 
+# f = open(fil,"w")
 
-# close file
-f.close()
+# # write json object to file
+# f.write(json)
+
+# # close file
+# f.close()
 
 
 
@@ -11083,18 +11252,21 @@ print("P57 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj57)
+# json = json.dumps(resp_obj57)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict57.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
+with open(fil, "w") as outfile:
+    json.dump(resp_obj57, outfile)
 
-# write json object to file
-f.write(json)
+# # open file for writing, "w" 
+# f = open(fil,"w")
 
-# close file
-f.close()
+# # write json object to file
+# f.write(json)
+
+# # close file
+# f.close()
 
 
 
@@ -11283,18 +11455,21 @@ print("P58 Done")
 
 
 # create json object from dictionary
-json = json.dumps(resp_obj58)
+# json = json.dumps(resp_obj58)
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "dict58.json"
 
-# open file for writing, "w" 
-f = open(fil,"w")
+with open(fil, "w") as outfile:
+    json.dump(resp_obj58, outfile)
 
-# write json object to file
-f.write(json)
+# # open file for writing, "w" 
+# f = open(fil,"w")
 
-# close file
-f.close()
+# # write json object to file
+# f.write(json)
+
+# # close file
+# f.close()
 
 
 
