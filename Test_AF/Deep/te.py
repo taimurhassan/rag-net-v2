@@ -10,8 +10,13 @@ import os
 
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "di.json"
-x = Path(os.environ["ICHOR_OUTPUT_DATASET"])
-print(x)
+# x = Path(os.environ["ICHOR_OUTPUT_DATASET"])
+# print(x)
+
+
+with open(fil, 'w') as f:
+    print("The json file is created")
+
 # fil1 = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict3.json"
 
 # # Data to be written
