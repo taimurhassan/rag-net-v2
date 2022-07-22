@@ -9,7 +9,7 @@ import os
 # Path(os.environ["ICHOR_LOGS"]).mkdir(exist_ok=True, parents=True)
 
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "di.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "di.json"
 # x = Path(os.environ["ICHOR_OUTPUT_DATASET"])
 # print(x)
 
