@@ -9,8 +9,8 @@ import os
 # Path(os.environ["ICHOR_LOGS"]).mkdir(exist_ok=True, parents=True)
 
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict2.json"
-fil1 = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict3.json"
+fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "di.json"
+# fil1 = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict3.json"
 
 
 # Data to be written
@@ -20,20 +20,19 @@ dictionary = {
     "cgpa": 8.6,
     "phonenumber": "9976770500"
 }
- 
+
 with open(fil, "w") as outfile:
     json.dump(dictionary, outfile)
 
 
+# # Data to be written
+# dictionary = {
+#     "name": "sathiyajith",
+#     "rollno": 56,
+#     "cgpa": 8.6,
+#     "phonenumber": "9976770500"
+# }
 
 
-# Data to be written
-dictionary = {
-    "name": "sathiyajith",
-    "rollno": 56,
-    "cgpa": 8.6,
-    "phonenumber": "9976770500"
-}
- 
-with open(fil1, "w") as outfile:
-    json.dump(dictionary, outfile)
+# with open(fil1, "w") as outfile:
+#     json.dump(dictionary, outfile)
