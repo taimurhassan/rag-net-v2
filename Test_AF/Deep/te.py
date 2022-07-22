@@ -10,6 +10,8 @@ import os
 
 
 fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "di.json"
+x = Path(os.environ["ICHOR_OUTPUT_DATASET"])
+print(x)
 # fil1 = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "new" / "dict3.json"
 
 # Data to be written
