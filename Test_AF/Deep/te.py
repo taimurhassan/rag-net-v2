@@ -17,7 +17,6 @@ fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "di.json"
 # with open(fil, 'w') as f:
 #     print("The json file is created")
 
-
 # Data to be written
 dictionary = {
     "name": "sathiyajith",
