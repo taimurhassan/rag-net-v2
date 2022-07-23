@@ -21,8 +21,9 @@ from tensorflow.keras.callbacks import ModelCheckpoint
 train_data_set_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "PIDray-Splitted/train"
 test_data_set_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "PIDray-Splitted/test"
 img_height = 224
-img_width= 224
-batch_size= 72
+img_width = 224
+batch_size_train = 72
+batch_size_test = 1
 
 # Image generator for training set with data augmentation
 train_datagen = ImageDataGenerator(
@@ -35,6 +36,13 @@ train_datagen = ImageDataGenerator(
   shear_range=0.2,
   zoom_range=0.2,
   horizontal_flip=True,
+  featurewise_center=True,
+  samplewise_center=True,
+  featurewise_std_normalization=True,
+  samplewise_std_normalization=True,
+  zca_whitening=True,
+  zca_epsilon=1e-06,
+  # channel_shift_range=100,
   )
 
 # Image generator for testing. We only rescale the images in the test folder without data augmentation.
@@ -47,7 +55,7 @@ test_datagen = ImageDataGenerator(
 train_generator = train_datagen.flow_from_directory(
   train_data_set_path,
   target_size=(img_height, img_width),
-  batch_size=batch_size,
+  batch_size=batch_size_train,
   class_mode='categorical'
   )
 
@@ -55,9 +63,10 @@ train_generator = train_datagen.flow_from_directory(
 test_generator = test_datagen.flow_from_directory(
   test_data_set_path,
   target_size=(img_height, img_width),
-  batch_size=batch_size,
+  batch_size=batch_size_test,
   class_mode='categorical'
   )
+
 
 
 # tf.keras.applications.resnet50.ResNet50(include_top=True, weights='imagenet', input_tensor=None, input_shape=None, pooling=None, classes=1000, **kwargs)
@@ -76,8 +85,9 @@ resnet_model.compile(optimizer=Adadelta(), loss='categorical_crossentropy', metr
 Path(os.environ["ICHOR_OUTPUT_DATASET"]).mkdir(exist_ok=True, parents=True)
 Path(os.environ["ICHOR_LOGS"]).mkdir(exist_ok=True, parents=True)
 
-history = resnet_model.fit(train_generator, steps_per_epoch=1217, epochs=100)
+history = resnet_model.fit(train_generator, steps_per_epoch=1217, batch_size=batch_size_train, epochs=100)
 
-h = Path(os.environ["ICHOR_OUTPUT_DATASET"])
+# h = Path(os.environ["ICHOR_OUTPUT_DATASET"])
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/wei/weights1.h5'
 
-resnet_model.save(h)
+resnet_model.save(fil)
