@@ -9,10 +9,11 @@ import os
 # Path(os.environ["ICHOR_LOGS"]).mkdir(exist_ok=True, parents=True)
 
 
-fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "di.json"
+# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "di.json"
 # x = Path(os.environ["ICHOR_OUTPUT_DATASET"])
 # print(x)
 
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/di.json'
 
 # with open(fil, 'w') as f:
 #     print("The json file is created")
