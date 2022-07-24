@@ -464,7 +464,7 @@ print("P5 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornpassive/dict.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornpassive/dict5.json'
 
 
 with open(fil, "w") as outfile:
@@ -554,7 +554,7 @@ print("P6 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornpassive/dict.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornpassive/dict6.json'
 
 
 with open(fil, "w") as outfile:
