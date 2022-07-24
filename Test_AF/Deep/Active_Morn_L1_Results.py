@@ -182,8 +182,6 @@ print("P2 Done")
 
 
 
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict2.json"
-
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict2.json'
 
 with open(fil, "w") as outfile:
@@ -278,7 +276,6 @@ print("P3 Done")
 
 
 
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict3.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict3.json'
 
 
@@ -376,8 +373,6 @@ print("P4 Done")
 
 
 
-
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict4.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict4.json'
 
 
@@ -467,7 +462,6 @@ print("P5 Done")
 
 
 
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict5.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict.json'
 
 
@@ -561,8 +555,6 @@ print("P6 Done")
 
 
 
-
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict6.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict.json'
 
 
@@ -659,7 +651,6 @@ print("P7 Done")
 
 
 
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict7.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict7.json'
 
 
@@ -755,7 +746,6 @@ print("P8 Done")
 
 
 
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict8.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict8.json'
 
 
@@ -852,7 +842,6 @@ print("P9 Done")
 
 
 
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict9.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict9.json'
 
 
@@ -947,8 +936,6 @@ print("P10 Done")
 
 
 
-
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict10.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict10.json'
 
 
@@ -1046,8 +1033,6 @@ print("P11 Done")
 
 
 
-
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict11.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict11.json'
 
 
@@ -1144,8 +1129,6 @@ print("P12 Done")
 
 
 
-
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict12.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict12.json'
 
 
@@ -1238,8 +1221,6 @@ print("P13 Done")
 
 
 
-
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict13.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict13.json'
 
 
@@ -1336,7 +1317,6 @@ print("P14 Done")
 
 
 
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict14.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict14.json'
 
 
@@ -1433,8 +1413,6 @@ print("P15 Done")
 
 
 
-
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict15.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict15.json'
 
 
@@ -1531,8 +1509,6 @@ print("P16 Done")
 
 
 
-
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict16.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict16.json'
 
 
@@ -1628,7 +1604,6 @@ print("P17 Done")
 
 
 
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict17.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict17.json'
 
 
@@ -1724,7 +1699,6 @@ print("P18 Done")
 
 
 
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict18.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict18.json'
 
 
@@ -1821,7 +1795,6 @@ print("P19 Done")
 
 
 
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict19.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict19.json'
 
 
@@ -1918,7 +1891,6 @@ print("P20 Done")
 
 
 
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict20.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict20.json'
 
 
@@ -2015,7 +1987,6 @@ print("P21 Done")
 
 
 
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict21.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict21.json'
 
 
@@ -2109,7 +2080,6 @@ print("P22 Done")
 
 
 
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict22.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict22.json'
 
 
@@ -2203,7 +2173,6 @@ print("P23 Done")
 
 
 
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict23.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict23.json'
 
 
@@ -2300,7 +2269,6 @@ print("P24 Done")
 
 
 
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict24.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict24.json'
 
 
@@ -2395,7 +2363,6 @@ print("P25 Done")
 
 
 
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict25.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict25.json'
 
 
@@ -2489,7 +2456,6 @@ print("P26 Done")
 
 
 
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict26.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict26.json'
 
 
@@ -2587,7 +2553,6 @@ print("P27 Done")
 
 
 
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict27.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict27.json'
 
 
@@ -2683,7 +2648,6 @@ print("P28 Done")
 
 
 
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict28.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict28.json'
 
 
@@ -2780,7 +2744,6 @@ print("P29 Done")
 
 
 
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict29.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict29.json'
 
 
@@ -2877,7 +2840,6 @@ print("P30 Done")
 
 
 
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict30.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict30.json'
 
 
@@ -2973,7 +2935,6 @@ print("P31 Done")
 
 
 
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict31.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict31.json'
 
 
@@ -3071,7 +3032,6 @@ print("P32 Done")
 
 
 
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict32.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict32.json'
 
 
@@ -3166,7 +3126,6 @@ print("P33 Done")
 
 
 
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict33.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict33.json'
 
 
@@ -3264,7 +3223,6 @@ print("P34 Done")
 
 
 
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict34.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict34.json'
 
 
@@ -3362,7 +3320,6 @@ print("P35 Done")
 
 
 
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict35.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict35.json'
 
 
@@ -3454,7 +3411,6 @@ print("P36 Done")
 
 
 
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict36.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict36.json'
 
 
@@ -3547,7 +3503,6 @@ print("P37 Done")
 
 
 
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict37.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict37.json'
 
 
@@ -3643,7 +3598,6 @@ print("P38 Done")
 
 
 
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict38.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict38.json'
 
 
@@ -3735,7 +3689,6 @@ print("P39 Done")
 
 
 
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict39.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict39.json'
 
 
@@ -3830,7 +3783,6 @@ print("P40 Done")
 
 
 
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict40.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict40.json'
 
 
@@ -3927,7 +3879,6 @@ print("P41 Done")
 
 
 
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict41.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict41.json'
 
 
@@ -4022,7 +3973,6 @@ print("P42 Done")
 
 
 
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict42.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict42.json'
 
 
@@ -4118,7 +4068,6 @@ print("P43 Done")
 
 
 
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict43.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict43.json'
 
 
@@ -4213,7 +4162,6 @@ print("P44 Done")
 
 
 
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict44.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict44.json'
 
 
@@ -4310,7 +4258,6 @@ print("P45 Done")
 
 
 
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict45.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict45.json'
 
 
@@ -4408,7 +4355,6 @@ print("P46 Done")
 
 
 
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict46.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict46.json'
 
 
@@ -4507,7 +4453,6 @@ print("P47 Done")
 
 
 
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict47.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict47.json'
 
 
@@ -4605,7 +4550,6 @@ print("P48 Done")
 
 
 
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict48.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict48.json'
 
 
@@ -4703,7 +4647,6 @@ print("P49 Done")
 
 
 
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict49.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict49.json'
 
 
@@ -4799,7 +4742,6 @@ print("P50 Done")
 
 
 
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict50.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict50.json'
 
 
@@ -4897,7 +4839,6 @@ print("P51 Done")
 
 
 
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict51.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict51.json'
 
 
@@ -4994,7 +4935,6 @@ print("P52 Done")
 
 
 
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict52.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict52.json'
 
 
@@ -5091,7 +5031,6 @@ print("P53 Done")
 
 
 
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict53.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict53.json'
 
 
@@ -5188,7 +5127,6 @@ print("P54 Done")
 
 
 
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict54.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict54.json'
 
 
@@ -5284,7 +5222,6 @@ print("P55 Done")
 
 
 
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict55.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict55.json'
 
 
@@ -5380,7 +5317,6 @@ print("P56 Done")
 
 
 
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict56.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict56.json'
 
 
@@ -5476,7 +5412,6 @@ print("P57 Done")
 
 
 
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict57.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict57.json'
 
 
@@ -5573,8 +5508,6 @@ print("P58 Done")
 
 
 
-
-# fil = Path(os.environ["ICHOR_OUTPUT_DATASET"]) / "arcl1mornactive" / "dict58.json"
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/arcl1mornactive/dict58.json'
 
 
