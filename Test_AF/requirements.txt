@@ -9,5 +9,6 @@ tensorboard-plugin-wit
 wandb
 scikit-image
 imageio
+pandas
 gdown
 chefboost
