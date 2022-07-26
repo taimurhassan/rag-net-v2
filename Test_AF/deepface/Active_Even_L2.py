@@ -2429,13 +2429,14 @@ negatives.decision.value_counts()
 
 
 # dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/26/"
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "Active_Even_L2/26/"
+# dataset_path = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-inputs/Active_Even_L2/26'
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
-dataset_path = "rag-net-v2-0c6f96b8050c43fd-inputs/droneSURF/Active_Even_L2/26/"
 
 negatives.file_x = dataset_path + negatives.file_x
 negatives.file_y = dataset_path + negatives.file_y
@@ -2446,8 +2447,7 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 print("P26")
-for i in range(0, len(instances)):
-    resp_obj26 = DeepFace.verify(img1_path=instances[i][0], img2_path=instances[i][1], model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
+resp_obj26 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P26 Done")
 
 
