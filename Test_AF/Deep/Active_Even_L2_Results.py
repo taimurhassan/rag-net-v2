@@ -2445,7 +2445,6 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-
 print("P26")
 resp_obj26 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P26 Done")
