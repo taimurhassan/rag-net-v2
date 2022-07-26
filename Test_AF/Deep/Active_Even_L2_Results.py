@@ -2443,8 +2443,11 @@ negatives.file_y = dataset_path + negatives.file_y
 
 instances = negatives[["file_x", "file_y"]].values.tolist()
 
+print(type(negatives.file_x[0]))
+print(type(negatives.file_x))
 print(instances)
-print("Type: ", type(instances))
+print(type(instances))
+print(type(instances[0][0]))
 
 
 # print("P26")
