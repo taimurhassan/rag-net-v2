@@ -2548,8 +2548,8 @@ negatives.decision.value_counts()
 
 
 # dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L2/27/"
-# dataset_path = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-inputs/droneSURF/Active_Morn_L2/27/'
-dataset_path = "27/"
+dataset_path = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-inputs/droneSURF/Active_Morn_L2/27/'
+# dataset_path = "27/"
 
 # dataset_path = dataset_path.parts
 # dataset_path = '/'.join(dataset_path)
