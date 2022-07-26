@@ -1,9 +1,0 @@
-C:/:Users/mohda/.deepface/weights/arcface_weights filter=lfs diff=lfs merge=lfs -text
-C:/:Users/mohda/.deepface/weights/arcface_weights.h5 filter=lfs diff=lfs merge=lfs -text
-C:/Users/mohda/.deepface/weights/arcface_weights.h5 filter=lfs diff=lfs merge=lfs -text
-C:/Users/mohda/.deepface/weights"
-git[[:space:]]add[[:space:]]C:Usersmohda.deepfaceweights" filter=lfs diff=lfs merge=lfs -text
-C:/Users/mohda/.deepface/weights"
-git[[:space:]]add[[:space:]]C:Usersmohda.deepfaceweights" filter=lfs diff=lfs merge=lfs -text
-C:/Users/mohda/.deepface/weights/arcface_weights.h5 filter=lfs diff=lfs merge=lfs -text
-*.h5 filter=lfs diff=lfs merge=lfs -text
