@@ -36,10 +36,10 @@ def loadModel(url = 'https://github.com/serengil/deepface_models/releases/downlo
 	output = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DFWeights/' + file_name
 
 
-	if os.path.isfile(output) != True:
+	# if os.path.isfile(output) != True:
 
-		print(file_name," will be downloaded to ",output)
-		gdown.download(url, output, quiet=False)
+	# 	print(file_name," will be downloaded to ",output)
+	# 	gdown.download(url, output, quiet=False)
 
 	#---------------------------------------
 	
