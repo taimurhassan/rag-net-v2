@@ -30,7 +30,7 @@ def loadModel(url = 'https://github.com/serengil/deepface_models/releases/downlo
 
 	home = functions.get_deepface_home()
 
-	file_name = f"arcface_weights.h5"
+	file_name = "rag-net-v2/Test_AF/Deep/deepface/basemodels/arcface_weights.h5"
 	# output = home+'/.deepface/weights/'+file_name
 	# output = Path(os.environ["ICHOR_INPUT_DATASET"]) / "DFweights" / file_name
 	# output = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DFWeights/' + file_name
