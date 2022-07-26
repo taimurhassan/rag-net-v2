@@ -8,7 +8,7 @@ import pickle
 from matplotlib import image
 
 
-dangerous_dir = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/26/"
+dangerous_dir = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/26/"
 for image_file in os.listdir(dangerous_dir):
     im = image.imread(dangerous_dir / image_file)
     print(f'Processing for file {image_file}.')
