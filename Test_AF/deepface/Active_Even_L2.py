@@ -2428,15 +2428,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/26/"
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "Active_Even_L2/26/"
-# dataset_path = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-inputs/Active_Even_L2/26/'
-dataset_path = 'Test_AF/deepface/Active_Even_L2/26/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/26/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -2447,14 +2444,16 @@ negatives.file_y = dataset_path + negatives.file_y
 instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
+
 print("P26")
 resp_obj26 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P26 Done")
 
 
 
-# fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict26.json'
-fil = 'Test_AF/deepface/Active_Even_L2_Files/dict26.json'
+
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict26.json'
+
 
 
 with open(fil, "w") as outfile:
@@ -2525,13 +2524,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/27/"
-dataset_path = 'Test_AF/deepface/Active_Even_L2/27/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/27/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -2550,9 +2548,7 @@ print("P27 Done")
 
 
 
-# fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict27.json'
-fil = 'Test_AF/deepface/Active_Even_L2_Files/dict27.json'
-
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict27.json'
 
 
 with open(fil, "w") as outfile:
@@ -2623,13 +2619,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/28/"
-dataset_path = 'Test_AF/deepface/Active_Even_L2/28/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/28/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -2649,9 +2644,7 @@ print("P28 Done")
 
 
 
-# fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict28.json'
-fil = 'Test_AF/deepface/Active_Even_L2_Files/dict28.json'
-
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict28.json'
 
 
 with open(fil, "w") as outfile:
@@ -2721,12 +2714,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/29/"
-dataset_path = 'Test_AF/deepface/Active_Even_L2/29/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/29/"
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -2747,8 +2740,7 @@ print("P29 Done")
 
 
 
-# fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict29.json'
-fil = 'Test_AF/deepface/Active_Even_L2_Files/dict29.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict29.json'
 
 
 
@@ -2817,13 +2809,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/30/"
-dataset_path = 'Test_AF/deepface/Active_Even_L2/30/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/30/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -2843,8 +2834,7 @@ print("P30 Done")
 
 
 
-# fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict30.json'
-fil = 'Test_AF/deepface/Active_Even_L2_Files/dict30.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict30.json'
 
 
 with open(fil, "w") as outfile:
@@ -2914,13 +2904,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/31/"
-dataset_path = 'Test_AF/deepface/Active_Even_L2/31/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/31/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -2942,7 +2931,6 @@ print("P31 Done")
 
 
 fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict31.json'
-fil = 'Test_AF/deepface/Active_Even_L2_Files/dict31.json'
 
 
 with open(fil, "w") as outfile:
@@ -3011,13 +2999,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/32/"
-dataset_path = 'Test_AF/deepface/Active_Even_L2/32/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/32/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -3038,8 +3025,7 @@ print("P32 Done")
 
 
 
-# fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict32.json'
-fil = 'Test_AF/deepface/Active_Even_L2_Files/dict32.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict32.json'
 
 
 with open(fil, "w") as outfile:
@@ -3108,13 +3094,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/33/"
-dataset_path = 'Test_AF/deepface/Active_Even_L2/33/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/33/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -3135,8 +3120,7 @@ print("P33 Done")
 
 
 
-# fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict33.json'
-fil = 'Test_AF/deepface/Active_Even_L2_Files/dict33.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict33.json'
 
 
 with open(fil, "w") as outfile:
@@ -3208,13 +3192,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/34/"
-dataset_path = 'Test_AF/deepface/Active_Even_L2/34/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/34/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -3234,9 +3217,7 @@ print("P34 Done")
 
 
 
-# fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict34.json'
-fil = 'Test_AF/deepface/Active_Even_L2_Files/dict34.json'
-
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict34.json'
 
 
 with open(fil, "w") as outfile:
@@ -3305,13 +3286,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/35/"
-dataset_path = 'Test_AF/deepface/Active_Even_L2/35/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/35/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -3332,9 +3312,7 @@ print("P35 Done")
 
 
 
-# fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict35.json'
-fil = 'Test_AF/deepface/Active_Even_L2_Files/dict35.json'
-
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict35.json'
 
 
 with open(fil, "w") as outfile:
@@ -3403,13 +3381,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/36/"
-dataset_path = 'Test_AF/deepface/Active_Even_L2/36/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/36/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -3430,9 +3407,7 @@ print("P36 Done")
 
 
 
-# fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict36.json'
-fil = 'Test_AF/deepface/Active_Even_L2_Files/dict36.json'
-
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict36.json'
 
 
 with open(fil, "w") as outfile:
@@ -3500,12 +3475,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/37/"
-dataset_path = 'Test_AF/deepface/Active_Even_L2/37/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/37/"
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -3524,9 +3499,7 @@ print("P37 Done")
 
 
 
-# fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict37.json'
-fil = 'Test_AF/deepface/Active_Even_L2_Files/dict37.json'
-
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict37.json'
 
 
 with open(fil, "w") as outfile:
@@ -3595,13 +3568,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/38/"
-dataset_path = 'Test_AF/deepface/Active_Even_L2/38/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/38/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -3622,9 +3594,7 @@ print("P38 Done")
 
 
 
-# fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict38.json'
-fil = 'Test_AF/deepface/Active_Even_L2_Files/dict38.json'
-
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict38.json'
 
 
 with open(fil, "w") as outfile:
@@ -3692,13 +3662,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/39/"
-dataset_path = 'Test_AF/deepface/Active_Even_L2/39/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/39/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -3717,9 +3686,7 @@ print("P39 Done")
 
 
 
-# fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict39.json'
-fil = 'Test_AF/deepface/Active_Even_L2_Files/dict39.json'
-
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict39.json'
 
 
 with open(fil, "w") as outfile:
@@ -3788,13 +3755,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/40/"
-dataset_path = 'Test_AF/deepface/Active_Even_L2/40/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/40/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -3814,9 +3780,7 @@ print("P40 Done")
 
 
 
-# fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict40.json'
-fil = 'Test_AF/deepface/Active_Even_L2_Files/dict40.json'
-
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict40.json'
 
 
 with open(fil, "w") as outfile:
@@ -3886,13 +3850,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/41/"
-dataset_path = 'Test_AF/deepface/Active_Even_L2/41/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/41/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -3912,9 +3875,7 @@ print("P41 Done")
 
 
 
-# fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict41.json'
-fil = 'Test_AF/deepface/Active_Even_L2_Files/dict41.json'
-
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict41.json'
 
 
 with open(fil, "w") as outfile:
@@ -3986,13 +3947,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/42/"
-dataset_path = 'Test_AF/deepface/Active_Even_L2/42/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/42/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -4011,9 +3971,7 @@ resp_obj42 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P42 Done")
 
 
-# fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict42.json'
-fil = 'Test_AF/deepface/Active_Even_L2_Files/dict42.json'
-
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict42.json'
 
 
 with open(fil, "w") as outfile:
@@ -4086,13 +4044,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/43/"
-dataset_path = 'Test_AF/deepface/Active_Even_L2/43/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/43/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -4112,8 +4069,7 @@ print("P43 Done")
 
 
 
-# fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict43.json'
-fil = 'Test_AF/deepface/Active_Even_L2_Files/dict43.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict43.json'
 
 
 with open(fil, "w") as outfile:
@@ -4183,13 +4139,11 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/44/"
-dataset_path = 'Test_AF/deepface/Active_Even_L2/44/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/44/"
 
-
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -4210,8 +4164,7 @@ print("P44 Done")
 
 
 
-# fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict44.json'
-fil = 'Test_AF/deepface/Active_Even_L2_Files/dict44.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict44.json'
 
 
 with open(fil, "w") as outfile:
@@ -4280,13 +4233,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/45/"
-dataset_path = 'Test_AF/deepface/Active_Even_L2/45/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/45/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -4306,9 +4258,7 @@ resp_obj45 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P45 Done")
 
 
-# fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict45.json'
-fil = 'Test_AF/deepface/Active_Even_L2_Files/dict45.json'
-
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict45.json'
 
 
 with open(fil, "w") as outfile:
@@ -4377,13 +4327,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/46/"
-dataset_path = 'Test_AF/deepface/Active_Even_L2/46/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/46/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -4404,9 +4353,7 @@ print("P46 Done")
 
 
 
-# fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict46.json'
-fil = 'Test_AF/deepface/Active_Even_L2_Files/dict46.json'
-
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict46.json'
 
 
 with open(fil, "w") as outfile:
@@ -4476,13 +4423,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/47/"
-dataset_path = 'Test_AF/deepface/Active_Even_L2/47/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/47/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -4503,9 +4449,7 @@ print("P47 Done")
 
 
 
-# fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict47.json'
-fil = 'Test_AF/deepface/Active_Even_L2_Files/dict47.json'
-
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict47.json'
 
 
 with open(fil, "w") as outfile:
@@ -4575,13 +4519,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/48/"
-dataset_path = 'Test_AF/deepface/Active_Even_L2/48/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/48/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -4602,9 +4545,7 @@ print("P48 Done")
 
 
 
-# fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict48.json'
-fil = 'Test_AF/deepface/Active_Even_L2_Files/dict48.json'
-
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict48.json'
 
 
 with open(fil, "w") as outfile:
@@ -4674,13 +4615,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/49/"
-dataset_path = 'Test_AF/deepface/Active_Even_L2/49/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/49/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -4701,9 +4641,7 @@ print("P49 Done")
 
 
 
-# fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict49.json'
-fil = 'Test_AF/deepface/Active_Even_L2_Files/dict49.json'
-
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict49.json'
 
 
 with open(fil, "w") as outfile:
@@ -4772,13 +4710,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/50/"
-dataset_path = 'Test_AF/deepface/Active_Even_L2/50/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/50/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -4799,9 +4736,7 @@ print("P50 Done")
 
 
 
-# fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict50.json'
-fil = 'Test_AF/deepface/Active_Even_L2_Files/dict50.json'
-
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict50.json'
 
 
 with open(fil, "w") as outfile:
@@ -4870,13 +4805,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/51/"
-dataset_path = 'Test_AF/deepface/Active_Even_L2/51/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/51/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -4897,9 +4831,7 @@ print("P51 Done")
 
 
 
-# fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict51.json'
-fil = 'Test_AF/deepface/Active_Even_L2_Files/dict51.json'
-
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict51.json'
 
 
 with open(fil, "w") as outfile:
@@ -4969,12 +4901,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/52/"
-dataset_path = 'Test_AF/deepface/Active_Even_L2/52/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/52/"
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -5063,13 +4995,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/53/"
-dataset_path = 'Test_AF/deepface/Active_Even_L2/53/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/53/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -5090,9 +5021,7 @@ print("P53 Done")
 
 
 
-# fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict53.json'
-fil = 'Test_AF/deepface/Active_Even_L2_Files/dict53.json'
-
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict53.json'
 
 
 with open(fil, "w") as outfile:
@@ -5163,13 +5092,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/54/"
-dataset_path = 'Test_AF/deepface/Active_Even_L2/54/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/54/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -5190,9 +5118,7 @@ print("P54 Done")
 
 
 
-# fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict54.json'
-fil = 'Test_AF/deepface/Active_Even_L2_Files/dict54.json'
-
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict54.json'
 
 
 with open(fil, "w") as outfile:
@@ -5263,13 +5189,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/55/"
-dataset_path = 'Test_AF/deepface/Active_Even_L2/55/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/55/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -5289,9 +5214,7 @@ print("P55 Done")
 
 
 
-# fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict55.json'
-fil = 'Test_AF/deepface/Active_Even_L2_Files/dict55.json'
-
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict55.json'
 
 
 with open(fil, "w") as outfile:
@@ -5361,13 +5284,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/56/"
-dataset_path = 'Test_AF/deepface/Active_Even_L2/56/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/56/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -5389,9 +5311,7 @@ print("P56 Done")
 
 
 
-# fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict56.json'
-fil = 'Test_AF/deepface/Active_Even_L2_Files/dict56.json'
-
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict56.json'
 
 
 with open(fil, "w") as outfile:
@@ -5463,13 +5383,11 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/57/"
-dataset_path = 'Test_AF/deepface/Active_Even_L2/57/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/57/"
 
-
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -5490,9 +5408,7 @@ print("P57 Done")
 
 
 
-# fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict57.json'
-fil = 'Test_AF/deepface/Active_Even_L2_Files/dict57.json'
-
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict57.json'
 
 
 with open(fil, "w") as outfile:
@@ -5562,13 +5478,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/58/"
-dataset_path = 'Test_AF/deepface/Active_Even_L2/58/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/58/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -5588,9 +5503,7 @@ print("P58 Done")
 
 
 
-# fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict58.json'
-fil = 'Test_AF/deepface/Active_Even_L2_Files/dict58.json'
-
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/new/dict58.json'
 
 
 with open(fil, "w") as outfile:
