@@ -85,9 +85,9 @@ resnet_model.compile(optimizer=Adadelta(), loss='categorical_crossentropy', metr
 Path(os.environ["ICHOR_OUTPUT_DATASET"]).mkdir(exist_ok=True, parents=True)
 Path(os.environ["ICHOR_LOGS"]).mkdir(exist_ok=True, parents=True)
 
-history = resnet_model.fit(train_generator, steps_per_epoch=1217, batch_size=batch_size_train, epochs=500)
+history = resnet_model.fit(train_generator, steps_per_epoch=1217, batch_size=batch_size_train, epochs=1)
 
 # h = Path(os.environ["ICHOR_OUTPUT_DATASET"])
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/wei/weights12.h5'
+# fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/wei/weights12.h5'
 
-resnet_model.save(fil)
+# resnet_model.save(fil)
