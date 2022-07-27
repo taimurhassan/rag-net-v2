@@ -40,8 +40,8 @@ train_datagen = ImageDataGenerator(
   samplewise_center=True,
   featurewise_std_normalization=True,
   samplewise_std_normalization=True,
-  zca_whitening=True,
-  zca_epsilon=1e-06,
+  # zca_whitening=True,
+  # zca_epsilon=1e-06,
   # channel_shift_range=100,
   )
 
