@@ -1,4 +1,5 @@
 FROM nvcr.io/nvidia/tensorflow:22.05-tf1-py3
+ENV PYTHONUNBUFFERED=1
 
 # install python requirements
 RUN pip install pip==21.0.1

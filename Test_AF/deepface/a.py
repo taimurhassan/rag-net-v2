@@ -8,8 +8,8 @@ import pickle
 from matplotlib import image
 import cv2
 
-# dangerous_dir = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/26/"
-dangerous_dir = 'Test_AF/deepface/Active_Even_L2/26/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/26/"
+# dangerous_dir = 'Test_AF/deepface/Active_Even_L2/26/'
 # for image_file in os.listdir(dangerous_dir):
 #     im = image.imread(dangerous_dir / image_file)
 #     print(f'Processing for file {image_file}.')
@@ -17,7 +17,11 @@ dangerous_dir = 'Test_AF/deepface/Active_Even_L2/26/'
 # print(type(im))
 # print(len(im))
 
-img = dangerous_dir + "down.jpg"
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
+
+img = dataset_path + "down.jpg"
 
 if os.path.isfile(img) != True:
     raise ValueError("Confirm that ",img," exists")
