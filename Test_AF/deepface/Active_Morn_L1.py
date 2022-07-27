@@ -2529,13 +2529,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/27/"
-dataset_path = 'Test_AF/deepface/Active_Morn_L1/27/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/27/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -2623,13 +2622,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/28/"
-dataset_path = 'Test_AF/deepface/Active_Morn_L1/28/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/28/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -2721,12 +2719,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/29/"
-dataset_path = 'Test_AF/deepface/Active_Morn_L1/29/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/29/"
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -2817,13 +2815,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/30/"
-dataset_path = 'Test_AF/deepface/Active_Morn_L1/30/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/30/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -2912,13 +2909,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/31/"
-dataset_path = 'Test_AF/deepface/Active_Morn_L1/31/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/31/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -3010,13 +3006,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/32/"
-dataset_path = 'Test_AF/deepface/Active_Morn_L1/32/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/32/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -3106,13 +3101,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/33/"
-dataset_path = 'Test_AF/deepface/Active_Morn_L1/33/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/33/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -3204,13 +3198,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/34/"
-dataset_path = 'Test_AF/deepface/Active_Morn_L1/34/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/34/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -3300,13 +3293,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/35/"
-dataset_path = 'Test_AF/deepface/Active_Morn_L1/35/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/35/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -3393,13 +3385,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/36/"
-dataset_path = 'Test_AF/deepface/Active_Morn_L1/36/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/36/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -3488,13 +3479,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/37/"
-dataset_path = 'Test_AF/deepface/Active_Morn_L1/37/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/37/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -3581,13 +3571,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/38/"
-dataset_path = 'Test_AF/deepface/Active_Morn_L1/38/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/38/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -3676,13 +3665,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/39/"
-dataset_path = 'Test_AF/deepface/Active_Morn_L1/39/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/39/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -3770,13 +3758,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/40/"
-dataset_path = 'Test_AF/deepface/Active_Morn_L1/40/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/40/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -3866,13 +3853,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/41/"
-dataset_path = 'Test_AF/deepface/Active_Morn_L1/41/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/41/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -3962,13 +3948,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/42/"
-dataset_path = 'Test_AF/deepface/Active_Morn_L1/42/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/42/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -4057,13 +4042,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/43/"
-dataset_path = 'Test_AF/deepface/Active_Morn_L1/43/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/43/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -4153,13 +4137,11 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/44/"
-dataset_path = 'Test_AF/deepface/Active_Morn_L1/44/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/44/"
 
-
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -4249,13 +4231,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/45/"
-dataset_path = 'Test_AF/deepface/Active_Morn_L1/45/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/45/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -4346,13 +4327,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/46/"
-dataset_path = 'Test_AF/deepface/Active_Morn_L1/46/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/46/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -4445,13 +4425,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/47/"
-dataset_path = 'Test_AF/deepface/Active_Morn_L1/47/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/47/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -4544,13 +4523,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/48/"
-dataset_path = 'Test_AF/deepface/Active_Morn_L1/48/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/48/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -4642,13 +4620,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/49/"
-dataset_path = 'Test_AF/deepface/Active_Morn_L1/49/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/49/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -4740,13 +4717,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/50/"
-dataset_path = 'Test_AF/deepface/Active_Morn_L1/50/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/50/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -4836,13 +4812,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/51/"
-dataset_path = 'Test_AF/deepface/Active_Morn_L1/51/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/51/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -4934,13 +4909,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/52/"
-dataset_path = 'Test_AF/deepface/Active_Morn_L1/52/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/52/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -5029,13 +5003,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/53/"
-dataset_path = 'Test_AF/deepface/Active_Morn_L1/53/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/53/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -5127,13 +5100,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/54/"
-dataset_path = 'Test_AF/deepface/Active_Morn_L1/54/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/54/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x
@@ -5224,13 +5196,12 @@ negatives.decision.value_counts()
 
 
 
-# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/55/"
-dataset_path = 'Test_AF/deepface/Active_Morn_L1/55/'
+dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Morn_L1/55/"
 
 
-# dataset_path = dataset_path.parts
-# dataset_path = '/'.join(dataset_path)
-# dataset_path = dataset_path + '/'
+dataset_path = dataset_path.parts
+dataset_path = '/'.join(dataset_path)
+dataset_path = dataset_path + '/'
 
 
 negatives.file_x = dataset_path + negatives.file_x

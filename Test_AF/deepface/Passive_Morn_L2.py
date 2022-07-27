@@ -2241,7 +2241,6 @@ negatives.file_y = dataset_path + negatives.file_y
 
 
 
-
 instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
