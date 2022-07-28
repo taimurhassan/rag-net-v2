@@ -6,3 +6,4 @@ scikit-image
 imageio
 pandas
 nvidia-ml-py3
+super_image
