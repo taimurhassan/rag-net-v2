@@ -12,4 +12,3 @@ imageio
 pandas
 gdown
 chefboost
-super_image
