@@ -80,7 +80,7 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 from deepface import DeepFace
 
-model_name = "ArcFace"
+model_name = "DeepID"
 distance_metric = "euclidean_l2"
 detector_backend = 'opencv'
 
