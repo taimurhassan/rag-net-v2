@@ -82,7 +82,8 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 from deepface import DeepFace
- 
+
+
 model_name = "Facenet"
 distance_metric = "euclidean_l2"
 detector_backend = 'opencv'
