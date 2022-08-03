@@ -99,7 +99,6 @@ import json
 
 
 
-
 # # P2
 # idendities = {
 #     "1": ["down.jpg", "front.jpg", "sideleft.jpg", "sideright.jpg"],
