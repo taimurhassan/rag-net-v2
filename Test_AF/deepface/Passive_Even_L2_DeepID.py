@@ -78,11 +78,11 @@ import os
 # instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
-# from deepface import DeepFace
+from deepface import DeepFace
 
-# model_name = "DeepID"
-# distance_metric = "euclidean_l2"
-# detector_backend = 'opencv'
+model_name = "DeepID"
+distance_metric = "euclidean_l2"
+detector_backend = 'opencv'
 
 
 # print("P1")
