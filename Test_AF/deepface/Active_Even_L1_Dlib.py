@@ -14,6 +14,7 @@ distance_metric = "euclidean_l2"
 detector_backend = 'opencv'
 
 
+
 idendities = {
     "1": ["down.jpg", "front.jpg", "sideleft.jpg", "sideright.jpg"],
     "2": [
