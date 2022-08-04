@@ -12,3 +12,4 @@ imageio
 pandas
 gdown
 chefboost
+dlib
