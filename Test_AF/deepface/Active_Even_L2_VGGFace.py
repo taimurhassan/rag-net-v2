@@ -7,7 +7,8 @@ import pickle
 import os
 import json
 from deepface import DeepFace
- 
+
+
 
 model_name = "VGG-Face"
 distance_metric = "euclidean_l2"
