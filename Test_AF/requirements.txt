@@ -12,4 +12,4 @@ imageio
 pandas
 gdown
 chefboost
-dlib
+dlib>=19.20.0

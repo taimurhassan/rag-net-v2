@@ -7,7 +7,7 @@ import pickle
 import os
 from deepface import DeepFace
 import json
-
+import dlib
 
 model_name = "Dlib"
 distance_metric = "euclidean_l2"
