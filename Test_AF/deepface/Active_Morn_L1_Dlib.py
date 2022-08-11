@@ -92,11 +92,10 @@ print("P1 Done")
 # # load json module
 import json
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict1.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict1.json'
 
 with open(fil, "w") as outfile:
     json.dump(resp_obj1, outfile)
-
 
 
 
@@ -183,7 +182,7 @@ print("P2 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict2.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict2.json'
 
 with open(fil, "w") as outfile:
     json.dump(resp_obj2, outfile)
@@ -277,7 +276,7 @@ print("P3 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict3.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict3.json'
 
 
 with open(fil, "w") as outfile:
@@ -374,7 +373,7 @@ print("P4 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict4.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict4.json'
 
 
 with open(fil, "w") as outfile:
@@ -463,7 +462,7 @@ print("P5 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict5.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict5.json'
 
 
 with open(fil, "w") as outfile:
@@ -556,7 +555,7 @@ print("P6 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict6.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict6.json'
 
 
 with open(fil, "w") as outfile:
@@ -652,7 +651,7 @@ print("P7 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict7.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict7.json'
 
 
 with open(fil, "w") as outfile:
@@ -747,7 +746,7 @@ print("P8 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict8.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict8.json'
 
 
 with open(fil, "w") as outfile:
@@ -843,7 +842,7 @@ print("P9 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict9.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict9.json'
 
 
 with open(fil, "w") as outfile:
@@ -937,7 +936,7 @@ print("P10 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict10.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict10.json'
 
 
 with open(fil, "w") as outfile:
@@ -1034,7 +1033,7 @@ print("P11 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict11.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict11.json'
 
 
 with open(fil, "w") as outfile:
@@ -1130,7 +1129,7 @@ print("P12 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict12.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict12.json'
 
 
 with open(fil, "w") as outfile:
@@ -1222,7 +1221,7 @@ print("P13 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict13.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict13.json'
 
 
 with open(fil, "w") as outfile:
@@ -1318,7 +1317,7 @@ print("P14 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict14.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict14.json'
 
 
 
@@ -1414,7 +1413,7 @@ print("P15 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict15.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict15.json'
 
 
 with open(fil, "w") as outfile:
@@ -1510,7 +1509,7 @@ print("P16 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict16.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict16.json'
 
 
 with open(fil, "w") as outfile:
@@ -1605,7 +1604,7 @@ print("P17 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict17.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict17.json'
 
 
 with open(fil, "w") as outfile:
@@ -1700,7 +1699,7 @@ print("P18 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict18.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict18.json'
 
 
 with open(fil, "w") as outfile:
@@ -1796,7 +1795,7 @@ print("P19 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict19.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict19.json'
 
 
 with open(fil, "w") as outfile:
@@ -1892,7 +1891,7 @@ print("P20 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict20.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict20.json'
 
 
 with open(fil, "w") as outfile:
@@ -1988,7 +1987,7 @@ print("P21 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict21.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict21.json'
 
 
 with open(fil, "w") as outfile:
@@ -2081,7 +2080,7 @@ print("P22 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict22.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict22.json'
 
 
 with open(fil, "w") as outfile:
@@ -2174,7 +2173,7 @@ print("P23 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict23.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict23.json'
 
 
 with open(fil, "w") as outfile:
@@ -2270,7 +2269,7 @@ print("P24 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict24.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict24.json'
 
 
 with open(fil, "w") as outfile:
@@ -2364,7 +2363,7 @@ print("P25 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict25.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict25.json'
 
 
 with open(fil, "w") as outfile:
@@ -2457,7 +2456,7 @@ print("P26 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict26.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict26.json'
 
 
 
@@ -2554,7 +2553,7 @@ print("P27 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict27.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict27.json'
 
 
 with open(fil, "w") as outfile:
@@ -2649,7 +2648,7 @@ print("P28 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict28.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict28.json'
 
 
 with open(fil, "w") as outfile:
@@ -2745,7 +2744,7 @@ print("P29 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict29.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict29.json'
 
 
 
@@ -2841,7 +2840,7 @@ print("P30 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict30.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict30.json'
 
 
 with open(fil, "w") as outfile:
@@ -2936,7 +2935,7 @@ print("P31 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict31.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict31.json'
 
 
 with open(fil, "w") as outfile:
@@ -3033,7 +3032,7 @@ print("P32 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict32.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict32.json'
 
 
 with open(fil, "w") as outfile:
@@ -3127,7 +3126,7 @@ print("P33 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict33.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict33.json'
 
 
 with open(fil, "w") as outfile:
@@ -3224,7 +3223,7 @@ print("P34 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict34.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict34.json'
 
 
 with open(fil, "w") as outfile:
@@ -3321,7 +3320,7 @@ print("P35 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict35.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict35.json'
 
 
 with open(fil, "w") as outfile:
@@ -3412,7 +3411,7 @@ print("P36 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict36.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict36.json'
 
 
 with open(fil, "w") as outfile:
@@ -3504,7 +3503,7 @@ print("P37 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict37.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict37.json'
 
 
 with open(fil, "w") as outfile:
@@ -3599,7 +3598,7 @@ print("P38 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict38.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict38.json'
 
 
 with open(fil, "w") as outfile:
@@ -3690,7 +3689,7 @@ print("P39 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict39.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict39.json'
 
 
 with open(fil, "w") as outfile:
@@ -3784,7 +3783,7 @@ print("P40 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict40.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict40.json'
 
 
 with open(fil, "w") as outfile:
@@ -3880,7 +3879,7 @@ print("P41 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict41.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict41.json'
 
 
 with open(fil, "w") as outfile:
@@ -3974,7 +3973,7 @@ print("P42 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict42.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict42.json'
 
 
 with open(fil, "w") as outfile:
@@ -4069,7 +4068,7 @@ print("P43 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict43.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict43.json'
 
 
 with open(fil, "w") as outfile:
@@ -4163,7 +4162,7 @@ print("P44 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict44.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict44.json'
 
 
 with open(fil, "w") as outfile:
@@ -4259,7 +4258,7 @@ print("P45 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict45.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict45.json'
 
 
 with open(fil, "w") as outfile:
@@ -4356,7 +4355,7 @@ print("P46 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict46.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict46.json'
 
 
 with open(fil, "w") as outfile:
@@ -4454,7 +4453,7 @@ print("P47 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict47.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict47.json'
 
 
 with open(fil, "w") as outfile:
@@ -4551,7 +4550,7 @@ print("P48 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict48.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict48.json'
 
 
 with open(fil, "w") as outfile:
@@ -4648,7 +4647,7 @@ print("P49 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict49.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict49.json'
 
 
 with open(fil, "w") as outfile:
@@ -4743,7 +4742,7 @@ print("P50 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict50.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict50.json'
 
 
 with open(fil, "w") as outfile:
@@ -4840,7 +4839,7 @@ print("P51 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict51.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict51.json'
 
 
 with open(fil, "w") as outfile:
@@ -4936,7 +4935,7 @@ print("P52 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict52.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict52.json'
 
 
 with open(fil, "w") as outfile:
@@ -5032,7 +5031,7 @@ print("P53 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict53.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict53.json'
 
 
 with open(fil, "w") as outfile:
@@ -5128,7 +5127,7 @@ print("P54 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict54.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict54.json'
 
 
 with open(fil, "w") as outfile:
@@ -5223,7 +5222,7 @@ print("P55 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict55.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict55.json'
 
 
 with open(fil, "w") as outfile:
@@ -5318,7 +5317,7 @@ print("P56 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict56.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict56.json'
 
 
 with open(fil, "w") as outfile:
@@ -5413,7 +5412,7 @@ print("P57 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict57.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict57.json'
 
 
 with open(fil, "w") as outfile:
@@ -5509,7 +5508,7 @@ print("P58 Done")
 
 
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepidActiveMornL1/dict58.json'
+fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DlibActiveMornL1/dict58.json'
 
 
 with open(fil, "w") as outfile:
