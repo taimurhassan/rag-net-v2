@@ -2656,7 +2656,6 @@ detector_backend = 'opencv'
 
 
 
-
 # P29
 idendities = {
     "1": ["down.jpg", "front.jpg", "sideleft.jpg", "sideright.jpg"],
