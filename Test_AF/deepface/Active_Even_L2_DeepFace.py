@@ -5164,11 +5164,10 @@ session = boto3.session.Session()
 
 s3_client = session.client(
     service_name='s3',
-    aws_access_key_id=AWS_SECRET_ACCESS_KEY,
-    aws_secret_access_key=AWS_ACCESS_KEY_ID,
+    aws_access_key_id=AWS_ACCESS_KEY_ID,
+    aws_secret_access_key=AWS_SECRET_ACCESS_KEY,
     endpoint_url=S3_ENDPOINT,
 )
-
 
 
 # P55
