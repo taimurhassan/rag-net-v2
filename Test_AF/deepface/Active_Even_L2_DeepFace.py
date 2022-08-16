@@ -5251,7 +5251,8 @@ download_files(
     dir="droneSURF/Active_Even_L2/55/"
 )
 
-dataset_path = "/app/input/droneSURF/Active_Even_L2/55/"
+# dataset_path = "/app/input/droneSURF/Active_Even_L2/55/"
+dataset_path = "/app/input/"
 
 negatives.file_x = dataset_path + negatives.file_x
 negatives.file_y = dataset_path + negatives.file_y
@@ -5359,7 +5360,8 @@ download_files(
     dir="droneSURF/Active_Even_L2/56/"
 )
 
-dataset_path = "/app/input/droneSURF/Active_Even_L2/56/"
+# dataset_path = "/app/input/droneSURF/Active_Even_L2/56/"
+dataset_path = "/app/input/"
 
 negatives.file_x = dataset_path + negatives.file_x
 negatives.file_y = dataset_path + negatives.file_y
@@ -5474,7 +5476,9 @@ download_files(
     dir="droneSURF/Active_Even_L2/57/"
 )
 
-dataset_path = "/app/input/droneSURF/Active_Even_L2/57/"
+# dataset_path = "/app/input/droneSURF/Active_Even_L2/57/"
+dataset_path = "/app/input/"
+
 
 negatives.file_x = dataset_path + negatives.file_x
 negatives.file_y = dataset_path + negatives.file_y
@@ -5587,7 +5591,8 @@ download_files(
     dir="droneSURF/Active_Even_L2/58/"
 )
 
-dataset_path = "/app/input/droneSURF/Active_Even_L2/58/"
+# dataset_path = "/app/input/droneSURF/Active_Even_L2/58/"
+dataset_path = "/app/input/"
 
 negatives.file_x = dataset_path + negatives.file_x
 negatives.file_y = dataset_path + negatives.file_y
