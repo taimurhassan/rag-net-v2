@@ -5123,7 +5123,52 @@ detector_backend = 'opencv'
 # with open(fil, "w") as outfile:
 #     json.dump(resp_obj54, outfile)
 
+import pandas as pd
+import itertools
+from tqdm import tqdm
+from os.path import expanduser
+from pathlib import Path
+import pickle
+import os
+import json
+from deepface import DeepFace
+import boto3
 
+def download_files(s3_client, bucket_name, local_path, file_names, dir):
+
+    local_path = Path(local_path)
+
+    for x in file_names:
+        for file_name in x:
+            file_path = Path.joinpath(local_path, file_name)
+            print(file_path, x, file_name)
+            file_path.parent.mkdir(parents=True, exist_ok=True)
+            print(file_path)
+            s3_client.download_file(
+                bucket_name,
+                dir + file_name,
+                str(file_path)
+            )
+
+model_name = "Dlib"
+distance_metric = "euclidean_l2"
+detector_backend = 'opencv'
+
+AWS_S3_INPUT_BUCKET = os.getenv("AWS_S3_INPUT_BUCKET")
+AWS_S3_OUTPUT_BUCKET = os.getenv("AWS_S3_OUTPUT_BUCKET")
+AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
+AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
+S3_ENDPOINT = os.getenv("S3_ENDPOINT")
+EXPERIMENT_ID = os.getenv("EXPERIMENT_ID")
+
+session = boto3.session.Session()
+
+s3_client = session.client(
+    service_name='s3',
+    aws_access_key_id=AWS_SECRET_ACCESS_KEY,
+    aws_secret_access_key=AWS_ACCESS_KEY_ID,
+    endpoint_url=S3_ENDPOINT,
+)
 
 
 
@@ -5140,8 +5185,6 @@ idendities = {
 
 
 
-
-
 positives = []
 
 for key, values in idendities.items():
@@ -5188,36 +5231,46 @@ negatives.decision.value_counts()
 
 
 
+# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/55/"
 
-dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/55/"
 
+# dataset_path = dataset_path.parts
+# dataset_path = '/'.join(dataset_path)
+# dataset_path = dataset_path + '/'
 
-dataset_path = dataset_path.parts
-dataset_path = '/'.join(dataset_path)
-dataset_path = dataset_path + '/'
+instances = negatives[["file_x", "file_y"]].values.tolist()
 
+download_files(
+    s3_client,
+    "rag-net-v2-0c6f96b8050c43fd-inputs",
+    "/app/input",
+    file_names=instances,
+    dir="droneSURF/Active_Even_L2/55/"
+)
+
+dataset_path = "/app/input/droneSURF/Active_Even_L2/55/"
 
 negatives.file_x = dataset_path + negatives.file_x
 negatives.file_y = dataset_path + negatives.file_y
 
 
-
-
 instances = negatives[["file_x", "file_y"]].values.tolist()
-
-
 
 
 print("P55")
 resp_obj55 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P55 Done")
 
+# fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepFaceActiveEvenL2/dict55.json'
 
+fil = 'output/DeepFaceActiveEvenL2/dict55.json'
+s3_client.download_file(
+    "rag-net-v2-0c6f96b8050c43fd-outputs",
+    fil,
+    "/app/output/dict55.json"
+)
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepFaceActiveEvenL2/dict55.json'
-
-
-with open(fil, "w") as outfile:
+with open("/app/output/dict55.json", "w") as outfile:
     json.dump(resp_obj55, outfile)
 
 
@@ -5234,9 +5287,6 @@ idendities = {
     }
 
 
-
-
-
 positives = []
 
 for key, values in idendities.items():
@@ -5282,26 +5332,31 @@ negatives["decision"] = "Yes"
 negatives.decision.value_counts()
 
 
+# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/56/"
 
 
-dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/56/"
+# dataset_path = dataset_path.parts
+# dataset_path = '/'.join(dataset_path)
+# dataset_path = dataset_path + '/'
 
+instances = negatives[["file_x", "file_y"]].values.tolist()
 
-dataset_path = dataset_path.parts
-dataset_path = '/'.join(dataset_path)
-dataset_path = dataset_path + '/'
+download_files(
+    s3_client,
+    "rag-net-v2-0c6f96b8050c43fd-inputs",
+    "/app/input",
+    file_names=instances,
+    dir="droneSURF/Active_Even_L2/56/"
+)
 
+dataset_path = "/app/input/droneSURF/Active_Even_L2/56/"
 
 negatives.file_x = dataset_path + negatives.file_x
 negatives.file_y = dataset_path + negatives.file_y
 
 
 
-
-
 instances = negatives[["file_x", "file_y"]].values.tolist()
-
-
 
 
 print("P56")
@@ -5309,13 +5364,19 @@ resp_obj56 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P56 Done")
 
 
+# fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepFaceActiveEvenL2/dict56.json'
+fil = 'output/DeepFaceActiveEvenL2/dict56.json'
+s3_client.download_file(
+    "rag-net-v2-0c6f96b8050c43fd-outputs",
+    fil,
+    "/app/output/dict56.json"
+)
 
-
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepFaceActiveEvenL2/dict56.json'
-
-
-with open(fil, "w") as outfile:
+with open("/app/output/dict56.json", "w") as outfile:
     json.dump(resp_obj56, outfile)
+
+# with open(fil, "w") as outfile:
+#     json.dump(resp_obj56, outfile)
 
 
 
@@ -5333,9 +5394,6 @@ idendities = {
     }
 
 
-
-
-
 positives = []
 
 for key, values in idendities.items():
@@ -5381,24 +5439,30 @@ negatives["decision"] = "Yes"
 negatives.decision.value_counts()
 
 
+# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/57/"
+
+# dataset_path = dataset_path.parts
+# dataset_path = '/'.join(dataset_path)
+# dataset_path = dataset_path + '/'
+
+instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
-dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/57/"
+download_files(
+    s3_client,
+    "rag-net-v2-0c6f96b8050c43fd-inputs",
+    "/app/input",
+    file_names=instances,
+    dir="droneSURF/Active_Even_L2/57/"
+)
 
-dataset_path = dataset_path.parts
-dataset_path = '/'.join(dataset_path)
-dataset_path = dataset_path + '/'
-
+dataset_path = "/app/input/droneSURF/Active_Even_L2/57/"
 
 negatives.file_x = dataset_path + negatives.file_x
 negatives.file_y = dataset_path + negatives.file_y
 
 
-
-
 instances = negatives[["file_x", "file_y"]].values.tolist()
-
-
 
 
 print("P57")
@@ -5406,14 +5470,20 @@ resp_obj57 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P57 Done")
 
 
+# fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepFaceActiveEvenL2/dict57.json'
 
+fil = 'output/DeepFaceActiveEvenL2/dict57.json'
+s3_client.download_file(
+    "rag-net-v2-0c6f96b8050c43fd-outputs",
+    fil,
+    "/app/output/dict57.json"
+)
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepFaceActiveEvenL2/dict57.json'
-
-
-with open(fil, "w") as outfile:
+with open("/app/output/dict57.json", "w") as outfile:
     json.dump(resp_obj57, outfile)
 
+# with open(fil, "w") as outfile:
+#     json.dump(resp_obj57, outfile)
 
 
 
@@ -5429,8 +5499,6 @@ idendities = {
     ]
     }
 
-
-
 positives = []
 
 for key, values in idendities.items():
@@ -5476,15 +5544,24 @@ negatives["decision"] = "Yes"
 negatives.decision.value_counts()
 
 
+# dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/58/"
 
 
-dataset_path = Path(os.environ["ICHOR_INPUT_DATASET"]) / "droneSURF/Active_Even_L2/58/"
+# dataset_path = dataset_path.parts
+# dataset_path = '/'.join(dataset_path)
+# dataset_path = dataset_path + '/'
 
+instances = negatives[["file_x", "file_y"]].values.tolist()
 
-dataset_path = dataset_path.parts
-dataset_path = '/'.join(dataset_path)
-dataset_path = dataset_path + '/'
+download_files(
+    s3_client,
+    "rag-net-v2-0c6f96b8050c43fd-inputs",
+    "/app/input",
+    file_names=instances,
+    dir="droneSURF/Active_Even_L2/58/"
+)
 
+dataset_path = "/app/input/droneSURF/Active_Even_L2/58/"
 
 negatives.file_x = dataset_path + negatives.file_x
 negatives.file_y = dataset_path + negatives.file_y
@@ -5501,10 +5578,17 @@ print("P58")
 resp_obj58 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P58 Done")
 
+# fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepFaceActiveEvenL2/dict58.json'
 
+fil = 'output/DeepFaceActiveEvenL2/dict58.json'
+s3_client.download_file(
+    "rag-net-v2-0c6f96b8050c43fd-outputs",
+    fil,
+    "/app/output/dict58.json"
+)
 
-fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepFaceActiveEvenL2/dict58.json'
-
-
-with open(fil, "w") as outfile:
+with open("/app/output/dict58.json", "w") as outfile:
     json.dump(resp_obj58, outfile)
+
+# with open(fil, "w") as outfile:
+    # json.dump(resp_obj58, outfile)
