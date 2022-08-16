@@ -5238,13 +5238,13 @@ negatives.decision.value_counts()
 # dataset_path = '/'.join(dataset_path)
 # dataset_path = dataset_path + '/'
 
-# instances = negatives[["file_x", "file_y"]].values.tolist()
+instances = negatives[["file_x", "file_y"]].values.tolist()
 
 download_files(
     s3_client,
     "rag-net-v2-0c6f96b8050c43fd-inputs",
     "/app/input",
-    file_names=idendities,
+    file_names=instances,
     dir="droneSURF/Active_Even_L2/55/"
 )
 
@@ -5339,13 +5339,13 @@ negatives.decision.value_counts()
 # dataset_path = '/'.join(dataset_path)
 # dataset_path = dataset_path + '/'
 
-# instances = negatives[["file_x", "file_y"]].values.tolist()
+instances = negatives[["file_x", "file_y"]].values.tolist()
 
 download_files(
     s3_client,
     "rag-net-v2-0c6f96b8050c43fd-inputs",
     "/app/input",
-    file_names=idendities,
+    file_names=instances,
     dir="droneSURF/Active_Even_L2/56/"
 )
 
@@ -5445,14 +5445,14 @@ negatives.decision.value_counts()
 # dataset_path = '/'.join(dataset_path)
 # dataset_path = dataset_path + '/'
 
-# instances = negatives[["file_x", "file_y"]].values.tolist()
+instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 download_files(
     s3_client,
     "rag-net-v2-0c6f96b8050c43fd-inputs",
     "/app/input",
-    file_names=idendities,
+    file_names=instances,
     dir="droneSURF/Active_Even_L2/57/"
 )
 
@@ -5551,13 +5551,13 @@ negatives.decision.value_counts()
 # dataset_path = '/'.join(dataset_path)
 # dataset_path = dataset_path + '/'
 
-# instances = negatives[["file_x", "file_y"]].values.tolist()
+instances = negatives[["file_x", "file_y"]].values.tolist()
 
 download_files(
     s3_client,
     "rag-net-v2-0c6f96b8050c43fd-inputs",
     "/app/input",
-    file_names=idendities,
+    file_names=instances,
     dir="droneSURF/Active_Even_L2/58/"
 )
 
