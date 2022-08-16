@@ -5139,16 +5139,15 @@ def download_files(s3_client, bucket_name, local_path, file_names, dir):
     local_path = Path(local_path)
 
     for x in file_names:
-        for file_name in x:
-            file_path = Path.joinpath(local_path, file_name)
-            print(file_path, x, file_name)
-            file_path.parent.mkdir(parents=True, exist_ok=True)
-            print(file_path)
-            s3_client.download_file(
-                bucket_name,
-                dir + file_name,
-                str(file_path)
-            )
+        file_path = Path.joinpath(local_path, x)
+        print(file_path, x)
+        file_path.parent.mkdir(parents=True, exist_ok=True)
+        print(file_path)
+        s3_client.download_file(
+            bucket_name,
+            dir + x,
+            str(file_path)
+        )
 
 model_name = "Dlib"
 distance_metric = "euclidean_l2"
