@@ -5265,14 +5265,11 @@ print("P55")
 resp_obj55 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P55 Done")
 
+
 # fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepFaceActiveEvenL2/dict55.json'
 
-# fil = 'output/DeepFaceActiveEvenL2/dict55.json'
-# s3_client.download_file(
-#     "rag-net-v2-0c6f96b8050c43fd-outputs",
-#     fil,
-#     "/app/output/dict55.json"
-# )
+
+os.mkdir("/app/output")
 
 
 fil = 'output/DeepFaceActiveEvenL2/dict55.json'
@@ -5282,8 +5279,15 @@ s3_client.download_file(
     "/app/output/dict55.json"
 )
 
+
 with open("/app/output/dict55.json", "w") as outfile:
     json.dump(resp_obj55, outfile)
+
+
+
+s3_client.upload_file("/app/output/dict55.json", 
+"rag-net-v2-0c6f96b8050c43fd-outputs", 
+"output/DeepFaceActiveEvenL2/dict55.json")
 
 
 
@@ -5394,6 +5398,12 @@ s3_client.download_file(
 
 with open("/app/output/dict56.json", "w") as outfile:
     json.dump(resp_obj56, outfile)
+
+
+s3_client.upload_file("/app/output/dict56.json", 
+"rag-net-v2-0c6f96b8050c43fd-outputs", 
+"output/DeepFaceActiveEvenL2/dict56.json")
+
 
 # with open(fil, "w") as outfile:
 #     json.dump(resp_obj56, outfile)
@@ -5515,6 +5525,9 @@ with open("/app/output/dict57.json", "w") as outfile:
 # with open(fil, "w") as outfile:
 #     json.dump(resp_obj57, outfile)
 
+s3_client.upload_file("/app/output/dict57.json", 
+"rag-net-v2-0c6f96b8050c43fd-outputs", 
+"output/DeepFaceActiveEvenL2/dict57.json")
 
 
 # P58
@@ -5628,6 +5641,11 @@ s3_client.download_file(
 
 with open("/app/output/dict58.json", "w") as outfile:
     json.dump(resp_obj58, outfile)
+
+
+s3_client.upload_file("/app/output/dict58.json", 
+"rag-net-v2-0c6f96b8050c43fd-outputs", 
+"output/DeepFaceActiveEvenL2/dict58.json")
 
 # with open(fil, "w") as outfile:
     # json.dump(resp_obj58, outfile)
