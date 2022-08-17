@@ -175,7 +175,7 @@ with open("/app/output/dict55.json", "w") as outfile:
 
 s3_client.upload_file("output/dict55.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/dict55.json")
+"output//DeepFaceActiveEvenL2/dict55.json")
 
 # s3_client.download_file(
 #     "rag-net-v2-0c6f96b8050c43fd-outputs",
