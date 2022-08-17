@@ -138,12 +138,22 @@ instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-fil = 'output/DeepFaceActiveEvenL2/dict55.json'
-s3_client.download_file(
+# fil = 'output/DeepFaceActiveEvenL2/dict55.json'
+# s3_client.download_file(
+#     "rag-net-v2-0c6f96b8050c43fd-outputs",
+#     fil,
+#     "/app/output"
+# )
+
+
+download_files(
+    s3_client,
     "rag-net-v2-0c6f96b8050c43fd-outputs",
-    fil,
-    "/app/output"
+    "/app/output",
+    file_names='dict55.json',
+    dir="DeepFaceActiveEvenL2/"
 )
+
 
 with open("/app/output/dict55.json", "w") as outfile:
     json.dump(idendities, outfile)
