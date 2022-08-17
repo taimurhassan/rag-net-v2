@@ -64,6 +64,10 @@ id = [
         'frame925.jpg', 'frame926.jpg', 'frame927.jpg', 'frame928.jpg', 'frame929.jpg', 'frame930.jpg', 'frame931.jpg', 'frame932.jpg', 'frame933.jpg', 'frame934.jpg', 'frame935.jpg', 'frame936.jpg', 'frame937.jpg', 'frame938.jpg', 'frame939.jpg', 'frame940.jpg', 'frame941.jpg', 'frame942.jpg', 'frame943.jpg', 'frame944.jpg', 'frame945.jpg', 'frame946.jpg', 'frame947.jpg', 'frame948.jpg', 'frame949.jpg', 'frame950.jpg', 'frame951.jpg', 'frame952.jpg', 'frame953.jpg', 'frame954.jpg', 'frame955.jpg', 'frame956.jpg', 'frame957.jpg', 'frame958.jpg', 'frame959.jpg', 'frame960.jpg', 'frame961.jpg', 'frame962.jpg', 'frame963.jpg', 'frame964.jpg', 'frame965.jpg', 'frame966.jpg', 'frame967.jpg', 'frame968.jpg', 'frame969.jpg', 'frame970.jpg', 'frame971.jpg', 'frame972.jpg', 'frame973.jpg', 'frame974.jpg', 'frame975.jpg', 'frame976.jpg', 'frame977.jpg', 'frame978.jpg', 'frame979.jpg', 'frame98.jpg', 'frame980.jpg', 'frame981.jpg', 'frame982.jpg', 'frame983.jpg', 'frame984.jpg', 'frame985.jpg', 'frame986.jpg', 'frame987.jpg', 'frame988.jpg', 'frame99.jpg', 'frame991.jpg', 'frame992.jpg', 'frame993.jpg', 'frame994.jpg', 'frame995.jpg', 'frame996.jpg', 'frame997.jpg', 'frame998.jpg', 'frame999.jpg'
         ]
 
+js = [
+    'dict1.json', 'dict2.json', 'dict3.json', 'dict4.json', 'dict5.json', 'dict6.json', 'dict7.json', 'dict8.json', 'dict9.json', 'dict10.json', 'dict11.json', 'dict12.json', 'dict13.json', 'dict14.json', 'dict15.json', 'dict16.json', 'dict17.json', 'dict18.json', 'dict19.json', 'dict20.json', 'dict21.json', 'dict22.json', 'dict23.json', 'dict24.json', 'dict25.json', 'dict26.json', 'dict27.json', 'dict28.json', 'dict29.json', 'dict30.json', 'dict31.json', 'dict32.json', 'dict33.json', 'dict34.json', 'dict35.json', 'dict36.json', 'dict37.json', 'dict38.json', 'dict39.json', 'dict40.json', 'dict41.json', 'dict42.json', 'dict43.json', 'dict44.json', 'dict45.json', 'dict46.json', 'dict47.json', 'dict48.json', 'dict49.json', 'dict50.json', 'dict51.json', 'dict52.json', 'dict53.json', 'dict54.json', 'dict55.json', 'dict56.json', 'dict57.json', 'dict58.json'
+]
+
 
 positives = []
 
@@ -150,7 +154,7 @@ download_files(
     s3_client,
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     "/app/output",
-    file_names='dict55.json',
+    file_names=js,
     dir="DeepFaceActiveEvenL2/"
 )
 
