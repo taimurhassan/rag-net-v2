@@ -5267,6 +5267,14 @@ print("P55 Done")
 
 # fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepFaceActiveEvenL2/dict55.json'
 
+# fil = 'output/DeepFaceActiveEvenL2/dict55.json'
+# s3_client.download_file(
+#     "rag-net-v2-0c6f96b8050c43fd-outputs",
+#     fil,
+#     "/app/output/dict55.json"
+# )
+
+
 fil = 'output/DeepFaceActiveEvenL2/dict55.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
