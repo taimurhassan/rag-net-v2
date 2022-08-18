@@ -44,296 +44,296 @@ s3_client = session.client(
     endpoint_url=S3_ENDPOINT,
 )
 
-#P1
-idendities = {
-    "1": ["down.jpg", "front.jpg", "sideleft.jpg", "sideright.jpg"],
-    "2": [
-        'frame10.jpg', 'frame100.jpg', 'frame1000.jpg', 'frame1001.jpg', 'frame1002.jpg', 'frame1003.jpg', 'frame1004.jpg', 'frame1005.jpg', 'frame1006.jpg', 'frame1007.jpg', 'frame1008.jpg', 'frame1009.jpg', 'frame101.jpg', 'frame1010.jpg', 'frame1011.jpg', 'frame1012.jpg', 'frame1013.jpg', 'frame1014.jpg', 'frame1015.jpg', 'frame1016.jpg', 'frame1017.jpg', 'frame1018.jpg', 'frame1019.jpg', 'frame102.jpg', 'frame1020.jpg', 'frame1021.jpg', 'frame1022.jpg', 'frame1025.jpg', 'frame1026.jpg', 'frame1027.jpg', 'frame1028.jpg', 'frame1029.jpg', 'frame103.jpg', 'frame1030.jpg', 'frame1031.jpg', 'frame1032.jpg', 'frame1033.jpg', 'frame1034.jpg', 'frame1035.jpg', 'frame1036.jpg', 'frame1037.jpg', 'frame1038.jpg', 'frame1039.jpg', 'frame104.jpg', 'frame1040.jpg', 'frame1041.jpg', 'frame1042.jpg', 'frame1043.jpg', 'frame1044.jpg', 'frame1045.jpg', 'frame1046.jpg', 'frame1047.jpg', 'frame1048.jpg', 'frame1049.jpg', 'frame105.jpg', 'frame1050.jpg', 'frame1051.jpg', 'frame1052.jpg', 'frame1053.jpg', 'frame1054.jpg', 'frame1055.jpg', 'frame1056.jpg', 'frame1057.jpg', 'frame1058.jpg', 'frame1059.jpg', 'frame106.jpg', 'frame1060.jpg', 'frame1061.jpg', 'frame1062.jpg', 'frame1063.jpg', 'frame1064.jpg', 'frame1065.jpg', 'frame1066.jpg', 'frame1067.jpg', 'frame1068.jpg', 'frame1069.jpg', 'frame107.jpg', 'frame1070.jpg', 'frame1071.jpg', 'frame1072.jpg', 'frame1073.jpg', 'frame1074.jpg', 'frame1075.jpg', 'frame1076.jpg', 'frame1077.jpg', 'frame1078.jpg', 'frame1079.jpg', 'frame108.jpg', 'frame1080.jpg', 'frame1081.jpg', 'frame1082.jpg', 'frame1083.jpg', 'frame1084.jpg', 'frame1085.jpg', 'frame1086.jpg', 'frame1087.jpg', 'frame1088.jpg', 'frame1089.jpg', 'frame109.jpg', 'frame1090.jpg', 'frame1091.jpg', 'frame1092.jpg', 'frame1093.jpg', 'frame1094.jpg', 'frame1095.jpg', 'frame1096.jpg', 'frame1097.jpg', 'frame1098.jpg', 'frame1099.jpg', 'frame11.jpg', 'frame110.jpg', 'frame1100.jpg', 'frame1101.jpg', 'frame1102.jpg', 'frame1103.jpg', 'frame1104.jpg', 'frame1105.jpg', 'frame1106.jpg', 'frame1107.jpg', 'frame1108.jpg', 'frame1109.jpg', 'frame111.jpg', 'frame1110.jpg', 'frame1111.jpg', 'frame1112.jpg', 'frame1113.jpg', 'frame1114.jpg', 'frame1115.jpg', 'frame1116.jpg', 'frame1117.jpg', 'frame1118.jpg', 'frame1119.jpg', 'frame112.jpg', 'frame1120.jpg', 'frame1121.jpg', 'frame1122.jpg', 'frame1123.jpg', 'frame1124.jpg', 'frame1125.jpg', 'frame1126.jpg', 'frame1127.jpg', 'frame1128.jpg', 'frame1129.jpg', 'frame113.jpg', 'frame1130.jpg', 'frame1131.jpg', 'frame1132.jpg', 'frame1133.jpg', 'frame1134.jpg', 'frame1135.jpg', 'frame1136.jpg', 'frame1137.jpg', 'frame1138.jpg', 'frame1139.jpg', 'frame114.jpg', 'frame1140.jpg', 'frame1141.jpg', 'frame1142.jpg', 'frame1143.jpg', 'frame1144.jpg', 'frame1145.jpg', 'frame1146.jpg', 'frame1147.jpg', 'frame1148.jpg', 'frame1149.jpg', 'frame115.jpg', 'frame1150.jpg', 'frame1151.jpg', 'frame1152.jpg', 'frame1153.jpg', 'frame1154.jpg', 'frame1155.jpg', 'frame1156.jpg', 'frame1157.jpg', 'frame1158.jpg', 'frame1159.jpg', 'frame116.jpg', 'frame1160.jpg', 'frame1161.jpg', 'frame1162.jpg', 'frame1163.jpg', 'frame1164.jpg', 'frame1165.jpg', 'frame1166.jpg', 'frame1167.jpg', 'frame1168.jpg', 'frame1169.jpg', 'frame117.jpg', 'frame1170.jpg', 'frame1171.jpg', 'frame1172.jpg', 'frame1173.jpg', 'frame1174.jpg', 'frame1175.jpg', 'frame1176.jpg', 'frame1177.jpg', 'frame1178.jpg', 'frame1179.jpg', 'frame118.jpg', 'frame1180.jpg', 'frame1181.jpg', 'frame1182.jpg', 'frame1183.jpg', 'frame1184.jpg', 'frame1185.jpg', 'frame1186.jpg', 'frame1187.jpg', 'frame1188.jpg', 'frame1189.jpg', 'frame119.jpg', 'frame1190.jpg', 'frame1191.jpg', 'frame1192.jpg', 'frame1193.jpg', 'frame1194.jpg', 'frame1195.jpg', 'frame1196.jpg', 'frame1197.jpg', 'frame1198.jpg', 'frame12.jpg', 'frame120.jpg', 'frame121.jpg', 'frame122.jpg', 'frame123.jpg', 'frame124.jpg', 'frame125.jpg', 'frame126.jpg', 'frame127.jpg', 'frame128.jpg', 'frame129.jpg', 'frame13.jpg', 'frame130.jpg', 'frame131.jpg', 'frame132.jpg', 'frame133.jpg', 'frame134.jpg', 'frame135.jpg', 'frame136.jpg', 'frame137.jpg', 'frame138.jpg', 'frame139.jpg', 'frame14.jpg', 'frame140.jpg', 'frame141.jpg', 'frame142.jpg', 'frame143.jpg', 'frame144.jpg', 'frame145.jpg', 'frame146.jpg', 'frame147.jpg', 'frame148.jpg', 'frame149.jpg', 'frame15.jpg', 'frame150.jpg', 'frame151.jpg', 'frame152.jpg', 'frame153.jpg', 'frame154.jpg', 'frame155.jpg', 'frame156.jpg', 'frame157.jpg', 'frame158.jpg', 'frame159.jpg', 'frame16.jpg', 'frame160.jpg', 'frame161.jpg', 'frame162.jpg', 'frame163.jpg', 'frame164.jpg', 'frame165.jpg', 'frame166.jpg', 'frame167.jpg', 'frame168.jpg', 'frame169.jpg', 'frame17.jpg', 'frame170.jpg', 'frame171.jpg', 'frame172.jpg', 'frame173.jpg', 'frame174.jpg', 'frame175.jpg', 'frame176.jpg', 'frame177.jpg', 'frame178.jpg', 'frame179.jpg', 'frame18.jpg', 'frame180.jpg', 'frame181.jpg', 'frame184.jpg', 'frame185.jpg', 'frame186.jpg', 'frame187.jpg', 'frame188.jpg', 'frame189.jpg', 'frame19.jpg', 'frame190.jpg', 'frame191.jpg', 'frame192.jpg', 'frame193.jpg', 'frame194.jpg', 'frame195.jpg', 'frame196.jpg', 'frame197.jpg', 'frame198.jpg', 'frame199.jpg', 'frame2.jpg', 'frame20.jpg', 'frame200.jpg', 'frame201.jpg', 'frame202.jpg', 'frame203.jpg', 'frame204.jpg', 'frame205.jpg', 'frame206.jpg', 'frame207.jpg', 'frame208.jpg', 'frame209.jpg', 'frame21.jpg', 'frame210.jpg', 'frame211.jpg', 'frame212.jpg', 'frame213.jpg', 'frame214.jpg', 'frame215.jpg', 'frame216.jpg', 'frame217.jpg', 'frame218.jpg', 'frame219.jpg', 'frame22.jpg', 'frame220.jpg', 'frame221.jpg', 'frame222.jpg', 'frame223.jpg', 'frame224.jpg', 'frame225.jpg', 'frame226.jpg', 'frame227.jpg', 'frame228.jpg', 'frame229.jpg', 'frame23.jpg', 'frame230.jpg', 'frame231.jpg', 'frame232.jpg', 'frame233.jpg', 'frame234.jpg', 'frame235.jpg', 'frame236.jpg', 'frame237.jpg', 'frame238.jpg', 'frame239.jpg', 'frame24.jpg', 'frame240.jpg', 'frame241.jpg', 'frame242.jpg', 'frame243.jpg', 'frame244.jpg', 'frame245.jpg', 'frame246.jpg', 'frame247.jpg', 'frame248.jpg', 'frame249.jpg', 'frame25.jpg', 'frame250.jpg', 'frame251.jpg', 'frame252.jpg', 'frame253.jpg', 'frame254.jpg', 'frame255.jpg', 'frame256.jpg', 'frame257.jpg', 'frame258.jpg', 'frame259.jpg', 'frame26.jpg', 'frame260.jpg', 'frame261.jpg', 'frame262.jpg', 'frame263.jpg', 'frame264.jpg', 'frame265.jpg', 'frame266.jpg', 'frame267.jpg', 'frame268.jpg', 'frame269.jpg', 'frame27.jpg', 'frame270.jpg', 'frame271.jpg', 'frame272.jpg', 'frame273.jpg', 'frame274.jpg', 'frame275.jpg', 'frame276.jpg', 'frame277.jpg', 'frame278.jpg', 'frame279.jpg', 'frame28.jpg', 'frame280.jpg', 'frame281.jpg', 'frame282.jpg', 'frame285.jpg', 'frame286.jpg', 'frame287.jpg', 'frame288.jpg', 'frame289.jpg', 'frame29.jpg', 'frame290.jpg', 'frame291.jpg', 'frame292.jpg', 'frame293.jpg', 'frame294.jpg', 'frame295.jpg', 'frame296.jpg', 'frame297.jpg', 'frame298.jpg', 'frame299.jpg', 'frame3.jpg', 'frame30.jpg', 'frame300.jpg', 'frame301.jpg', 'frame302.jpg', 'frame303.jpg', 'frame304.jpg', 'frame305.jpg', 'frame306.jpg', 'frame307.jpg', 'frame308.jpg', 'frame309.jpg', 'frame31.jpg', 'frame310.jpg', 'frame311.jpg', 'frame312.jpg', 'frame313.jpg', 'frame314.jpg', 'frame315.jpg', 'frame316.jpg', 'frame317.jpg', 'frame318.jpg', 'frame319.jpg', 'frame32.jpg', 'frame320.jpg', 'frame321.jpg', 'frame322.jpg', 'frame323.jpg', 'frame324.jpg', 'frame325.jpg', 'frame326.jpg', 'frame327.jpg', 'frame328.jpg', 'frame329.jpg', 'frame33.jpg', 'frame330.jpg', 'frame331.jpg', 'frame332.jpg', 'frame333.jpg', 'frame334.jpg', 'frame335.jpg', 'frame336.jpg', 'frame337.jpg', 'frame338.jpg', 'frame339.jpg', 'frame34.jpg', 'frame340.jpg', 'frame35.jpg', 'frame36.jpg', 'frame364.jpg', 'frame365.jpg', 'frame366.jpg', 'frame367.jpg', 'frame368.jpg', 'frame369.jpg', 'frame37.jpg', 'frame370.jpg', 'frame371.jpg', 'frame372.jpg', 'frame373.jpg', 'frame374.jpg', 'frame375.jpg', 'frame376.jpg', 'frame377.jpg', 'frame378.jpg', 'frame379.jpg', 'frame38.jpg', 'frame380.jpg', 'frame381.jpg', 'frame382.jpg', 'frame383.jpg', 'frame384.jpg', 'frame385.jpg', 'frame386.jpg', 'frame387.jpg', 'frame388.jpg', 'frame389.jpg', 'frame39.jpg', 'frame390.jpg', 'frame391.jpg', 'frame392.jpg', 'frame393.jpg', 'frame394.jpg', 'frame395.jpg', 'frame396.jpg', 'frame397.jpg', 'frame398.jpg', 'frame399.jpg', 'frame4.jpg', 'frame40.jpg', 'frame400.jpg', 'frame401.jpg', 'frame402.jpg', 'frame403.jpg', 'frame404.jpg', 'frame405.jpg', 'frame406.jpg', 'frame407.jpg', 'frame408.jpg', 'frame409.jpg', 'frame41.jpg', 'frame410.jpg', 'frame411.jpg', 'frame412.jpg', 'frame413.jpg', 'frame414.jpg', 'frame415.jpg', 'frame416.jpg', 'frame417.jpg', 'frame418.jpg', 'frame419.jpg', 'frame42.jpg', 'frame420.jpg', 'frame421.jpg', 'frame422.jpg', 'frame423.jpg', 'frame424.jpg', 'frame425.jpg', 'frame426.jpg', 'frame427.jpg', 'frame428.jpg', 'frame429.jpg', 'frame430.jpg', 'frame431.jpg', 'frame432.jpg', 'frame433.jpg', 'frame434.jpg', 'frame435.jpg', 'frame436.jpg', 'frame437.jpg', 'frame438.jpg', 'frame439.jpg', 'frame440.jpg', 'frame441.jpg', 'frame442.jpg', 'frame443.jpg', 'frame444.jpg', 'frame445.jpg', 'frame446.jpg', 'frame447.jpg', 'frame448.jpg', 'frame449.jpg', 'frame45.jpg', 'frame450.jpg', 'frame451.jpg', 'frame452.jpg', 'frame453.jpg', 'frame454.jpg', 'frame455.jpg', 'frame456.jpg', 'frame457.jpg', 'frame458.jpg', 'frame459.jpg', 'frame46.jpg', 'frame460.jpg', 'frame461.jpg', 'frame462.jpg', 'frame463.jpg', 'frame464.jpg', 'frame465.jpg', 'frame466.jpg', 'frame467.jpg', 'frame468.jpg', 'frame469.jpg', 'frame47.jpg', 'frame470.jpg', 'frame471.jpg', 'frame472.jpg', 'frame473.jpg', 'frame474.jpg', 'frame475.jpg', 'frame476.jpg', 'frame477.jpg', 'frame478.jpg', 'frame479.jpg', 'frame48.jpg', 'frame480.jpg', 'frame481.jpg', 'frame482.jpg', 'frame483.jpg', 'frame484.jpg', 'frame485.jpg', 'frame486.jpg', 'frame487.jpg', 'frame488.jpg', 'frame489.jpg', 'frame49.jpg', 'frame490.jpg', 'frame491.jpg', 'frame492.jpg', 'frame493.jpg', 'frame494.jpg', 'frame495.jpg', 'frame496.jpg', 'frame497.jpg', 'frame498.jpg', 'frame499.jpg', 'frame5.jpg', 
-        'frame50.jpg', 'frame500.jpg', 'frame501.jpg', 'frame502.jpg', 'frame503.jpg', 'frame504.jpg', 'frame505.jpg', 'frame506.jpg', 'frame507.jpg', 'frame508.jpg', 'frame509.jpg', 'frame51.jpg', 'frame510.jpg', 'frame511.jpg', 'frame512.jpg', 'frame513.jpg', 'frame514.jpg', 'frame515.jpg', 'frame516.jpg', 'frame517.jpg', 'frame518.jpg', 'frame519.jpg', 'frame52.jpg', 'frame520.jpg', 'frame521.jpg', 'frame522.jpg', 'frame523.jpg', 'frame524.jpg', 'frame525.jpg', 'frame526.jpg', 'frame527.jpg', 'frame528.jpg', 'frame529.jpg', 'frame53.jpg', 'frame530.jpg', 'frame531.jpg', 'frame532.jpg', 'frame533.jpg', 'frame534.jpg', 'frame535.jpg', 'frame536.jpg', 'frame537.jpg', 'frame538.jpg', 'frame539.jpg', 'frame54.jpg', 'frame540.jpg', 'frame541.jpg', 'frame542.jpg', 'frame543.jpg', 'frame544.jpg', 'frame545.jpg', 'frame546.jpg', 'frame547.jpg', 'frame548.jpg', 'frame549.jpg', 'frame55.jpg', 'frame550.jpg', 'frame551.jpg', 'frame552.jpg', 'frame553.jpg', 'frame554.jpg', 'frame555.jpg', 'frame556.jpg', 'frame557.jpg', 'frame558.jpg', 'frame559.jpg', 'frame56.jpg', 'frame560.jpg', 'frame561.jpg', 'frame562.jpg', 'frame563.jpg', 'frame566.jpg', 'frame567.jpg', 'frame568.jpg', 'frame569.jpg', 'frame57.jpg', 'frame570.jpg', 'frame571.jpg', 'frame572.jpg', 'frame573.jpg', 'frame574.jpg', 'frame575.jpg', 'frame576.jpg', 'frame577.jpg', 'frame578.jpg', 'frame579.jpg', 'frame58.jpg', 'frame580.jpg', 'frame581.jpg', 'frame582.jpg', 'frame583.jpg', 'frame584.jpg', 'frame585.jpg', 'frame586.jpg', 'frame587.jpg', 'frame588.jpg', 'frame589.jpg', 'frame59.jpg', 'frame590.jpg', 'frame591.jpg', 'frame592.jpg', 'frame593.jpg', 'frame594.jpg', 'frame595.jpg', 'frame596.jpg', 'frame597.jpg', 'frame598.jpg', 'frame599.jpg', 'frame6.jpg', 'frame60.jpg', 'frame600.jpg', 'frame601.jpg', 'frame602.jpg', 'frame603.jpg', 'frame604.jpg', 'frame605.jpg', 'frame606.jpg', 'frame607.jpg', 'frame608.jpg', 'frame609.jpg', 'frame61.jpg', 'frame610.jpg', 'frame611.jpg', 'frame612.jpg', 'frame613.jpg', 'frame614.jpg', 'frame615.jpg', 'frame616.jpg', 'frame617.jpg', 'frame618.jpg', 'frame619.jpg', 'frame62.jpg', 'frame620.jpg', 'frame621.jpg', 'frame622.jpg', 'frame623.jpg', 'frame624.jpg', 'frame625.jpg', 'frame626.jpg', 'frame627.jpg', 'frame628.jpg', 'frame629.jpg', 'frame63.jpg', 'frame630.jpg', 'frame631.jpg', 'frame632.jpg', 'frame633.jpg', 'frame634.jpg', 'frame635.jpg', 'frame636.jpg', 'frame637.jpg', 'frame638.jpg', 'frame639.jpg', 'frame64.jpg', 'frame640.jpg', 'frame641.jpg', 'frame642.jpg', 'frame643.jpg', 'frame644.jpg', 'frame645.jpg', 'frame646.jpg', 'frame647.jpg', 'frame648.jpg', 'frame649.jpg', 'frame65.jpg', 'frame650.jpg', 'frame651.jpg', 'frame652.jpg', 'frame653.jpg', 'frame654.jpg', 'frame655.jpg', 'frame656.jpg', 'frame657.jpg', 'frame658.jpg', 'frame659.jpg', 'frame66.jpg', 'frame660.jpg', 'frame661.jpg', 'frame662.jpg', 'frame663.jpg', 'frame664.jpg', 'frame665.jpg', 'frame666.jpg', 'frame667.jpg', 'frame668.jpg', 'frame669.jpg', 'frame67.jpg', 'frame670.jpg', 'frame671.jpg', 'frame672.jpg', 'frame673.jpg', 'frame674.jpg', 'frame675.jpg', 'frame676.jpg', 'frame677.jpg', 'frame678.jpg', 'frame679.jpg', 'frame68.jpg', 'frame680.jpg', 'frame681.jpg', 'frame682.jpg', 'frame683.jpg', 'frame684.jpg', 'frame685.jpg', 'frame686.jpg', 'frame687.jpg', 'frame688.jpg', 'frame689.jpg', 'frame69.jpg', 'frame690.jpg', 'frame691.jpg', 'frame692.jpg', 'frame693.jpg', 'frame694.jpg', 'frame695.jpg', 'frame696.jpg', 'frame697.jpg', 'frame698.jpg', 'frame699.jpg', 'frame7.jpg', 'frame70.jpg', 'frame700.jpg', 'frame701.jpg', 'frame702.jpg', 'frame703.jpg', 'frame704.jpg', 'frame705.jpg', 'frame706.jpg', 'frame707.jpg', 'frame708.jpg', 'frame709.jpg', 'frame71.jpg', 'frame710.jpg', 'frame711.jpg', 'frame712.jpg', 'frame713.jpg', 'frame714.jpg', 'frame715.jpg', 'frame716.jpg', 'frame717.jpg', 'frame718.jpg', 'frame719.jpg', 'frame72.jpg', 'frame720.jpg', 'frame721.jpg', 'frame722.jpg', 'frame723.jpg', 'frame724.jpg', 'frame725.jpg', 'frame726.jpg', 'frame727.jpg', 'frame73.jpg', 'frame74.jpg', 'frame75.jpg', 'frame76.jpg', 'frame763.jpg', 'frame764.jpg', 'frame765.jpg', 'frame766.jpg', 'frame767.jpg', 'frame768.jpg', 'frame769.jpg', 'frame77.jpg', 'frame770.jpg', 'frame771.jpg', 'frame772.jpg', 'frame773.jpg', 'frame774.jpg', 'frame78.jpg', 'frame79.jpg', 'frame8.jpg', 'frame80.jpg', 'frame800.jpg', 'frame801.jpg', 'frame802.jpg', 'frame803.jpg', 'frame804.jpg', 'frame805.jpg', 'frame806.jpg', 'frame807.jpg', 'frame808.jpg', 'frame809.jpg', 'frame81.jpg', 'frame810.jpg', 'frame811.jpg', 'frame812.jpg', 'frame813.jpg', 'frame814.jpg', 'frame815.jpg', 'frame816.jpg', 'frame817.jpg', 'frame818.jpg', 'frame819.jpg', 'frame82.jpg', 'frame820.jpg', 'frame821.jpg', 'frame822.jpg', 'frame823.jpg', 'frame824.jpg', 'frame825.jpg', 'frame826.jpg', 'frame827.jpg', 'frame828.jpg', 'frame829.jpg', 'frame83.jpg', 'frame830.jpg', 'frame831.jpg', 'frame832.jpg', 'frame833.jpg', 'frame834.jpg', 'frame835.jpg', 'frame836.jpg', 'frame837.jpg', 'frame838.jpg', 'frame839.jpg', 'frame84.jpg', 'frame840.jpg', 'frame841.jpg', 'frame842.jpg', 'frame843.jpg', 'frame844.jpg', 'frame845.jpg', 'frame846.jpg', 'frame847.jpg', 'frame848.jpg', 'frame849.jpg', 'frame85.jpg', 'frame850.jpg', 'frame851.jpg', 'frame852.jpg', 'frame853.jpg', 'frame854.jpg', 'frame855.jpg', 'frame856.jpg', 'frame857.jpg', 'frame858.jpg', 'frame859.jpg', 'frame86.jpg', 'frame860.jpg', 'frame861.jpg', 'frame862.jpg', 'frame863.jpg', 'frame864.jpg', 'frame865.jpg', 'frame866.jpg', 'frame867.jpg', 'frame868.jpg', 'frame869.jpg', 'frame87.jpg', 'frame870.jpg', 'frame871.jpg', 'frame872.jpg', 'frame873.jpg', 'frame874.jpg', 'frame875.jpg', 'frame876.jpg', 'frame877.jpg', 'frame878.jpg', 'frame879.jpg', 'frame88.jpg', 'frame880.jpg', 'frame881.jpg', 'frame882.jpg', 'frame883.jpg', 'frame884.jpg', 'frame885.jpg', 'frame886.jpg', 'frame887.jpg', 'frame888.jpg', 'frame889.jpg', 'frame89.jpg', 'frame890.jpg', 'frame891.jpg', 'frame892.jpg', 'frame893.jpg', 'frame894.jpg', 'frame895.jpg', 'frame896.jpg', 'frame897.jpg', 'frame898.jpg', 'frame899.jpg', 'frame9.jpg', 'frame90.jpg', 'frame900.jpg', 'frame901.jpg', 'frame902.jpg', 'frame903.jpg', 'frame904.jpg', 'frame905.jpg', 'frame906.jpg', 'frame907.jpg', 'frame908.jpg', 'frame909.jpg', 'frame91.jpg', 'frame910.jpg', 'frame911.jpg', 'frame912.jpg', 'frame913.jpg', 'frame914.jpg', 'frame915.jpg', 'frame916.jpg', 'frame917.jpg', 'frame918.jpg', 'frame919.jpg', 'frame92.jpg', 'frame920.jpg', 'frame921.jpg', 'frame922.jpg', 'frame923.jpg', 'frame924.jpg', 'frame925.jpg', 'frame926.jpg', 'frame927.jpg', 'frame928.jpg', 'frame929.jpg', 'frame93.jpg', 'frame930.jpg', 'frame931.jpg', 'frame932.jpg', 'frame933.jpg', 'frame934.jpg', 'frame935.jpg', 'frame936.jpg', 'frame937.jpg', 'frame938.jpg', 'frame939.jpg', 'frame94.jpg', 'frame940.jpg', 'frame941.jpg', 'frame942.jpg', 'frame943.jpg', 'frame944.jpg', 'frame945.jpg', 'frame946.jpg', 'frame947.jpg', 'frame948.jpg', 'frame949.jpg', 'frame95.jpg', 'frame950.jpg', 'frame951.jpg', 'frame952.jpg', 'frame953.jpg', 'frame954.jpg', 'frame955.jpg', 'frame956.jpg', 'frame957.jpg', 'frame958.jpg', 'frame959.jpg', 'frame96.jpg', 'frame960.jpg', 'frame961.jpg', 'frame962.jpg', 'frame963.jpg', 'frame964.jpg', 'frame965.jpg', 'frame966.jpg', 'frame967.jpg', 'frame968.jpg', 'frame969.jpg', 'frame97.jpg', 'frame970.jpg', 'frame971.jpg', 'frame972.jpg', 'frame973.jpg', 'frame974.jpg', 'frame975.jpg', 'frame976.jpg', 'frame977.jpg', 'frame978.jpg', 'frame979.jpg', 'frame98.jpg', 'frame980.jpg', 'frame981.jpg', 'frame982.jpg', 'frame983.jpg', 'frame984.jpg', 'frame985.jpg', 'frame986.jpg', 'frame987.jpg', 'frame988.jpg', 'frame989.jpg', 'frame99.jpg', 'frame990.jpg', 'frame991.jpg', 'frame992.jpg', 'frame993.jpg', 'frame994.jpg', 'frame995.jpg', 'frame996.jpg', 'frame997.jpg', 'frame998.jpg', 'frame999.jpg'
-    ]
-    }
+# #P1
+# idendities = {
+#     "1": ["down.jpg", "front.jpg", "sideleft.jpg", "sideright.jpg"],
+#     "2": [
+#         'frame10.jpg', 'frame100.jpg', 'frame1000.jpg', 'frame1001.jpg', 'frame1002.jpg', 'frame1003.jpg', 'frame1004.jpg', 'frame1005.jpg', 'frame1006.jpg', 'frame1007.jpg', 'frame1008.jpg', 'frame1009.jpg', 'frame101.jpg', 'frame1010.jpg', 'frame1011.jpg', 'frame1012.jpg', 'frame1013.jpg', 'frame1014.jpg', 'frame1015.jpg', 'frame1016.jpg', 'frame1017.jpg', 'frame1018.jpg', 'frame1019.jpg', 'frame102.jpg', 'frame1020.jpg', 'frame1021.jpg', 'frame1022.jpg', 'frame1025.jpg', 'frame1026.jpg', 'frame1027.jpg', 'frame1028.jpg', 'frame1029.jpg', 'frame103.jpg', 'frame1030.jpg', 'frame1031.jpg', 'frame1032.jpg', 'frame1033.jpg', 'frame1034.jpg', 'frame1035.jpg', 'frame1036.jpg', 'frame1037.jpg', 'frame1038.jpg', 'frame1039.jpg', 'frame104.jpg', 'frame1040.jpg', 'frame1041.jpg', 'frame1042.jpg', 'frame1043.jpg', 'frame1044.jpg', 'frame1045.jpg', 'frame1046.jpg', 'frame1047.jpg', 'frame1048.jpg', 'frame1049.jpg', 'frame105.jpg', 'frame1050.jpg', 'frame1051.jpg', 'frame1052.jpg', 'frame1053.jpg', 'frame1054.jpg', 'frame1055.jpg', 'frame1056.jpg', 'frame1057.jpg', 'frame1058.jpg', 'frame1059.jpg', 'frame106.jpg', 'frame1060.jpg', 'frame1061.jpg', 'frame1062.jpg', 'frame1063.jpg', 'frame1064.jpg', 'frame1065.jpg', 'frame1066.jpg', 'frame1067.jpg', 'frame1068.jpg', 'frame1069.jpg', 'frame107.jpg', 'frame1070.jpg', 'frame1071.jpg', 'frame1072.jpg', 'frame1073.jpg', 'frame1074.jpg', 'frame1075.jpg', 'frame1076.jpg', 'frame1077.jpg', 'frame1078.jpg', 'frame1079.jpg', 'frame108.jpg', 'frame1080.jpg', 'frame1081.jpg', 'frame1082.jpg', 'frame1083.jpg', 'frame1084.jpg', 'frame1085.jpg', 'frame1086.jpg', 'frame1087.jpg', 'frame1088.jpg', 'frame1089.jpg', 'frame109.jpg', 'frame1090.jpg', 'frame1091.jpg', 'frame1092.jpg', 'frame1093.jpg', 'frame1094.jpg', 'frame1095.jpg', 'frame1096.jpg', 'frame1097.jpg', 'frame1098.jpg', 'frame1099.jpg', 'frame11.jpg', 'frame110.jpg', 'frame1100.jpg', 'frame1101.jpg', 'frame1102.jpg', 'frame1103.jpg', 'frame1104.jpg', 'frame1105.jpg', 'frame1106.jpg', 'frame1107.jpg', 'frame1108.jpg', 'frame1109.jpg', 'frame111.jpg', 'frame1110.jpg', 'frame1111.jpg', 'frame1112.jpg', 'frame1113.jpg', 'frame1114.jpg', 'frame1115.jpg', 'frame1116.jpg', 'frame1117.jpg', 'frame1118.jpg', 'frame1119.jpg', 'frame112.jpg', 'frame1120.jpg', 'frame1121.jpg', 'frame1122.jpg', 'frame1123.jpg', 'frame1124.jpg', 'frame1125.jpg', 'frame1126.jpg', 'frame1127.jpg', 'frame1128.jpg', 'frame1129.jpg', 'frame113.jpg', 'frame1130.jpg', 'frame1131.jpg', 'frame1132.jpg', 'frame1133.jpg', 'frame1134.jpg', 'frame1135.jpg', 'frame1136.jpg', 'frame1137.jpg', 'frame1138.jpg', 'frame1139.jpg', 'frame114.jpg', 'frame1140.jpg', 'frame1141.jpg', 'frame1142.jpg', 'frame1143.jpg', 'frame1144.jpg', 'frame1145.jpg', 'frame1146.jpg', 'frame1147.jpg', 'frame1148.jpg', 'frame1149.jpg', 'frame115.jpg', 'frame1150.jpg', 'frame1151.jpg', 'frame1152.jpg', 'frame1153.jpg', 'frame1154.jpg', 'frame1155.jpg', 'frame1156.jpg', 'frame1157.jpg', 'frame1158.jpg', 'frame1159.jpg', 'frame116.jpg', 'frame1160.jpg', 'frame1161.jpg', 'frame1162.jpg', 'frame1163.jpg', 'frame1164.jpg', 'frame1165.jpg', 'frame1166.jpg', 'frame1167.jpg', 'frame1168.jpg', 'frame1169.jpg', 'frame117.jpg', 'frame1170.jpg', 'frame1171.jpg', 'frame1172.jpg', 'frame1173.jpg', 'frame1174.jpg', 'frame1175.jpg', 'frame1176.jpg', 'frame1177.jpg', 'frame1178.jpg', 'frame1179.jpg', 'frame118.jpg', 'frame1180.jpg', 'frame1181.jpg', 'frame1182.jpg', 'frame1183.jpg', 'frame1184.jpg', 'frame1185.jpg', 'frame1186.jpg', 'frame1187.jpg', 'frame1188.jpg', 'frame1189.jpg', 'frame119.jpg', 'frame1190.jpg', 'frame1191.jpg', 'frame1192.jpg', 'frame1193.jpg', 'frame1194.jpg', 'frame1195.jpg', 'frame1196.jpg', 'frame1197.jpg', 'frame1198.jpg', 'frame12.jpg', 'frame120.jpg', 'frame121.jpg', 'frame122.jpg', 'frame123.jpg', 'frame124.jpg', 'frame125.jpg', 'frame126.jpg', 'frame127.jpg', 'frame128.jpg', 'frame129.jpg', 'frame13.jpg', 'frame130.jpg', 'frame131.jpg', 'frame132.jpg', 'frame133.jpg', 'frame134.jpg', 'frame135.jpg', 'frame136.jpg', 'frame137.jpg', 'frame138.jpg', 'frame139.jpg', 'frame14.jpg', 'frame140.jpg', 'frame141.jpg', 'frame142.jpg', 'frame143.jpg', 'frame144.jpg', 'frame145.jpg', 'frame146.jpg', 'frame147.jpg', 'frame148.jpg', 'frame149.jpg', 'frame15.jpg', 'frame150.jpg', 'frame151.jpg', 'frame152.jpg', 'frame153.jpg', 'frame154.jpg', 'frame155.jpg', 'frame156.jpg', 'frame157.jpg', 'frame158.jpg', 'frame159.jpg', 'frame16.jpg', 'frame160.jpg', 'frame161.jpg', 'frame162.jpg', 'frame163.jpg', 'frame164.jpg', 'frame165.jpg', 'frame166.jpg', 'frame167.jpg', 'frame168.jpg', 'frame169.jpg', 'frame17.jpg', 'frame170.jpg', 'frame171.jpg', 'frame172.jpg', 'frame173.jpg', 'frame174.jpg', 'frame175.jpg', 'frame176.jpg', 'frame177.jpg', 'frame178.jpg', 'frame179.jpg', 'frame18.jpg', 'frame180.jpg', 'frame181.jpg', 'frame184.jpg', 'frame185.jpg', 'frame186.jpg', 'frame187.jpg', 'frame188.jpg', 'frame189.jpg', 'frame19.jpg', 'frame190.jpg', 'frame191.jpg', 'frame192.jpg', 'frame193.jpg', 'frame194.jpg', 'frame195.jpg', 'frame196.jpg', 'frame197.jpg', 'frame198.jpg', 'frame199.jpg', 'frame2.jpg', 'frame20.jpg', 'frame200.jpg', 'frame201.jpg', 'frame202.jpg', 'frame203.jpg', 'frame204.jpg', 'frame205.jpg', 'frame206.jpg', 'frame207.jpg', 'frame208.jpg', 'frame209.jpg', 'frame21.jpg', 'frame210.jpg', 'frame211.jpg', 'frame212.jpg', 'frame213.jpg', 'frame214.jpg', 'frame215.jpg', 'frame216.jpg', 'frame217.jpg', 'frame218.jpg', 'frame219.jpg', 'frame22.jpg', 'frame220.jpg', 'frame221.jpg', 'frame222.jpg', 'frame223.jpg', 'frame224.jpg', 'frame225.jpg', 'frame226.jpg', 'frame227.jpg', 'frame228.jpg', 'frame229.jpg', 'frame23.jpg', 'frame230.jpg', 'frame231.jpg', 'frame232.jpg', 'frame233.jpg', 'frame234.jpg', 'frame235.jpg', 'frame236.jpg', 'frame237.jpg', 'frame238.jpg', 'frame239.jpg', 'frame24.jpg', 'frame240.jpg', 'frame241.jpg', 'frame242.jpg', 'frame243.jpg', 'frame244.jpg', 'frame245.jpg', 'frame246.jpg', 'frame247.jpg', 'frame248.jpg', 'frame249.jpg', 'frame25.jpg', 'frame250.jpg', 'frame251.jpg', 'frame252.jpg', 'frame253.jpg', 'frame254.jpg', 'frame255.jpg', 'frame256.jpg', 'frame257.jpg', 'frame258.jpg', 'frame259.jpg', 'frame26.jpg', 'frame260.jpg', 'frame261.jpg', 'frame262.jpg', 'frame263.jpg', 'frame264.jpg', 'frame265.jpg', 'frame266.jpg', 'frame267.jpg', 'frame268.jpg', 'frame269.jpg', 'frame27.jpg', 'frame270.jpg', 'frame271.jpg', 'frame272.jpg', 'frame273.jpg', 'frame274.jpg', 'frame275.jpg', 'frame276.jpg', 'frame277.jpg', 'frame278.jpg', 'frame279.jpg', 'frame28.jpg', 'frame280.jpg', 'frame281.jpg', 'frame282.jpg', 'frame285.jpg', 'frame286.jpg', 'frame287.jpg', 'frame288.jpg', 'frame289.jpg', 'frame29.jpg', 'frame290.jpg', 'frame291.jpg', 'frame292.jpg', 'frame293.jpg', 'frame294.jpg', 'frame295.jpg', 'frame296.jpg', 'frame297.jpg', 'frame298.jpg', 'frame299.jpg', 'frame3.jpg', 'frame30.jpg', 'frame300.jpg', 'frame301.jpg', 'frame302.jpg', 'frame303.jpg', 'frame304.jpg', 'frame305.jpg', 'frame306.jpg', 'frame307.jpg', 'frame308.jpg', 'frame309.jpg', 'frame31.jpg', 'frame310.jpg', 'frame311.jpg', 'frame312.jpg', 'frame313.jpg', 'frame314.jpg', 'frame315.jpg', 'frame316.jpg', 'frame317.jpg', 'frame318.jpg', 'frame319.jpg', 'frame32.jpg', 'frame320.jpg', 'frame321.jpg', 'frame322.jpg', 'frame323.jpg', 'frame324.jpg', 'frame325.jpg', 'frame326.jpg', 'frame327.jpg', 'frame328.jpg', 'frame329.jpg', 'frame33.jpg', 'frame330.jpg', 'frame331.jpg', 'frame332.jpg', 'frame333.jpg', 'frame334.jpg', 'frame335.jpg', 'frame336.jpg', 'frame337.jpg', 'frame338.jpg', 'frame339.jpg', 'frame34.jpg', 'frame340.jpg', 'frame35.jpg', 'frame36.jpg', 'frame364.jpg', 'frame365.jpg', 'frame366.jpg', 'frame367.jpg', 'frame368.jpg', 'frame369.jpg', 'frame37.jpg', 'frame370.jpg', 'frame371.jpg', 'frame372.jpg', 'frame373.jpg', 'frame374.jpg', 'frame375.jpg', 'frame376.jpg', 'frame377.jpg', 'frame378.jpg', 'frame379.jpg', 'frame38.jpg', 'frame380.jpg', 'frame381.jpg', 'frame382.jpg', 'frame383.jpg', 'frame384.jpg', 'frame385.jpg', 'frame386.jpg', 'frame387.jpg', 'frame388.jpg', 'frame389.jpg', 'frame39.jpg', 'frame390.jpg', 'frame391.jpg', 'frame392.jpg', 'frame393.jpg', 'frame394.jpg', 'frame395.jpg', 'frame396.jpg', 'frame397.jpg', 'frame398.jpg', 'frame399.jpg', 'frame4.jpg', 'frame40.jpg', 'frame400.jpg', 'frame401.jpg', 'frame402.jpg', 'frame403.jpg', 'frame404.jpg', 'frame405.jpg', 'frame406.jpg', 'frame407.jpg', 'frame408.jpg', 'frame409.jpg', 'frame41.jpg', 'frame410.jpg', 'frame411.jpg', 'frame412.jpg', 'frame413.jpg', 'frame414.jpg', 'frame415.jpg', 'frame416.jpg', 'frame417.jpg', 'frame418.jpg', 'frame419.jpg', 'frame42.jpg', 'frame420.jpg', 'frame421.jpg', 'frame422.jpg', 'frame423.jpg', 'frame424.jpg', 'frame425.jpg', 'frame426.jpg', 'frame427.jpg', 'frame428.jpg', 'frame429.jpg', 'frame430.jpg', 'frame431.jpg', 'frame432.jpg', 'frame433.jpg', 'frame434.jpg', 'frame435.jpg', 'frame436.jpg', 'frame437.jpg', 'frame438.jpg', 'frame439.jpg', 'frame440.jpg', 'frame441.jpg', 'frame442.jpg', 'frame443.jpg', 'frame444.jpg', 'frame445.jpg', 'frame446.jpg', 'frame447.jpg', 'frame448.jpg', 'frame449.jpg', 'frame45.jpg', 'frame450.jpg', 'frame451.jpg', 'frame452.jpg', 'frame453.jpg', 'frame454.jpg', 'frame455.jpg', 'frame456.jpg', 'frame457.jpg', 'frame458.jpg', 'frame459.jpg', 'frame46.jpg', 'frame460.jpg', 'frame461.jpg', 'frame462.jpg', 'frame463.jpg', 'frame464.jpg', 'frame465.jpg', 'frame466.jpg', 'frame467.jpg', 'frame468.jpg', 'frame469.jpg', 'frame47.jpg', 'frame470.jpg', 'frame471.jpg', 'frame472.jpg', 'frame473.jpg', 'frame474.jpg', 'frame475.jpg', 'frame476.jpg', 'frame477.jpg', 'frame478.jpg', 'frame479.jpg', 'frame48.jpg', 'frame480.jpg', 'frame481.jpg', 'frame482.jpg', 'frame483.jpg', 'frame484.jpg', 'frame485.jpg', 'frame486.jpg', 'frame487.jpg', 'frame488.jpg', 'frame489.jpg', 'frame49.jpg', 'frame490.jpg', 'frame491.jpg', 'frame492.jpg', 'frame493.jpg', 'frame494.jpg', 'frame495.jpg', 'frame496.jpg', 'frame497.jpg', 'frame498.jpg', 'frame499.jpg', 'frame5.jpg', 
+#         'frame50.jpg', 'frame500.jpg', 'frame501.jpg', 'frame502.jpg', 'frame503.jpg', 'frame504.jpg', 'frame505.jpg', 'frame506.jpg', 'frame507.jpg', 'frame508.jpg', 'frame509.jpg', 'frame51.jpg', 'frame510.jpg', 'frame511.jpg', 'frame512.jpg', 'frame513.jpg', 'frame514.jpg', 'frame515.jpg', 'frame516.jpg', 'frame517.jpg', 'frame518.jpg', 'frame519.jpg', 'frame52.jpg', 'frame520.jpg', 'frame521.jpg', 'frame522.jpg', 'frame523.jpg', 'frame524.jpg', 'frame525.jpg', 'frame526.jpg', 'frame527.jpg', 'frame528.jpg', 'frame529.jpg', 'frame53.jpg', 'frame530.jpg', 'frame531.jpg', 'frame532.jpg', 'frame533.jpg', 'frame534.jpg', 'frame535.jpg', 'frame536.jpg', 'frame537.jpg', 'frame538.jpg', 'frame539.jpg', 'frame54.jpg', 'frame540.jpg', 'frame541.jpg', 'frame542.jpg', 'frame543.jpg', 'frame544.jpg', 'frame545.jpg', 'frame546.jpg', 'frame547.jpg', 'frame548.jpg', 'frame549.jpg', 'frame55.jpg', 'frame550.jpg', 'frame551.jpg', 'frame552.jpg', 'frame553.jpg', 'frame554.jpg', 'frame555.jpg', 'frame556.jpg', 'frame557.jpg', 'frame558.jpg', 'frame559.jpg', 'frame56.jpg', 'frame560.jpg', 'frame561.jpg', 'frame562.jpg', 'frame563.jpg', 'frame566.jpg', 'frame567.jpg', 'frame568.jpg', 'frame569.jpg', 'frame57.jpg', 'frame570.jpg', 'frame571.jpg', 'frame572.jpg', 'frame573.jpg', 'frame574.jpg', 'frame575.jpg', 'frame576.jpg', 'frame577.jpg', 'frame578.jpg', 'frame579.jpg', 'frame58.jpg', 'frame580.jpg', 'frame581.jpg', 'frame582.jpg', 'frame583.jpg', 'frame584.jpg', 'frame585.jpg', 'frame586.jpg', 'frame587.jpg', 'frame588.jpg', 'frame589.jpg', 'frame59.jpg', 'frame590.jpg', 'frame591.jpg', 'frame592.jpg', 'frame593.jpg', 'frame594.jpg', 'frame595.jpg', 'frame596.jpg', 'frame597.jpg', 'frame598.jpg', 'frame599.jpg', 'frame6.jpg', 'frame60.jpg', 'frame600.jpg', 'frame601.jpg', 'frame602.jpg', 'frame603.jpg', 'frame604.jpg', 'frame605.jpg', 'frame606.jpg', 'frame607.jpg', 'frame608.jpg', 'frame609.jpg', 'frame61.jpg', 'frame610.jpg', 'frame611.jpg', 'frame612.jpg', 'frame613.jpg', 'frame614.jpg', 'frame615.jpg', 'frame616.jpg', 'frame617.jpg', 'frame618.jpg', 'frame619.jpg', 'frame62.jpg', 'frame620.jpg', 'frame621.jpg', 'frame622.jpg', 'frame623.jpg', 'frame624.jpg', 'frame625.jpg', 'frame626.jpg', 'frame627.jpg', 'frame628.jpg', 'frame629.jpg', 'frame63.jpg', 'frame630.jpg', 'frame631.jpg', 'frame632.jpg', 'frame633.jpg', 'frame634.jpg', 'frame635.jpg', 'frame636.jpg', 'frame637.jpg', 'frame638.jpg', 'frame639.jpg', 'frame64.jpg', 'frame640.jpg', 'frame641.jpg', 'frame642.jpg', 'frame643.jpg', 'frame644.jpg', 'frame645.jpg', 'frame646.jpg', 'frame647.jpg', 'frame648.jpg', 'frame649.jpg', 'frame65.jpg', 'frame650.jpg', 'frame651.jpg', 'frame652.jpg', 'frame653.jpg', 'frame654.jpg', 'frame655.jpg', 'frame656.jpg', 'frame657.jpg', 'frame658.jpg', 'frame659.jpg', 'frame66.jpg', 'frame660.jpg', 'frame661.jpg', 'frame662.jpg', 'frame663.jpg', 'frame664.jpg', 'frame665.jpg', 'frame666.jpg', 'frame667.jpg', 'frame668.jpg', 'frame669.jpg', 'frame67.jpg', 'frame670.jpg', 'frame671.jpg', 'frame672.jpg', 'frame673.jpg', 'frame674.jpg', 'frame675.jpg', 'frame676.jpg', 'frame677.jpg', 'frame678.jpg', 'frame679.jpg', 'frame68.jpg', 'frame680.jpg', 'frame681.jpg', 'frame682.jpg', 'frame683.jpg', 'frame684.jpg', 'frame685.jpg', 'frame686.jpg', 'frame687.jpg', 'frame688.jpg', 'frame689.jpg', 'frame69.jpg', 'frame690.jpg', 'frame691.jpg', 'frame692.jpg', 'frame693.jpg', 'frame694.jpg', 'frame695.jpg', 'frame696.jpg', 'frame697.jpg', 'frame698.jpg', 'frame699.jpg', 'frame7.jpg', 'frame70.jpg', 'frame700.jpg', 'frame701.jpg', 'frame702.jpg', 'frame703.jpg', 'frame704.jpg', 'frame705.jpg', 'frame706.jpg', 'frame707.jpg', 'frame708.jpg', 'frame709.jpg', 'frame71.jpg', 'frame710.jpg', 'frame711.jpg', 'frame712.jpg', 'frame713.jpg', 'frame714.jpg', 'frame715.jpg', 'frame716.jpg', 'frame717.jpg', 'frame718.jpg', 'frame719.jpg', 'frame72.jpg', 'frame720.jpg', 'frame721.jpg', 'frame722.jpg', 'frame723.jpg', 'frame724.jpg', 'frame725.jpg', 'frame726.jpg', 'frame727.jpg', 'frame73.jpg', 'frame74.jpg', 'frame75.jpg', 'frame76.jpg', 'frame763.jpg', 'frame764.jpg', 'frame765.jpg', 'frame766.jpg', 'frame767.jpg', 'frame768.jpg', 'frame769.jpg', 'frame77.jpg', 'frame770.jpg', 'frame771.jpg', 'frame772.jpg', 'frame773.jpg', 'frame774.jpg', 'frame78.jpg', 'frame79.jpg', 'frame8.jpg', 'frame80.jpg', 'frame800.jpg', 'frame801.jpg', 'frame802.jpg', 'frame803.jpg', 'frame804.jpg', 'frame805.jpg', 'frame806.jpg', 'frame807.jpg', 'frame808.jpg', 'frame809.jpg', 'frame81.jpg', 'frame810.jpg', 'frame811.jpg', 'frame812.jpg', 'frame813.jpg', 'frame814.jpg', 'frame815.jpg', 'frame816.jpg', 'frame817.jpg', 'frame818.jpg', 'frame819.jpg', 'frame82.jpg', 'frame820.jpg', 'frame821.jpg', 'frame822.jpg', 'frame823.jpg', 'frame824.jpg', 'frame825.jpg', 'frame826.jpg', 'frame827.jpg', 'frame828.jpg', 'frame829.jpg', 'frame83.jpg', 'frame830.jpg', 'frame831.jpg', 'frame832.jpg', 'frame833.jpg', 'frame834.jpg', 'frame835.jpg', 'frame836.jpg', 'frame837.jpg', 'frame838.jpg', 'frame839.jpg', 'frame84.jpg', 'frame840.jpg', 'frame841.jpg', 'frame842.jpg', 'frame843.jpg', 'frame844.jpg', 'frame845.jpg', 'frame846.jpg', 'frame847.jpg', 'frame848.jpg', 'frame849.jpg', 'frame85.jpg', 'frame850.jpg', 'frame851.jpg', 'frame852.jpg', 'frame853.jpg', 'frame854.jpg', 'frame855.jpg', 'frame856.jpg', 'frame857.jpg', 'frame858.jpg', 'frame859.jpg', 'frame86.jpg', 'frame860.jpg', 'frame861.jpg', 'frame862.jpg', 'frame863.jpg', 'frame864.jpg', 'frame865.jpg', 'frame866.jpg', 'frame867.jpg', 'frame868.jpg', 'frame869.jpg', 'frame87.jpg', 'frame870.jpg', 'frame871.jpg', 'frame872.jpg', 'frame873.jpg', 'frame874.jpg', 'frame875.jpg', 'frame876.jpg', 'frame877.jpg', 'frame878.jpg', 'frame879.jpg', 'frame88.jpg', 'frame880.jpg', 'frame881.jpg', 'frame882.jpg', 'frame883.jpg', 'frame884.jpg', 'frame885.jpg', 'frame886.jpg', 'frame887.jpg', 'frame888.jpg', 'frame889.jpg', 'frame89.jpg', 'frame890.jpg', 'frame891.jpg', 'frame892.jpg', 'frame893.jpg', 'frame894.jpg', 'frame895.jpg', 'frame896.jpg', 'frame897.jpg', 'frame898.jpg', 'frame899.jpg', 'frame9.jpg', 'frame90.jpg', 'frame900.jpg', 'frame901.jpg', 'frame902.jpg', 'frame903.jpg', 'frame904.jpg', 'frame905.jpg', 'frame906.jpg', 'frame907.jpg', 'frame908.jpg', 'frame909.jpg', 'frame91.jpg', 'frame910.jpg', 'frame911.jpg', 'frame912.jpg', 'frame913.jpg', 'frame914.jpg', 'frame915.jpg', 'frame916.jpg', 'frame917.jpg', 'frame918.jpg', 'frame919.jpg', 'frame92.jpg', 'frame920.jpg', 'frame921.jpg', 'frame922.jpg', 'frame923.jpg', 'frame924.jpg', 'frame925.jpg', 'frame926.jpg', 'frame927.jpg', 'frame928.jpg', 'frame929.jpg', 'frame93.jpg', 'frame930.jpg', 'frame931.jpg', 'frame932.jpg', 'frame933.jpg', 'frame934.jpg', 'frame935.jpg', 'frame936.jpg', 'frame937.jpg', 'frame938.jpg', 'frame939.jpg', 'frame94.jpg', 'frame940.jpg', 'frame941.jpg', 'frame942.jpg', 'frame943.jpg', 'frame944.jpg', 'frame945.jpg', 'frame946.jpg', 'frame947.jpg', 'frame948.jpg', 'frame949.jpg', 'frame95.jpg', 'frame950.jpg', 'frame951.jpg', 'frame952.jpg', 'frame953.jpg', 'frame954.jpg', 'frame955.jpg', 'frame956.jpg', 'frame957.jpg', 'frame958.jpg', 'frame959.jpg', 'frame96.jpg', 'frame960.jpg', 'frame961.jpg', 'frame962.jpg', 'frame963.jpg', 'frame964.jpg', 'frame965.jpg', 'frame966.jpg', 'frame967.jpg', 'frame968.jpg', 'frame969.jpg', 'frame97.jpg', 'frame970.jpg', 'frame971.jpg', 'frame972.jpg', 'frame973.jpg', 'frame974.jpg', 'frame975.jpg', 'frame976.jpg', 'frame977.jpg', 'frame978.jpg', 'frame979.jpg', 'frame98.jpg', 'frame980.jpg', 'frame981.jpg', 'frame982.jpg', 'frame983.jpg', 'frame984.jpg', 'frame985.jpg', 'frame986.jpg', 'frame987.jpg', 'frame988.jpg', 'frame989.jpg', 'frame99.jpg', 'frame990.jpg', 'frame991.jpg', 'frame992.jpg', 'frame993.jpg', 'frame994.jpg', 'frame995.jpg', 'frame996.jpg', 'frame997.jpg', 'frame998.jpg', 'frame999.jpg'
+#     ]
+#     }
 
-id = ["down.jpg", "front.jpg", "sideleft.jpg", "sideright.jpg",
-        'frame10.jpg', 'frame100.jpg', 'frame1000.jpg', 'frame1001.jpg', 'frame1002.jpg', 'frame1003.jpg', 'frame1004.jpg', 'frame1005.jpg', 'frame1006.jpg', 'frame1007.jpg', 'frame1008.jpg', 'frame1009.jpg', 'frame101.jpg', 'frame1010.jpg', 'frame1011.jpg', 'frame1012.jpg', 'frame1013.jpg', 'frame1014.jpg', 'frame1015.jpg', 'frame1016.jpg', 'frame1017.jpg', 'frame1018.jpg', 'frame1019.jpg', 'frame102.jpg', 'frame1020.jpg', 'frame1021.jpg', 'frame1022.jpg', 'frame1025.jpg', 'frame1026.jpg', 'frame1027.jpg', 'frame1028.jpg', 'frame1029.jpg', 'frame103.jpg', 'frame1030.jpg', 'frame1031.jpg', 'frame1032.jpg', 'frame1033.jpg', 'frame1034.jpg', 'frame1035.jpg', 'frame1036.jpg', 'frame1037.jpg', 'frame1038.jpg', 'frame1039.jpg', 'frame104.jpg', 'frame1040.jpg', 'frame1041.jpg', 'frame1042.jpg', 'frame1043.jpg', 'frame1044.jpg', 'frame1045.jpg', 'frame1046.jpg', 'frame1047.jpg', 'frame1048.jpg', 'frame1049.jpg', 'frame105.jpg', 'frame1050.jpg', 'frame1051.jpg', 'frame1052.jpg', 'frame1053.jpg', 'frame1054.jpg', 'frame1055.jpg', 'frame1056.jpg', 'frame1057.jpg', 'frame1058.jpg', 'frame1059.jpg', 'frame106.jpg', 'frame1060.jpg', 'frame1061.jpg', 'frame1062.jpg', 'frame1063.jpg', 'frame1064.jpg', 'frame1065.jpg', 'frame1066.jpg', 'frame1067.jpg', 'frame1068.jpg', 'frame1069.jpg', 'frame107.jpg', 'frame1070.jpg', 'frame1071.jpg', 'frame1072.jpg', 'frame1073.jpg', 'frame1074.jpg', 'frame1075.jpg', 'frame1076.jpg', 'frame1077.jpg', 'frame1078.jpg', 'frame1079.jpg', 'frame108.jpg', 'frame1080.jpg', 'frame1081.jpg', 'frame1082.jpg', 'frame1083.jpg', 'frame1084.jpg', 'frame1085.jpg', 'frame1086.jpg', 'frame1087.jpg', 'frame1088.jpg', 'frame1089.jpg', 'frame109.jpg', 'frame1090.jpg', 'frame1091.jpg', 'frame1092.jpg', 'frame1093.jpg', 'frame1094.jpg', 'frame1095.jpg', 'frame1096.jpg', 'frame1097.jpg', 'frame1098.jpg', 'frame1099.jpg', 'frame11.jpg', 'frame110.jpg', 'frame1100.jpg', 'frame1101.jpg', 'frame1102.jpg', 'frame1103.jpg', 'frame1104.jpg', 'frame1105.jpg', 'frame1106.jpg', 'frame1107.jpg', 'frame1108.jpg', 'frame1109.jpg', 'frame111.jpg', 'frame1110.jpg', 'frame1111.jpg', 'frame1112.jpg', 'frame1113.jpg', 'frame1114.jpg', 'frame1115.jpg', 'frame1116.jpg', 'frame1117.jpg', 'frame1118.jpg', 'frame1119.jpg', 'frame112.jpg', 'frame1120.jpg', 'frame1121.jpg', 'frame1122.jpg', 'frame1123.jpg', 'frame1124.jpg', 'frame1125.jpg', 'frame1126.jpg', 'frame1127.jpg', 'frame1128.jpg', 'frame1129.jpg', 'frame113.jpg', 'frame1130.jpg', 'frame1131.jpg', 'frame1132.jpg', 'frame1133.jpg', 'frame1134.jpg', 'frame1135.jpg', 'frame1136.jpg', 'frame1137.jpg', 'frame1138.jpg', 'frame1139.jpg', 'frame114.jpg', 'frame1140.jpg', 'frame1141.jpg', 'frame1142.jpg', 'frame1143.jpg', 'frame1144.jpg', 'frame1145.jpg', 'frame1146.jpg', 'frame1147.jpg', 'frame1148.jpg', 'frame1149.jpg', 'frame115.jpg', 'frame1150.jpg', 'frame1151.jpg', 'frame1152.jpg', 'frame1153.jpg', 'frame1154.jpg', 'frame1155.jpg', 'frame1156.jpg', 'frame1157.jpg', 'frame1158.jpg', 'frame1159.jpg', 'frame116.jpg', 'frame1160.jpg', 'frame1161.jpg', 'frame1162.jpg', 'frame1163.jpg', 'frame1164.jpg', 'frame1165.jpg', 'frame1166.jpg', 'frame1167.jpg', 'frame1168.jpg', 'frame1169.jpg', 'frame117.jpg', 'frame1170.jpg', 'frame1171.jpg', 'frame1172.jpg', 'frame1173.jpg', 'frame1174.jpg', 'frame1175.jpg', 'frame1176.jpg', 'frame1177.jpg', 'frame1178.jpg', 'frame1179.jpg', 'frame118.jpg', 'frame1180.jpg', 'frame1181.jpg', 'frame1182.jpg', 'frame1183.jpg', 'frame1184.jpg', 'frame1185.jpg', 'frame1186.jpg', 'frame1187.jpg', 'frame1188.jpg', 'frame1189.jpg', 'frame119.jpg', 'frame1190.jpg', 'frame1191.jpg', 'frame1192.jpg', 'frame1193.jpg', 'frame1194.jpg', 'frame1195.jpg', 'frame1196.jpg', 'frame1197.jpg', 'frame1198.jpg', 'frame12.jpg', 'frame120.jpg', 'frame121.jpg', 'frame122.jpg', 'frame123.jpg', 'frame124.jpg', 'frame125.jpg', 'frame126.jpg', 'frame127.jpg', 'frame128.jpg', 'frame129.jpg', 'frame13.jpg', 'frame130.jpg', 'frame131.jpg', 'frame132.jpg', 'frame133.jpg', 'frame134.jpg', 'frame135.jpg', 'frame136.jpg', 'frame137.jpg', 'frame138.jpg', 'frame139.jpg', 'frame14.jpg', 'frame140.jpg', 'frame141.jpg', 'frame142.jpg', 'frame143.jpg', 'frame144.jpg', 'frame145.jpg', 'frame146.jpg', 'frame147.jpg', 'frame148.jpg', 'frame149.jpg', 'frame15.jpg', 'frame150.jpg', 'frame151.jpg', 'frame152.jpg', 'frame153.jpg', 'frame154.jpg', 'frame155.jpg', 'frame156.jpg', 'frame157.jpg', 'frame158.jpg', 'frame159.jpg', 'frame16.jpg', 'frame160.jpg', 'frame161.jpg', 'frame162.jpg', 'frame163.jpg', 'frame164.jpg', 'frame165.jpg', 'frame166.jpg', 'frame167.jpg', 'frame168.jpg', 'frame169.jpg', 'frame17.jpg', 'frame170.jpg', 'frame171.jpg', 'frame172.jpg', 'frame173.jpg', 'frame174.jpg', 'frame175.jpg', 'frame176.jpg', 'frame177.jpg', 'frame178.jpg', 'frame179.jpg', 'frame18.jpg', 'frame180.jpg', 'frame181.jpg', 'frame184.jpg', 'frame185.jpg', 'frame186.jpg', 'frame187.jpg', 'frame188.jpg', 'frame189.jpg', 'frame19.jpg', 'frame190.jpg', 'frame191.jpg', 'frame192.jpg', 'frame193.jpg', 'frame194.jpg', 'frame195.jpg', 'frame196.jpg', 'frame197.jpg', 'frame198.jpg', 'frame199.jpg', 'frame2.jpg', 'frame20.jpg', 'frame200.jpg', 'frame201.jpg', 'frame202.jpg', 'frame203.jpg', 'frame204.jpg', 'frame205.jpg', 'frame206.jpg', 'frame207.jpg', 'frame208.jpg', 'frame209.jpg', 'frame21.jpg', 'frame210.jpg', 'frame211.jpg', 'frame212.jpg', 'frame213.jpg', 'frame214.jpg', 'frame215.jpg', 'frame216.jpg', 'frame217.jpg', 'frame218.jpg', 'frame219.jpg', 'frame22.jpg', 'frame220.jpg', 'frame221.jpg', 'frame222.jpg', 'frame223.jpg', 'frame224.jpg', 'frame225.jpg', 'frame226.jpg', 'frame227.jpg', 'frame228.jpg', 'frame229.jpg', 'frame23.jpg', 'frame230.jpg', 'frame231.jpg', 'frame232.jpg', 'frame233.jpg', 'frame234.jpg', 'frame235.jpg', 'frame236.jpg', 'frame237.jpg', 'frame238.jpg', 'frame239.jpg', 'frame24.jpg', 'frame240.jpg', 'frame241.jpg', 'frame242.jpg', 'frame243.jpg', 'frame244.jpg', 'frame245.jpg', 'frame246.jpg', 'frame247.jpg', 'frame248.jpg', 'frame249.jpg', 'frame25.jpg', 'frame250.jpg', 'frame251.jpg', 'frame252.jpg', 'frame253.jpg', 'frame254.jpg', 'frame255.jpg', 'frame256.jpg', 'frame257.jpg', 'frame258.jpg', 'frame259.jpg', 'frame26.jpg', 'frame260.jpg', 'frame261.jpg', 'frame262.jpg', 'frame263.jpg', 'frame264.jpg', 'frame265.jpg', 'frame266.jpg', 'frame267.jpg', 'frame268.jpg', 'frame269.jpg', 'frame27.jpg', 'frame270.jpg', 'frame271.jpg', 'frame272.jpg', 'frame273.jpg', 'frame274.jpg', 'frame275.jpg', 'frame276.jpg', 'frame277.jpg', 'frame278.jpg', 'frame279.jpg', 'frame28.jpg', 'frame280.jpg', 'frame281.jpg', 'frame282.jpg', 'frame285.jpg', 'frame286.jpg', 'frame287.jpg', 'frame288.jpg', 'frame289.jpg', 'frame29.jpg', 'frame290.jpg', 'frame291.jpg', 'frame292.jpg', 'frame293.jpg', 'frame294.jpg', 'frame295.jpg', 'frame296.jpg', 'frame297.jpg', 'frame298.jpg', 'frame299.jpg', 'frame3.jpg', 'frame30.jpg', 'frame300.jpg', 'frame301.jpg', 'frame302.jpg', 'frame303.jpg', 'frame304.jpg', 'frame305.jpg', 'frame306.jpg', 'frame307.jpg', 'frame308.jpg', 'frame309.jpg', 'frame31.jpg', 'frame310.jpg', 'frame311.jpg', 'frame312.jpg', 'frame313.jpg', 'frame314.jpg', 'frame315.jpg', 'frame316.jpg', 'frame317.jpg', 'frame318.jpg', 'frame319.jpg', 'frame32.jpg', 'frame320.jpg', 'frame321.jpg', 'frame322.jpg', 'frame323.jpg', 'frame324.jpg', 'frame325.jpg', 'frame326.jpg', 'frame327.jpg', 'frame328.jpg', 'frame329.jpg', 'frame33.jpg', 'frame330.jpg', 'frame331.jpg', 'frame332.jpg', 'frame333.jpg', 'frame334.jpg', 'frame335.jpg', 'frame336.jpg', 'frame337.jpg', 'frame338.jpg', 'frame339.jpg', 'frame34.jpg', 'frame340.jpg', 'frame35.jpg', 'frame36.jpg', 'frame364.jpg', 'frame365.jpg', 'frame366.jpg', 'frame367.jpg', 'frame368.jpg', 'frame369.jpg', 'frame37.jpg', 'frame370.jpg', 'frame371.jpg', 'frame372.jpg', 'frame373.jpg', 'frame374.jpg', 'frame375.jpg', 'frame376.jpg', 'frame377.jpg', 'frame378.jpg', 'frame379.jpg', 'frame38.jpg', 'frame380.jpg', 'frame381.jpg', 'frame382.jpg', 'frame383.jpg', 'frame384.jpg', 'frame385.jpg', 'frame386.jpg', 'frame387.jpg', 'frame388.jpg', 'frame389.jpg', 'frame39.jpg', 'frame390.jpg', 'frame391.jpg', 'frame392.jpg', 'frame393.jpg', 'frame394.jpg', 'frame395.jpg', 'frame396.jpg', 'frame397.jpg', 'frame398.jpg', 'frame399.jpg', 'frame4.jpg', 'frame40.jpg', 'frame400.jpg', 'frame401.jpg', 'frame402.jpg', 'frame403.jpg', 'frame404.jpg', 'frame405.jpg', 'frame406.jpg', 'frame407.jpg', 'frame408.jpg', 'frame409.jpg', 'frame41.jpg', 'frame410.jpg', 'frame411.jpg', 'frame412.jpg', 'frame413.jpg', 'frame414.jpg', 'frame415.jpg', 'frame416.jpg', 'frame417.jpg', 'frame418.jpg', 'frame419.jpg', 'frame42.jpg', 'frame420.jpg', 'frame421.jpg', 'frame422.jpg', 'frame423.jpg', 'frame424.jpg', 'frame425.jpg', 'frame426.jpg', 'frame427.jpg', 'frame428.jpg', 'frame429.jpg', 'frame430.jpg', 'frame431.jpg', 'frame432.jpg', 'frame433.jpg', 'frame434.jpg', 'frame435.jpg', 'frame436.jpg', 'frame437.jpg', 'frame438.jpg', 'frame439.jpg', 'frame440.jpg', 'frame441.jpg', 'frame442.jpg', 'frame443.jpg', 'frame444.jpg', 'frame445.jpg', 'frame446.jpg', 'frame447.jpg', 'frame448.jpg', 'frame449.jpg', 'frame45.jpg', 'frame450.jpg', 'frame451.jpg', 'frame452.jpg', 'frame453.jpg', 'frame454.jpg', 'frame455.jpg', 'frame456.jpg', 'frame457.jpg', 'frame458.jpg', 'frame459.jpg', 'frame46.jpg', 'frame460.jpg', 'frame461.jpg', 'frame462.jpg', 'frame463.jpg', 'frame464.jpg', 'frame465.jpg', 'frame466.jpg', 'frame467.jpg', 'frame468.jpg', 'frame469.jpg', 'frame47.jpg', 'frame470.jpg', 'frame471.jpg', 'frame472.jpg', 'frame473.jpg', 'frame474.jpg', 'frame475.jpg', 'frame476.jpg', 'frame477.jpg', 'frame478.jpg', 'frame479.jpg', 'frame48.jpg', 'frame480.jpg', 'frame481.jpg', 'frame482.jpg', 'frame483.jpg', 'frame484.jpg', 'frame485.jpg', 'frame486.jpg', 'frame487.jpg', 'frame488.jpg', 'frame489.jpg', 'frame49.jpg', 'frame490.jpg', 'frame491.jpg', 'frame492.jpg', 'frame493.jpg', 'frame494.jpg', 'frame495.jpg', 'frame496.jpg', 'frame497.jpg', 'frame498.jpg', 'frame499.jpg', 'frame5.jpg', 
-        'frame50.jpg', 'frame500.jpg', 'frame501.jpg', 'frame502.jpg', 'frame503.jpg', 'frame504.jpg', 'frame505.jpg', 'frame506.jpg', 'frame507.jpg', 'frame508.jpg', 'frame509.jpg', 'frame51.jpg', 'frame510.jpg', 'frame511.jpg', 'frame512.jpg', 'frame513.jpg', 'frame514.jpg', 'frame515.jpg', 'frame516.jpg', 'frame517.jpg', 'frame518.jpg', 'frame519.jpg', 'frame52.jpg', 'frame520.jpg', 'frame521.jpg', 'frame522.jpg', 'frame523.jpg', 'frame524.jpg', 'frame525.jpg', 'frame526.jpg', 'frame527.jpg', 'frame528.jpg', 'frame529.jpg', 'frame53.jpg', 'frame530.jpg', 'frame531.jpg', 'frame532.jpg', 'frame533.jpg', 'frame534.jpg', 'frame535.jpg', 'frame536.jpg', 'frame537.jpg', 'frame538.jpg', 'frame539.jpg', 'frame54.jpg', 'frame540.jpg', 'frame541.jpg', 'frame542.jpg', 'frame543.jpg', 'frame544.jpg', 'frame545.jpg', 'frame546.jpg', 'frame547.jpg', 'frame548.jpg', 'frame549.jpg', 'frame55.jpg', 'frame550.jpg', 'frame551.jpg', 'frame552.jpg', 'frame553.jpg', 'frame554.jpg', 'frame555.jpg', 'frame556.jpg', 'frame557.jpg', 'frame558.jpg', 'frame559.jpg', 'frame56.jpg', 'frame560.jpg', 'frame561.jpg', 'frame562.jpg', 'frame563.jpg', 'frame566.jpg', 'frame567.jpg', 'frame568.jpg', 'frame569.jpg', 'frame57.jpg', 'frame570.jpg', 'frame571.jpg', 'frame572.jpg', 'frame573.jpg', 'frame574.jpg', 'frame575.jpg', 'frame576.jpg', 'frame577.jpg', 'frame578.jpg', 'frame579.jpg', 'frame58.jpg', 'frame580.jpg', 'frame581.jpg', 'frame582.jpg', 'frame583.jpg', 'frame584.jpg', 'frame585.jpg', 'frame586.jpg', 'frame587.jpg', 'frame588.jpg', 'frame589.jpg', 'frame59.jpg', 'frame590.jpg', 'frame591.jpg', 'frame592.jpg', 'frame593.jpg', 'frame594.jpg', 'frame595.jpg', 'frame596.jpg', 'frame597.jpg', 'frame598.jpg', 'frame599.jpg', 'frame6.jpg', 'frame60.jpg', 'frame600.jpg', 'frame601.jpg', 'frame602.jpg', 'frame603.jpg', 'frame604.jpg', 'frame605.jpg', 'frame606.jpg', 'frame607.jpg', 'frame608.jpg', 'frame609.jpg', 'frame61.jpg', 'frame610.jpg', 'frame611.jpg', 'frame612.jpg', 'frame613.jpg', 'frame614.jpg', 'frame615.jpg', 'frame616.jpg', 'frame617.jpg', 'frame618.jpg', 'frame619.jpg', 'frame62.jpg', 'frame620.jpg', 'frame621.jpg', 'frame622.jpg', 'frame623.jpg', 'frame624.jpg', 'frame625.jpg', 'frame626.jpg', 'frame627.jpg', 'frame628.jpg', 'frame629.jpg', 'frame63.jpg', 'frame630.jpg', 'frame631.jpg', 'frame632.jpg', 'frame633.jpg', 'frame634.jpg', 'frame635.jpg', 'frame636.jpg', 'frame637.jpg', 'frame638.jpg', 'frame639.jpg', 'frame64.jpg', 'frame640.jpg', 'frame641.jpg', 'frame642.jpg', 'frame643.jpg', 'frame644.jpg', 'frame645.jpg', 'frame646.jpg', 'frame647.jpg', 'frame648.jpg', 'frame649.jpg', 'frame65.jpg', 'frame650.jpg', 'frame651.jpg', 'frame652.jpg', 'frame653.jpg', 'frame654.jpg', 'frame655.jpg', 'frame656.jpg', 'frame657.jpg', 'frame658.jpg', 'frame659.jpg', 'frame66.jpg', 'frame660.jpg', 'frame661.jpg', 'frame662.jpg', 'frame663.jpg', 'frame664.jpg', 'frame665.jpg', 'frame666.jpg', 'frame667.jpg', 'frame668.jpg', 'frame669.jpg', 'frame67.jpg', 'frame670.jpg', 'frame671.jpg', 'frame672.jpg', 'frame673.jpg', 'frame674.jpg', 'frame675.jpg', 'frame676.jpg', 'frame677.jpg', 'frame678.jpg', 'frame679.jpg', 'frame68.jpg', 'frame680.jpg', 'frame681.jpg', 'frame682.jpg', 'frame683.jpg', 'frame684.jpg', 'frame685.jpg', 'frame686.jpg', 'frame687.jpg', 'frame688.jpg', 'frame689.jpg', 'frame69.jpg', 'frame690.jpg', 'frame691.jpg', 'frame692.jpg', 'frame693.jpg', 'frame694.jpg', 'frame695.jpg', 'frame696.jpg', 'frame697.jpg', 'frame698.jpg', 'frame699.jpg', 'frame7.jpg', 'frame70.jpg', 'frame700.jpg', 'frame701.jpg', 'frame702.jpg', 'frame703.jpg', 'frame704.jpg', 'frame705.jpg', 'frame706.jpg', 'frame707.jpg', 'frame708.jpg', 'frame709.jpg', 'frame71.jpg', 'frame710.jpg', 'frame711.jpg', 'frame712.jpg', 'frame713.jpg', 'frame714.jpg', 'frame715.jpg', 'frame716.jpg', 'frame717.jpg', 'frame718.jpg', 'frame719.jpg', 'frame72.jpg', 'frame720.jpg', 'frame721.jpg', 'frame722.jpg', 'frame723.jpg', 'frame724.jpg', 'frame725.jpg', 'frame726.jpg', 'frame727.jpg', 'frame73.jpg', 'frame74.jpg', 'frame75.jpg', 'frame76.jpg', 'frame763.jpg', 'frame764.jpg', 'frame765.jpg', 'frame766.jpg', 'frame767.jpg', 'frame768.jpg', 'frame769.jpg', 'frame77.jpg', 'frame770.jpg', 'frame771.jpg', 'frame772.jpg', 'frame773.jpg', 'frame774.jpg', 'frame78.jpg', 'frame79.jpg', 'frame8.jpg', 'frame80.jpg', 'frame800.jpg', 'frame801.jpg', 'frame802.jpg', 'frame803.jpg', 'frame804.jpg', 'frame805.jpg', 'frame806.jpg', 'frame807.jpg', 'frame808.jpg', 'frame809.jpg', 'frame81.jpg', 'frame810.jpg', 'frame811.jpg', 'frame812.jpg', 'frame813.jpg', 'frame814.jpg', 'frame815.jpg', 'frame816.jpg', 'frame817.jpg', 'frame818.jpg', 'frame819.jpg', 'frame82.jpg', 'frame820.jpg', 'frame821.jpg', 'frame822.jpg', 'frame823.jpg', 'frame824.jpg', 'frame825.jpg', 'frame826.jpg', 'frame827.jpg', 'frame828.jpg', 'frame829.jpg', 'frame83.jpg', 'frame830.jpg', 'frame831.jpg', 'frame832.jpg', 'frame833.jpg', 'frame834.jpg', 'frame835.jpg', 'frame836.jpg', 'frame837.jpg', 'frame838.jpg', 'frame839.jpg', 'frame84.jpg', 'frame840.jpg', 'frame841.jpg', 'frame842.jpg', 'frame843.jpg', 'frame844.jpg', 'frame845.jpg', 'frame846.jpg', 'frame847.jpg', 'frame848.jpg', 'frame849.jpg', 'frame85.jpg', 'frame850.jpg', 'frame851.jpg', 'frame852.jpg', 'frame853.jpg', 'frame854.jpg', 'frame855.jpg', 'frame856.jpg', 'frame857.jpg', 'frame858.jpg', 'frame859.jpg', 'frame86.jpg', 'frame860.jpg', 'frame861.jpg', 'frame862.jpg', 'frame863.jpg', 'frame864.jpg', 'frame865.jpg', 'frame866.jpg', 'frame867.jpg', 'frame868.jpg', 'frame869.jpg', 'frame87.jpg', 'frame870.jpg', 'frame871.jpg', 'frame872.jpg', 'frame873.jpg', 'frame874.jpg', 'frame875.jpg', 'frame876.jpg', 'frame877.jpg', 'frame878.jpg', 'frame879.jpg', 'frame88.jpg', 'frame880.jpg', 'frame881.jpg', 'frame882.jpg', 'frame883.jpg', 'frame884.jpg', 'frame885.jpg', 'frame886.jpg', 'frame887.jpg', 'frame888.jpg', 'frame889.jpg', 'frame89.jpg', 'frame890.jpg', 'frame891.jpg', 'frame892.jpg', 'frame893.jpg', 'frame894.jpg', 'frame895.jpg', 'frame896.jpg', 'frame897.jpg', 'frame898.jpg', 'frame899.jpg', 'frame9.jpg', 'frame90.jpg', 'frame900.jpg', 'frame901.jpg', 'frame902.jpg', 'frame903.jpg', 'frame904.jpg', 'frame905.jpg', 'frame906.jpg', 'frame907.jpg', 'frame908.jpg', 'frame909.jpg', 'frame91.jpg', 'frame910.jpg', 'frame911.jpg', 'frame912.jpg', 'frame913.jpg', 'frame914.jpg', 'frame915.jpg', 'frame916.jpg', 'frame917.jpg', 'frame918.jpg', 'frame919.jpg', 'frame92.jpg', 'frame920.jpg', 'frame921.jpg', 'frame922.jpg', 'frame923.jpg', 'frame924.jpg', 'frame925.jpg', 'frame926.jpg', 'frame927.jpg', 'frame928.jpg', 'frame929.jpg', 'frame93.jpg', 'frame930.jpg', 'frame931.jpg', 'frame932.jpg', 'frame933.jpg', 'frame934.jpg', 'frame935.jpg', 'frame936.jpg', 'frame937.jpg', 'frame938.jpg', 'frame939.jpg', 'frame94.jpg', 'frame940.jpg', 'frame941.jpg', 'frame942.jpg', 'frame943.jpg', 'frame944.jpg', 'frame945.jpg', 'frame946.jpg', 'frame947.jpg', 'frame948.jpg', 'frame949.jpg', 'frame95.jpg', 'frame950.jpg', 'frame951.jpg', 'frame952.jpg', 'frame953.jpg', 'frame954.jpg', 'frame955.jpg', 'frame956.jpg', 'frame957.jpg', 'frame958.jpg', 'frame959.jpg', 'frame96.jpg', 'frame960.jpg', 'frame961.jpg', 'frame962.jpg', 'frame963.jpg', 'frame964.jpg', 'frame965.jpg', 'frame966.jpg', 'frame967.jpg', 'frame968.jpg', 'frame969.jpg', 'frame97.jpg', 'frame970.jpg', 'frame971.jpg', 'frame972.jpg', 'frame973.jpg', 'frame974.jpg', 'frame975.jpg', 'frame976.jpg', 'frame977.jpg', 'frame978.jpg', 'frame979.jpg', 'frame98.jpg', 'frame980.jpg', 'frame981.jpg', 'frame982.jpg', 'frame983.jpg', 'frame984.jpg', 'frame985.jpg', 'frame986.jpg', 'frame987.jpg', 'frame988.jpg', 'frame989.jpg', 'frame99.jpg', 'frame990.jpg', 'frame991.jpg', 'frame992.jpg', 'frame993.jpg', 'frame994.jpg', 'frame995.jpg', 'frame996.jpg', 'frame997.jpg', 'frame998.jpg', 'frame999.jpg'
-    ]
+# id = ["down.jpg", "front.jpg", "sideleft.jpg", "sideright.jpg",
+#         'frame10.jpg', 'frame100.jpg', 'frame1000.jpg', 'frame1001.jpg', 'frame1002.jpg', 'frame1003.jpg', 'frame1004.jpg', 'frame1005.jpg', 'frame1006.jpg', 'frame1007.jpg', 'frame1008.jpg', 'frame1009.jpg', 'frame101.jpg', 'frame1010.jpg', 'frame1011.jpg', 'frame1012.jpg', 'frame1013.jpg', 'frame1014.jpg', 'frame1015.jpg', 'frame1016.jpg', 'frame1017.jpg', 'frame1018.jpg', 'frame1019.jpg', 'frame102.jpg', 'frame1020.jpg', 'frame1021.jpg', 'frame1022.jpg', 'frame1025.jpg', 'frame1026.jpg', 'frame1027.jpg', 'frame1028.jpg', 'frame1029.jpg', 'frame103.jpg', 'frame1030.jpg', 'frame1031.jpg', 'frame1032.jpg', 'frame1033.jpg', 'frame1034.jpg', 'frame1035.jpg', 'frame1036.jpg', 'frame1037.jpg', 'frame1038.jpg', 'frame1039.jpg', 'frame104.jpg', 'frame1040.jpg', 'frame1041.jpg', 'frame1042.jpg', 'frame1043.jpg', 'frame1044.jpg', 'frame1045.jpg', 'frame1046.jpg', 'frame1047.jpg', 'frame1048.jpg', 'frame1049.jpg', 'frame105.jpg', 'frame1050.jpg', 'frame1051.jpg', 'frame1052.jpg', 'frame1053.jpg', 'frame1054.jpg', 'frame1055.jpg', 'frame1056.jpg', 'frame1057.jpg', 'frame1058.jpg', 'frame1059.jpg', 'frame106.jpg', 'frame1060.jpg', 'frame1061.jpg', 'frame1062.jpg', 'frame1063.jpg', 'frame1064.jpg', 'frame1065.jpg', 'frame1066.jpg', 'frame1067.jpg', 'frame1068.jpg', 'frame1069.jpg', 'frame107.jpg', 'frame1070.jpg', 'frame1071.jpg', 'frame1072.jpg', 'frame1073.jpg', 'frame1074.jpg', 'frame1075.jpg', 'frame1076.jpg', 'frame1077.jpg', 'frame1078.jpg', 'frame1079.jpg', 'frame108.jpg', 'frame1080.jpg', 'frame1081.jpg', 'frame1082.jpg', 'frame1083.jpg', 'frame1084.jpg', 'frame1085.jpg', 'frame1086.jpg', 'frame1087.jpg', 'frame1088.jpg', 'frame1089.jpg', 'frame109.jpg', 'frame1090.jpg', 'frame1091.jpg', 'frame1092.jpg', 'frame1093.jpg', 'frame1094.jpg', 'frame1095.jpg', 'frame1096.jpg', 'frame1097.jpg', 'frame1098.jpg', 'frame1099.jpg', 'frame11.jpg', 'frame110.jpg', 'frame1100.jpg', 'frame1101.jpg', 'frame1102.jpg', 'frame1103.jpg', 'frame1104.jpg', 'frame1105.jpg', 'frame1106.jpg', 'frame1107.jpg', 'frame1108.jpg', 'frame1109.jpg', 'frame111.jpg', 'frame1110.jpg', 'frame1111.jpg', 'frame1112.jpg', 'frame1113.jpg', 'frame1114.jpg', 'frame1115.jpg', 'frame1116.jpg', 'frame1117.jpg', 'frame1118.jpg', 'frame1119.jpg', 'frame112.jpg', 'frame1120.jpg', 'frame1121.jpg', 'frame1122.jpg', 'frame1123.jpg', 'frame1124.jpg', 'frame1125.jpg', 'frame1126.jpg', 'frame1127.jpg', 'frame1128.jpg', 'frame1129.jpg', 'frame113.jpg', 'frame1130.jpg', 'frame1131.jpg', 'frame1132.jpg', 'frame1133.jpg', 'frame1134.jpg', 'frame1135.jpg', 'frame1136.jpg', 'frame1137.jpg', 'frame1138.jpg', 'frame1139.jpg', 'frame114.jpg', 'frame1140.jpg', 'frame1141.jpg', 'frame1142.jpg', 'frame1143.jpg', 'frame1144.jpg', 'frame1145.jpg', 'frame1146.jpg', 'frame1147.jpg', 'frame1148.jpg', 'frame1149.jpg', 'frame115.jpg', 'frame1150.jpg', 'frame1151.jpg', 'frame1152.jpg', 'frame1153.jpg', 'frame1154.jpg', 'frame1155.jpg', 'frame1156.jpg', 'frame1157.jpg', 'frame1158.jpg', 'frame1159.jpg', 'frame116.jpg', 'frame1160.jpg', 'frame1161.jpg', 'frame1162.jpg', 'frame1163.jpg', 'frame1164.jpg', 'frame1165.jpg', 'frame1166.jpg', 'frame1167.jpg', 'frame1168.jpg', 'frame1169.jpg', 'frame117.jpg', 'frame1170.jpg', 'frame1171.jpg', 'frame1172.jpg', 'frame1173.jpg', 'frame1174.jpg', 'frame1175.jpg', 'frame1176.jpg', 'frame1177.jpg', 'frame1178.jpg', 'frame1179.jpg', 'frame118.jpg', 'frame1180.jpg', 'frame1181.jpg', 'frame1182.jpg', 'frame1183.jpg', 'frame1184.jpg', 'frame1185.jpg', 'frame1186.jpg', 'frame1187.jpg', 'frame1188.jpg', 'frame1189.jpg', 'frame119.jpg', 'frame1190.jpg', 'frame1191.jpg', 'frame1192.jpg', 'frame1193.jpg', 'frame1194.jpg', 'frame1195.jpg', 'frame1196.jpg', 'frame1197.jpg', 'frame1198.jpg', 'frame12.jpg', 'frame120.jpg', 'frame121.jpg', 'frame122.jpg', 'frame123.jpg', 'frame124.jpg', 'frame125.jpg', 'frame126.jpg', 'frame127.jpg', 'frame128.jpg', 'frame129.jpg', 'frame13.jpg', 'frame130.jpg', 'frame131.jpg', 'frame132.jpg', 'frame133.jpg', 'frame134.jpg', 'frame135.jpg', 'frame136.jpg', 'frame137.jpg', 'frame138.jpg', 'frame139.jpg', 'frame14.jpg', 'frame140.jpg', 'frame141.jpg', 'frame142.jpg', 'frame143.jpg', 'frame144.jpg', 'frame145.jpg', 'frame146.jpg', 'frame147.jpg', 'frame148.jpg', 'frame149.jpg', 'frame15.jpg', 'frame150.jpg', 'frame151.jpg', 'frame152.jpg', 'frame153.jpg', 'frame154.jpg', 'frame155.jpg', 'frame156.jpg', 'frame157.jpg', 'frame158.jpg', 'frame159.jpg', 'frame16.jpg', 'frame160.jpg', 'frame161.jpg', 'frame162.jpg', 'frame163.jpg', 'frame164.jpg', 'frame165.jpg', 'frame166.jpg', 'frame167.jpg', 'frame168.jpg', 'frame169.jpg', 'frame17.jpg', 'frame170.jpg', 'frame171.jpg', 'frame172.jpg', 'frame173.jpg', 'frame174.jpg', 'frame175.jpg', 'frame176.jpg', 'frame177.jpg', 'frame178.jpg', 'frame179.jpg', 'frame18.jpg', 'frame180.jpg', 'frame181.jpg', 'frame184.jpg', 'frame185.jpg', 'frame186.jpg', 'frame187.jpg', 'frame188.jpg', 'frame189.jpg', 'frame19.jpg', 'frame190.jpg', 'frame191.jpg', 'frame192.jpg', 'frame193.jpg', 'frame194.jpg', 'frame195.jpg', 'frame196.jpg', 'frame197.jpg', 'frame198.jpg', 'frame199.jpg', 'frame2.jpg', 'frame20.jpg', 'frame200.jpg', 'frame201.jpg', 'frame202.jpg', 'frame203.jpg', 'frame204.jpg', 'frame205.jpg', 'frame206.jpg', 'frame207.jpg', 'frame208.jpg', 'frame209.jpg', 'frame21.jpg', 'frame210.jpg', 'frame211.jpg', 'frame212.jpg', 'frame213.jpg', 'frame214.jpg', 'frame215.jpg', 'frame216.jpg', 'frame217.jpg', 'frame218.jpg', 'frame219.jpg', 'frame22.jpg', 'frame220.jpg', 'frame221.jpg', 'frame222.jpg', 'frame223.jpg', 'frame224.jpg', 'frame225.jpg', 'frame226.jpg', 'frame227.jpg', 'frame228.jpg', 'frame229.jpg', 'frame23.jpg', 'frame230.jpg', 'frame231.jpg', 'frame232.jpg', 'frame233.jpg', 'frame234.jpg', 'frame235.jpg', 'frame236.jpg', 'frame237.jpg', 'frame238.jpg', 'frame239.jpg', 'frame24.jpg', 'frame240.jpg', 'frame241.jpg', 'frame242.jpg', 'frame243.jpg', 'frame244.jpg', 'frame245.jpg', 'frame246.jpg', 'frame247.jpg', 'frame248.jpg', 'frame249.jpg', 'frame25.jpg', 'frame250.jpg', 'frame251.jpg', 'frame252.jpg', 'frame253.jpg', 'frame254.jpg', 'frame255.jpg', 'frame256.jpg', 'frame257.jpg', 'frame258.jpg', 'frame259.jpg', 'frame26.jpg', 'frame260.jpg', 'frame261.jpg', 'frame262.jpg', 'frame263.jpg', 'frame264.jpg', 'frame265.jpg', 'frame266.jpg', 'frame267.jpg', 'frame268.jpg', 'frame269.jpg', 'frame27.jpg', 'frame270.jpg', 'frame271.jpg', 'frame272.jpg', 'frame273.jpg', 'frame274.jpg', 'frame275.jpg', 'frame276.jpg', 'frame277.jpg', 'frame278.jpg', 'frame279.jpg', 'frame28.jpg', 'frame280.jpg', 'frame281.jpg', 'frame282.jpg', 'frame285.jpg', 'frame286.jpg', 'frame287.jpg', 'frame288.jpg', 'frame289.jpg', 'frame29.jpg', 'frame290.jpg', 'frame291.jpg', 'frame292.jpg', 'frame293.jpg', 'frame294.jpg', 'frame295.jpg', 'frame296.jpg', 'frame297.jpg', 'frame298.jpg', 'frame299.jpg', 'frame3.jpg', 'frame30.jpg', 'frame300.jpg', 'frame301.jpg', 'frame302.jpg', 'frame303.jpg', 'frame304.jpg', 'frame305.jpg', 'frame306.jpg', 'frame307.jpg', 'frame308.jpg', 'frame309.jpg', 'frame31.jpg', 'frame310.jpg', 'frame311.jpg', 'frame312.jpg', 'frame313.jpg', 'frame314.jpg', 'frame315.jpg', 'frame316.jpg', 'frame317.jpg', 'frame318.jpg', 'frame319.jpg', 'frame32.jpg', 'frame320.jpg', 'frame321.jpg', 'frame322.jpg', 'frame323.jpg', 'frame324.jpg', 'frame325.jpg', 'frame326.jpg', 'frame327.jpg', 'frame328.jpg', 'frame329.jpg', 'frame33.jpg', 'frame330.jpg', 'frame331.jpg', 'frame332.jpg', 'frame333.jpg', 'frame334.jpg', 'frame335.jpg', 'frame336.jpg', 'frame337.jpg', 'frame338.jpg', 'frame339.jpg', 'frame34.jpg', 'frame340.jpg', 'frame35.jpg', 'frame36.jpg', 'frame364.jpg', 'frame365.jpg', 'frame366.jpg', 'frame367.jpg', 'frame368.jpg', 'frame369.jpg', 'frame37.jpg', 'frame370.jpg', 'frame371.jpg', 'frame372.jpg', 'frame373.jpg', 'frame374.jpg', 'frame375.jpg', 'frame376.jpg', 'frame377.jpg', 'frame378.jpg', 'frame379.jpg', 'frame38.jpg', 'frame380.jpg', 'frame381.jpg', 'frame382.jpg', 'frame383.jpg', 'frame384.jpg', 'frame385.jpg', 'frame386.jpg', 'frame387.jpg', 'frame388.jpg', 'frame389.jpg', 'frame39.jpg', 'frame390.jpg', 'frame391.jpg', 'frame392.jpg', 'frame393.jpg', 'frame394.jpg', 'frame395.jpg', 'frame396.jpg', 'frame397.jpg', 'frame398.jpg', 'frame399.jpg', 'frame4.jpg', 'frame40.jpg', 'frame400.jpg', 'frame401.jpg', 'frame402.jpg', 'frame403.jpg', 'frame404.jpg', 'frame405.jpg', 'frame406.jpg', 'frame407.jpg', 'frame408.jpg', 'frame409.jpg', 'frame41.jpg', 'frame410.jpg', 'frame411.jpg', 'frame412.jpg', 'frame413.jpg', 'frame414.jpg', 'frame415.jpg', 'frame416.jpg', 'frame417.jpg', 'frame418.jpg', 'frame419.jpg', 'frame42.jpg', 'frame420.jpg', 'frame421.jpg', 'frame422.jpg', 'frame423.jpg', 'frame424.jpg', 'frame425.jpg', 'frame426.jpg', 'frame427.jpg', 'frame428.jpg', 'frame429.jpg', 'frame430.jpg', 'frame431.jpg', 'frame432.jpg', 'frame433.jpg', 'frame434.jpg', 'frame435.jpg', 'frame436.jpg', 'frame437.jpg', 'frame438.jpg', 'frame439.jpg', 'frame440.jpg', 'frame441.jpg', 'frame442.jpg', 'frame443.jpg', 'frame444.jpg', 'frame445.jpg', 'frame446.jpg', 'frame447.jpg', 'frame448.jpg', 'frame449.jpg', 'frame45.jpg', 'frame450.jpg', 'frame451.jpg', 'frame452.jpg', 'frame453.jpg', 'frame454.jpg', 'frame455.jpg', 'frame456.jpg', 'frame457.jpg', 'frame458.jpg', 'frame459.jpg', 'frame46.jpg', 'frame460.jpg', 'frame461.jpg', 'frame462.jpg', 'frame463.jpg', 'frame464.jpg', 'frame465.jpg', 'frame466.jpg', 'frame467.jpg', 'frame468.jpg', 'frame469.jpg', 'frame47.jpg', 'frame470.jpg', 'frame471.jpg', 'frame472.jpg', 'frame473.jpg', 'frame474.jpg', 'frame475.jpg', 'frame476.jpg', 'frame477.jpg', 'frame478.jpg', 'frame479.jpg', 'frame48.jpg', 'frame480.jpg', 'frame481.jpg', 'frame482.jpg', 'frame483.jpg', 'frame484.jpg', 'frame485.jpg', 'frame486.jpg', 'frame487.jpg', 'frame488.jpg', 'frame489.jpg', 'frame49.jpg', 'frame490.jpg', 'frame491.jpg', 'frame492.jpg', 'frame493.jpg', 'frame494.jpg', 'frame495.jpg', 'frame496.jpg', 'frame497.jpg', 'frame498.jpg', 'frame499.jpg', 'frame5.jpg', 
+#         'frame50.jpg', 'frame500.jpg', 'frame501.jpg', 'frame502.jpg', 'frame503.jpg', 'frame504.jpg', 'frame505.jpg', 'frame506.jpg', 'frame507.jpg', 'frame508.jpg', 'frame509.jpg', 'frame51.jpg', 'frame510.jpg', 'frame511.jpg', 'frame512.jpg', 'frame513.jpg', 'frame514.jpg', 'frame515.jpg', 'frame516.jpg', 'frame517.jpg', 'frame518.jpg', 'frame519.jpg', 'frame52.jpg', 'frame520.jpg', 'frame521.jpg', 'frame522.jpg', 'frame523.jpg', 'frame524.jpg', 'frame525.jpg', 'frame526.jpg', 'frame527.jpg', 'frame528.jpg', 'frame529.jpg', 'frame53.jpg', 'frame530.jpg', 'frame531.jpg', 'frame532.jpg', 'frame533.jpg', 'frame534.jpg', 'frame535.jpg', 'frame536.jpg', 'frame537.jpg', 'frame538.jpg', 'frame539.jpg', 'frame54.jpg', 'frame540.jpg', 'frame541.jpg', 'frame542.jpg', 'frame543.jpg', 'frame544.jpg', 'frame545.jpg', 'frame546.jpg', 'frame547.jpg', 'frame548.jpg', 'frame549.jpg', 'frame55.jpg', 'frame550.jpg', 'frame551.jpg', 'frame552.jpg', 'frame553.jpg', 'frame554.jpg', 'frame555.jpg', 'frame556.jpg', 'frame557.jpg', 'frame558.jpg', 'frame559.jpg', 'frame56.jpg', 'frame560.jpg', 'frame561.jpg', 'frame562.jpg', 'frame563.jpg', 'frame566.jpg', 'frame567.jpg', 'frame568.jpg', 'frame569.jpg', 'frame57.jpg', 'frame570.jpg', 'frame571.jpg', 'frame572.jpg', 'frame573.jpg', 'frame574.jpg', 'frame575.jpg', 'frame576.jpg', 'frame577.jpg', 'frame578.jpg', 'frame579.jpg', 'frame58.jpg', 'frame580.jpg', 'frame581.jpg', 'frame582.jpg', 'frame583.jpg', 'frame584.jpg', 'frame585.jpg', 'frame586.jpg', 'frame587.jpg', 'frame588.jpg', 'frame589.jpg', 'frame59.jpg', 'frame590.jpg', 'frame591.jpg', 'frame592.jpg', 'frame593.jpg', 'frame594.jpg', 'frame595.jpg', 'frame596.jpg', 'frame597.jpg', 'frame598.jpg', 'frame599.jpg', 'frame6.jpg', 'frame60.jpg', 'frame600.jpg', 'frame601.jpg', 'frame602.jpg', 'frame603.jpg', 'frame604.jpg', 'frame605.jpg', 'frame606.jpg', 'frame607.jpg', 'frame608.jpg', 'frame609.jpg', 'frame61.jpg', 'frame610.jpg', 'frame611.jpg', 'frame612.jpg', 'frame613.jpg', 'frame614.jpg', 'frame615.jpg', 'frame616.jpg', 'frame617.jpg', 'frame618.jpg', 'frame619.jpg', 'frame62.jpg', 'frame620.jpg', 'frame621.jpg', 'frame622.jpg', 'frame623.jpg', 'frame624.jpg', 'frame625.jpg', 'frame626.jpg', 'frame627.jpg', 'frame628.jpg', 'frame629.jpg', 'frame63.jpg', 'frame630.jpg', 'frame631.jpg', 'frame632.jpg', 'frame633.jpg', 'frame634.jpg', 'frame635.jpg', 'frame636.jpg', 'frame637.jpg', 'frame638.jpg', 'frame639.jpg', 'frame64.jpg', 'frame640.jpg', 'frame641.jpg', 'frame642.jpg', 'frame643.jpg', 'frame644.jpg', 'frame645.jpg', 'frame646.jpg', 'frame647.jpg', 'frame648.jpg', 'frame649.jpg', 'frame65.jpg', 'frame650.jpg', 'frame651.jpg', 'frame652.jpg', 'frame653.jpg', 'frame654.jpg', 'frame655.jpg', 'frame656.jpg', 'frame657.jpg', 'frame658.jpg', 'frame659.jpg', 'frame66.jpg', 'frame660.jpg', 'frame661.jpg', 'frame662.jpg', 'frame663.jpg', 'frame664.jpg', 'frame665.jpg', 'frame666.jpg', 'frame667.jpg', 'frame668.jpg', 'frame669.jpg', 'frame67.jpg', 'frame670.jpg', 'frame671.jpg', 'frame672.jpg', 'frame673.jpg', 'frame674.jpg', 'frame675.jpg', 'frame676.jpg', 'frame677.jpg', 'frame678.jpg', 'frame679.jpg', 'frame68.jpg', 'frame680.jpg', 'frame681.jpg', 'frame682.jpg', 'frame683.jpg', 'frame684.jpg', 'frame685.jpg', 'frame686.jpg', 'frame687.jpg', 'frame688.jpg', 'frame689.jpg', 'frame69.jpg', 'frame690.jpg', 'frame691.jpg', 'frame692.jpg', 'frame693.jpg', 'frame694.jpg', 'frame695.jpg', 'frame696.jpg', 'frame697.jpg', 'frame698.jpg', 'frame699.jpg', 'frame7.jpg', 'frame70.jpg', 'frame700.jpg', 'frame701.jpg', 'frame702.jpg', 'frame703.jpg', 'frame704.jpg', 'frame705.jpg', 'frame706.jpg', 'frame707.jpg', 'frame708.jpg', 'frame709.jpg', 'frame71.jpg', 'frame710.jpg', 'frame711.jpg', 'frame712.jpg', 'frame713.jpg', 'frame714.jpg', 'frame715.jpg', 'frame716.jpg', 'frame717.jpg', 'frame718.jpg', 'frame719.jpg', 'frame72.jpg', 'frame720.jpg', 'frame721.jpg', 'frame722.jpg', 'frame723.jpg', 'frame724.jpg', 'frame725.jpg', 'frame726.jpg', 'frame727.jpg', 'frame73.jpg', 'frame74.jpg', 'frame75.jpg', 'frame76.jpg', 'frame763.jpg', 'frame764.jpg', 'frame765.jpg', 'frame766.jpg', 'frame767.jpg', 'frame768.jpg', 'frame769.jpg', 'frame77.jpg', 'frame770.jpg', 'frame771.jpg', 'frame772.jpg', 'frame773.jpg', 'frame774.jpg', 'frame78.jpg', 'frame79.jpg', 'frame8.jpg', 'frame80.jpg', 'frame800.jpg', 'frame801.jpg', 'frame802.jpg', 'frame803.jpg', 'frame804.jpg', 'frame805.jpg', 'frame806.jpg', 'frame807.jpg', 'frame808.jpg', 'frame809.jpg', 'frame81.jpg', 'frame810.jpg', 'frame811.jpg', 'frame812.jpg', 'frame813.jpg', 'frame814.jpg', 'frame815.jpg', 'frame816.jpg', 'frame817.jpg', 'frame818.jpg', 'frame819.jpg', 'frame82.jpg', 'frame820.jpg', 'frame821.jpg', 'frame822.jpg', 'frame823.jpg', 'frame824.jpg', 'frame825.jpg', 'frame826.jpg', 'frame827.jpg', 'frame828.jpg', 'frame829.jpg', 'frame83.jpg', 'frame830.jpg', 'frame831.jpg', 'frame832.jpg', 'frame833.jpg', 'frame834.jpg', 'frame835.jpg', 'frame836.jpg', 'frame837.jpg', 'frame838.jpg', 'frame839.jpg', 'frame84.jpg', 'frame840.jpg', 'frame841.jpg', 'frame842.jpg', 'frame843.jpg', 'frame844.jpg', 'frame845.jpg', 'frame846.jpg', 'frame847.jpg', 'frame848.jpg', 'frame849.jpg', 'frame85.jpg', 'frame850.jpg', 'frame851.jpg', 'frame852.jpg', 'frame853.jpg', 'frame854.jpg', 'frame855.jpg', 'frame856.jpg', 'frame857.jpg', 'frame858.jpg', 'frame859.jpg', 'frame86.jpg', 'frame860.jpg', 'frame861.jpg', 'frame862.jpg', 'frame863.jpg', 'frame864.jpg', 'frame865.jpg', 'frame866.jpg', 'frame867.jpg', 'frame868.jpg', 'frame869.jpg', 'frame87.jpg', 'frame870.jpg', 'frame871.jpg', 'frame872.jpg', 'frame873.jpg', 'frame874.jpg', 'frame875.jpg', 'frame876.jpg', 'frame877.jpg', 'frame878.jpg', 'frame879.jpg', 'frame88.jpg', 'frame880.jpg', 'frame881.jpg', 'frame882.jpg', 'frame883.jpg', 'frame884.jpg', 'frame885.jpg', 'frame886.jpg', 'frame887.jpg', 'frame888.jpg', 'frame889.jpg', 'frame89.jpg', 'frame890.jpg', 'frame891.jpg', 'frame892.jpg', 'frame893.jpg', 'frame894.jpg', 'frame895.jpg', 'frame896.jpg', 'frame897.jpg', 'frame898.jpg', 'frame899.jpg', 'frame9.jpg', 'frame90.jpg', 'frame900.jpg', 'frame901.jpg', 'frame902.jpg', 'frame903.jpg', 'frame904.jpg', 'frame905.jpg', 'frame906.jpg', 'frame907.jpg', 'frame908.jpg', 'frame909.jpg', 'frame91.jpg', 'frame910.jpg', 'frame911.jpg', 'frame912.jpg', 'frame913.jpg', 'frame914.jpg', 'frame915.jpg', 'frame916.jpg', 'frame917.jpg', 'frame918.jpg', 'frame919.jpg', 'frame92.jpg', 'frame920.jpg', 'frame921.jpg', 'frame922.jpg', 'frame923.jpg', 'frame924.jpg', 'frame925.jpg', 'frame926.jpg', 'frame927.jpg', 'frame928.jpg', 'frame929.jpg', 'frame93.jpg', 'frame930.jpg', 'frame931.jpg', 'frame932.jpg', 'frame933.jpg', 'frame934.jpg', 'frame935.jpg', 'frame936.jpg', 'frame937.jpg', 'frame938.jpg', 'frame939.jpg', 'frame94.jpg', 'frame940.jpg', 'frame941.jpg', 'frame942.jpg', 'frame943.jpg', 'frame944.jpg', 'frame945.jpg', 'frame946.jpg', 'frame947.jpg', 'frame948.jpg', 'frame949.jpg', 'frame95.jpg', 'frame950.jpg', 'frame951.jpg', 'frame952.jpg', 'frame953.jpg', 'frame954.jpg', 'frame955.jpg', 'frame956.jpg', 'frame957.jpg', 'frame958.jpg', 'frame959.jpg', 'frame96.jpg', 'frame960.jpg', 'frame961.jpg', 'frame962.jpg', 'frame963.jpg', 'frame964.jpg', 'frame965.jpg', 'frame966.jpg', 'frame967.jpg', 'frame968.jpg', 'frame969.jpg', 'frame97.jpg', 'frame970.jpg', 'frame971.jpg', 'frame972.jpg', 'frame973.jpg', 'frame974.jpg', 'frame975.jpg', 'frame976.jpg', 'frame977.jpg', 'frame978.jpg', 'frame979.jpg', 'frame98.jpg', 'frame980.jpg', 'frame981.jpg', 'frame982.jpg', 'frame983.jpg', 'frame984.jpg', 'frame985.jpg', 'frame986.jpg', 'frame987.jpg', 'frame988.jpg', 'frame989.jpg', 'frame99.jpg', 'frame990.jpg', 'frame991.jpg', 'frame992.jpg', 'frame993.jpg', 'frame994.jpg', 'frame995.jpg', 'frame996.jpg', 'frame997.jpg', 'frame998.jpg', 'frame999.jpg'
+#     ]
 
-positives = []
+# positives = []
 
-for key, values in idendities.items():
+# for key, values in idendities.items():
     
-    #print(key)
-    for i in range(0, len(values)-1):
-        for j in range(i+1, len(values)):
-            #print(values[i], " and ", values[j])
-            positive = []
-            positive.append(values[i])
-            positive.append(values[j])
-            positives.append(positive)
+#     #print(key)
+#     for i in range(0, len(values)-1):
+#         for j in range(i+1, len(values)):
+#             #print(values[i], " and ", values[j])
+#             positive = []
+#             positive.append(values[i])
+#             positive.append(values[j])
+#             positives.append(positive)
 
-positives = pd.DataFrame(positives, columns = ["file_x", "file_y"])
-positives["decision"] = "Yes"
+# positives = pd.DataFrame(positives, columns = ["file_x", "file_y"])
+# positives["decision"] = "Yes"
 
-samples_list = list(idendities.values())
+# samples_list = list(idendities.values())
 
 
-negatives = []
+# negatives = []
 
-for i in range(0, len(idendities) - 1):
-    for j in range(i+1, len(idendities)):
-        #print(samples_list[i], " vs ",samples_list[j]) 
-        cross_product = itertools.product(samples_list[i], samples_list[j])
-        cross_product = list(cross_product)
-        #print(cross_product)
+# for i in range(0, len(idendities) - 1):
+#     for j in range(i+1, len(idendities)):
+#         #print(samples_list[i], " vs ",samples_list[j]) 
+#         cross_product = itertools.product(samples_list[i], samples_list[j])
+#         cross_product = list(cross_product)
+#         #print(cross_product)
         
-        for cross_sample in cross_product:
-            #print(cross_sample[0], " vs ", cross_sample[1])
-            negative = []
-            negative.append(cross_sample[0])
-            negative.append(cross_sample[1])
-            negatives.append(negative)
+#         for cross_sample in cross_product:
+#             #print(cross_sample[0], " vs ", cross_sample[1])
+#             negative = []
+#             negative.append(cross_sample[0])
+#             negative.append(cross_sample[1])
+#             negatives.append(negative)
 
-negatives = pd.DataFrame(negatives, columns = ["file_x", "file_y"])
-negatives["decision"] = "No"
+# negatives = pd.DataFrame(negatives, columns = ["file_x", "file_y"])
+# negatives["decision"] = "No"
 
-df = pd.concat([positives, negatives]).reset_index(drop = True)
+# df = pd.concat([positives, negatives]).reset_index(drop = True)
 
-negatives["decision"] = "Yes"
+# negatives["decision"] = "Yes"
 
-negatives.decision.value_counts()
+# negatives.decision.value_counts()
 
-download_files(
-    s3_client,
-    "rag-net-v2-0c6f96b8050c43fd-inputs",
-    "/app/input",
-    file_names=id,
-    dir="droneSURF/Active_Morn_L1/1/"
-)
+# download_files(
+#     s3_client,
+#     "rag-net-v2-0c6f96b8050c43fd-inputs",
+#     "/app/input",
+#     file_names=id,
+#     dir="droneSURF/Active_Morn_L1/1/"
+# )
 
-dataset_path = "/app/input/"
-
-
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+# dataset_path = "/app/input/"
 
 
-instances = negatives[["file_x", "file_y"]].values.tolist()
+# negatives.file_x = dataset_path + negatives.file_x
+# negatives.file_y = dataset_path + negatives.file_y
 
 
-print("P1")
-resp_obj1 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-print("P1 Done")
-
-os.mkdir("/app/output")
+# instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
-fil = 'output/DeepFaceActiveMornL1/dict1.json'
-s3_client.download_file(
-    "rag-net-v2-0c6f96b8050c43fd-outputs",
-    fil,
-    "/app/output/dict1.json"
-)
+# print("P1")
+# resp_obj1 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
+# print("P1 Done")
 
-with open("/app/output/dict1.json", "w") as outfile:
-    json.dump(resp_obj1, outfile)
-
-s3_client.upload_file("/app/output/dict1.json", 
-"rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict1.json")
+# os.mkdir("/app/output")
 
 
-# P2
-idendities = {
-    "1": ["down.jpg", "front.jpg", "sideleft.jpg", "sideright.jpg"],
-    "2": [
-        'frame10.jpg', 'frame100.jpg', 'frame1000.jpg', 'frame1001.jpg', 'frame1002.jpg', 'frame1003.jpg', 'frame1004.jpg', 'frame1005.jpg', 'frame1006.jpg', 'frame1007.jpg', 'frame1008.jpg', 'frame1009.jpg', 'frame101.jpg', 'frame1010.jpg', 'frame1011.jpg', 'frame1012.jpg', 'frame1013.jpg', 'frame1014.jpg', 'frame1015.jpg', 'frame1016.jpg', 'frame1017.jpg', 'frame1018.jpg', 'frame1019.jpg', 'frame102.jpg', 'frame1020.jpg', 'frame1021.jpg', 'frame1022.jpg', 'frame1025.jpg', 'frame1026.jpg', 'frame1027.jpg', 'frame1028.jpg', 'frame1029.jpg', 'frame103.jpg', 'frame1030.jpg', 'frame1031.jpg', 'frame1032.jpg', 'frame1033.jpg', 'frame1034.jpg', 'frame1035.jpg', 'frame1036.jpg', 'frame1037.jpg', 'frame1038.jpg', 'frame1039.jpg', 'frame104.jpg', 'frame1040.jpg', 'frame1041.jpg', 'frame1042.jpg', 'frame1043.jpg', 'frame1044.jpg', 'frame1045.jpg', 'frame1046.jpg', 'frame1047.jpg', 'frame1048.jpg', 'frame1049.jpg', 'frame105.jpg', 'frame1050.jpg', 'frame1051.jpg', 'frame1052.jpg', 'frame1053.jpg', 'frame1054.jpg', 'frame1055.jpg', 'frame1056.jpg', 'frame1057.jpg', 'frame1058.jpg', 'frame1059.jpg', 'frame106.jpg', 'frame1060.jpg', 'frame1061.jpg', 'frame1062.jpg', 'frame1063.jpg', 'frame1064.jpg', 'frame1065.jpg', 'frame1066.jpg', 'frame1067.jpg', 'frame1068.jpg', 'frame1069.jpg', 'frame107.jpg', 'frame1070.jpg', 'frame1071.jpg', 'frame1072.jpg', 'frame1073.jpg', 'frame1074.jpg', 'frame1075.jpg', 'frame1076.jpg', 'frame1077.jpg', 'frame1078.jpg', 'frame1079.jpg', 'frame108.jpg', 'frame1080.jpg', 'frame1081.jpg', 'frame1082.jpg', 'frame1083.jpg', 'frame1084.jpg', 'frame1085.jpg', 'frame1086.jpg', 'frame1087.jpg', 'frame1088.jpg', 'frame1089.jpg', 'frame109.jpg', 'frame1090.jpg', 'frame1091.jpg', 'frame1092.jpg', 'frame1093.jpg', 'frame1094.jpg', 'frame1095.jpg', 'frame1096.jpg', 'frame1097.jpg', 'frame1098.jpg', 'frame1099.jpg', 'frame11.jpg', 'frame110.jpg', 'frame1100.jpg', 'frame1101.jpg', 'frame1102.jpg', 'frame1103.jpg', 'frame1104.jpg', 'frame1105.jpg', 'frame1106.jpg', 'frame1107.jpg', 'frame1108.jpg', 'frame1109.jpg', 'frame111.jpg', 'frame1110.jpg', 'frame1111.jpg', 'frame1112.jpg', 'frame1113.jpg', 'frame1114.jpg', 'frame1115.jpg', 'frame1116.jpg', 'frame1117.jpg', 'frame1118.jpg', 'frame1119.jpg', 'frame112.jpg', 'frame1120.jpg', 'frame1121.jpg', 'frame1122.jpg', 'frame1123.jpg', 'frame1124.jpg', 'frame1125.jpg', 'frame1126.jpg', 'frame1127.jpg', 'frame1128.jpg', 'frame1129.jpg', 'frame113.jpg', 'frame1130.jpg', 'frame1131.jpg', 'frame1132.jpg', 'frame1133.jpg', 'frame1134.jpg', 'frame1135.jpg', 'frame1136.jpg', 'frame1137.jpg', 'frame1138.jpg', 'frame1139.jpg', 'frame114.jpg', 'frame1140.jpg', 'frame1141.jpg', 'frame1142.jpg', 'frame1143.jpg', 'frame1144.jpg', 'frame1145.jpg', 'frame1146.jpg', 'frame1147.jpg', 'frame1148.jpg', 'frame1149.jpg', 'frame115.jpg', 'frame1150.jpg', 'frame1151.jpg', 'frame1152.jpg', 'frame1153.jpg', 'frame1154.jpg', 'frame1155.jpg', 'frame1156.jpg', 'frame1157.jpg', 'frame1158.jpg', 'frame1159.jpg', 'frame116.jpg', 'frame1160.jpg', 'frame1161.jpg', 'frame1162.jpg', 'frame1163.jpg', 'frame1164.jpg', 'frame1165.jpg', 'frame1166.jpg', 'frame1167.jpg', 'frame1168.jpg', 'frame1169.jpg', 'frame117.jpg', 'frame1170.jpg', 'frame1171.jpg', 'frame1172.jpg', 'frame1173.jpg', 'frame1174.jpg', 'frame1175.jpg', 'frame1176.jpg', 'frame1177.jpg', 'frame1178.jpg', 'frame1179.jpg', 'frame118.jpg', 'frame1180.jpg', 'frame1181.jpg', 'frame1182.jpg', 'frame1183.jpg', 'frame1184.jpg', 'frame1185.jpg', 'frame1186.jpg', 'frame1187.jpg', 'frame1188.jpg', 'frame1189.jpg', 'frame119.jpg', 'frame1190.jpg', 'frame1191.jpg', 'frame1192.jpg', 'frame1193.jpg', 'frame1194.jpg', 'frame1195.jpg', 'frame1196.jpg', 'frame1197.jpg', 'frame1198.jpg', 'frame12.jpg', 'frame120.jpg', 'frame121.jpg', 'frame122.jpg', 'frame123.jpg', 'frame124.jpg', 'frame125.jpg', 'frame126.jpg', 'frame127.jpg', 'frame128.jpg', 'frame129.jpg', 'frame13.jpg', 'frame130.jpg', 'frame131.jpg', 'frame132.jpg', 'frame133.jpg', 'frame134.jpg', 'frame135.jpg', 'frame136.jpg', 'frame137.jpg', 'frame138.jpg', 'frame139.jpg', 'frame14.jpg', 'frame140.jpg', 'frame141.jpg', 'frame142.jpg', 'frame143.jpg', 'frame144.jpg', 'frame145.jpg', 'frame146.jpg', 'frame147.jpg', 'frame148.jpg', 'frame149.jpg', 'frame15.jpg', 'frame150.jpg', 'frame151.jpg', 'frame152.jpg', 'frame153.jpg', 'frame154.jpg', 'frame155.jpg', 'frame156.jpg', 'frame157.jpg', 'frame158.jpg', 'frame159.jpg', 'frame16.jpg', 'frame160.jpg', 'frame161.jpg', 'frame162.jpg', 'frame163.jpg', 'frame164.jpg', 'frame165.jpg', 'frame166.jpg', 'frame167.jpg', 'frame168.jpg', 'frame169.jpg', 'frame17.jpg', 'frame170.jpg', 'frame171.jpg', 'frame172.jpg', 'frame173.jpg', 'frame174.jpg', 'frame175.jpg', 'frame176.jpg', 'frame177.jpg', 'frame178.jpg', 'frame179.jpg', 'frame18.jpg', 'frame180.jpg', 'frame181.jpg', 'frame184.jpg', 'frame185.jpg', 'frame186.jpg', 'frame187.jpg', 'frame188.jpg', 'frame189.jpg', 'frame19.jpg', 'frame190.jpg', 'frame191.jpg', 'frame192.jpg', 'frame193.jpg', 'frame194.jpg', 'frame195.jpg', 'frame196.jpg', 'frame197.jpg', 'frame198.jpg', 'frame199.jpg', 'frame2.jpg', 'frame20.jpg', 'frame200.jpg', 'frame201.jpg', 'frame202.jpg', 'frame203.jpg', 'frame204.jpg', 'frame205.jpg', 'frame206.jpg', 'frame207.jpg', 'frame208.jpg', 'frame209.jpg', 'frame21.jpg', 'frame210.jpg', 'frame211.jpg', 'frame212.jpg', 'frame213.jpg', 'frame214.jpg', 'frame215.jpg', 'frame216.jpg', 'frame217.jpg', 'frame218.jpg', 'frame219.jpg', 'frame22.jpg', 'frame220.jpg', 'frame221.jpg', 'frame222.jpg', 'frame223.jpg', 'frame224.jpg', 'frame225.jpg', 'frame226.jpg', 'frame227.jpg', 'frame228.jpg', 'frame229.jpg', 'frame23.jpg', 'frame230.jpg', 'frame231.jpg', 'frame232.jpg', 'frame233.jpg', 'frame234.jpg', 'frame235.jpg', 'frame236.jpg', 'frame237.jpg', 'frame238.jpg', 'frame239.jpg', 'frame24.jpg', 'frame240.jpg', 'frame241.jpg', 'frame242.jpg', 'frame243.jpg', 'frame244.jpg', 'frame245.jpg', 'frame246.jpg', 'frame247.jpg', 'frame248.jpg', 'frame249.jpg', 'frame25.jpg', 'frame250.jpg', 'frame251.jpg', 'frame252.jpg', 'frame253.jpg', 'frame254.jpg', 'frame255.jpg', 'frame256.jpg', 'frame257.jpg', 'frame258.jpg', 'frame259.jpg', 'frame26.jpg', 'frame260.jpg', 'frame261.jpg', 'frame262.jpg', 'frame263.jpg', 'frame264.jpg', 'frame265.jpg', 'frame266.jpg', 'frame267.jpg', 'frame268.jpg', 'frame269.jpg', 'frame27.jpg', 'frame270.jpg', 'frame271.jpg', 'frame272.jpg', 'frame273.jpg', 'frame274.jpg', 'frame275.jpg', 'frame276.jpg', 'frame277.jpg', 'frame278.jpg', 'frame279.jpg', 'frame28.jpg', 'frame280.jpg', 'frame281.jpg', 'frame282.jpg', 'frame285.jpg', 'frame286.jpg', 'frame287.jpg', 'frame288.jpg', 'frame289.jpg', 'frame29.jpg', 'frame290.jpg', 'frame291.jpg', 'frame292.jpg', 'frame293.jpg', 'frame294.jpg', 'frame295.jpg', 'frame296.jpg', 'frame297.jpg', 'frame298.jpg', 'frame299.jpg', 'frame3.jpg', 'frame30.jpg', 'frame300.jpg', 'frame301.jpg', 'frame302.jpg', 'frame303.jpg', 'frame304.jpg', 'frame305.jpg', 'frame306.jpg', 'frame307.jpg', 'frame308.jpg', 'frame309.jpg', 'frame31.jpg', 'frame310.jpg', 'frame311.jpg', 'frame312.jpg', 'frame313.jpg', 'frame314.jpg', 'frame315.jpg', 'frame316.jpg', 'frame317.jpg', 'frame318.jpg', 'frame319.jpg', 'frame32.jpg', 'frame320.jpg', 'frame321.jpg', 'frame322.jpg', 'frame323.jpg', 'frame324.jpg', 'frame325.jpg', 'frame326.jpg', 'frame327.jpg', 'frame328.jpg', 'frame329.jpg', 'frame33.jpg', 'frame330.jpg', 'frame331.jpg', 'frame332.jpg', 'frame333.jpg', 'frame334.jpg', 'frame335.jpg', 'frame336.jpg', 'frame337.jpg', 'frame338.jpg', 'frame339.jpg', 'frame34.jpg', 'frame340.jpg', 'frame35.jpg', 'frame36.jpg', 'frame364.jpg', 'frame365.jpg', 'frame366.jpg', 'frame367.jpg', 'frame368.jpg', 'frame369.jpg', 'frame37.jpg', 'frame370.jpg', 'frame371.jpg', 'frame372.jpg', 'frame373.jpg', 'frame374.jpg', 'frame375.jpg', 'frame376.jpg', 'frame377.jpg', 'frame378.jpg', 'frame379.jpg', 'frame38.jpg', 'frame380.jpg', 'frame381.jpg', 'frame382.jpg', 'frame383.jpg', 'frame384.jpg', 'frame385.jpg', 'frame386.jpg', 'frame387.jpg', 'frame388.jpg', 'frame389.jpg', 'frame39.jpg', 'frame390.jpg', 'frame391.jpg', 'frame392.jpg', 'frame393.jpg', 'frame394.jpg', 'frame395.jpg', 'frame396.jpg', 'frame397.jpg', 'frame398.jpg', 'frame399.jpg', 'frame4.jpg', 'frame40.jpg', 'frame400.jpg', 'frame401.jpg', 'frame402.jpg', 'frame403.jpg', 'frame404.jpg', 'frame405.jpg', 'frame406.jpg', 'frame407.jpg', 'frame408.jpg', 'frame409.jpg', 'frame41.jpg', 'frame410.jpg', 'frame413.jpg', 'frame414.jpg', 'frame415.jpg', 'frame416.jpg', 'frame417.jpg', 'frame418.jpg', 'frame419.jpg', 'frame42.jpg', 'frame420.jpg', 'frame421.jpg', 'frame422.jpg', 'frame423.jpg', 'frame424.jpg', 'frame425.jpg', 'frame426.jpg', 'frame427.jpg', 'frame428.jpg', 'frame429.jpg', 'frame430.jpg', 'frame431.jpg', 'frame432.jpg', 'frame433.jpg', 'frame434.jpg', 'frame435.jpg', 'frame436.jpg', 'frame437.jpg', 'frame438.jpg', 'frame439.jpg', 'frame440.jpg', 'frame441.jpg', 'frame442.jpg', 'frame443.jpg', 'frame444.jpg', 'frame445.jpg', 'frame446.jpg', 'frame447.jpg', 'frame448.jpg', 'frame449.jpg', 'frame45.jpg', 'frame450.jpg', 'frame451.jpg', 'frame452.jpg', 'frame453.jpg', 'frame454.jpg', 'frame455.jpg', 'frame456.jpg', 'frame457.jpg', 'frame458.jpg', 'frame459.jpg', 'frame46.jpg', 'frame460.jpg', 'frame461.jpg', 'frame462.jpg', 'frame463.jpg', 'frame464.jpg', 'frame465.jpg', 'frame466.jpg', 'frame467.jpg', 'frame468.jpg', 'frame469.jpg', 'frame47.jpg', 'frame470.jpg', 'frame471.jpg', 'frame472.jpg', 'frame473.jpg', 'frame474.jpg', 'frame475.jpg', 'frame476.jpg', 'frame477.jpg', 'frame478.jpg', 'frame479.jpg', 'frame48.jpg', 'frame480.jpg', 'frame481.jpg', 'frame482.jpg', 'frame483.jpg', 'frame484.jpg', 'frame485.jpg', 'frame486.jpg', 'frame487.jpg', 'frame488.jpg', 'frame489.jpg', 'frame49.jpg', 'frame490.jpg', 'frame491.jpg', 'frame492.jpg', 'frame493.jpg', 'frame494.jpg', 'frame495.jpg', 'frame496.jpg', 'frame497.jpg', 'frame498.jpg', 'frame499.jpg', 'frame5.jpg', 'frame50.jpg', 'frame500.jpg', 
-        'frame501.jpg', 'frame502.jpg', 'frame503.jpg', 'frame504.jpg', 'frame505.jpg', 'frame506.jpg', 'frame507.jpg', 'frame508.jpg', 'frame509.jpg', 'frame51.jpg', 'frame510.jpg', 'frame511.jpg', 'frame512.jpg', 'frame513.jpg', 'frame514.jpg', 'frame515.jpg', 'frame516.jpg', 'frame517.jpg', 'frame518.jpg', 'frame519.jpg', 'frame52.jpg', 'frame520.jpg', 'frame521.jpg', 'frame522.jpg', 'frame523.jpg', 'frame524.jpg', 'frame525.jpg', 'frame526.jpg', 'frame527.jpg', 'frame528.jpg', 'frame529.jpg', 'frame53.jpg', 'frame530.jpg', 'frame531.jpg', 'frame532.jpg', 'frame533.jpg', 'frame534.jpg', 'frame535.jpg', 'frame536.jpg', 'frame537.jpg', 'frame538.jpg', 'frame539.jpg', 'frame54.jpg', 'frame540.jpg', 'frame541.jpg', 'frame542.jpg', 'frame543.jpg', 'frame544.jpg', 'frame545.jpg', 'frame546.jpg', 'frame547.jpg', 'frame548.jpg', 'frame549.jpg', 'frame55.jpg', 'frame550.jpg', 'frame551.jpg', 'frame552.jpg', 'frame553.jpg', 'frame554.jpg', 'frame555.jpg', 'frame556.jpg', 'frame557.jpg', 'frame558.jpg', 'frame559.jpg', 'frame56.jpg', 'frame560.jpg', 'frame561.jpg', 'frame562.jpg', 'frame563.jpg', 'frame566.jpg', 'frame567.jpg', 'frame568.jpg', 'frame569.jpg', 'frame57.jpg', 'frame570.jpg', 'frame571.jpg', 'frame572.jpg', 'frame573.jpg', 'frame574.jpg', 'frame575.jpg', 'frame576.jpg', 'frame577.jpg', 'frame578.jpg', 'frame579.jpg', 'frame58.jpg', 'frame580.jpg', 'frame581.jpg', 'frame582.jpg', 'frame583.jpg', 'frame584.jpg', 'frame585.jpg', 'frame586.jpg', 'frame587.jpg', 'frame588.jpg', 'frame589.jpg', 'frame59.jpg', 'frame590.jpg', 'frame591.jpg', 'frame592.jpg', 'frame593.jpg', 'frame594.jpg', 'frame595.jpg', 'frame596.jpg', 'frame597.jpg', 'frame598.jpg', 'frame599.jpg', 'frame6.jpg', 'frame60.jpg', 'frame600.jpg', 'frame601.jpg', 'frame602.jpg', 'frame603.jpg', 'frame604.jpg', 'frame605.jpg', 'frame606.jpg', 'frame607.jpg', 'frame608.jpg', 'frame609.jpg', 'frame61.jpg', 'frame610.jpg', 'frame611.jpg', 'frame612.jpg', 'frame613.jpg', 'frame614.jpg', 'frame615.jpg', 'frame616.jpg', 'frame617.jpg', 'frame618.jpg', 'frame619.jpg', 'frame62.jpg', 'frame620.jpg', 'frame621.jpg', 'frame622.jpg', 'frame623.jpg', 'frame624.jpg', 'frame625.jpg', 'frame626.jpg', 'frame627.jpg', 'frame628.jpg', 'frame629.jpg', 'frame63.jpg', 'frame630.jpg', 'frame631.jpg', 'frame632.jpg', 'frame633.jpg', 'frame634.jpg', 'frame635.jpg', 'frame636.jpg', 'frame637.jpg', 'frame638.jpg', 'frame639.jpg', 'frame64.jpg', 'frame640.jpg', 'frame641.jpg', 'frame642.jpg', 'frame643.jpg', 'frame644.jpg', 'frame645.jpg', 'frame646.jpg', 'frame647.jpg', 'frame648.jpg', 'frame649.jpg', 'frame65.jpg', 'frame650.jpg', 'frame651.jpg', 'frame652.jpg', 'frame653.jpg', 'frame654.jpg', 'frame655.jpg', 'frame656.jpg', 'frame657.jpg', 'frame658.jpg', 'frame659.jpg', 'frame66.jpg', 'frame660.jpg', 'frame661.jpg', 'frame662.jpg', 'frame663.jpg', 'frame664.jpg', 'frame665.jpg', 'frame666.jpg', 'frame667.jpg', 'frame668.jpg', 'frame669.jpg', 'frame67.jpg', 'frame670.jpg', 'frame671.jpg', 'frame672.jpg', 'frame673.jpg', 'frame674.jpg', 'frame675.jpg', 'frame676.jpg', 'frame677.jpg', 'frame678.jpg', 'frame679.jpg', 'frame68.jpg', 'frame680.jpg', 'frame681.jpg', 'frame682.jpg', 'frame683.jpg', 'frame684.jpg', 'frame685.jpg', 'frame686.jpg', 'frame687.jpg', 'frame688.jpg', 'frame689.jpg', 'frame69.jpg', 'frame690.jpg', 'frame691.jpg', 'frame692.jpg', 'frame693.jpg', 'frame694.jpg', 'frame695.jpg', 'frame696.jpg', 'frame697.jpg', 'frame698.jpg', 'frame699.jpg', 'frame7.jpg', 'frame70.jpg', 'frame700.jpg', 'frame701.jpg', 'frame702.jpg', 'frame703.jpg', 'frame704.jpg', 'frame705.jpg', 'frame706.jpg', 'frame707.jpg', 'frame708.jpg', 'frame709.jpg', 'frame71.jpg', 'frame710.jpg', 'frame711.jpg', 'frame712.jpg', 'frame713.jpg', 'frame714.jpg', 'frame715.jpg', 'frame716.jpg', 'frame717.jpg', 'frame718.jpg', 'frame719.jpg', 'frame72.jpg', 'frame720.jpg', 'frame721.jpg', 'frame722.jpg', 'frame73.jpg', 'frame74.jpg', 'frame75.jpg', 'frame76.jpg', 'frame763.jpg', 'frame764.jpg', 'frame765.jpg', 'frame766.jpg', 'frame767.jpg', 'frame768.jpg', 'frame769.jpg', 'frame77.jpg', 'frame770.jpg', 'frame771.jpg', 'frame772.jpg', 'frame773.jpg', 'frame774.jpg', 'frame78.jpg', 'frame79.jpg', 'frame794.jpg', 'frame795.jpg', 'frame796.jpg', 'frame797.jpg', 'frame8.jpg', 'frame80.jpg', 'frame801.jpg', 'frame802.jpg', 'frame803.jpg', 'frame804.jpg', 'frame805.jpg', 'frame806.jpg', 'frame807.jpg', 'frame808.jpg', 'frame809.jpg', 'frame81.jpg', 'frame810.jpg', 'frame811.jpg', 'frame812.jpg', 'frame813.jpg', 'frame814.jpg', 'frame815.jpg', 'frame816.jpg', 'frame817.jpg', 'frame818.jpg', 'frame819.jpg', 'frame82.jpg', 'frame820.jpg', 'frame821.jpg', 'frame822.jpg', 'frame823.jpg', 'frame824.jpg', 'frame825.jpg', 'frame826.jpg', 'frame827.jpg', 'frame828.jpg', 'frame829.jpg', 'frame83.jpg', 'frame830.jpg', 'frame831.jpg', 'frame832.jpg', 'frame833.jpg', 'frame834.jpg', 'frame835.jpg', 'frame836.jpg', 'frame837.jpg', 'frame838.jpg', 'frame839.jpg', 'frame84.jpg', 'frame840.jpg', 'frame841.jpg', 'frame842.jpg', 'frame843.jpg', 'frame844.jpg', 'frame845.jpg', 'frame846.jpg', 'frame847.jpg', 'frame848.jpg', 'frame849.jpg', 'frame85.jpg', 'frame850.jpg', 'frame851.jpg', 'frame852.jpg', 'frame853.jpg', 'frame854.jpg', 'frame855.jpg', 'frame856.jpg', 'frame857.jpg', 'frame858.jpg', 'frame859.jpg', 'frame86.jpg', 'frame860.jpg', 'frame861.jpg', 'frame862.jpg', 'frame863.jpg', 'frame864.jpg', 'frame865.jpg', 'frame866.jpg', 'frame867.jpg', 'frame868.jpg', 'frame869.jpg', 'frame87.jpg', 'frame870.jpg', 'frame871.jpg', 'frame872.jpg', 'frame873.jpg', 'frame874.jpg', 'frame875.jpg', 'frame876.jpg', 'frame877.jpg', 'frame878.jpg', 'frame879.jpg', 'frame88.jpg', 'frame880.jpg', 'frame881.jpg', 'frame882.jpg', 'frame883.jpg', 'frame884.jpg', 'frame885.jpg', 'frame886.jpg', 'frame887.jpg', 'frame888.jpg', 'frame889.jpg', 'frame89.jpg', 'frame890.jpg', 'frame891.jpg', 'frame892.jpg', 'frame893.jpg', 'frame894.jpg', 'frame895.jpg', 'frame896.jpg', 'frame897.jpg', 'frame898.jpg', 'frame899.jpg', 'frame9.jpg', 'frame90.jpg', 'frame900.jpg', 'frame901.jpg', 'frame902.jpg', 'frame903.jpg', 'frame904.jpg', 'frame905.jpg', 'frame906.jpg', 'frame907.jpg', 'frame908.jpg', 'frame909.jpg', 'frame91.jpg', 'frame910.jpg', 'frame911.jpg', 'frame912.jpg', 'frame913.jpg', 'frame914.jpg', 'frame915.jpg', 'frame916.jpg', 'frame917.jpg', 'frame918.jpg', 'frame919.jpg', 'frame92.jpg', 'frame920.jpg', 'frame921.jpg', 'frame922.jpg', 'frame923.jpg', 'frame924.jpg', 'frame925.jpg', 'frame926.jpg', 'frame927.jpg', 'frame928.jpg', 'frame929.jpg', 'frame93.jpg', 'frame930.jpg', 'frame931.jpg', 'frame932.jpg', 'frame933.jpg', 'frame934.jpg', 'frame935.jpg', 'frame936.jpg', 'frame937.jpg', 'frame938.jpg', 'frame939.jpg', 'frame94.jpg', 'frame940.jpg', 'frame941.jpg', 'frame942.jpg', 'frame943.jpg', 'frame944.jpg', 'frame945.jpg', 'frame946.jpg', 'frame947.jpg', 'frame948.jpg', 'frame949.jpg', 'frame95.jpg', 'frame950.jpg', 'frame951.jpg', 'frame952.jpg', 'frame953.jpg', 'frame954.jpg', 'frame955.jpg', 'frame956.jpg', 'frame957.jpg', 'frame958.jpg', 'frame959.jpg', 'frame96.jpg', 'frame960.jpg', 'frame961.jpg', 'frame962.jpg', 'frame963.jpg', 'frame964.jpg', 'frame965.jpg', 'frame966.jpg', 'frame967.jpg', 'frame968.jpg', 'frame969.jpg', 'frame97.jpg', 'frame970.jpg', 'frame971.jpg', 'frame972.jpg', 'frame973.jpg', 'frame974.jpg', 'frame975.jpg', 'frame978.jpg', 'frame979.jpg', 'frame98.jpg', 'frame980.jpg', 'frame981.jpg', 'frame982.jpg', 'frame983.jpg', 'frame984.jpg', 'frame985.jpg', 'frame986.jpg', 'frame987.jpg', 'frame988.jpg', 'frame989.jpg', 'frame99.jpg', 'frame990.jpg', 'frame991.jpg', 'frame992.jpg', 'frame993.jpg', 'frame994.jpg', 'frame995.jpg', 'frame996.jpg', 'frame997.jpg', 'frame998.jpg', 'frame999.jpg'
-    ]
-        }
+# fil = 'output/DlibActiveMornL1/dict1.json'
+# s3_client.download_file(
+#     "rag-net-v2-0c6f96b8050c43fd-outputs",
+#     fil,
+#     "/app/output/dict1.json"
+# )
 
-id = ["down.jpg", "front.jpg", "sideleft.jpg", "sideright.jpg",
-        'frame10.jpg', 'frame100.jpg', 'frame1000.jpg', 'frame1001.jpg', 'frame1002.jpg', 'frame1003.jpg', 'frame1004.jpg', 'frame1005.jpg', 'frame1006.jpg', 'frame1007.jpg', 'frame1008.jpg', 'frame1009.jpg', 'frame101.jpg', 'frame1010.jpg', 'frame1011.jpg', 'frame1012.jpg', 'frame1013.jpg', 'frame1014.jpg', 'frame1015.jpg', 'frame1016.jpg', 'frame1017.jpg', 'frame1018.jpg', 'frame1019.jpg', 'frame102.jpg', 'frame1020.jpg', 'frame1021.jpg', 'frame1022.jpg', 'frame1025.jpg', 'frame1026.jpg', 'frame1027.jpg', 'frame1028.jpg', 'frame1029.jpg', 'frame103.jpg', 'frame1030.jpg', 'frame1031.jpg', 'frame1032.jpg', 'frame1033.jpg', 'frame1034.jpg', 'frame1035.jpg', 'frame1036.jpg', 'frame1037.jpg', 'frame1038.jpg', 'frame1039.jpg', 'frame104.jpg', 'frame1040.jpg', 'frame1041.jpg', 'frame1042.jpg', 'frame1043.jpg', 'frame1044.jpg', 'frame1045.jpg', 'frame1046.jpg', 'frame1047.jpg', 'frame1048.jpg', 'frame1049.jpg', 'frame105.jpg', 'frame1050.jpg', 'frame1051.jpg', 'frame1052.jpg', 'frame1053.jpg', 'frame1054.jpg', 'frame1055.jpg', 'frame1056.jpg', 'frame1057.jpg', 'frame1058.jpg', 'frame1059.jpg', 'frame106.jpg', 'frame1060.jpg', 'frame1061.jpg', 'frame1062.jpg', 'frame1063.jpg', 'frame1064.jpg', 'frame1065.jpg', 'frame1066.jpg', 'frame1067.jpg', 'frame1068.jpg', 'frame1069.jpg', 'frame107.jpg', 'frame1070.jpg', 'frame1071.jpg', 'frame1072.jpg', 'frame1073.jpg', 'frame1074.jpg', 'frame1075.jpg', 'frame1076.jpg', 'frame1077.jpg', 'frame1078.jpg', 'frame1079.jpg', 'frame108.jpg', 'frame1080.jpg', 'frame1081.jpg', 'frame1082.jpg', 'frame1083.jpg', 'frame1084.jpg', 'frame1085.jpg', 'frame1086.jpg', 'frame1087.jpg', 'frame1088.jpg', 'frame1089.jpg', 'frame109.jpg', 'frame1090.jpg', 'frame1091.jpg', 'frame1092.jpg', 'frame1093.jpg', 'frame1094.jpg', 'frame1095.jpg', 'frame1096.jpg', 'frame1097.jpg', 'frame1098.jpg', 'frame1099.jpg', 'frame11.jpg', 'frame110.jpg', 'frame1100.jpg', 'frame1101.jpg', 'frame1102.jpg', 'frame1103.jpg', 'frame1104.jpg', 'frame1105.jpg', 'frame1106.jpg', 'frame1107.jpg', 'frame1108.jpg', 'frame1109.jpg', 'frame111.jpg', 'frame1110.jpg', 'frame1111.jpg', 'frame1112.jpg', 'frame1113.jpg', 'frame1114.jpg', 'frame1115.jpg', 'frame1116.jpg', 'frame1117.jpg', 'frame1118.jpg', 'frame1119.jpg', 'frame112.jpg', 'frame1120.jpg', 'frame1121.jpg', 'frame1122.jpg', 'frame1123.jpg', 'frame1124.jpg', 'frame1125.jpg', 'frame1126.jpg', 'frame1127.jpg', 'frame1128.jpg', 'frame1129.jpg', 'frame113.jpg', 'frame1130.jpg', 'frame1131.jpg', 'frame1132.jpg', 'frame1133.jpg', 'frame1134.jpg', 'frame1135.jpg', 'frame1136.jpg', 'frame1137.jpg', 'frame1138.jpg', 'frame1139.jpg', 'frame114.jpg', 'frame1140.jpg', 'frame1141.jpg', 'frame1142.jpg', 'frame1143.jpg', 'frame1144.jpg', 'frame1145.jpg', 'frame1146.jpg', 'frame1147.jpg', 'frame1148.jpg', 'frame1149.jpg', 'frame115.jpg', 'frame1150.jpg', 'frame1151.jpg', 'frame1152.jpg', 'frame1153.jpg', 'frame1154.jpg', 'frame1155.jpg', 'frame1156.jpg', 'frame1157.jpg', 'frame1158.jpg', 'frame1159.jpg', 'frame116.jpg', 'frame1160.jpg', 'frame1161.jpg', 'frame1162.jpg', 'frame1163.jpg', 'frame1164.jpg', 'frame1165.jpg', 'frame1166.jpg', 'frame1167.jpg', 'frame1168.jpg', 'frame1169.jpg', 'frame117.jpg', 'frame1170.jpg', 'frame1171.jpg', 'frame1172.jpg', 'frame1173.jpg', 'frame1174.jpg', 'frame1175.jpg', 'frame1176.jpg', 'frame1177.jpg', 'frame1178.jpg', 'frame1179.jpg', 'frame118.jpg', 'frame1180.jpg', 'frame1181.jpg', 'frame1182.jpg', 'frame1183.jpg', 'frame1184.jpg', 'frame1185.jpg', 'frame1186.jpg', 'frame1187.jpg', 'frame1188.jpg', 'frame1189.jpg', 'frame119.jpg', 'frame1190.jpg', 'frame1191.jpg', 'frame1192.jpg', 'frame1193.jpg', 'frame1194.jpg', 'frame1195.jpg', 'frame1196.jpg', 'frame1197.jpg', 'frame1198.jpg', 'frame12.jpg', 'frame120.jpg', 'frame121.jpg', 'frame122.jpg', 'frame123.jpg', 'frame124.jpg', 'frame125.jpg', 'frame126.jpg', 'frame127.jpg', 'frame128.jpg', 'frame129.jpg', 'frame13.jpg', 'frame130.jpg', 'frame131.jpg', 'frame132.jpg', 'frame133.jpg', 'frame134.jpg', 'frame135.jpg', 'frame136.jpg', 'frame137.jpg', 'frame138.jpg', 'frame139.jpg', 'frame14.jpg', 'frame140.jpg', 'frame141.jpg', 'frame142.jpg', 'frame143.jpg', 'frame144.jpg', 'frame145.jpg', 'frame146.jpg', 'frame147.jpg', 'frame148.jpg', 'frame149.jpg', 'frame15.jpg', 'frame150.jpg', 'frame151.jpg', 'frame152.jpg', 'frame153.jpg', 'frame154.jpg', 'frame155.jpg', 'frame156.jpg', 'frame157.jpg', 'frame158.jpg', 'frame159.jpg', 'frame16.jpg', 'frame160.jpg', 'frame161.jpg', 'frame162.jpg', 'frame163.jpg', 'frame164.jpg', 'frame165.jpg', 'frame166.jpg', 'frame167.jpg', 'frame168.jpg', 'frame169.jpg', 'frame17.jpg', 'frame170.jpg', 'frame171.jpg', 'frame172.jpg', 'frame173.jpg', 'frame174.jpg', 'frame175.jpg', 'frame176.jpg', 'frame177.jpg', 'frame178.jpg', 'frame179.jpg', 'frame18.jpg', 'frame180.jpg', 'frame181.jpg', 'frame184.jpg', 'frame185.jpg', 'frame186.jpg', 'frame187.jpg', 'frame188.jpg', 'frame189.jpg', 'frame19.jpg', 'frame190.jpg', 'frame191.jpg', 'frame192.jpg', 'frame193.jpg', 'frame194.jpg', 'frame195.jpg', 'frame196.jpg', 'frame197.jpg', 'frame198.jpg', 'frame199.jpg', 'frame2.jpg', 'frame20.jpg', 'frame200.jpg', 'frame201.jpg', 'frame202.jpg', 'frame203.jpg', 'frame204.jpg', 'frame205.jpg', 'frame206.jpg', 'frame207.jpg', 'frame208.jpg', 'frame209.jpg', 'frame21.jpg', 'frame210.jpg', 'frame211.jpg', 'frame212.jpg', 'frame213.jpg', 'frame214.jpg', 'frame215.jpg', 'frame216.jpg', 'frame217.jpg', 'frame218.jpg', 'frame219.jpg', 'frame22.jpg', 'frame220.jpg', 'frame221.jpg', 'frame222.jpg', 'frame223.jpg', 'frame224.jpg', 'frame225.jpg', 'frame226.jpg', 'frame227.jpg', 'frame228.jpg', 'frame229.jpg', 'frame23.jpg', 'frame230.jpg', 'frame231.jpg', 'frame232.jpg', 'frame233.jpg', 'frame234.jpg', 'frame235.jpg', 'frame236.jpg', 'frame237.jpg', 'frame238.jpg', 'frame239.jpg', 'frame24.jpg', 'frame240.jpg', 'frame241.jpg', 'frame242.jpg', 'frame243.jpg', 'frame244.jpg', 'frame245.jpg', 'frame246.jpg', 'frame247.jpg', 'frame248.jpg', 'frame249.jpg', 'frame25.jpg', 'frame250.jpg', 'frame251.jpg', 'frame252.jpg', 'frame253.jpg', 'frame254.jpg', 'frame255.jpg', 'frame256.jpg', 'frame257.jpg', 'frame258.jpg', 'frame259.jpg', 'frame26.jpg', 'frame260.jpg', 'frame261.jpg', 'frame262.jpg', 'frame263.jpg', 'frame264.jpg', 'frame265.jpg', 'frame266.jpg', 'frame267.jpg', 'frame268.jpg', 'frame269.jpg', 'frame27.jpg', 'frame270.jpg', 'frame271.jpg', 'frame272.jpg', 'frame273.jpg', 'frame274.jpg', 'frame275.jpg', 'frame276.jpg', 'frame277.jpg', 'frame278.jpg', 'frame279.jpg', 'frame28.jpg', 'frame280.jpg', 'frame281.jpg', 'frame282.jpg', 'frame285.jpg', 'frame286.jpg', 'frame287.jpg', 'frame288.jpg', 'frame289.jpg', 'frame29.jpg', 'frame290.jpg', 'frame291.jpg', 'frame292.jpg', 'frame293.jpg', 'frame294.jpg', 'frame295.jpg', 'frame296.jpg', 'frame297.jpg', 'frame298.jpg', 'frame299.jpg', 'frame3.jpg', 'frame30.jpg', 'frame300.jpg', 'frame301.jpg', 'frame302.jpg', 'frame303.jpg', 'frame304.jpg', 'frame305.jpg', 'frame306.jpg', 'frame307.jpg', 'frame308.jpg', 'frame309.jpg', 'frame31.jpg', 'frame310.jpg', 'frame311.jpg', 'frame312.jpg', 'frame313.jpg', 'frame314.jpg', 'frame315.jpg', 'frame316.jpg', 'frame317.jpg', 'frame318.jpg', 'frame319.jpg', 'frame32.jpg', 'frame320.jpg', 'frame321.jpg', 'frame322.jpg', 'frame323.jpg', 'frame324.jpg', 'frame325.jpg', 'frame326.jpg', 'frame327.jpg', 'frame328.jpg', 'frame329.jpg', 'frame33.jpg', 'frame330.jpg', 'frame331.jpg', 'frame332.jpg', 'frame333.jpg', 'frame334.jpg', 'frame335.jpg', 'frame336.jpg', 'frame337.jpg', 'frame338.jpg', 'frame339.jpg', 'frame34.jpg', 'frame340.jpg', 'frame35.jpg', 'frame36.jpg', 'frame364.jpg', 'frame365.jpg', 'frame366.jpg', 'frame367.jpg', 'frame368.jpg', 'frame369.jpg', 'frame37.jpg', 'frame370.jpg', 'frame371.jpg', 'frame372.jpg', 'frame373.jpg', 'frame374.jpg', 'frame375.jpg', 'frame376.jpg', 'frame377.jpg', 'frame378.jpg', 'frame379.jpg', 'frame38.jpg', 'frame380.jpg', 'frame381.jpg', 'frame382.jpg', 'frame383.jpg', 'frame384.jpg', 'frame385.jpg', 'frame386.jpg', 'frame387.jpg', 'frame388.jpg', 'frame389.jpg', 'frame39.jpg', 'frame390.jpg', 'frame391.jpg', 'frame392.jpg', 'frame393.jpg', 'frame394.jpg', 'frame395.jpg', 'frame396.jpg', 'frame397.jpg', 'frame398.jpg', 'frame399.jpg', 'frame4.jpg', 'frame40.jpg', 'frame400.jpg', 'frame401.jpg', 'frame402.jpg', 'frame403.jpg', 'frame404.jpg', 'frame405.jpg', 'frame406.jpg', 'frame407.jpg', 'frame408.jpg', 'frame409.jpg', 'frame41.jpg', 'frame410.jpg', 'frame413.jpg', 'frame414.jpg', 'frame415.jpg', 'frame416.jpg', 'frame417.jpg', 'frame418.jpg', 'frame419.jpg', 'frame42.jpg', 'frame420.jpg', 'frame421.jpg', 'frame422.jpg', 'frame423.jpg', 'frame424.jpg', 'frame425.jpg', 'frame426.jpg', 'frame427.jpg', 'frame428.jpg', 'frame429.jpg', 'frame430.jpg', 'frame431.jpg', 'frame432.jpg', 'frame433.jpg', 'frame434.jpg', 'frame435.jpg', 'frame436.jpg', 'frame437.jpg', 'frame438.jpg', 'frame439.jpg', 'frame440.jpg', 'frame441.jpg', 'frame442.jpg', 'frame443.jpg', 'frame444.jpg', 'frame445.jpg', 'frame446.jpg', 'frame447.jpg', 'frame448.jpg', 'frame449.jpg', 'frame45.jpg', 'frame450.jpg', 'frame451.jpg', 'frame452.jpg', 'frame453.jpg', 'frame454.jpg', 'frame455.jpg', 'frame456.jpg', 'frame457.jpg', 'frame458.jpg', 'frame459.jpg', 'frame46.jpg', 'frame460.jpg', 'frame461.jpg', 'frame462.jpg', 'frame463.jpg', 'frame464.jpg', 'frame465.jpg', 'frame466.jpg', 'frame467.jpg', 'frame468.jpg', 'frame469.jpg', 'frame47.jpg', 'frame470.jpg', 'frame471.jpg', 'frame472.jpg', 'frame473.jpg', 'frame474.jpg', 'frame475.jpg', 'frame476.jpg', 'frame477.jpg', 'frame478.jpg', 'frame479.jpg', 'frame48.jpg', 'frame480.jpg', 'frame481.jpg', 'frame482.jpg', 'frame483.jpg', 'frame484.jpg', 'frame485.jpg', 'frame486.jpg', 'frame487.jpg', 'frame488.jpg', 'frame489.jpg', 'frame49.jpg', 'frame490.jpg', 'frame491.jpg', 'frame492.jpg', 'frame493.jpg', 'frame494.jpg', 'frame495.jpg', 'frame496.jpg', 'frame497.jpg', 'frame498.jpg', 'frame499.jpg', 'frame5.jpg', 'frame50.jpg', 'frame500.jpg', 
-        'frame501.jpg', 'frame502.jpg', 'frame503.jpg', 'frame504.jpg', 'frame505.jpg', 'frame506.jpg', 'frame507.jpg', 'frame508.jpg', 'frame509.jpg', 'frame51.jpg', 'frame510.jpg', 'frame511.jpg', 'frame512.jpg', 'frame513.jpg', 'frame514.jpg', 'frame515.jpg', 'frame516.jpg', 'frame517.jpg', 'frame518.jpg', 'frame519.jpg', 'frame52.jpg', 'frame520.jpg', 'frame521.jpg', 'frame522.jpg', 'frame523.jpg', 'frame524.jpg', 'frame525.jpg', 'frame526.jpg', 'frame527.jpg', 'frame528.jpg', 'frame529.jpg', 'frame53.jpg', 'frame530.jpg', 'frame531.jpg', 'frame532.jpg', 'frame533.jpg', 'frame534.jpg', 'frame535.jpg', 'frame536.jpg', 'frame537.jpg', 'frame538.jpg', 'frame539.jpg', 'frame54.jpg', 'frame540.jpg', 'frame541.jpg', 'frame542.jpg', 'frame543.jpg', 'frame544.jpg', 'frame545.jpg', 'frame546.jpg', 'frame547.jpg', 'frame548.jpg', 'frame549.jpg', 'frame55.jpg', 'frame550.jpg', 'frame551.jpg', 'frame552.jpg', 'frame553.jpg', 'frame554.jpg', 'frame555.jpg', 'frame556.jpg', 'frame557.jpg', 'frame558.jpg', 'frame559.jpg', 'frame56.jpg', 'frame560.jpg', 'frame561.jpg', 'frame562.jpg', 'frame563.jpg', 'frame566.jpg', 'frame567.jpg', 'frame568.jpg', 'frame569.jpg', 'frame57.jpg', 'frame570.jpg', 'frame571.jpg', 'frame572.jpg', 'frame573.jpg', 'frame574.jpg', 'frame575.jpg', 'frame576.jpg', 'frame577.jpg', 'frame578.jpg', 'frame579.jpg', 'frame58.jpg', 'frame580.jpg', 'frame581.jpg', 'frame582.jpg', 'frame583.jpg', 'frame584.jpg', 'frame585.jpg', 'frame586.jpg', 'frame587.jpg', 'frame588.jpg', 'frame589.jpg', 'frame59.jpg', 'frame590.jpg', 'frame591.jpg', 'frame592.jpg', 'frame593.jpg', 'frame594.jpg', 'frame595.jpg', 'frame596.jpg', 'frame597.jpg', 'frame598.jpg', 'frame599.jpg', 'frame6.jpg', 'frame60.jpg', 'frame600.jpg', 'frame601.jpg', 'frame602.jpg', 'frame603.jpg', 'frame604.jpg', 'frame605.jpg', 'frame606.jpg', 'frame607.jpg', 'frame608.jpg', 'frame609.jpg', 'frame61.jpg', 'frame610.jpg', 'frame611.jpg', 'frame612.jpg', 'frame613.jpg', 'frame614.jpg', 'frame615.jpg', 'frame616.jpg', 'frame617.jpg', 'frame618.jpg', 'frame619.jpg', 'frame62.jpg', 'frame620.jpg', 'frame621.jpg', 'frame622.jpg', 'frame623.jpg', 'frame624.jpg', 'frame625.jpg', 'frame626.jpg', 'frame627.jpg', 'frame628.jpg', 'frame629.jpg', 'frame63.jpg', 'frame630.jpg', 'frame631.jpg', 'frame632.jpg', 'frame633.jpg', 'frame634.jpg', 'frame635.jpg', 'frame636.jpg', 'frame637.jpg', 'frame638.jpg', 'frame639.jpg', 'frame64.jpg', 'frame640.jpg', 'frame641.jpg', 'frame642.jpg', 'frame643.jpg', 'frame644.jpg', 'frame645.jpg', 'frame646.jpg', 'frame647.jpg', 'frame648.jpg', 'frame649.jpg', 'frame65.jpg', 'frame650.jpg', 'frame651.jpg', 'frame652.jpg', 'frame653.jpg', 'frame654.jpg', 'frame655.jpg', 'frame656.jpg', 'frame657.jpg', 'frame658.jpg', 'frame659.jpg', 'frame66.jpg', 'frame660.jpg', 'frame661.jpg', 'frame662.jpg', 'frame663.jpg', 'frame664.jpg', 'frame665.jpg', 'frame666.jpg', 'frame667.jpg', 'frame668.jpg', 'frame669.jpg', 'frame67.jpg', 'frame670.jpg', 'frame671.jpg', 'frame672.jpg', 'frame673.jpg', 'frame674.jpg', 'frame675.jpg', 'frame676.jpg', 'frame677.jpg', 'frame678.jpg', 'frame679.jpg', 'frame68.jpg', 'frame680.jpg', 'frame681.jpg', 'frame682.jpg', 'frame683.jpg', 'frame684.jpg', 'frame685.jpg', 'frame686.jpg', 'frame687.jpg', 'frame688.jpg', 'frame689.jpg', 'frame69.jpg', 'frame690.jpg', 'frame691.jpg', 'frame692.jpg', 'frame693.jpg', 'frame694.jpg', 'frame695.jpg', 'frame696.jpg', 'frame697.jpg', 'frame698.jpg', 'frame699.jpg', 'frame7.jpg', 'frame70.jpg', 'frame700.jpg', 'frame701.jpg', 'frame702.jpg', 'frame703.jpg', 'frame704.jpg', 'frame705.jpg', 'frame706.jpg', 'frame707.jpg', 'frame708.jpg', 'frame709.jpg', 'frame71.jpg', 'frame710.jpg', 'frame711.jpg', 'frame712.jpg', 'frame713.jpg', 'frame714.jpg', 'frame715.jpg', 'frame716.jpg', 'frame717.jpg', 'frame718.jpg', 'frame719.jpg', 'frame72.jpg', 'frame720.jpg', 'frame721.jpg', 'frame722.jpg', 'frame73.jpg', 'frame74.jpg', 'frame75.jpg', 'frame76.jpg', 'frame763.jpg', 'frame764.jpg', 'frame765.jpg', 'frame766.jpg', 'frame767.jpg', 'frame768.jpg', 'frame769.jpg', 'frame77.jpg', 'frame770.jpg', 'frame771.jpg', 'frame772.jpg', 'frame773.jpg', 'frame774.jpg', 'frame78.jpg', 'frame79.jpg', 'frame794.jpg', 'frame795.jpg', 'frame796.jpg', 'frame797.jpg', 'frame8.jpg', 'frame80.jpg', 'frame801.jpg', 'frame802.jpg', 'frame803.jpg', 'frame804.jpg', 'frame805.jpg', 'frame806.jpg', 'frame807.jpg', 'frame808.jpg', 'frame809.jpg', 'frame81.jpg', 'frame810.jpg', 'frame811.jpg', 'frame812.jpg', 'frame813.jpg', 'frame814.jpg', 'frame815.jpg', 'frame816.jpg', 'frame817.jpg', 'frame818.jpg', 'frame819.jpg', 'frame82.jpg', 'frame820.jpg', 'frame821.jpg', 'frame822.jpg', 'frame823.jpg', 'frame824.jpg', 'frame825.jpg', 'frame826.jpg', 'frame827.jpg', 'frame828.jpg', 'frame829.jpg', 'frame83.jpg', 'frame830.jpg', 'frame831.jpg', 'frame832.jpg', 'frame833.jpg', 'frame834.jpg', 'frame835.jpg', 'frame836.jpg', 'frame837.jpg', 'frame838.jpg', 'frame839.jpg', 'frame84.jpg', 'frame840.jpg', 'frame841.jpg', 'frame842.jpg', 'frame843.jpg', 'frame844.jpg', 'frame845.jpg', 'frame846.jpg', 'frame847.jpg', 'frame848.jpg', 'frame849.jpg', 'frame85.jpg', 'frame850.jpg', 'frame851.jpg', 'frame852.jpg', 'frame853.jpg', 'frame854.jpg', 'frame855.jpg', 'frame856.jpg', 'frame857.jpg', 'frame858.jpg', 'frame859.jpg', 'frame86.jpg', 'frame860.jpg', 'frame861.jpg', 'frame862.jpg', 'frame863.jpg', 'frame864.jpg', 'frame865.jpg', 'frame866.jpg', 'frame867.jpg', 'frame868.jpg', 'frame869.jpg', 'frame87.jpg', 'frame870.jpg', 'frame871.jpg', 'frame872.jpg', 'frame873.jpg', 'frame874.jpg', 'frame875.jpg', 'frame876.jpg', 'frame877.jpg', 'frame878.jpg', 'frame879.jpg', 'frame88.jpg', 'frame880.jpg', 'frame881.jpg', 'frame882.jpg', 'frame883.jpg', 'frame884.jpg', 'frame885.jpg', 'frame886.jpg', 'frame887.jpg', 'frame888.jpg', 'frame889.jpg', 'frame89.jpg', 'frame890.jpg', 'frame891.jpg', 'frame892.jpg', 'frame893.jpg', 'frame894.jpg', 'frame895.jpg', 'frame896.jpg', 'frame897.jpg', 'frame898.jpg', 'frame899.jpg', 'frame9.jpg', 'frame90.jpg', 'frame900.jpg', 'frame901.jpg', 'frame902.jpg', 'frame903.jpg', 'frame904.jpg', 'frame905.jpg', 'frame906.jpg', 'frame907.jpg', 'frame908.jpg', 'frame909.jpg', 'frame91.jpg', 'frame910.jpg', 'frame911.jpg', 'frame912.jpg', 'frame913.jpg', 'frame914.jpg', 'frame915.jpg', 'frame916.jpg', 'frame917.jpg', 'frame918.jpg', 'frame919.jpg', 'frame92.jpg', 'frame920.jpg', 'frame921.jpg', 'frame922.jpg', 'frame923.jpg', 'frame924.jpg', 'frame925.jpg', 'frame926.jpg', 'frame927.jpg', 'frame928.jpg', 'frame929.jpg', 'frame93.jpg', 'frame930.jpg', 'frame931.jpg', 'frame932.jpg', 'frame933.jpg', 'frame934.jpg', 'frame935.jpg', 'frame936.jpg', 'frame937.jpg', 'frame938.jpg', 'frame939.jpg', 'frame94.jpg', 'frame940.jpg', 'frame941.jpg', 'frame942.jpg', 'frame943.jpg', 'frame944.jpg', 'frame945.jpg', 'frame946.jpg', 'frame947.jpg', 'frame948.jpg', 'frame949.jpg', 'frame95.jpg', 'frame950.jpg', 'frame951.jpg', 'frame952.jpg', 'frame953.jpg', 'frame954.jpg', 'frame955.jpg', 'frame956.jpg', 'frame957.jpg', 'frame958.jpg', 'frame959.jpg', 'frame96.jpg', 'frame960.jpg', 'frame961.jpg', 'frame962.jpg', 'frame963.jpg', 'frame964.jpg', 'frame965.jpg', 'frame966.jpg', 'frame967.jpg', 'frame968.jpg', 'frame969.jpg', 'frame97.jpg', 'frame970.jpg', 'frame971.jpg', 'frame972.jpg', 'frame973.jpg', 'frame974.jpg', 'frame975.jpg', 'frame978.jpg', 'frame979.jpg', 'frame98.jpg', 'frame980.jpg', 'frame981.jpg', 'frame982.jpg', 'frame983.jpg', 'frame984.jpg', 'frame985.jpg', 'frame986.jpg', 'frame987.jpg', 'frame988.jpg', 'frame989.jpg', 'frame99.jpg', 'frame990.jpg', 'frame991.jpg', 'frame992.jpg', 'frame993.jpg', 'frame994.jpg', 'frame995.jpg', 'frame996.jpg', 'frame997.jpg', 'frame998.jpg', 'frame999.jpg'
-    ]
+# with open("/app/output/dict1.json", "w") as outfile:
+#     json.dump(resp_obj1, outfile)
 
-positives = []
+# s3_client.upload_file("/app/output/dict1.json", 
+# "rag-net-v2-0c6f96b8050c43fd-outputs", 
+# "output/DlibActiveMornL1/dict1.json")
 
-for key, values in idendities.items():
+
+# # P2
+# idendities = {
+#     "1": ["down.jpg", "front.jpg", "sideleft.jpg", "sideright.jpg"],
+#     "2": [
+#         'frame10.jpg', 'frame100.jpg', 'frame1000.jpg', 'frame1001.jpg', 'frame1002.jpg', 'frame1003.jpg', 'frame1004.jpg', 'frame1005.jpg', 'frame1006.jpg', 'frame1007.jpg', 'frame1008.jpg', 'frame1009.jpg', 'frame101.jpg', 'frame1010.jpg', 'frame1011.jpg', 'frame1012.jpg', 'frame1013.jpg', 'frame1014.jpg', 'frame1015.jpg', 'frame1016.jpg', 'frame1017.jpg', 'frame1018.jpg', 'frame1019.jpg', 'frame102.jpg', 'frame1020.jpg', 'frame1021.jpg', 'frame1022.jpg', 'frame1025.jpg', 'frame1026.jpg', 'frame1027.jpg', 'frame1028.jpg', 'frame1029.jpg', 'frame103.jpg', 'frame1030.jpg', 'frame1031.jpg', 'frame1032.jpg', 'frame1033.jpg', 'frame1034.jpg', 'frame1035.jpg', 'frame1036.jpg', 'frame1037.jpg', 'frame1038.jpg', 'frame1039.jpg', 'frame104.jpg', 'frame1040.jpg', 'frame1041.jpg', 'frame1042.jpg', 'frame1043.jpg', 'frame1044.jpg', 'frame1045.jpg', 'frame1046.jpg', 'frame1047.jpg', 'frame1048.jpg', 'frame1049.jpg', 'frame105.jpg', 'frame1050.jpg', 'frame1051.jpg', 'frame1052.jpg', 'frame1053.jpg', 'frame1054.jpg', 'frame1055.jpg', 'frame1056.jpg', 'frame1057.jpg', 'frame1058.jpg', 'frame1059.jpg', 'frame106.jpg', 'frame1060.jpg', 'frame1061.jpg', 'frame1062.jpg', 'frame1063.jpg', 'frame1064.jpg', 'frame1065.jpg', 'frame1066.jpg', 'frame1067.jpg', 'frame1068.jpg', 'frame1069.jpg', 'frame107.jpg', 'frame1070.jpg', 'frame1071.jpg', 'frame1072.jpg', 'frame1073.jpg', 'frame1074.jpg', 'frame1075.jpg', 'frame1076.jpg', 'frame1077.jpg', 'frame1078.jpg', 'frame1079.jpg', 'frame108.jpg', 'frame1080.jpg', 'frame1081.jpg', 'frame1082.jpg', 'frame1083.jpg', 'frame1084.jpg', 'frame1085.jpg', 'frame1086.jpg', 'frame1087.jpg', 'frame1088.jpg', 'frame1089.jpg', 'frame109.jpg', 'frame1090.jpg', 'frame1091.jpg', 'frame1092.jpg', 'frame1093.jpg', 'frame1094.jpg', 'frame1095.jpg', 'frame1096.jpg', 'frame1097.jpg', 'frame1098.jpg', 'frame1099.jpg', 'frame11.jpg', 'frame110.jpg', 'frame1100.jpg', 'frame1101.jpg', 'frame1102.jpg', 'frame1103.jpg', 'frame1104.jpg', 'frame1105.jpg', 'frame1106.jpg', 'frame1107.jpg', 'frame1108.jpg', 'frame1109.jpg', 'frame111.jpg', 'frame1110.jpg', 'frame1111.jpg', 'frame1112.jpg', 'frame1113.jpg', 'frame1114.jpg', 'frame1115.jpg', 'frame1116.jpg', 'frame1117.jpg', 'frame1118.jpg', 'frame1119.jpg', 'frame112.jpg', 'frame1120.jpg', 'frame1121.jpg', 'frame1122.jpg', 'frame1123.jpg', 'frame1124.jpg', 'frame1125.jpg', 'frame1126.jpg', 'frame1127.jpg', 'frame1128.jpg', 'frame1129.jpg', 'frame113.jpg', 'frame1130.jpg', 'frame1131.jpg', 'frame1132.jpg', 'frame1133.jpg', 'frame1134.jpg', 'frame1135.jpg', 'frame1136.jpg', 'frame1137.jpg', 'frame1138.jpg', 'frame1139.jpg', 'frame114.jpg', 'frame1140.jpg', 'frame1141.jpg', 'frame1142.jpg', 'frame1143.jpg', 'frame1144.jpg', 'frame1145.jpg', 'frame1146.jpg', 'frame1147.jpg', 'frame1148.jpg', 'frame1149.jpg', 'frame115.jpg', 'frame1150.jpg', 'frame1151.jpg', 'frame1152.jpg', 'frame1153.jpg', 'frame1154.jpg', 'frame1155.jpg', 'frame1156.jpg', 'frame1157.jpg', 'frame1158.jpg', 'frame1159.jpg', 'frame116.jpg', 'frame1160.jpg', 'frame1161.jpg', 'frame1162.jpg', 'frame1163.jpg', 'frame1164.jpg', 'frame1165.jpg', 'frame1166.jpg', 'frame1167.jpg', 'frame1168.jpg', 'frame1169.jpg', 'frame117.jpg', 'frame1170.jpg', 'frame1171.jpg', 'frame1172.jpg', 'frame1173.jpg', 'frame1174.jpg', 'frame1175.jpg', 'frame1176.jpg', 'frame1177.jpg', 'frame1178.jpg', 'frame1179.jpg', 'frame118.jpg', 'frame1180.jpg', 'frame1181.jpg', 'frame1182.jpg', 'frame1183.jpg', 'frame1184.jpg', 'frame1185.jpg', 'frame1186.jpg', 'frame1187.jpg', 'frame1188.jpg', 'frame1189.jpg', 'frame119.jpg', 'frame1190.jpg', 'frame1191.jpg', 'frame1192.jpg', 'frame1193.jpg', 'frame1194.jpg', 'frame1195.jpg', 'frame1196.jpg', 'frame1197.jpg', 'frame1198.jpg', 'frame12.jpg', 'frame120.jpg', 'frame121.jpg', 'frame122.jpg', 'frame123.jpg', 'frame124.jpg', 'frame125.jpg', 'frame126.jpg', 'frame127.jpg', 'frame128.jpg', 'frame129.jpg', 'frame13.jpg', 'frame130.jpg', 'frame131.jpg', 'frame132.jpg', 'frame133.jpg', 'frame134.jpg', 'frame135.jpg', 'frame136.jpg', 'frame137.jpg', 'frame138.jpg', 'frame139.jpg', 'frame14.jpg', 'frame140.jpg', 'frame141.jpg', 'frame142.jpg', 'frame143.jpg', 'frame144.jpg', 'frame145.jpg', 'frame146.jpg', 'frame147.jpg', 'frame148.jpg', 'frame149.jpg', 'frame15.jpg', 'frame150.jpg', 'frame151.jpg', 'frame152.jpg', 'frame153.jpg', 'frame154.jpg', 'frame155.jpg', 'frame156.jpg', 'frame157.jpg', 'frame158.jpg', 'frame159.jpg', 'frame16.jpg', 'frame160.jpg', 'frame161.jpg', 'frame162.jpg', 'frame163.jpg', 'frame164.jpg', 'frame165.jpg', 'frame166.jpg', 'frame167.jpg', 'frame168.jpg', 'frame169.jpg', 'frame17.jpg', 'frame170.jpg', 'frame171.jpg', 'frame172.jpg', 'frame173.jpg', 'frame174.jpg', 'frame175.jpg', 'frame176.jpg', 'frame177.jpg', 'frame178.jpg', 'frame179.jpg', 'frame18.jpg', 'frame180.jpg', 'frame181.jpg', 'frame184.jpg', 'frame185.jpg', 'frame186.jpg', 'frame187.jpg', 'frame188.jpg', 'frame189.jpg', 'frame19.jpg', 'frame190.jpg', 'frame191.jpg', 'frame192.jpg', 'frame193.jpg', 'frame194.jpg', 'frame195.jpg', 'frame196.jpg', 'frame197.jpg', 'frame198.jpg', 'frame199.jpg', 'frame2.jpg', 'frame20.jpg', 'frame200.jpg', 'frame201.jpg', 'frame202.jpg', 'frame203.jpg', 'frame204.jpg', 'frame205.jpg', 'frame206.jpg', 'frame207.jpg', 'frame208.jpg', 'frame209.jpg', 'frame21.jpg', 'frame210.jpg', 'frame211.jpg', 'frame212.jpg', 'frame213.jpg', 'frame214.jpg', 'frame215.jpg', 'frame216.jpg', 'frame217.jpg', 'frame218.jpg', 'frame219.jpg', 'frame22.jpg', 'frame220.jpg', 'frame221.jpg', 'frame222.jpg', 'frame223.jpg', 'frame224.jpg', 'frame225.jpg', 'frame226.jpg', 'frame227.jpg', 'frame228.jpg', 'frame229.jpg', 'frame23.jpg', 'frame230.jpg', 'frame231.jpg', 'frame232.jpg', 'frame233.jpg', 'frame234.jpg', 'frame235.jpg', 'frame236.jpg', 'frame237.jpg', 'frame238.jpg', 'frame239.jpg', 'frame24.jpg', 'frame240.jpg', 'frame241.jpg', 'frame242.jpg', 'frame243.jpg', 'frame244.jpg', 'frame245.jpg', 'frame246.jpg', 'frame247.jpg', 'frame248.jpg', 'frame249.jpg', 'frame25.jpg', 'frame250.jpg', 'frame251.jpg', 'frame252.jpg', 'frame253.jpg', 'frame254.jpg', 'frame255.jpg', 'frame256.jpg', 'frame257.jpg', 'frame258.jpg', 'frame259.jpg', 'frame26.jpg', 'frame260.jpg', 'frame261.jpg', 'frame262.jpg', 'frame263.jpg', 'frame264.jpg', 'frame265.jpg', 'frame266.jpg', 'frame267.jpg', 'frame268.jpg', 'frame269.jpg', 'frame27.jpg', 'frame270.jpg', 'frame271.jpg', 'frame272.jpg', 'frame273.jpg', 'frame274.jpg', 'frame275.jpg', 'frame276.jpg', 'frame277.jpg', 'frame278.jpg', 'frame279.jpg', 'frame28.jpg', 'frame280.jpg', 'frame281.jpg', 'frame282.jpg', 'frame285.jpg', 'frame286.jpg', 'frame287.jpg', 'frame288.jpg', 'frame289.jpg', 'frame29.jpg', 'frame290.jpg', 'frame291.jpg', 'frame292.jpg', 'frame293.jpg', 'frame294.jpg', 'frame295.jpg', 'frame296.jpg', 'frame297.jpg', 'frame298.jpg', 'frame299.jpg', 'frame3.jpg', 'frame30.jpg', 'frame300.jpg', 'frame301.jpg', 'frame302.jpg', 'frame303.jpg', 'frame304.jpg', 'frame305.jpg', 'frame306.jpg', 'frame307.jpg', 'frame308.jpg', 'frame309.jpg', 'frame31.jpg', 'frame310.jpg', 'frame311.jpg', 'frame312.jpg', 'frame313.jpg', 'frame314.jpg', 'frame315.jpg', 'frame316.jpg', 'frame317.jpg', 'frame318.jpg', 'frame319.jpg', 'frame32.jpg', 'frame320.jpg', 'frame321.jpg', 'frame322.jpg', 'frame323.jpg', 'frame324.jpg', 'frame325.jpg', 'frame326.jpg', 'frame327.jpg', 'frame328.jpg', 'frame329.jpg', 'frame33.jpg', 'frame330.jpg', 'frame331.jpg', 'frame332.jpg', 'frame333.jpg', 'frame334.jpg', 'frame335.jpg', 'frame336.jpg', 'frame337.jpg', 'frame338.jpg', 'frame339.jpg', 'frame34.jpg', 'frame340.jpg', 'frame35.jpg', 'frame36.jpg', 'frame364.jpg', 'frame365.jpg', 'frame366.jpg', 'frame367.jpg', 'frame368.jpg', 'frame369.jpg', 'frame37.jpg', 'frame370.jpg', 'frame371.jpg', 'frame372.jpg', 'frame373.jpg', 'frame374.jpg', 'frame375.jpg', 'frame376.jpg', 'frame377.jpg', 'frame378.jpg', 'frame379.jpg', 'frame38.jpg', 'frame380.jpg', 'frame381.jpg', 'frame382.jpg', 'frame383.jpg', 'frame384.jpg', 'frame385.jpg', 'frame386.jpg', 'frame387.jpg', 'frame388.jpg', 'frame389.jpg', 'frame39.jpg', 'frame390.jpg', 'frame391.jpg', 'frame392.jpg', 'frame393.jpg', 'frame394.jpg', 'frame395.jpg', 'frame396.jpg', 'frame397.jpg', 'frame398.jpg', 'frame399.jpg', 'frame4.jpg', 'frame40.jpg', 'frame400.jpg', 'frame401.jpg', 'frame402.jpg', 'frame403.jpg', 'frame404.jpg', 'frame405.jpg', 'frame406.jpg', 'frame407.jpg', 'frame408.jpg', 'frame409.jpg', 'frame41.jpg', 'frame410.jpg', 'frame413.jpg', 'frame414.jpg', 'frame415.jpg', 'frame416.jpg', 'frame417.jpg', 'frame418.jpg', 'frame419.jpg', 'frame42.jpg', 'frame420.jpg', 'frame421.jpg', 'frame422.jpg', 'frame423.jpg', 'frame424.jpg', 'frame425.jpg', 'frame426.jpg', 'frame427.jpg', 'frame428.jpg', 'frame429.jpg', 'frame430.jpg', 'frame431.jpg', 'frame432.jpg', 'frame433.jpg', 'frame434.jpg', 'frame435.jpg', 'frame436.jpg', 'frame437.jpg', 'frame438.jpg', 'frame439.jpg', 'frame440.jpg', 'frame441.jpg', 'frame442.jpg', 'frame443.jpg', 'frame444.jpg', 'frame445.jpg', 'frame446.jpg', 'frame447.jpg', 'frame448.jpg', 'frame449.jpg', 'frame45.jpg', 'frame450.jpg', 'frame451.jpg', 'frame452.jpg', 'frame453.jpg', 'frame454.jpg', 'frame455.jpg', 'frame456.jpg', 'frame457.jpg', 'frame458.jpg', 'frame459.jpg', 'frame46.jpg', 'frame460.jpg', 'frame461.jpg', 'frame462.jpg', 'frame463.jpg', 'frame464.jpg', 'frame465.jpg', 'frame466.jpg', 'frame467.jpg', 'frame468.jpg', 'frame469.jpg', 'frame47.jpg', 'frame470.jpg', 'frame471.jpg', 'frame472.jpg', 'frame473.jpg', 'frame474.jpg', 'frame475.jpg', 'frame476.jpg', 'frame477.jpg', 'frame478.jpg', 'frame479.jpg', 'frame48.jpg', 'frame480.jpg', 'frame481.jpg', 'frame482.jpg', 'frame483.jpg', 'frame484.jpg', 'frame485.jpg', 'frame486.jpg', 'frame487.jpg', 'frame488.jpg', 'frame489.jpg', 'frame49.jpg', 'frame490.jpg', 'frame491.jpg', 'frame492.jpg', 'frame493.jpg', 'frame494.jpg', 'frame495.jpg', 'frame496.jpg', 'frame497.jpg', 'frame498.jpg', 'frame499.jpg', 'frame5.jpg', 'frame50.jpg', 'frame500.jpg', 
+#         'frame501.jpg', 'frame502.jpg', 'frame503.jpg', 'frame504.jpg', 'frame505.jpg', 'frame506.jpg', 'frame507.jpg', 'frame508.jpg', 'frame509.jpg', 'frame51.jpg', 'frame510.jpg', 'frame511.jpg', 'frame512.jpg', 'frame513.jpg', 'frame514.jpg', 'frame515.jpg', 'frame516.jpg', 'frame517.jpg', 'frame518.jpg', 'frame519.jpg', 'frame52.jpg', 'frame520.jpg', 'frame521.jpg', 'frame522.jpg', 'frame523.jpg', 'frame524.jpg', 'frame525.jpg', 'frame526.jpg', 'frame527.jpg', 'frame528.jpg', 'frame529.jpg', 'frame53.jpg', 'frame530.jpg', 'frame531.jpg', 'frame532.jpg', 'frame533.jpg', 'frame534.jpg', 'frame535.jpg', 'frame536.jpg', 'frame537.jpg', 'frame538.jpg', 'frame539.jpg', 'frame54.jpg', 'frame540.jpg', 'frame541.jpg', 'frame542.jpg', 'frame543.jpg', 'frame544.jpg', 'frame545.jpg', 'frame546.jpg', 'frame547.jpg', 'frame548.jpg', 'frame549.jpg', 'frame55.jpg', 'frame550.jpg', 'frame551.jpg', 'frame552.jpg', 'frame553.jpg', 'frame554.jpg', 'frame555.jpg', 'frame556.jpg', 'frame557.jpg', 'frame558.jpg', 'frame559.jpg', 'frame56.jpg', 'frame560.jpg', 'frame561.jpg', 'frame562.jpg', 'frame563.jpg', 'frame566.jpg', 'frame567.jpg', 'frame568.jpg', 'frame569.jpg', 'frame57.jpg', 'frame570.jpg', 'frame571.jpg', 'frame572.jpg', 'frame573.jpg', 'frame574.jpg', 'frame575.jpg', 'frame576.jpg', 'frame577.jpg', 'frame578.jpg', 'frame579.jpg', 'frame58.jpg', 'frame580.jpg', 'frame581.jpg', 'frame582.jpg', 'frame583.jpg', 'frame584.jpg', 'frame585.jpg', 'frame586.jpg', 'frame587.jpg', 'frame588.jpg', 'frame589.jpg', 'frame59.jpg', 'frame590.jpg', 'frame591.jpg', 'frame592.jpg', 'frame593.jpg', 'frame594.jpg', 'frame595.jpg', 'frame596.jpg', 'frame597.jpg', 'frame598.jpg', 'frame599.jpg', 'frame6.jpg', 'frame60.jpg', 'frame600.jpg', 'frame601.jpg', 'frame602.jpg', 'frame603.jpg', 'frame604.jpg', 'frame605.jpg', 'frame606.jpg', 'frame607.jpg', 'frame608.jpg', 'frame609.jpg', 'frame61.jpg', 'frame610.jpg', 'frame611.jpg', 'frame612.jpg', 'frame613.jpg', 'frame614.jpg', 'frame615.jpg', 'frame616.jpg', 'frame617.jpg', 'frame618.jpg', 'frame619.jpg', 'frame62.jpg', 'frame620.jpg', 'frame621.jpg', 'frame622.jpg', 'frame623.jpg', 'frame624.jpg', 'frame625.jpg', 'frame626.jpg', 'frame627.jpg', 'frame628.jpg', 'frame629.jpg', 'frame63.jpg', 'frame630.jpg', 'frame631.jpg', 'frame632.jpg', 'frame633.jpg', 'frame634.jpg', 'frame635.jpg', 'frame636.jpg', 'frame637.jpg', 'frame638.jpg', 'frame639.jpg', 'frame64.jpg', 'frame640.jpg', 'frame641.jpg', 'frame642.jpg', 'frame643.jpg', 'frame644.jpg', 'frame645.jpg', 'frame646.jpg', 'frame647.jpg', 'frame648.jpg', 'frame649.jpg', 'frame65.jpg', 'frame650.jpg', 'frame651.jpg', 'frame652.jpg', 'frame653.jpg', 'frame654.jpg', 'frame655.jpg', 'frame656.jpg', 'frame657.jpg', 'frame658.jpg', 'frame659.jpg', 'frame66.jpg', 'frame660.jpg', 'frame661.jpg', 'frame662.jpg', 'frame663.jpg', 'frame664.jpg', 'frame665.jpg', 'frame666.jpg', 'frame667.jpg', 'frame668.jpg', 'frame669.jpg', 'frame67.jpg', 'frame670.jpg', 'frame671.jpg', 'frame672.jpg', 'frame673.jpg', 'frame674.jpg', 'frame675.jpg', 'frame676.jpg', 'frame677.jpg', 'frame678.jpg', 'frame679.jpg', 'frame68.jpg', 'frame680.jpg', 'frame681.jpg', 'frame682.jpg', 'frame683.jpg', 'frame684.jpg', 'frame685.jpg', 'frame686.jpg', 'frame687.jpg', 'frame688.jpg', 'frame689.jpg', 'frame69.jpg', 'frame690.jpg', 'frame691.jpg', 'frame692.jpg', 'frame693.jpg', 'frame694.jpg', 'frame695.jpg', 'frame696.jpg', 'frame697.jpg', 'frame698.jpg', 'frame699.jpg', 'frame7.jpg', 'frame70.jpg', 'frame700.jpg', 'frame701.jpg', 'frame702.jpg', 'frame703.jpg', 'frame704.jpg', 'frame705.jpg', 'frame706.jpg', 'frame707.jpg', 'frame708.jpg', 'frame709.jpg', 'frame71.jpg', 'frame710.jpg', 'frame711.jpg', 'frame712.jpg', 'frame713.jpg', 'frame714.jpg', 'frame715.jpg', 'frame716.jpg', 'frame717.jpg', 'frame718.jpg', 'frame719.jpg', 'frame72.jpg', 'frame720.jpg', 'frame721.jpg', 'frame722.jpg', 'frame73.jpg', 'frame74.jpg', 'frame75.jpg', 'frame76.jpg', 'frame763.jpg', 'frame764.jpg', 'frame765.jpg', 'frame766.jpg', 'frame767.jpg', 'frame768.jpg', 'frame769.jpg', 'frame77.jpg', 'frame770.jpg', 'frame771.jpg', 'frame772.jpg', 'frame773.jpg', 'frame774.jpg', 'frame78.jpg', 'frame79.jpg', 'frame794.jpg', 'frame795.jpg', 'frame796.jpg', 'frame797.jpg', 'frame8.jpg', 'frame80.jpg', 'frame801.jpg', 'frame802.jpg', 'frame803.jpg', 'frame804.jpg', 'frame805.jpg', 'frame806.jpg', 'frame807.jpg', 'frame808.jpg', 'frame809.jpg', 'frame81.jpg', 'frame810.jpg', 'frame811.jpg', 'frame812.jpg', 'frame813.jpg', 'frame814.jpg', 'frame815.jpg', 'frame816.jpg', 'frame817.jpg', 'frame818.jpg', 'frame819.jpg', 'frame82.jpg', 'frame820.jpg', 'frame821.jpg', 'frame822.jpg', 'frame823.jpg', 'frame824.jpg', 'frame825.jpg', 'frame826.jpg', 'frame827.jpg', 'frame828.jpg', 'frame829.jpg', 'frame83.jpg', 'frame830.jpg', 'frame831.jpg', 'frame832.jpg', 'frame833.jpg', 'frame834.jpg', 'frame835.jpg', 'frame836.jpg', 'frame837.jpg', 'frame838.jpg', 'frame839.jpg', 'frame84.jpg', 'frame840.jpg', 'frame841.jpg', 'frame842.jpg', 'frame843.jpg', 'frame844.jpg', 'frame845.jpg', 'frame846.jpg', 'frame847.jpg', 'frame848.jpg', 'frame849.jpg', 'frame85.jpg', 'frame850.jpg', 'frame851.jpg', 'frame852.jpg', 'frame853.jpg', 'frame854.jpg', 'frame855.jpg', 'frame856.jpg', 'frame857.jpg', 'frame858.jpg', 'frame859.jpg', 'frame86.jpg', 'frame860.jpg', 'frame861.jpg', 'frame862.jpg', 'frame863.jpg', 'frame864.jpg', 'frame865.jpg', 'frame866.jpg', 'frame867.jpg', 'frame868.jpg', 'frame869.jpg', 'frame87.jpg', 'frame870.jpg', 'frame871.jpg', 'frame872.jpg', 'frame873.jpg', 'frame874.jpg', 'frame875.jpg', 'frame876.jpg', 'frame877.jpg', 'frame878.jpg', 'frame879.jpg', 'frame88.jpg', 'frame880.jpg', 'frame881.jpg', 'frame882.jpg', 'frame883.jpg', 'frame884.jpg', 'frame885.jpg', 'frame886.jpg', 'frame887.jpg', 'frame888.jpg', 'frame889.jpg', 'frame89.jpg', 'frame890.jpg', 'frame891.jpg', 'frame892.jpg', 'frame893.jpg', 'frame894.jpg', 'frame895.jpg', 'frame896.jpg', 'frame897.jpg', 'frame898.jpg', 'frame899.jpg', 'frame9.jpg', 'frame90.jpg', 'frame900.jpg', 'frame901.jpg', 'frame902.jpg', 'frame903.jpg', 'frame904.jpg', 'frame905.jpg', 'frame906.jpg', 'frame907.jpg', 'frame908.jpg', 'frame909.jpg', 'frame91.jpg', 'frame910.jpg', 'frame911.jpg', 'frame912.jpg', 'frame913.jpg', 'frame914.jpg', 'frame915.jpg', 'frame916.jpg', 'frame917.jpg', 'frame918.jpg', 'frame919.jpg', 'frame92.jpg', 'frame920.jpg', 'frame921.jpg', 'frame922.jpg', 'frame923.jpg', 'frame924.jpg', 'frame925.jpg', 'frame926.jpg', 'frame927.jpg', 'frame928.jpg', 'frame929.jpg', 'frame93.jpg', 'frame930.jpg', 'frame931.jpg', 'frame932.jpg', 'frame933.jpg', 'frame934.jpg', 'frame935.jpg', 'frame936.jpg', 'frame937.jpg', 'frame938.jpg', 'frame939.jpg', 'frame94.jpg', 'frame940.jpg', 'frame941.jpg', 'frame942.jpg', 'frame943.jpg', 'frame944.jpg', 'frame945.jpg', 'frame946.jpg', 'frame947.jpg', 'frame948.jpg', 'frame949.jpg', 'frame95.jpg', 'frame950.jpg', 'frame951.jpg', 'frame952.jpg', 'frame953.jpg', 'frame954.jpg', 'frame955.jpg', 'frame956.jpg', 'frame957.jpg', 'frame958.jpg', 'frame959.jpg', 'frame96.jpg', 'frame960.jpg', 'frame961.jpg', 'frame962.jpg', 'frame963.jpg', 'frame964.jpg', 'frame965.jpg', 'frame966.jpg', 'frame967.jpg', 'frame968.jpg', 'frame969.jpg', 'frame97.jpg', 'frame970.jpg', 'frame971.jpg', 'frame972.jpg', 'frame973.jpg', 'frame974.jpg', 'frame975.jpg', 'frame978.jpg', 'frame979.jpg', 'frame98.jpg', 'frame980.jpg', 'frame981.jpg', 'frame982.jpg', 'frame983.jpg', 'frame984.jpg', 'frame985.jpg', 'frame986.jpg', 'frame987.jpg', 'frame988.jpg', 'frame989.jpg', 'frame99.jpg', 'frame990.jpg', 'frame991.jpg', 'frame992.jpg', 'frame993.jpg', 'frame994.jpg', 'frame995.jpg', 'frame996.jpg', 'frame997.jpg', 'frame998.jpg', 'frame999.jpg'
+#     ]
+#         }
+
+# id = ["down.jpg", "front.jpg", "sideleft.jpg", "sideright.jpg",
+#         'frame10.jpg', 'frame100.jpg', 'frame1000.jpg', 'frame1001.jpg', 'frame1002.jpg', 'frame1003.jpg', 'frame1004.jpg', 'frame1005.jpg', 'frame1006.jpg', 'frame1007.jpg', 'frame1008.jpg', 'frame1009.jpg', 'frame101.jpg', 'frame1010.jpg', 'frame1011.jpg', 'frame1012.jpg', 'frame1013.jpg', 'frame1014.jpg', 'frame1015.jpg', 'frame1016.jpg', 'frame1017.jpg', 'frame1018.jpg', 'frame1019.jpg', 'frame102.jpg', 'frame1020.jpg', 'frame1021.jpg', 'frame1022.jpg', 'frame1025.jpg', 'frame1026.jpg', 'frame1027.jpg', 'frame1028.jpg', 'frame1029.jpg', 'frame103.jpg', 'frame1030.jpg', 'frame1031.jpg', 'frame1032.jpg', 'frame1033.jpg', 'frame1034.jpg', 'frame1035.jpg', 'frame1036.jpg', 'frame1037.jpg', 'frame1038.jpg', 'frame1039.jpg', 'frame104.jpg', 'frame1040.jpg', 'frame1041.jpg', 'frame1042.jpg', 'frame1043.jpg', 'frame1044.jpg', 'frame1045.jpg', 'frame1046.jpg', 'frame1047.jpg', 'frame1048.jpg', 'frame1049.jpg', 'frame105.jpg', 'frame1050.jpg', 'frame1051.jpg', 'frame1052.jpg', 'frame1053.jpg', 'frame1054.jpg', 'frame1055.jpg', 'frame1056.jpg', 'frame1057.jpg', 'frame1058.jpg', 'frame1059.jpg', 'frame106.jpg', 'frame1060.jpg', 'frame1061.jpg', 'frame1062.jpg', 'frame1063.jpg', 'frame1064.jpg', 'frame1065.jpg', 'frame1066.jpg', 'frame1067.jpg', 'frame1068.jpg', 'frame1069.jpg', 'frame107.jpg', 'frame1070.jpg', 'frame1071.jpg', 'frame1072.jpg', 'frame1073.jpg', 'frame1074.jpg', 'frame1075.jpg', 'frame1076.jpg', 'frame1077.jpg', 'frame1078.jpg', 'frame1079.jpg', 'frame108.jpg', 'frame1080.jpg', 'frame1081.jpg', 'frame1082.jpg', 'frame1083.jpg', 'frame1084.jpg', 'frame1085.jpg', 'frame1086.jpg', 'frame1087.jpg', 'frame1088.jpg', 'frame1089.jpg', 'frame109.jpg', 'frame1090.jpg', 'frame1091.jpg', 'frame1092.jpg', 'frame1093.jpg', 'frame1094.jpg', 'frame1095.jpg', 'frame1096.jpg', 'frame1097.jpg', 'frame1098.jpg', 'frame1099.jpg', 'frame11.jpg', 'frame110.jpg', 'frame1100.jpg', 'frame1101.jpg', 'frame1102.jpg', 'frame1103.jpg', 'frame1104.jpg', 'frame1105.jpg', 'frame1106.jpg', 'frame1107.jpg', 'frame1108.jpg', 'frame1109.jpg', 'frame111.jpg', 'frame1110.jpg', 'frame1111.jpg', 'frame1112.jpg', 'frame1113.jpg', 'frame1114.jpg', 'frame1115.jpg', 'frame1116.jpg', 'frame1117.jpg', 'frame1118.jpg', 'frame1119.jpg', 'frame112.jpg', 'frame1120.jpg', 'frame1121.jpg', 'frame1122.jpg', 'frame1123.jpg', 'frame1124.jpg', 'frame1125.jpg', 'frame1126.jpg', 'frame1127.jpg', 'frame1128.jpg', 'frame1129.jpg', 'frame113.jpg', 'frame1130.jpg', 'frame1131.jpg', 'frame1132.jpg', 'frame1133.jpg', 'frame1134.jpg', 'frame1135.jpg', 'frame1136.jpg', 'frame1137.jpg', 'frame1138.jpg', 'frame1139.jpg', 'frame114.jpg', 'frame1140.jpg', 'frame1141.jpg', 'frame1142.jpg', 'frame1143.jpg', 'frame1144.jpg', 'frame1145.jpg', 'frame1146.jpg', 'frame1147.jpg', 'frame1148.jpg', 'frame1149.jpg', 'frame115.jpg', 'frame1150.jpg', 'frame1151.jpg', 'frame1152.jpg', 'frame1153.jpg', 'frame1154.jpg', 'frame1155.jpg', 'frame1156.jpg', 'frame1157.jpg', 'frame1158.jpg', 'frame1159.jpg', 'frame116.jpg', 'frame1160.jpg', 'frame1161.jpg', 'frame1162.jpg', 'frame1163.jpg', 'frame1164.jpg', 'frame1165.jpg', 'frame1166.jpg', 'frame1167.jpg', 'frame1168.jpg', 'frame1169.jpg', 'frame117.jpg', 'frame1170.jpg', 'frame1171.jpg', 'frame1172.jpg', 'frame1173.jpg', 'frame1174.jpg', 'frame1175.jpg', 'frame1176.jpg', 'frame1177.jpg', 'frame1178.jpg', 'frame1179.jpg', 'frame118.jpg', 'frame1180.jpg', 'frame1181.jpg', 'frame1182.jpg', 'frame1183.jpg', 'frame1184.jpg', 'frame1185.jpg', 'frame1186.jpg', 'frame1187.jpg', 'frame1188.jpg', 'frame1189.jpg', 'frame119.jpg', 'frame1190.jpg', 'frame1191.jpg', 'frame1192.jpg', 'frame1193.jpg', 'frame1194.jpg', 'frame1195.jpg', 'frame1196.jpg', 'frame1197.jpg', 'frame1198.jpg', 'frame12.jpg', 'frame120.jpg', 'frame121.jpg', 'frame122.jpg', 'frame123.jpg', 'frame124.jpg', 'frame125.jpg', 'frame126.jpg', 'frame127.jpg', 'frame128.jpg', 'frame129.jpg', 'frame13.jpg', 'frame130.jpg', 'frame131.jpg', 'frame132.jpg', 'frame133.jpg', 'frame134.jpg', 'frame135.jpg', 'frame136.jpg', 'frame137.jpg', 'frame138.jpg', 'frame139.jpg', 'frame14.jpg', 'frame140.jpg', 'frame141.jpg', 'frame142.jpg', 'frame143.jpg', 'frame144.jpg', 'frame145.jpg', 'frame146.jpg', 'frame147.jpg', 'frame148.jpg', 'frame149.jpg', 'frame15.jpg', 'frame150.jpg', 'frame151.jpg', 'frame152.jpg', 'frame153.jpg', 'frame154.jpg', 'frame155.jpg', 'frame156.jpg', 'frame157.jpg', 'frame158.jpg', 'frame159.jpg', 'frame16.jpg', 'frame160.jpg', 'frame161.jpg', 'frame162.jpg', 'frame163.jpg', 'frame164.jpg', 'frame165.jpg', 'frame166.jpg', 'frame167.jpg', 'frame168.jpg', 'frame169.jpg', 'frame17.jpg', 'frame170.jpg', 'frame171.jpg', 'frame172.jpg', 'frame173.jpg', 'frame174.jpg', 'frame175.jpg', 'frame176.jpg', 'frame177.jpg', 'frame178.jpg', 'frame179.jpg', 'frame18.jpg', 'frame180.jpg', 'frame181.jpg', 'frame184.jpg', 'frame185.jpg', 'frame186.jpg', 'frame187.jpg', 'frame188.jpg', 'frame189.jpg', 'frame19.jpg', 'frame190.jpg', 'frame191.jpg', 'frame192.jpg', 'frame193.jpg', 'frame194.jpg', 'frame195.jpg', 'frame196.jpg', 'frame197.jpg', 'frame198.jpg', 'frame199.jpg', 'frame2.jpg', 'frame20.jpg', 'frame200.jpg', 'frame201.jpg', 'frame202.jpg', 'frame203.jpg', 'frame204.jpg', 'frame205.jpg', 'frame206.jpg', 'frame207.jpg', 'frame208.jpg', 'frame209.jpg', 'frame21.jpg', 'frame210.jpg', 'frame211.jpg', 'frame212.jpg', 'frame213.jpg', 'frame214.jpg', 'frame215.jpg', 'frame216.jpg', 'frame217.jpg', 'frame218.jpg', 'frame219.jpg', 'frame22.jpg', 'frame220.jpg', 'frame221.jpg', 'frame222.jpg', 'frame223.jpg', 'frame224.jpg', 'frame225.jpg', 'frame226.jpg', 'frame227.jpg', 'frame228.jpg', 'frame229.jpg', 'frame23.jpg', 'frame230.jpg', 'frame231.jpg', 'frame232.jpg', 'frame233.jpg', 'frame234.jpg', 'frame235.jpg', 'frame236.jpg', 'frame237.jpg', 'frame238.jpg', 'frame239.jpg', 'frame24.jpg', 'frame240.jpg', 'frame241.jpg', 'frame242.jpg', 'frame243.jpg', 'frame244.jpg', 'frame245.jpg', 'frame246.jpg', 'frame247.jpg', 'frame248.jpg', 'frame249.jpg', 'frame25.jpg', 'frame250.jpg', 'frame251.jpg', 'frame252.jpg', 'frame253.jpg', 'frame254.jpg', 'frame255.jpg', 'frame256.jpg', 'frame257.jpg', 'frame258.jpg', 'frame259.jpg', 'frame26.jpg', 'frame260.jpg', 'frame261.jpg', 'frame262.jpg', 'frame263.jpg', 'frame264.jpg', 'frame265.jpg', 'frame266.jpg', 'frame267.jpg', 'frame268.jpg', 'frame269.jpg', 'frame27.jpg', 'frame270.jpg', 'frame271.jpg', 'frame272.jpg', 'frame273.jpg', 'frame274.jpg', 'frame275.jpg', 'frame276.jpg', 'frame277.jpg', 'frame278.jpg', 'frame279.jpg', 'frame28.jpg', 'frame280.jpg', 'frame281.jpg', 'frame282.jpg', 'frame285.jpg', 'frame286.jpg', 'frame287.jpg', 'frame288.jpg', 'frame289.jpg', 'frame29.jpg', 'frame290.jpg', 'frame291.jpg', 'frame292.jpg', 'frame293.jpg', 'frame294.jpg', 'frame295.jpg', 'frame296.jpg', 'frame297.jpg', 'frame298.jpg', 'frame299.jpg', 'frame3.jpg', 'frame30.jpg', 'frame300.jpg', 'frame301.jpg', 'frame302.jpg', 'frame303.jpg', 'frame304.jpg', 'frame305.jpg', 'frame306.jpg', 'frame307.jpg', 'frame308.jpg', 'frame309.jpg', 'frame31.jpg', 'frame310.jpg', 'frame311.jpg', 'frame312.jpg', 'frame313.jpg', 'frame314.jpg', 'frame315.jpg', 'frame316.jpg', 'frame317.jpg', 'frame318.jpg', 'frame319.jpg', 'frame32.jpg', 'frame320.jpg', 'frame321.jpg', 'frame322.jpg', 'frame323.jpg', 'frame324.jpg', 'frame325.jpg', 'frame326.jpg', 'frame327.jpg', 'frame328.jpg', 'frame329.jpg', 'frame33.jpg', 'frame330.jpg', 'frame331.jpg', 'frame332.jpg', 'frame333.jpg', 'frame334.jpg', 'frame335.jpg', 'frame336.jpg', 'frame337.jpg', 'frame338.jpg', 'frame339.jpg', 'frame34.jpg', 'frame340.jpg', 'frame35.jpg', 'frame36.jpg', 'frame364.jpg', 'frame365.jpg', 'frame366.jpg', 'frame367.jpg', 'frame368.jpg', 'frame369.jpg', 'frame37.jpg', 'frame370.jpg', 'frame371.jpg', 'frame372.jpg', 'frame373.jpg', 'frame374.jpg', 'frame375.jpg', 'frame376.jpg', 'frame377.jpg', 'frame378.jpg', 'frame379.jpg', 'frame38.jpg', 'frame380.jpg', 'frame381.jpg', 'frame382.jpg', 'frame383.jpg', 'frame384.jpg', 'frame385.jpg', 'frame386.jpg', 'frame387.jpg', 'frame388.jpg', 'frame389.jpg', 'frame39.jpg', 'frame390.jpg', 'frame391.jpg', 'frame392.jpg', 'frame393.jpg', 'frame394.jpg', 'frame395.jpg', 'frame396.jpg', 'frame397.jpg', 'frame398.jpg', 'frame399.jpg', 'frame4.jpg', 'frame40.jpg', 'frame400.jpg', 'frame401.jpg', 'frame402.jpg', 'frame403.jpg', 'frame404.jpg', 'frame405.jpg', 'frame406.jpg', 'frame407.jpg', 'frame408.jpg', 'frame409.jpg', 'frame41.jpg', 'frame410.jpg', 'frame413.jpg', 'frame414.jpg', 'frame415.jpg', 'frame416.jpg', 'frame417.jpg', 'frame418.jpg', 'frame419.jpg', 'frame42.jpg', 'frame420.jpg', 'frame421.jpg', 'frame422.jpg', 'frame423.jpg', 'frame424.jpg', 'frame425.jpg', 'frame426.jpg', 'frame427.jpg', 'frame428.jpg', 'frame429.jpg', 'frame430.jpg', 'frame431.jpg', 'frame432.jpg', 'frame433.jpg', 'frame434.jpg', 'frame435.jpg', 'frame436.jpg', 'frame437.jpg', 'frame438.jpg', 'frame439.jpg', 'frame440.jpg', 'frame441.jpg', 'frame442.jpg', 'frame443.jpg', 'frame444.jpg', 'frame445.jpg', 'frame446.jpg', 'frame447.jpg', 'frame448.jpg', 'frame449.jpg', 'frame45.jpg', 'frame450.jpg', 'frame451.jpg', 'frame452.jpg', 'frame453.jpg', 'frame454.jpg', 'frame455.jpg', 'frame456.jpg', 'frame457.jpg', 'frame458.jpg', 'frame459.jpg', 'frame46.jpg', 'frame460.jpg', 'frame461.jpg', 'frame462.jpg', 'frame463.jpg', 'frame464.jpg', 'frame465.jpg', 'frame466.jpg', 'frame467.jpg', 'frame468.jpg', 'frame469.jpg', 'frame47.jpg', 'frame470.jpg', 'frame471.jpg', 'frame472.jpg', 'frame473.jpg', 'frame474.jpg', 'frame475.jpg', 'frame476.jpg', 'frame477.jpg', 'frame478.jpg', 'frame479.jpg', 'frame48.jpg', 'frame480.jpg', 'frame481.jpg', 'frame482.jpg', 'frame483.jpg', 'frame484.jpg', 'frame485.jpg', 'frame486.jpg', 'frame487.jpg', 'frame488.jpg', 'frame489.jpg', 'frame49.jpg', 'frame490.jpg', 'frame491.jpg', 'frame492.jpg', 'frame493.jpg', 'frame494.jpg', 'frame495.jpg', 'frame496.jpg', 'frame497.jpg', 'frame498.jpg', 'frame499.jpg', 'frame5.jpg', 'frame50.jpg', 'frame500.jpg', 
+#         'frame501.jpg', 'frame502.jpg', 'frame503.jpg', 'frame504.jpg', 'frame505.jpg', 'frame506.jpg', 'frame507.jpg', 'frame508.jpg', 'frame509.jpg', 'frame51.jpg', 'frame510.jpg', 'frame511.jpg', 'frame512.jpg', 'frame513.jpg', 'frame514.jpg', 'frame515.jpg', 'frame516.jpg', 'frame517.jpg', 'frame518.jpg', 'frame519.jpg', 'frame52.jpg', 'frame520.jpg', 'frame521.jpg', 'frame522.jpg', 'frame523.jpg', 'frame524.jpg', 'frame525.jpg', 'frame526.jpg', 'frame527.jpg', 'frame528.jpg', 'frame529.jpg', 'frame53.jpg', 'frame530.jpg', 'frame531.jpg', 'frame532.jpg', 'frame533.jpg', 'frame534.jpg', 'frame535.jpg', 'frame536.jpg', 'frame537.jpg', 'frame538.jpg', 'frame539.jpg', 'frame54.jpg', 'frame540.jpg', 'frame541.jpg', 'frame542.jpg', 'frame543.jpg', 'frame544.jpg', 'frame545.jpg', 'frame546.jpg', 'frame547.jpg', 'frame548.jpg', 'frame549.jpg', 'frame55.jpg', 'frame550.jpg', 'frame551.jpg', 'frame552.jpg', 'frame553.jpg', 'frame554.jpg', 'frame555.jpg', 'frame556.jpg', 'frame557.jpg', 'frame558.jpg', 'frame559.jpg', 'frame56.jpg', 'frame560.jpg', 'frame561.jpg', 'frame562.jpg', 'frame563.jpg', 'frame566.jpg', 'frame567.jpg', 'frame568.jpg', 'frame569.jpg', 'frame57.jpg', 'frame570.jpg', 'frame571.jpg', 'frame572.jpg', 'frame573.jpg', 'frame574.jpg', 'frame575.jpg', 'frame576.jpg', 'frame577.jpg', 'frame578.jpg', 'frame579.jpg', 'frame58.jpg', 'frame580.jpg', 'frame581.jpg', 'frame582.jpg', 'frame583.jpg', 'frame584.jpg', 'frame585.jpg', 'frame586.jpg', 'frame587.jpg', 'frame588.jpg', 'frame589.jpg', 'frame59.jpg', 'frame590.jpg', 'frame591.jpg', 'frame592.jpg', 'frame593.jpg', 'frame594.jpg', 'frame595.jpg', 'frame596.jpg', 'frame597.jpg', 'frame598.jpg', 'frame599.jpg', 'frame6.jpg', 'frame60.jpg', 'frame600.jpg', 'frame601.jpg', 'frame602.jpg', 'frame603.jpg', 'frame604.jpg', 'frame605.jpg', 'frame606.jpg', 'frame607.jpg', 'frame608.jpg', 'frame609.jpg', 'frame61.jpg', 'frame610.jpg', 'frame611.jpg', 'frame612.jpg', 'frame613.jpg', 'frame614.jpg', 'frame615.jpg', 'frame616.jpg', 'frame617.jpg', 'frame618.jpg', 'frame619.jpg', 'frame62.jpg', 'frame620.jpg', 'frame621.jpg', 'frame622.jpg', 'frame623.jpg', 'frame624.jpg', 'frame625.jpg', 'frame626.jpg', 'frame627.jpg', 'frame628.jpg', 'frame629.jpg', 'frame63.jpg', 'frame630.jpg', 'frame631.jpg', 'frame632.jpg', 'frame633.jpg', 'frame634.jpg', 'frame635.jpg', 'frame636.jpg', 'frame637.jpg', 'frame638.jpg', 'frame639.jpg', 'frame64.jpg', 'frame640.jpg', 'frame641.jpg', 'frame642.jpg', 'frame643.jpg', 'frame644.jpg', 'frame645.jpg', 'frame646.jpg', 'frame647.jpg', 'frame648.jpg', 'frame649.jpg', 'frame65.jpg', 'frame650.jpg', 'frame651.jpg', 'frame652.jpg', 'frame653.jpg', 'frame654.jpg', 'frame655.jpg', 'frame656.jpg', 'frame657.jpg', 'frame658.jpg', 'frame659.jpg', 'frame66.jpg', 'frame660.jpg', 'frame661.jpg', 'frame662.jpg', 'frame663.jpg', 'frame664.jpg', 'frame665.jpg', 'frame666.jpg', 'frame667.jpg', 'frame668.jpg', 'frame669.jpg', 'frame67.jpg', 'frame670.jpg', 'frame671.jpg', 'frame672.jpg', 'frame673.jpg', 'frame674.jpg', 'frame675.jpg', 'frame676.jpg', 'frame677.jpg', 'frame678.jpg', 'frame679.jpg', 'frame68.jpg', 'frame680.jpg', 'frame681.jpg', 'frame682.jpg', 'frame683.jpg', 'frame684.jpg', 'frame685.jpg', 'frame686.jpg', 'frame687.jpg', 'frame688.jpg', 'frame689.jpg', 'frame69.jpg', 'frame690.jpg', 'frame691.jpg', 'frame692.jpg', 'frame693.jpg', 'frame694.jpg', 'frame695.jpg', 'frame696.jpg', 'frame697.jpg', 'frame698.jpg', 'frame699.jpg', 'frame7.jpg', 'frame70.jpg', 'frame700.jpg', 'frame701.jpg', 'frame702.jpg', 'frame703.jpg', 'frame704.jpg', 'frame705.jpg', 'frame706.jpg', 'frame707.jpg', 'frame708.jpg', 'frame709.jpg', 'frame71.jpg', 'frame710.jpg', 'frame711.jpg', 'frame712.jpg', 'frame713.jpg', 'frame714.jpg', 'frame715.jpg', 'frame716.jpg', 'frame717.jpg', 'frame718.jpg', 'frame719.jpg', 'frame72.jpg', 'frame720.jpg', 'frame721.jpg', 'frame722.jpg', 'frame73.jpg', 'frame74.jpg', 'frame75.jpg', 'frame76.jpg', 'frame763.jpg', 'frame764.jpg', 'frame765.jpg', 'frame766.jpg', 'frame767.jpg', 'frame768.jpg', 'frame769.jpg', 'frame77.jpg', 'frame770.jpg', 'frame771.jpg', 'frame772.jpg', 'frame773.jpg', 'frame774.jpg', 'frame78.jpg', 'frame79.jpg', 'frame794.jpg', 'frame795.jpg', 'frame796.jpg', 'frame797.jpg', 'frame8.jpg', 'frame80.jpg', 'frame801.jpg', 'frame802.jpg', 'frame803.jpg', 'frame804.jpg', 'frame805.jpg', 'frame806.jpg', 'frame807.jpg', 'frame808.jpg', 'frame809.jpg', 'frame81.jpg', 'frame810.jpg', 'frame811.jpg', 'frame812.jpg', 'frame813.jpg', 'frame814.jpg', 'frame815.jpg', 'frame816.jpg', 'frame817.jpg', 'frame818.jpg', 'frame819.jpg', 'frame82.jpg', 'frame820.jpg', 'frame821.jpg', 'frame822.jpg', 'frame823.jpg', 'frame824.jpg', 'frame825.jpg', 'frame826.jpg', 'frame827.jpg', 'frame828.jpg', 'frame829.jpg', 'frame83.jpg', 'frame830.jpg', 'frame831.jpg', 'frame832.jpg', 'frame833.jpg', 'frame834.jpg', 'frame835.jpg', 'frame836.jpg', 'frame837.jpg', 'frame838.jpg', 'frame839.jpg', 'frame84.jpg', 'frame840.jpg', 'frame841.jpg', 'frame842.jpg', 'frame843.jpg', 'frame844.jpg', 'frame845.jpg', 'frame846.jpg', 'frame847.jpg', 'frame848.jpg', 'frame849.jpg', 'frame85.jpg', 'frame850.jpg', 'frame851.jpg', 'frame852.jpg', 'frame853.jpg', 'frame854.jpg', 'frame855.jpg', 'frame856.jpg', 'frame857.jpg', 'frame858.jpg', 'frame859.jpg', 'frame86.jpg', 'frame860.jpg', 'frame861.jpg', 'frame862.jpg', 'frame863.jpg', 'frame864.jpg', 'frame865.jpg', 'frame866.jpg', 'frame867.jpg', 'frame868.jpg', 'frame869.jpg', 'frame87.jpg', 'frame870.jpg', 'frame871.jpg', 'frame872.jpg', 'frame873.jpg', 'frame874.jpg', 'frame875.jpg', 'frame876.jpg', 'frame877.jpg', 'frame878.jpg', 'frame879.jpg', 'frame88.jpg', 'frame880.jpg', 'frame881.jpg', 'frame882.jpg', 'frame883.jpg', 'frame884.jpg', 'frame885.jpg', 'frame886.jpg', 'frame887.jpg', 'frame888.jpg', 'frame889.jpg', 'frame89.jpg', 'frame890.jpg', 'frame891.jpg', 'frame892.jpg', 'frame893.jpg', 'frame894.jpg', 'frame895.jpg', 'frame896.jpg', 'frame897.jpg', 'frame898.jpg', 'frame899.jpg', 'frame9.jpg', 'frame90.jpg', 'frame900.jpg', 'frame901.jpg', 'frame902.jpg', 'frame903.jpg', 'frame904.jpg', 'frame905.jpg', 'frame906.jpg', 'frame907.jpg', 'frame908.jpg', 'frame909.jpg', 'frame91.jpg', 'frame910.jpg', 'frame911.jpg', 'frame912.jpg', 'frame913.jpg', 'frame914.jpg', 'frame915.jpg', 'frame916.jpg', 'frame917.jpg', 'frame918.jpg', 'frame919.jpg', 'frame92.jpg', 'frame920.jpg', 'frame921.jpg', 'frame922.jpg', 'frame923.jpg', 'frame924.jpg', 'frame925.jpg', 'frame926.jpg', 'frame927.jpg', 'frame928.jpg', 'frame929.jpg', 'frame93.jpg', 'frame930.jpg', 'frame931.jpg', 'frame932.jpg', 'frame933.jpg', 'frame934.jpg', 'frame935.jpg', 'frame936.jpg', 'frame937.jpg', 'frame938.jpg', 'frame939.jpg', 'frame94.jpg', 'frame940.jpg', 'frame941.jpg', 'frame942.jpg', 'frame943.jpg', 'frame944.jpg', 'frame945.jpg', 'frame946.jpg', 'frame947.jpg', 'frame948.jpg', 'frame949.jpg', 'frame95.jpg', 'frame950.jpg', 'frame951.jpg', 'frame952.jpg', 'frame953.jpg', 'frame954.jpg', 'frame955.jpg', 'frame956.jpg', 'frame957.jpg', 'frame958.jpg', 'frame959.jpg', 'frame96.jpg', 'frame960.jpg', 'frame961.jpg', 'frame962.jpg', 'frame963.jpg', 'frame964.jpg', 'frame965.jpg', 'frame966.jpg', 'frame967.jpg', 'frame968.jpg', 'frame969.jpg', 'frame97.jpg', 'frame970.jpg', 'frame971.jpg', 'frame972.jpg', 'frame973.jpg', 'frame974.jpg', 'frame975.jpg', 'frame978.jpg', 'frame979.jpg', 'frame98.jpg', 'frame980.jpg', 'frame981.jpg', 'frame982.jpg', 'frame983.jpg', 'frame984.jpg', 'frame985.jpg', 'frame986.jpg', 'frame987.jpg', 'frame988.jpg', 'frame989.jpg', 'frame99.jpg', 'frame990.jpg', 'frame991.jpg', 'frame992.jpg', 'frame993.jpg', 'frame994.jpg', 'frame995.jpg', 'frame996.jpg', 'frame997.jpg', 'frame998.jpg', 'frame999.jpg'
+#     ]
+
+# positives = []
+
+# for key, values in idendities.items():
     
-    #print(key)
-    for i in range(0, len(values)-1):
-        for j in range(i+1, len(values)):
-            #print(values[i], " and ", values[j])
-            positive = []
-            positive.append(values[i])
-            positive.append(values[j])
-            positives.append(positive)
+#     #print(key)
+#     for i in range(0, len(values)-1):
+#         for j in range(i+1, len(values)):
+#             #print(values[i], " and ", values[j])
+#             positive = []
+#             positive.append(values[i])
+#             positive.append(values[j])
+#             positives.append(positive)
 
-positives = pd.DataFrame(positives, columns = ["file_x", "file_y"])
-positives["decision"] = "Yes"
+# positives = pd.DataFrame(positives, columns = ["file_x", "file_y"])
+# positives["decision"] = "Yes"
 
-samples_list = list(idendities.values())
+# samples_list = list(idendities.values())
 
 
-negatives = []
+# negatives = []
 
-for i in range(0, len(idendities) - 1):
-    for j in range(i+1, len(idendities)):
-        #print(samples_list[i], " vs ",samples_list[j]) 
-        cross_product = itertools.product(samples_list[i], samples_list[j])
-        cross_product = list(cross_product)
-        #print(cross_product)
+# for i in range(0, len(idendities) - 1):
+#     for j in range(i+1, len(idendities)):
+#         #print(samples_list[i], " vs ",samples_list[j]) 
+#         cross_product = itertools.product(samples_list[i], samples_list[j])
+#         cross_product = list(cross_product)
+#         #print(cross_product)
         
-        for cross_sample in cross_product:
-            #print(cross_sample[0], " vs ", cross_sample[1])
-            negative = []
-            negative.append(cross_sample[0])
-            negative.append(cross_sample[1])
-            negatives.append(negative)
+#         for cross_sample in cross_product:
+#             #print(cross_sample[0], " vs ", cross_sample[1])
+#             negative = []
+#             negative.append(cross_sample[0])
+#             negative.append(cross_sample[1])
+#             negatives.append(negative)
 
-negatives = pd.DataFrame(negatives, columns = ["file_x", "file_y"])
-negatives["decision"] = "No"
+# negatives = pd.DataFrame(negatives, columns = ["file_x", "file_y"])
+# negatives["decision"] = "No"
 
-df = pd.concat([positives, negatives]).reset_index(drop = True)
+# df = pd.concat([positives, negatives]).reset_index(drop = True)
 
-negatives["decision"] = "Yes"
+# negatives["decision"] = "Yes"
 
-negatives.decision.value_counts()
-
-
-download_files(
-    s3_client,
-    "rag-net-v2-0c6f96b8050c43fd-inputs",
-    "/app/input",
-    file_names=id,
-    dir="droneSURF/Active_Morn_L1/2/"
-)
-
-dataset_path = "/app/input/"
-
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+# negatives.decision.value_counts()
 
 
-instances = negatives[["file_x", "file_y"]].values.tolist()
+# download_files(
+#     s3_client,
+#     "rag-net-v2-0c6f96b8050c43fd-inputs",
+#     "/app/input",
+#     file_names=id,
+#     dir="droneSURF/Active_Morn_L1/2/"
+# )
+
+# dataset_path = "/app/input/"
+
+# negatives.file_x = dataset_path + negatives.file_x
+# negatives.file_y = dataset_path + negatives.file_y
 
 
-print("P2")
-resp_obj2 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-print("P2 Done")
+# instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
-fil = 'output/DeepFaceActiveMornL1/dict2.json'
-s3_client.download_file(
-    "rag-net-v2-0c6f96b8050c43fd-outputs",
-    fil,
-    "/app/output/dict2.json"
-)
-
-with open("/app/output/dict2.json", "w") as outfile:
-    json.dump(resp_obj2, outfile)
-
-s3_client.upload_file("/app/output/dict2.json", 
-"rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict2.json")
+# print("P2")
+# resp_obj2 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
+# print("P2 Done")
 
 
-# P3
-idendities = {
-    "1": ["down.jpg", "front.jpg", "sideleft.jpg", "sideright.jpg"],
-    "2": [
-        'frame10.jpg', 'frame100.jpg', 'frame1000.jpg', 'frame1001.jpg', 'frame1002.jpg', 'frame1003.jpg', 'frame1004.jpg', 'frame1005.jpg', 'frame1006.jpg', 'frame1007.jpg', 'frame1008.jpg', 'frame1009.jpg', 'frame101.jpg', 'frame1010.jpg', 'frame1011.jpg', 'frame1012.jpg', 'frame1013.jpg', 'frame1014.jpg', 'frame1015.jpg', 'frame1016.jpg', 'frame1017.jpg', 'frame1018.jpg', 'frame1019.jpg', 'frame102.jpg', 'frame1020.jpg', 'frame1021.jpg', 'frame1022.jpg', 'frame1025.jpg', 'frame1026.jpg', 'frame1027.jpg', 'frame1028.jpg', 'frame1029.jpg', 'frame103.jpg', 'frame1030.jpg', 'frame1031.jpg', 'frame1032.jpg', 'frame1033.jpg', 'frame1034.jpg', 'frame1035.jpg', 'frame1036.jpg', 'frame1037.jpg', 'frame1038.jpg', 'frame1039.jpg', 'frame104.jpg', 'frame1040.jpg', 'frame1041.jpg', 'frame1042.jpg', 'frame1043.jpg', 'frame1044.jpg', 'frame1045.jpg', 'frame1046.jpg', 'frame1047.jpg', 'frame1048.jpg', 'frame1049.jpg', 'frame105.jpg', 'frame1050.jpg', 'frame1051.jpg', 'frame1052.jpg', 'frame1053.jpg', 'frame1054.jpg', 'frame1055.jpg', 'frame1056.jpg', 'frame1057.jpg', 'frame1058.jpg', 'frame1059.jpg', 'frame106.jpg', 'frame1060.jpg', 'frame1061.jpg', 'frame1062.jpg', 'frame1063.jpg', 'frame1064.jpg', 'frame1065.jpg', 'frame1066.jpg', 'frame1067.jpg', 'frame1068.jpg', 'frame1069.jpg', 'frame107.jpg', 'frame1070.jpg', 'frame1071.jpg', 'frame1072.jpg', 'frame1073.jpg', 'frame1074.jpg', 'frame1075.jpg', 'frame1076.jpg', 'frame1077.jpg', 'frame1078.jpg', 'frame1079.jpg', 'frame108.jpg', 'frame1080.jpg', 'frame1081.jpg', 'frame1082.jpg', 'frame1083.jpg', 'frame1084.jpg', 'frame1085.jpg', 'frame1086.jpg', 'frame1087.jpg', 'frame1088.jpg', 'frame1089.jpg', 'frame109.jpg', 'frame1090.jpg', 'frame1091.jpg', 'frame1092.jpg', 'frame1093.jpg', 'frame1094.jpg', 'frame1095.jpg', 'frame1096.jpg', 'frame1097.jpg', 'frame1098.jpg', 'frame1099.jpg', 'frame11.jpg', 'frame110.jpg', 'frame1100.jpg', 'frame1101.jpg', 'frame1102.jpg', 'frame1103.jpg', 'frame1104.jpg', 'frame1105.jpg', 'frame1106.jpg', 'frame1107.jpg', 'frame1108.jpg', 'frame1109.jpg', 'frame111.jpg', 'frame1110.jpg', 'frame1111.jpg', 'frame1112.jpg', 'frame1113.jpg', 'frame1114.jpg', 'frame1115.jpg', 'frame1116.jpg', 'frame1117.jpg', 'frame1118.jpg', 'frame1119.jpg', 'frame112.jpg', 'frame1120.jpg', 'frame1121.jpg', 'frame1122.jpg', 'frame1123.jpg', 'frame1124.jpg', 'frame1125.jpg', 'frame1126.jpg', 'frame1127.jpg', 'frame1128.jpg', 'frame1129.jpg', 'frame113.jpg', 'frame1130.jpg', 'frame1131.jpg', 'frame1132.jpg', 'frame1133.jpg', 'frame1134.jpg', 'frame1135.jpg', 'frame1136.jpg', 'frame1137.jpg', 'frame1138.jpg', 'frame1139.jpg', 'frame114.jpg', 'frame1140.jpg', 'frame1141.jpg', 'frame1142.jpg', 'frame1143.jpg', 'frame1144.jpg', 'frame1145.jpg', 'frame1146.jpg', 'frame1147.jpg', 'frame1148.jpg', 'frame1149.jpg', 'frame115.jpg', 'frame1150.jpg', 'frame1151.jpg', 'frame1152.jpg', 'frame1153.jpg', 'frame1154.jpg', 'frame1155.jpg', 'frame1156.jpg', 'frame1157.jpg', 'frame1158.jpg', 'frame1159.jpg', 'frame116.jpg', 'frame1160.jpg', 'frame1161.jpg', 'frame1162.jpg', 'frame1163.jpg', 'frame1164.jpg', 'frame1165.jpg', 'frame1166.jpg', 'frame1167.jpg', 'frame1168.jpg', 'frame1169.jpg', 'frame117.jpg', 'frame1170.jpg', 'frame1171.jpg', 'frame1172.jpg', 'frame1173.jpg', 'frame1174.jpg', 'frame1175.jpg', 'frame1176.jpg', 'frame1177.jpg', 'frame1178.jpg', 'frame1179.jpg', 'frame118.jpg', 'frame1180.jpg', 'frame1181.jpg', 'frame1182.jpg', 'frame1183.jpg', 'frame1184.jpg', 'frame1185.jpg', 'frame1186.jpg', 'frame1187.jpg', 'frame1188.jpg', 'frame1189.jpg', 'frame119.jpg', 'frame1190.jpg', 'frame1191.jpg', 'frame1192.jpg', 'frame1193.jpg', 'frame1194.jpg', 'frame1195.jpg', 'frame1196.jpg', 'frame1197.jpg', 'frame1198.jpg', 'frame12.jpg', 'frame120.jpg', 'frame121.jpg', 'frame122.jpg', 'frame123.jpg', 'frame124.jpg', 'frame125.jpg', 'frame126.jpg', 'frame127.jpg', 'frame128.jpg', 'frame129.jpg', 'frame13.jpg', 'frame130.jpg', 'frame131.jpg', 'frame132.jpg', 'frame133.jpg', 'frame134.jpg', 'frame135.jpg', 'frame136.jpg', 'frame137.jpg', 'frame138.jpg', 'frame139.jpg', 'frame14.jpg', 'frame140.jpg', 'frame141.jpg', 'frame142.jpg', 'frame143.jpg', 'frame144.jpg', 'frame145.jpg', 'frame146.jpg', 'frame147.jpg', 'frame148.jpg', 'frame149.jpg', 'frame15.jpg', 'frame150.jpg', 'frame151.jpg', 'frame152.jpg', 'frame153.jpg', 'frame154.jpg', 'frame155.jpg', 'frame156.jpg', 'frame157.jpg', 'frame158.jpg', 'frame159.jpg', 'frame16.jpg', 'frame160.jpg', 'frame161.jpg', 'frame162.jpg', 'frame163.jpg', 'frame164.jpg', 'frame165.jpg', 'frame166.jpg', 'frame167.jpg', 'frame168.jpg', 'frame169.jpg', 'frame17.jpg', 'frame170.jpg', 'frame171.jpg', 'frame172.jpg', 'frame173.jpg', 'frame174.jpg', 'frame175.jpg', 'frame176.jpg', 'frame177.jpg', 'frame178.jpg', 'frame179.jpg', 'frame18.jpg', 'frame180.jpg', 'frame181.jpg', 'frame184.jpg', 'frame185.jpg', 'frame186.jpg', 'frame187.jpg', 'frame188.jpg', 'frame189.jpg', 'frame19.jpg', 'frame190.jpg', 'frame191.jpg', 'frame192.jpg', 'frame193.jpg', 'frame194.jpg', 'frame195.jpg', 'frame196.jpg', 'frame197.jpg', 'frame198.jpg', 'frame199.jpg', 'frame2.jpg', 'frame20.jpg', 'frame200.jpg', 'frame201.jpg', 'frame202.jpg', 'frame203.jpg', 'frame204.jpg', 'frame205.jpg', 'frame206.jpg', 'frame207.jpg', 'frame208.jpg', 'frame209.jpg', 'frame21.jpg', 'frame210.jpg', 'frame211.jpg', 'frame212.jpg', 'frame213.jpg', 'frame214.jpg', 'frame215.jpg', 'frame216.jpg', 'frame217.jpg', 'frame218.jpg', 'frame219.jpg', 'frame22.jpg', 'frame220.jpg', 'frame221.jpg', 'frame222.jpg', 'frame223.jpg', 'frame224.jpg', 'frame225.jpg', 'frame226.jpg', 'frame227.jpg', 'frame228.jpg', 'frame229.jpg', 'frame23.jpg', 'frame230.jpg', 'frame231.jpg', 'frame232.jpg', 'frame233.jpg', 'frame234.jpg', 'frame235.jpg', 'frame236.jpg', 'frame237.jpg', 'frame238.jpg', 'frame239.jpg', 'frame24.jpg', 'frame240.jpg', 'frame241.jpg', 'frame242.jpg', 'frame243.jpg', 'frame244.jpg', 'frame245.jpg', 'frame246.jpg', 'frame247.jpg', 'frame248.jpg', 'frame249.jpg', 'frame25.jpg', 'frame250.jpg', 'frame251.jpg', 'frame252.jpg', 'frame253.jpg', 'frame254.jpg', 'frame255.jpg', 'frame256.jpg', 'frame257.jpg', 'frame258.jpg', 'frame259.jpg', 'frame26.jpg', 'frame260.jpg', 'frame261.jpg', 'frame262.jpg', 'frame263.jpg', 'frame264.jpg', 'frame265.jpg', 'frame266.jpg', 'frame267.jpg', 'frame268.jpg', 'frame269.jpg', 'frame27.jpg', 'frame270.jpg', 'frame271.jpg', 'frame272.jpg', 'frame273.jpg', 'frame274.jpg', 'frame275.jpg', 'frame276.jpg', 'frame277.jpg', 'frame278.jpg', 'frame279.jpg', 'frame28.jpg', 'frame280.jpg', 'frame281.jpg', 'frame282.jpg', 'frame285.jpg', 'frame286.jpg', 'frame287.jpg', 'frame288.jpg', 'frame289.jpg', 'frame29.jpg', 'frame290.jpg', 'frame291.jpg', 'frame292.jpg', 'frame293.jpg', 'frame294.jpg', 'frame295.jpg', 'frame296.jpg', 'frame297.jpg', 'frame298.jpg', 'frame299.jpg', 'frame3.jpg', 'frame30.jpg', 'frame300.jpg', 'frame301.jpg', 'frame302.jpg', 'frame303.jpg', 'frame304.jpg', 'frame305.jpg', 'frame306.jpg', 'frame307.jpg', 'frame308.jpg', 'frame309.jpg', 'frame31.jpg', 'frame310.jpg', 'frame311.jpg', 'frame312.jpg', 'frame313.jpg', 'frame314.jpg', 'frame315.jpg', 'frame316.jpg', 'frame317.jpg', 'frame318.jpg', 'frame319.jpg', 'frame32.jpg', 'frame320.jpg', 'frame321.jpg', 'frame322.jpg', 'frame323.jpg', 'frame324.jpg', 'frame325.jpg', 'frame326.jpg', 'frame327.jpg', 'frame328.jpg', 'frame329.jpg', 'frame33.jpg', 'frame330.jpg', 'frame331.jpg', 'frame332.jpg', 'frame333.jpg', 'frame334.jpg', 'frame335.jpg', 'frame336.jpg', 'frame337.jpg', 'frame338.jpg', 'frame34.jpg', 'frame35.jpg', 'frame36.jpg', 'frame364.jpg', 'frame365.jpg', 'frame366.jpg', 'frame367.jpg', 'frame368.jpg', 'frame369.jpg', 'frame37.jpg', 'frame370.jpg', 'frame371.jpg', 'frame372.jpg', 'frame373.jpg', 'frame374.jpg', 'frame375.jpg', 'frame376.jpg', 'frame377.jpg', 'frame378.jpg', 'frame379.jpg', 'frame38.jpg', 'frame380.jpg', 'frame381.jpg', 'frame382.jpg', 'frame383.jpg', 'frame384.jpg', 'frame385.jpg', 'frame386.jpg', 'frame387.jpg', 'frame388.jpg', 'frame389.jpg', 'frame39.jpg', 'frame390.jpg', 'frame391.jpg', 'frame392.jpg', 'frame393.jpg', 'frame394.jpg', 'frame395.jpg', 'frame396.jpg', 'frame397.jpg', 'frame398.jpg', 'frame399.jpg', 'frame4.jpg', 'frame40.jpg', 'frame400.jpg', 'frame401.jpg', 'frame402.jpg', 'frame403.jpg', 'frame404.jpg', 'frame405.jpg', 'frame406.jpg', 'frame407.jpg', 'frame408.jpg', 'frame409.jpg', 'frame41.jpg', 'frame410.jpg', 'frame413.jpg', 'frame414.jpg', 'frame415.jpg', 'frame416.jpg', 'frame417.jpg', 'frame418.jpg', 'frame419.jpg', 'frame42.jpg', 'frame420.jpg', 'frame421.jpg', 'frame422.jpg', 'frame423.jpg', 'frame424.jpg', 'frame425.jpg', 'frame426.jpg', 'frame427.jpg', 'frame428.jpg', 'frame429.jpg', 'frame430.jpg', 'frame431.jpg', 'frame432.jpg', 'frame433.jpg', 'frame434.jpg', 'frame435.jpg', 'frame436.jpg', 'frame437.jpg', 'frame438.jpg', 'frame439.jpg', 'frame440.jpg', 'frame441.jpg', 'frame442.jpg', 'frame443.jpg', 'frame444.jpg', 'frame445.jpg', 'frame446.jpg', 'frame447.jpg', 'frame448.jpg', 'frame449.jpg', 'frame45.jpg', 'frame450.jpg', 'frame451.jpg', 'frame452.jpg', 'frame453.jpg', 'frame454.jpg', 'frame455.jpg', 'frame456.jpg', 'frame457.jpg', 'frame458.jpg', 'frame459.jpg', 'frame46.jpg', 'frame460.jpg', 'frame461.jpg', 'frame462.jpg', 'frame463.jpg', 'frame464.jpg', 'frame465.jpg', 'frame466.jpg', 'frame467.jpg', 'frame468.jpg', 'frame469.jpg', 'frame47.jpg', 'frame470.jpg', 'frame471.jpg', 'frame472.jpg', 'frame473.jpg', 'frame474.jpg', 'frame475.jpg', 'frame476.jpg', 'frame477.jpg', 'frame478.jpg', 'frame479.jpg', 'frame48.jpg', 'frame480.jpg', 'frame481.jpg', 'frame482.jpg', 'frame483.jpg', 'frame484.jpg', 'frame485.jpg', 'frame486.jpg', 'frame487.jpg', 'frame488.jpg', 'frame489.jpg', 'frame49.jpg', 'frame490.jpg', 'frame491.jpg', 'frame492.jpg', 'frame493.jpg', 'frame494.jpg', 'frame495.jpg', 'frame496.jpg', 'frame497.jpg', 'frame498.jpg', 'frame499.jpg', 'frame5.jpg', 'frame50.jpg', 'frame500.jpg', 'frame501.jpg', 'frame502.jpg', 
-        'frame503.jpg', 'frame504.jpg', 'frame505.jpg', 'frame506.jpg', 'frame507.jpg', 'frame508.jpg', 'frame509.jpg', 'frame51.jpg', 'frame510.jpg', 'frame511.jpg', 'frame512.jpg', 'frame513.jpg', 'frame514.jpg', 'frame515.jpg', 'frame516.jpg', 'frame517.jpg', 'frame518.jpg', 'frame519.jpg', 'frame52.jpg', 'frame520.jpg', 'frame521.jpg', 'frame522.jpg', 'frame523.jpg', 'frame524.jpg', 'frame525.jpg', 'frame526.jpg', 'frame527.jpg', 'frame528.jpg', 'frame529.jpg', 'frame53.jpg', 'frame530.jpg', 'frame531.jpg', 'frame532.jpg', 'frame533.jpg', 'frame534.jpg', 'frame535.jpg', 'frame536.jpg', 'frame537.jpg', 'frame538.jpg', 'frame539.jpg', 'frame54.jpg', 'frame540.jpg', 'frame541.jpg', 'frame542.jpg', 'frame543.jpg', 'frame544.jpg', 'frame545.jpg', 'frame546.jpg', 'frame547.jpg', 'frame548.jpg', 'frame549.jpg', 'frame55.jpg', 'frame550.jpg', 'frame551.jpg', 'frame552.jpg', 'frame553.jpg', 'frame554.jpg', 'frame555.jpg', 'frame556.jpg', 'frame557.jpg', 'frame558.jpg', 'frame559.jpg', 'frame56.jpg', 'frame560.jpg', 'frame561.jpg', 'frame562.jpg', 'frame563.jpg', 'frame566.jpg', 'frame567.jpg', 'frame568.jpg', 'frame569.jpg', 'frame57.jpg', 'frame570.jpg', 'frame571.jpg', 'frame572.jpg', 'frame573.jpg', 'frame574.jpg', 'frame575.jpg', 'frame576.jpg', 'frame577.jpg', 'frame578.jpg', 'frame579.jpg', 'frame58.jpg', 'frame580.jpg', 'frame581.jpg', 'frame582.jpg', 'frame583.jpg', 'frame584.jpg', 'frame585.jpg', 'frame586.jpg', 'frame587.jpg', 'frame588.jpg', 'frame589.jpg', 'frame59.jpg', 'frame590.jpg', 'frame591.jpg', 'frame592.jpg', 'frame593.jpg', 'frame594.jpg', 'frame595.jpg', 'frame596.jpg', 'frame597.jpg', 'frame598.jpg', 'frame599.jpg', 'frame6.jpg', 'frame60.jpg', 'frame600.jpg', 'frame601.jpg', 'frame602.jpg', 'frame603.jpg', 'frame604.jpg', 'frame605.jpg', 'frame606.jpg', 'frame607.jpg', 'frame608.jpg', 'frame609.jpg', 'frame61.jpg', 'frame610.jpg', 'frame611.jpg', 'frame612.jpg', 'frame613.jpg', 'frame614.jpg', 'frame615.jpg', 'frame616.jpg', 'frame617.jpg', 'frame618.jpg', 'frame619.jpg', 'frame62.jpg', 'frame620.jpg', 'frame621.jpg', 'frame622.jpg', 'frame623.jpg', 'frame624.jpg', 'frame625.jpg', 'frame626.jpg', 'frame627.jpg', 'frame628.jpg', 'frame629.jpg', 'frame63.jpg', 'frame630.jpg', 'frame631.jpg', 'frame632.jpg', 'frame633.jpg', 'frame634.jpg', 'frame635.jpg', 'frame636.jpg', 'frame637.jpg', 'frame638.jpg', 'frame639.jpg', 'frame64.jpg', 'frame640.jpg', 'frame641.jpg', 'frame642.jpg', 'frame643.jpg', 'frame644.jpg', 'frame645.jpg', 'frame646.jpg', 'frame647.jpg', 'frame648.jpg', 'frame649.jpg', 'frame65.jpg', 'frame650.jpg', 'frame651.jpg', 'frame652.jpg', 'frame653.jpg', 'frame654.jpg', 'frame655.jpg', 'frame656.jpg', 'frame657.jpg', 'frame658.jpg', 'frame659.jpg', 'frame66.jpg', 'frame660.jpg', 'frame661.jpg', 'frame662.jpg', 'frame663.jpg', 'frame664.jpg', 'frame665.jpg', 'frame666.jpg', 'frame667.jpg', 'frame668.jpg', 'frame669.jpg', 'frame67.jpg', 'frame670.jpg', 'frame671.jpg', 'frame672.jpg', 'frame673.jpg', 'frame674.jpg', 'frame675.jpg', 'frame676.jpg', 'frame677.jpg', 'frame678.jpg', 'frame679.jpg', 'frame68.jpg', 'frame680.jpg', 'frame681.jpg', 'frame682.jpg', 'frame683.jpg', 'frame684.jpg', 'frame685.jpg', 'frame686.jpg', 'frame687.jpg', 'frame688.jpg', 'frame689.jpg', 'frame69.jpg', 'frame690.jpg', 'frame691.jpg', 'frame692.jpg', 'frame693.jpg', 'frame694.jpg', 'frame695.jpg', 'frame696.jpg', 'frame697.jpg', 'frame698.jpg', 'frame699.jpg', 'frame7.jpg', 'frame70.jpg', 'frame700.jpg', 'frame701.jpg', 'frame702.jpg', 'frame703.jpg', 'frame704.jpg', 'frame705.jpg', 'frame706.jpg', 'frame707.jpg', 'frame708.jpg', 'frame709.jpg', 'frame71.jpg', 'frame710.jpg', 'frame711.jpg', 'frame712.jpg', 'frame713.jpg', 'frame714.jpg', 'frame715.jpg', 'frame716.jpg', 'frame717.jpg', 'frame718.jpg', 'frame719.jpg', 'frame72.jpg', 'frame720.jpg', 'frame721.jpg', 'frame722.jpg', 'frame723.jpg', 'frame724.jpg', 'frame725.jpg', 'frame726.jpg', 'frame727.jpg', 'frame728.jpg', 'frame729.jpg', 'frame73.jpg', 'frame730.jpg', 'frame74.jpg', 'frame75.jpg', 'frame76.jpg', 'frame763.jpg', 'frame764.jpg', 'frame765.jpg', 'frame766.jpg', 'frame767.jpg', 'frame768.jpg', 'frame769.jpg', 'frame77.jpg', 'frame770.jpg', 'frame771.jpg', 'frame772.jpg', 'frame773.jpg', 'frame774.jpg', 'frame78.jpg', 'frame79.jpg', 'frame793.jpg', 'frame794.jpg', 'frame795.jpg', 'frame796.jpg', 'frame797.jpg', 'frame8.jpg', 'frame80.jpg', 'frame800.jpg', 'frame801.jpg', 'frame802.jpg', 'frame803.jpg', 'frame804.jpg', 'frame805.jpg', 'frame806.jpg', 'frame807.jpg', 'frame808.jpg', 'frame809.jpg', 'frame81.jpg', 'frame810.jpg', 'frame811.jpg', 'frame812.jpg', 'frame813.jpg', 'frame814.jpg', 'frame815.jpg', 'frame816.jpg', 'frame817.jpg', 'frame818.jpg', 'frame819.jpg', 'frame82.jpg', 'frame820.jpg', 'frame821.jpg', 'frame822.jpg', 'frame823.jpg', 'frame824.jpg', 'frame825.jpg', 'frame826.jpg', 'frame827.jpg', 'frame828.jpg', 'frame829.jpg', 'frame83.jpg', 'frame830.jpg', 'frame831.jpg', 'frame832.jpg', 'frame833.jpg', 'frame834.jpg', 'frame835.jpg', 'frame836.jpg', 'frame837.jpg', 'frame838.jpg', 'frame839.jpg', 'frame84.jpg', 'frame840.jpg', 'frame841.jpg', 'frame842.jpg', 'frame843.jpg', 'frame844.jpg', 'frame845.jpg', 'frame846.jpg', 'frame847.jpg', 'frame848.jpg', 'frame849.jpg', 'frame85.jpg', 'frame850.jpg', 'frame851.jpg', 'frame852.jpg', 'frame853.jpg', 'frame854.jpg', 'frame855.jpg', 'frame856.jpg', 'frame857.jpg', 'frame858.jpg', 'frame859.jpg', 'frame86.jpg', 'frame860.jpg', 'frame861.jpg', 'frame862.jpg', 'frame863.jpg', 'frame864.jpg', 'frame865.jpg', 'frame866.jpg', 'frame867.jpg', 'frame868.jpg', 'frame869.jpg', 'frame87.jpg', 'frame870.jpg', 'frame871.jpg', 'frame872.jpg', 'frame873.jpg', 'frame874.jpg', 'frame875.jpg', 'frame876.jpg', 'frame877.jpg', 'frame878.jpg', 'frame879.jpg', 'frame88.jpg', 'frame880.jpg', 'frame881.jpg', 'frame882.jpg', 'frame883.jpg', 'frame884.jpg', 'frame885.jpg', 'frame886.jpg', 'frame887.jpg', 'frame888.jpg', 'frame889.jpg', 'frame89.jpg', 'frame890.jpg', 'frame891.jpg', 'frame892.jpg', 'frame893.jpg', 'frame894.jpg', 'frame895.jpg', 'frame896.jpg', 'frame897.jpg', 'frame898.jpg', 'frame899.jpg', 'frame9.jpg', 'frame90.jpg', 'frame900.jpg', 'frame901.jpg', 'frame902.jpg', 'frame903.jpg', 'frame904.jpg', 'frame905.jpg', 'frame906.jpg', 'frame907.jpg', 'frame908.jpg', 'frame909.jpg', 'frame91.jpg', 'frame910.jpg', 'frame911.jpg', 'frame912.jpg', 'frame913.jpg', 'frame914.jpg', 'frame915.jpg', 'frame916.jpg', 'frame917.jpg', 'frame918.jpg', 'frame919.jpg', 'frame92.jpg', 'frame920.jpg', 'frame921.jpg', 'frame922.jpg', 'frame923.jpg', 'frame924.jpg', 'frame925.jpg', 'frame926.jpg', 'frame927.jpg', 'frame928.jpg', 'frame929.jpg', 'frame93.jpg', 'frame930.jpg', 'frame931.jpg', 'frame932.jpg', 'frame933.jpg', 'frame934.jpg', 'frame935.jpg', 'frame936.jpg', 'frame937.jpg', 'frame938.jpg', 'frame939.jpg', 'frame94.jpg', 'frame940.jpg', 'frame941.jpg', 'frame942.jpg', 'frame943.jpg', 'frame944.jpg', 'frame945.jpg', 'frame946.jpg', 'frame947.jpg', 'frame948.jpg', 'frame949.jpg', 'frame95.jpg', 'frame950.jpg', 'frame951.jpg', 'frame952.jpg', 'frame953.jpg', 'frame954.jpg', 'frame955.jpg', 'frame956.jpg', 'frame957.jpg', 'frame958.jpg', 'frame959.jpg', 'frame96.jpg', 'frame960.jpg', 'frame961.jpg', 'frame962.jpg', 'frame963.jpg', 'frame964.jpg', 'frame965.jpg', 'frame966.jpg', 'frame967.jpg', 'frame968.jpg', 'frame969.jpg', 'frame97.jpg', 'frame970.jpg', 'frame971.jpg', 'frame972.jpg', 'frame973.jpg', 'frame974.jpg', 'frame975.jpg', 'frame976.jpg', 'frame977.jpg', 'frame978.jpg', 'frame979.jpg', 'frame98.jpg', 'frame980.jpg', 'frame981.jpg', 'frame982.jpg', 'frame983.jpg', 'frame984.jpg', 'frame985.jpg', 'frame986.jpg', 'frame987.jpg', 'frame988.jpg', 'frame989.jpg', 'frame99.jpg', 'frame990.jpg', 'frame991.jpg', 'frame992.jpg', 'frame993.jpg', 'frame994.jpg', 'frame995.jpg', 'frame996.jpg', 'frame997.jpg', 'frame998.jpg', 'frame999.jpg'
-    ]
-        }
+# fil = 'output/DlibActiveMornL1/dict2.json'
+# s3_client.download_file(
+#     "rag-net-v2-0c6f96b8050c43fd-outputs",
+#     fil,
+#     "/app/output/dict2.json"
+# )
 
-id = ["down.jpg", "front.jpg", "sideleft.jpg", "sideright.jpg",
-        'frame10.jpg', 'frame100.jpg', 'frame1000.jpg', 'frame1001.jpg', 'frame1002.jpg', 'frame1003.jpg', 'frame1004.jpg', 'frame1005.jpg', 'frame1006.jpg', 'frame1007.jpg', 'frame1008.jpg', 'frame1009.jpg', 'frame101.jpg', 'frame1010.jpg', 'frame1011.jpg', 'frame1012.jpg', 'frame1013.jpg', 'frame1014.jpg', 'frame1015.jpg', 'frame1016.jpg', 'frame1017.jpg', 'frame1018.jpg', 'frame1019.jpg', 'frame102.jpg', 'frame1020.jpg', 'frame1021.jpg', 'frame1022.jpg', 'frame1025.jpg', 'frame1026.jpg', 'frame1027.jpg', 'frame1028.jpg', 'frame1029.jpg', 'frame103.jpg', 'frame1030.jpg', 'frame1031.jpg', 'frame1032.jpg', 'frame1033.jpg', 'frame1034.jpg', 'frame1035.jpg', 'frame1036.jpg', 'frame1037.jpg', 'frame1038.jpg', 'frame1039.jpg', 'frame104.jpg', 'frame1040.jpg', 'frame1041.jpg', 'frame1042.jpg', 'frame1043.jpg', 'frame1044.jpg', 'frame1045.jpg', 'frame1046.jpg', 'frame1047.jpg', 'frame1048.jpg', 'frame1049.jpg', 'frame105.jpg', 'frame1050.jpg', 'frame1051.jpg', 'frame1052.jpg', 'frame1053.jpg', 'frame1054.jpg', 'frame1055.jpg', 'frame1056.jpg', 'frame1057.jpg', 'frame1058.jpg', 'frame1059.jpg', 'frame106.jpg', 'frame1060.jpg', 'frame1061.jpg', 'frame1062.jpg', 'frame1063.jpg', 'frame1064.jpg', 'frame1065.jpg', 'frame1066.jpg', 'frame1067.jpg', 'frame1068.jpg', 'frame1069.jpg', 'frame107.jpg', 'frame1070.jpg', 'frame1071.jpg', 'frame1072.jpg', 'frame1073.jpg', 'frame1074.jpg', 'frame1075.jpg', 'frame1076.jpg', 'frame1077.jpg', 'frame1078.jpg', 'frame1079.jpg', 'frame108.jpg', 'frame1080.jpg', 'frame1081.jpg', 'frame1082.jpg', 'frame1083.jpg', 'frame1084.jpg', 'frame1085.jpg', 'frame1086.jpg', 'frame1087.jpg', 'frame1088.jpg', 'frame1089.jpg', 'frame109.jpg', 'frame1090.jpg', 'frame1091.jpg', 'frame1092.jpg', 'frame1093.jpg', 'frame1094.jpg', 'frame1095.jpg', 'frame1096.jpg', 'frame1097.jpg', 'frame1098.jpg', 'frame1099.jpg', 'frame11.jpg', 'frame110.jpg', 'frame1100.jpg', 'frame1101.jpg', 'frame1102.jpg', 'frame1103.jpg', 'frame1104.jpg', 'frame1105.jpg', 'frame1106.jpg', 'frame1107.jpg', 'frame1108.jpg', 'frame1109.jpg', 'frame111.jpg', 'frame1110.jpg', 'frame1111.jpg', 'frame1112.jpg', 'frame1113.jpg', 'frame1114.jpg', 'frame1115.jpg', 'frame1116.jpg', 'frame1117.jpg', 'frame1118.jpg', 'frame1119.jpg', 'frame112.jpg', 'frame1120.jpg', 'frame1121.jpg', 'frame1122.jpg', 'frame1123.jpg', 'frame1124.jpg', 'frame1125.jpg', 'frame1126.jpg', 'frame1127.jpg', 'frame1128.jpg', 'frame1129.jpg', 'frame113.jpg', 'frame1130.jpg', 'frame1131.jpg', 'frame1132.jpg', 'frame1133.jpg', 'frame1134.jpg', 'frame1135.jpg', 'frame1136.jpg', 'frame1137.jpg', 'frame1138.jpg', 'frame1139.jpg', 'frame114.jpg', 'frame1140.jpg', 'frame1141.jpg', 'frame1142.jpg', 'frame1143.jpg', 'frame1144.jpg', 'frame1145.jpg', 'frame1146.jpg', 'frame1147.jpg', 'frame1148.jpg', 'frame1149.jpg', 'frame115.jpg', 'frame1150.jpg', 'frame1151.jpg', 'frame1152.jpg', 'frame1153.jpg', 'frame1154.jpg', 'frame1155.jpg', 'frame1156.jpg', 'frame1157.jpg', 'frame1158.jpg', 'frame1159.jpg', 'frame116.jpg', 'frame1160.jpg', 'frame1161.jpg', 'frame1162.jpg', 'frame1163.jpg', 'frame1164.jpg', 'frame1165.jpg', 'frame1166.jpg', 'frame1167.jpg', 'frame1168.jpg', 'frame1169.jpg', 'frame117.jpg', 'frame1170.jpg', 'frame1171.jpg', 'frame1172.jpg', 'frame1173.jpg', 'frame1174.jpg', 'frame1175.jpg', 'frame1176.jpg', 'frame1177.jpg', 'frame1178.jpg', 'frame1179.jpg', 'frame118.jpg', 'frame1180.jpg', 'frame1181.jpg', 'frame1182.jpg', 'frame1183.jpg', 'frame1184.jpg', 'frame1185.jpg', 'frame1186.jpg', 'frame1187.jpg', 'frame1188.jpg', 'frame1189.jpg', 'frame119.jpg', 'frame1190.jpg', 'frame1191.jpg', 'frame1192.jpg', 'frame1193.jpg', 'frame1194.jpg', 'frame1195.jpg', 'frame1196.jpg', 'frame1197.jpg', 'frame1198.jpg', 'frame12.jpg', 'frame120.jpg', 'frame121.jpg', 'frame122.jpg', 'frame123.jpg', 'frame124.jpg', 'frame125.jpg', 'frame126.jpg', 'frame127.jpg', 'frame128.jpg', 'frame129.jpg', 'frame13.jpg', 'frame130.jpg', 'frame131.jpg', 'frame132.jpg', 'frame133.jpg', 'frame134.jpg', 'frame135.jpg', 'frame136.jpg', 'frame137.jpg', 'frame138.jpg', 'frame139.jpg', 'frame14.jpg', 'frame140.jpg', 'frame141.jpg', 'frame142.jpg', 'frame143.jpg', 'frame144.jpg', 'frame145.jpg', 'frame146.jpg', 'frame147.jpg', 'frame148.jpg', 'frame149.jpg', 'frame15.jpg', 'frame150.jpg', 'frame151.jpg', 'frame152.jpg', 'frame153.jpg', 'frame154.jpg', 'frame155.jpg', 'frame156.jpg', 'frame157.jpg', 'frame158.jpg', 'frame159.jpg', 'frame16.jpg', 'frame160.jpg', 'frame161.jpg', 'frame162.jpg', 'frame163.jpg', 'frame164.jpg', 'frame165.jpg', 'frame166.jpg', 'frame167.jpg', 'frame168.jpg', 'frame169.jpg', 'frame17.jpg', 'frame170.jpg', 'frame171.jpg', 'frame172.jpg', 'frame173.jpg', 'frame174.jpg', 'frame175.jpg', 'frame176.jpg', 'frame177.jpg', 'frame178.jpg', 'frame179.jpg', 'frame18.jpg', 'frame180.jpg', 'frame181.jpg', 'frame184.jpg', 'frame185.jpg', 'frame186.jpg', 'frame187.jpg', 'frame188.jpg', 'frame189.jpg', 'frame19.jpg', 'frame190.jpg', 'frame191.jpg', 'frame192.jpg', 'frame193.jpg', 'frame194.jpg', 'frame195.jpg', 'frame196.jpg', 'frame197.jpg', 'frame198.jpg', 'frame199.jpg', 'frame2.jpg', 'frame20.jpg', 'frame200.jpg', 'frame201.jpg', 'frame202.jpg', 'frame203.jpg', 'frame204.jpg', 'frame205.jpg', 'frame206.jpg', 'frame207.jpg', 'frame208.jpg', 'frame209.jpg', 'frame21.jpg', 'frame210.jpg', 'frame211.jpg', 'frame212.jpg', 'frame213.jpg', 'frame214.jpg', 'frame215.jpg', 'frame216.jpg', 'frame217.jpg', 'frame218.jpg', 'frame219.jpg', 'frame22.jpg', 'frame220.jpg', 'frame221.jpg', 'frame222.jpg', 'frame223.jpg', 'frame224.jpg', 'frame225.jpg', 'frame226.jpg', 'frame227.jpg', 'frame228.jpg', 'frame229.jpg', 'frame23.jpg', 'frame230.jpg', 'frame231.jpg', 'frame232.jpg', 'frame233.jpg', 'frame234.jpg', 'frame235.jpg', 'frame236.jpg', 'frame237.jpg', 'frame238.jpg', 'frame239.jpg', 'frame24.jpg', 'frame240.jpg', 'frame241.jpg', 'frame242.jpg', 'frame243.jpg', 'frame244.jpg', 'frame245.jpg', 'frame246.jpg', 'frame247.jpg', 'frame248.jpg', 'frame249.jpg', 'frame25.jpg', 'frame250.jpg', 'frame251.jpg', 'frame252.jpg', 'frame253.jpg', 'frame254.jpg', 'frame255.jpg', 'frame256.jpg', 'frame257.jpg', 'frame258.jpg', 'frame259.jpg', 'frame26.jpg', 'frame260.jpg', 'frame261.jpg', 'frame262.jpg', 'frame263.jpg', 'frame264.jpg', 'frame265.jpg', 'frame266.jpg', 'frame267.jpg', 'frame268.jpg', 'frame269.jpg', 'frame27.jpg', 'frame270.jpg', 'frame271.jpg', 'frame272.jpg', 'frame273.jpg', 'frame274.jpg', 'frame275.jpg', 'frame276.jpg', 'frame277.jpg', 'frame278.jpg', 'frame279.jpg', 'frame28.jpg', 'frame280.jpg', 'frame281.jpg', 'frame282.jpg', 'frame285.jpg', 'frame286.jpg', 'frame287.jpg', 'frame288.jpg', 'frame289.jpg', 'frame29.jpg', 'frame290.jpg', 'frame291.jpg', 'frame292.jpg', 'frame293.jpg', 'frame294.jpg', 'frame295.jpg', 'frame296.jpg', 'frame297.jpg', 'frame298.jpg', 'frame299.jpg', 'frame3.jpg', 'frame30.jpg', 'frame300.jpg', 'frame301.jpg', 'frame302.jpg', 'frame303.jpg', 'frame304.jpg', 'frame305.jpg', 'frame306.jpg', 'frame307.jpg', 'frame308.jpg', 'frame309.jpg', 'frame31.jpg', 'frame310.jpg', 'frame311.jpg', 'frame312.jpg', 'frame313.jpg', 'frame314.jpg', 'frame315.jpg', 'frame316.jpg', 'frame317.jpg', 'frame318.jpg', 'frame319.jpg', 'frame32.jpg', 'frame320.jpg', 'frame321.jpg', 'frame322.jpg', 'frame323.jpg', 'frame324.jpg', 'frame325.jpg', 'frame326.jpg', 'frame327.jpg', 'frame328.jpg', 'frame329.jpg', 'frame33.jpg', 'frame330.jpg', 'frame331.jpg', 'frame332.jpg', 'frame333.jpg', 'frame334.jpg', 'frame335.jpg', 'frame336.jpg', 'frame337.jpg', 'frame338.jpg', 'frame34.jpg', 'frame35.jpg', 'frame36.jpg', 'frame364.jpg', 'frame365.jpg', 'frame366.jpg', 'frame367.jpg', 'frame368.jpg', 'frame369.jpg', 'frame37.jpg', 'frame370.jpg', 'frame371.jpg', 'frame372.jpg', 'frame373.jpg', 'frame374.jpg', 'frame375.jpg', 'frame376.jpg', 'frame377.jpg', 'frame378.jpg', 'frame379.jpg', 'frame38.jpg', 'frame380.jpg', 'frame381.jpg', 'frame382.jpg', 'frame383.jpg', 'frame384.jpg', 'frame385.jpg', 'frame386.jpg', 'frame387.jpg', 'frame388.jpg', 'frame389.jpg', 'frame39.jpg', 'frame390.jpg', 'frame391.jpg', 'frame392.jpg', 'frame393.jpg', 'frame394.jpg', 'frame395.jpg', 'frame396.jpg', 'frame397.jpg', 'frame398.jpg', 'frame399.jpg', 'frame4.jpg', 'frame40.jpg', 'frame400.jpg', 'frame401.jpg', 'frame402.jpg', 'frame403.jpg', 'frame404.jpg', 'frame405.jpg', 'frame406.jpg', 'frame407.jpg', 'frame408.jpg', 'frame409.jpg', 'frame41.jpg', 'frame410.jpg', 'frame413.jpg', 'frame414.jpg', 'frame415.jpg', 'frame416.jpg', 'frame417.jpg', 'frame418.jpg', 'frame419.jpg', 'frame42.jpg', 'frame420.jpg', 'frame421.jpg', 'frame422.jpg', 'frame423.jpg', 'frame424.jpg', 'frame425.jpg', 'frame426.jpg', 'frame427.jpg', 'frame428.jpg', 'frame429.jpg', 'frame430.jpg', 'frame431.jpg', 'frame432.jpg', 'frame433.jpg', 'frame434.jpg', 'frame435.jpg', 'frame436.jpg', 'frame437.jpg', 'frame438.jpg', 'frame439.jpg', 'frame440.jpg', 'frame441.jpg', 'frame442.jpg', 'frame443.jpg', 'frame444.jpg', 'frame445.jpg', 'frame446.jpg', 'frame447.jpg', 'frame448.jpg', 'frame449.jpg', 'frame45.jpg', 'frame450.jpg', 'frame451.jpg', 'frame452.jpg', 'frame453.jpg', 'frame454.jpg', 'frame455.jpg', 'frame456.jpg', 'frame457.jpg', 'frame458.jpg', 'frame459.jpg', 'frame46.jpg', 'frame460.jpg', 'frame461.jpg', 'frame462.jpg', 'frame463.jpg', 'frame464.jpg', 'frame465.jpg', 'frame466.jpg', 'frame467.jpg', 'frame468.jpg', 'frame469.jpg', 'frame47.jpg', 'frame470.jpg', 'frame471.jpg', 'frame472.jpg', 'frame473.jpg', 'frame474.jpg', 'frame475.jpg', 'frame476.jpg', 'frame477.jpg', 'frame478.jpg', 'frame479.jpg', 'frame48.jpg', 'frame480.jpg', 'frame481.jpg', 'frame482.jpg', 'frame483.jpg', 'frame484.jpg', 'frame485.jpg', 'frame486.jpg', 'frame487.jpg', 'frame488.jpg', 'frame489.jpg', 'frame49.jpg', 'frame490.jpg', 'frame491.jpg', 'frame492.jpg', 'frame493.jpg', 'frame494.jpg', 'frame495.jpg', 'frame496.jpg', 'frame497.jpg', 'frame498.jpg', 'frame499.jpg', 'frame5.jpg', 'frame50.jpg', 'frame500.jpg', 'frame501.jpg', 'frame502.jpg', 
-        'frame503.jpg', 'frame504.jpg', 'frame505.jpg', 'frame506.jpg', 'frame507.jpg', 'frame508.jpg', 'frame509.jpg', 'frame51.jpg', 'frame510.jpg', 'frame511.jpg', 'frame512.jpg', 'frame513.jpg', 'frame514.jpg', 'frame515.jpg', 'frame516.jpg', 'frame517.jpg', 'frame518.jpg', 'frame519.jpg', 'frame52.jpg', 'frame520.jpg', 'frame521.jpg', 'frame522.jpg', 'frame523.jpg', 'frame524.jpg', 'frame525.jpg', 'frame526.jpg', 'frame527.jpg', 'frame528.jpg', 'frame529.jpg', 'frame53.jpg', 'frame530.jpg', 'frame531.jpg', 'frame532.jpg', 'frame533.jpg', 'frame534.jpg', 'frame535.jpg', 'frame536.jpg', 'frame537.jpg', 'frame538.jpg', 'frame539.jpg', 'frame54.jpg', 'frame540.jpg', 'frame541.jpg', 'frame542.jpg', 'frame543.jpg', 'frame544.jpg', 'frame545.jpg', 'frame546.jpg', 'frame547.jpg', 'frame548.jpg', 'frame549.jpg', 'frame55.jpg', 'frame550.jpg', 'frame551.jpg', 'frame552.jpg', 'frame553.jpg', 'frame554.jpg', 'frame555.jpg', 'frame556.jpg', 'frame557.jpg', 'frame558.jpg', 'frame559.jpg', 'frame56.jpg', 'frame560.jpg', 'frame561.jpg', 'frame562.jpg', 'frame563.jpg', 'frame566.jpg', 'frame567.jpg', 'frame568.jpg', 'frame569.jpg', 'frame57.jpg', 'frame570.jpg', 'frame571.jpg', 'frame572.jpg', 'frame573.jpg', 'frame574.jpg', 'frame575.jpg', 'frame576.jpg', 'frame577.jpg', 'frame578.jpg', 'frame579.jpg', 'frame58.jpg', 'frame580.jpg', 'frame581.jpg', 'frame582.jpg', 'frame583.jpg', 'frame584.jpg', 'frame585.jpg', 'frame586.jpg', 'frame587.jpg', 'frame588.jpg', 'frame589.jpg', 'frame59.jpg', 'frame590.jpg', 'frame591.jpg', 'frame592.jpg', 'frame593.jpg', 'frame594.jpg', 'frame595.jpg', 'frame596.jpg', 'frame597.jpg', 'frame598.jpg', 'frame599.jpg', 'frame6.jpg', 'frame60.jpg', 'frame600.jpg', 'frame601.jpg', 'frame602.jpg', 'frame603.jpg', 'frame604.jpg', 'frame605.jpg', 'frame606.jpg', 'frame607.jpg', 'frame608.jpg', 'frame609.jpg', 'frame61.jpg', 'frame610.jpg', 'frame611.jpg', 'frame612.jpg', 'frame613.jpg', 'frame614.jpg', 'frame615.jpg', 'frame616.jpg', 'frame617.jpg', 'frame618.jpg', 'frame619.jpg', 'frame62.jpg', 'frame620.jpg', 'frame621.jpg', 'frame622.jpg', 'frame623.jpg', 'frame624.jpg', 'frame625.jpg', 'frame626.jpg', 'frame627.jpg', 'frame628.jpg', 'frame629.jpg', 'frame63.jpg', 'frame630.jpg', 'frame631.jpg', 'frame632.jpg', 'frame633.jpg', 'frame634.jpg', 'frame635.jpg', 'frame636.jpg', 'frame637.jpg', 'frame638.jpg', 'frame639.jpg', 'frame64.jpg', 'frame640.jpg', 'frame641.jpg', 'frame642.jpg', 'frame643.jpg', 'frame644.jpg', 'frame645.jpg', 'frame646.jpg', 'frame647.jpg', 'frame648.jpg', 'frame649.jpg', 'frame65.jpg', 'frame650.jpg', 'frame651.jpg', 'frame652.jpg', 'frame653.jpg', 'frame654.jpg', 'frame655.jpg', 'frame656.jpg', 'frame657.jpg', 'frame658.jpg', 'frame659.jpg', 'frame66.jpg', 'frame660.jpg', 'frame661.jpg', 'frame662.jpg', 'frame663.jpg', 'frame664.jpg', 'frame665.jpg', 'frame666.jpg', 'frame667.jpg', 'frame668.jpg', 'frame669.jpg', 'frame67.jpg', 'frame670.jpg', 'frame671.jpg', 'frame672.jpg', 'frame673.jpg', 'frame674.jpg', 'frame675.jpg', 'frame676.jpg', 'frame677.jpg', 'frame678.jpg', 'frame679.jpg', 'frame68.jpg', 'frame680.jpg', 'frame681.jpg', 'frame682.jpg', 'frame683.jpg', 'frame684.jpg', 'frame685.jpg', 'frame686.jpg', 'frame687.jpg', 'frame688.jpg', 'frame689.jpg', 'frame69.jpg', 'frame690.jpg', 'frame691.jpg', 'frame692.jpg', 'frame693.jpg', 'frame694.jpg', 'frame695.jpg', 'frame696.jpg', 'frame697.jpg', 'frame698.jpg', 'frame699.jpg', 'frame7.jpg', 'frame70.jpg', 'frame700.jpg', 'frame701.jpg', 'frame702.jpg', 'frame703.jpg', 'frame704.jpg', 'frame705.jpg', 'frame706.jpg', 'frame707.jpg', 'frame708.jpg', 'frame709.jpg', 'frame71.jpg', 'frame710.jpg', 'frame711.jpg', 'frame712.jpg', 'frame713.jpg', 'frame714.jpg', 'frame715.jpg', 'frame716.jpg', 'frame717.jpg', 'frame718.jpg', 'frame719.jpg', 'frame72.jpg', 'frame720.jpg', 'frame721.jpg', 'frame722.jpg', 'frame723.jpg', 'frame724.jpg', 'frame725.jpg', 'frame726.jpg', 'frame727.jpg', 'frame728.jpg', 'frame729.jpg', 'frame73.jpg', 'frame730.jpg', 'frame74.jpg', 'frame75.jpg', 'frame76.jpg', 'frame763.jpg', 'frame764.jpg', 'frame765.jpg', 'frame766.jpg', 'frame767.jpg', 'frame768.jpg', 'frame769.jpg', 'frame77.jpg', 'frame770.jpg', 'frame771.jpg', 'frame772.jpg', 'frame773.jpg', 'frame774.jpg', 'frame78.jpg', 'frame79.jpg', 'frame793.jpg', 'frame794.jpg', 'frame795.jpg', 'frame796.jpg', 'frame797.jpg', 'frame8.jpg', 'frame80.jpg', 'frame800.jpg', 'frame801.jpg', 'frame802.jpg', 'frame803.jpg', 'frame804.jpg', 'frame805.jpg', 'frame806.jpg', 'frame807.jpg', 'frame808.jpg', 'frame809.jpg', 'frame81.jpg', 'frame810.jpg', 'frame811.jpg', 'frame812.jpg', 'frame813.jpg', 'frame814.jpg', 'frame815.jpg', 'frame816.jpg', 'frame817.jpg', 'frame818.jpg', 'frame819.jpg', 'frame82.jpg', 'frame820.jpg', 'frame821.jpg', 'frame822.jpg', 'frame823.jpg', 'frame824.jpg', 'frame825.jpg', 'frame826.jpg', 'frame827.jpg', 'frame828.jpg', 'frame829.jpg', 'frame83.jpg', 'frame830.jpg', 'frame831.jpg', 'frame832.jpg', 'frame833.jpg', 'frame834.jpg', 'frame835.jpg', 'frame836.jpg', 'frame837.jpg', 'frame838.jpg', 'frame839.jpg', 'frame84.jpg', 'frame840.jpg', 'frame841.jpg', 'frame842.jpg', 'frame843.jpg', 'frame844.jpg', 'frame845.jpg', 'frame846.jpg', 'frame847.jpg', 'frame848.jpg', 'frame849.jpg', 'frame85.jpg', 'frame850.jpg', 'frame851.jpg', 'frame852.jpg', 'frame853.jpg', 'frame854.jpg', 'frame855.jpg', 'frame856.jpg', 'frame857.jpg', 'frame858.jpg', 'frame859.jpg', 'frame86.jpg', 'frame860.jpg', 'frame861.jpg', 'frame862.jpg', 'frame863.jpg', 'frame864.jpg', 'frame865.jpg', 'frame866.jpg', 'frame867.jpg', 'frame868.jpg', 'frame869.jpg', 'frame87.jpg', 'frame870.jpg', 'frame871.jpg', 'frame872.jpg', 'frame873.jpg', 'frame874.jpg', 'frame875.jpg', 'frame876.jpg', 'frame877.jpg', 'frame878.jpg', 'frame879.jpg', 'frame88.jpg', 'frame880.jpg', 'frame881.jpg', 'frame882.jpg', 'frame883.jpg', 'frame884.jpg', 'frame885.jpg', 'frame886.jpg', 'frame887.jpg', 'frame888.jpg', 'frame889.jpg', 'frame89.jpg', 'frame890.jpg', 'frame891.jpg', 'frame892.jpg', 'frame893.jpg', 'frame894.jpg', 'frame895.jpg', 'frame896.jpg', 'frame897.jpg', 'frame898.jpg', 'frame899.jpg', 'frame9.jpg', 'frame90.jpg', 'frame900.jpg', 'frame901.jpg', 'frame902.jpg', 'frame903.jpg', 'frame904.jpg', 'frame905.jpg', 'frame906.jpg', 'frame907.jpg', 'frame908.jpg', 'frame909.jpg', 'frame91.jpg', 'frame910.jpg', 'frame911.jpg', 'frame912.jpg', 'frame913.jpg', 'frame914.jpg', 'frame915.jpg', 'frame916.jpg', 'frame917.jpg', 'frame918.jpg', 'frame919.jpg', 'frame92.jpg', 'frame920.jpg', 'frame921.jpg', 'frame922.jpg', 'frame923.jpg', 'frame924.jpg', 'frame925.jpg', 'frame926.jpg', 'frame927.jpg', 'frame928.jpg', 'frame929.jpg', 'frame93.jpg', 'frame930.jpg', 'frame931.jpg', 'frame932.jpg', 'frame933.jpg', 'frame934.jpg', 'frame935.jpg', 'frame936.jpg', 'frame937.jpg', 'frame938.jpg', 'frame939.jpg', 'frame94.jpg', 'frame940.jpg', 'frame941.jpg', 'frame942.jpg', 'frame943.jpg', 'frame944.jpg', 'frame945.jpg', 'frame946.jpg', 'frame947.jpg', 'frame948.jpg', 'frame949.jpg', 'frame95.jpg', 'frame950.jpg', 'frame951.jpg', 'frame952.jpg', 'frame953.jpg', 'frame954.jpg', 'frame955.jpg', 'frame956.jpg', 'frame957.jpg', 'frame958.jpg', 'frame959.jpg', 'frame96.jpg', 'frame960.jpg', 'frame961.jpg', 'frame962.jpg', 'frame963.jpg', 'frame964.jpg', 'frame965.jpg', 'frame966.jpg', 'frame967.jpg', 'frame968.jpg', 'frame969.jpg', 'frame97.jpg', 'frame970.jpg', 'frame971.jpg', 'frame972.jpg', 'frame973.jpg', 'frame974.jpg', 'frame975.jpg', 'frame976.jpg', 'frame977.jpg', 'frame978.jpg', 'frame979.jpg', 'frame98.jpg', 'frame980.jpg', 'frame981.jpg', 'frame982.jpg', 'frame983.jpg', 'frame984.jpg', 'frame985.jpg', 'frame986.jpg', 'frame987.jpg', 'frame988.jpg', 'frame989.jpg', 'frame99.jpg', 'frame990.jpg', 'frame991.jpg', 'frame992.jpg', 'frame993.jpg', 'frame994.jpg', 'frame995.jpg', 'frame996.jpg', 'frame997.jpg', 'frame998.jpg', 'frame999.jpg'
-    ]
+# with open("/app/output/dict2.json", "w") as outfile:
+#     json.dump(resp_obj2, outfile)
 
-positives = []
+# s3_client.upload_file("/app/output/dict2.json", 
+# "rag-net-v2-0c6f96b8050c43fd-outputs", 
+# "output/DlibActiveMornL1/dict2.json")
 
-for key, values in idendities.items():
+
+# # P3
+# idendities = {
+#     "1": ["down.jpg", "front.jpg", "sideleft.jpg", "sideright.jpg"],
+#     "2": [
+#         'frame10.jpg', 'frame100.jpg', 'frame1000.jpg', 'frame1001.jpg', 'frame1002.jpg', 'frame1003.jpg', 'frame1004.jpg', 'frame1005.jpg', 'frame1006.jpg', 'frame1007.jpg', 'frame1008.jpg', 'frame1009.jpg', 'frame101.jpg', 'frame1010.jpg', 'frame1011.jpg', 'frame1012.jpg', 'frame1013.jpg', 'frame1014.jpg', 'frame1015.jpg', 'frame1016.jpg', 'frame1017.jpg', 'frame1018.jpg', 'frame1019.jpg', 'frame102.jpg', 'frame1020.jpg', 'frame1021.jpg', 'frame1022.jpg', 'frame1025.jpg', 'frame1026.jpg', 'frame1027.jpg', 'frame1028.jpg', 'frame1029.jpg', 'frame103.jpg', 'frame1030.jpg', 'frame1031.jpg', 'frame1032.jpg', 'frame1033.jpg', 'frame1034.jpg', 'frame1035.jpg', 'frame1036.jpg', 'frame1037.jpg', 'frame1038.jpg', 'frame1039.jpg', 'frame104.jpg', 'frame1040.jpg', 'frame1041.jpg', 'frame1042.jpg', 'frame1043.jpg', 'frame1044.jpg', 'frame1045.jpg', 'frame1046.jpg', 'frame1047.jpg', 'frame1048.jpg', 'frame1049.jpg', 'frame105.jpg', 'frame1050.jpg', 'frame1051.jpg', 'frame1052.jpg', 'frame1053.jpg', 'frame1054.jpg', 'frame1055.jpg', 'frame1056.jpg', 'frame1057.jpg', 'frame1058.jpg', 'frame1059.jpg', 'frame106.jpg', 'frame1060.jpg', 'frame1061.jpg', 'frame1062.jpg', 'frame1063.jpg', 'frame1064.jpg', 'frame1065.jpg', 'frame1066.jpg', 'frame1067.jpg', 'frame1068.jpg', 'frame1069.jpg', 'frame107.jpg', 'frame1070.jpg', 'frame1071.jpg', 'frame1072.jpg', 'frame1073.jpg', 'frame1074.jpg', 'frame1075.jpg', 'frame1076.jpg', 'frame1077.jpg', 'frame1078.jpg', 'frame1079.jpg', 'frame108.jpg', 'frame1080.jpg', 'frame1081.jpg', 'frame1082.jpg', 'frame1083.jpg', 'frame1084.jpg', 'frame1085.jpg', 'frame1086.jpg', 'frame1087.jpg', 'frame1088.jpg', 'frame1089.jpg', 'frame109.jpg', 'frame1090.jpg', 'frame1091.jpg', 'frame1092.jpg', 'frame1093.jpg', 'frame1094.jpg', 'frame1095.jpg', 'frame1096.jpg', 'frame1097.jpg', 'frame1098.jpg', 'frame1099.jpg', 'frame11.jpg', 'frame110.jpg', 'frame1100.jpg', 'frame1101.jpg', 'frame1102.jpg', 'frame1103.jpg', 'frame1104.jpg', 'frame1105.jpg', 'frame1106.jpg', 'frame1107.jpg', 'frame1108.jpg', 'frame1109.jpg', 'frame111.jpg', 'frame1110.jpg', 'frame1111.jpg', 'frame1112.jpg', 'frame1113.jpg', 'frame1114.jpg', 'frame1115.jpg', 'frame1116.jpg', 'frame1117.jpg', 'frame1118.jpg', 'frame1119.jpg', 'frame112.jpg', 'frame1120.jpg', 'frame1121.jpg', 'frame1122.jpg', 'frame1123.jpg', 'frame1124.jpg', 'frame1125.jpg', 'frame1126.jpg', 'frame1127.jpg', 'frame1128.jpg', 'frame1129.jpg', 'frame113.jpg', 'frame1130.jpg', 'frame1131.jpg', 'frame1132.jpg', 'frame1133.jpg', 'frame1134.jpg', 'frame1135.jpg', 'frame1136.jpg', 'frame1137.jpg', 'frame1138.jpg', 'frame1139.jpg', 'frame114.jpg', 'frame1140.jpg', 'frame1141.jpg', 'frame1142.jpg', 'frame1143.jpg', 'frame1144.jpg', 'frame1145.jpg', 'frame1146.jpg', 'frame1147.jpg', 'frame1148.jpg', 'frame1149.jpg', 'frame115.jpg', 'frame1150.jpg', 'frame1151.jpg', 'frame1152.jpg', 'frame1153.jpg', 'frame1154.jpg', 'frame1155.jpg', 'frame1156.jpg', 'frame1157.jpg', 'frame1158.jpg', 'frame1159.jpg', 'frame116.jpg', 'frame1160.jpg', 'frame1161.jpg', 'frame1162.jpg', 'frame1163.jpg', 'frame1164.jpg', 'frame1165.jpg', 'frame1166.jpg', 'frame1167.jpg', 'frame1168.jpg', 'frame1169.jpg', 'frame117.jpg', 'frame1170.jpg', 'frame1171.jpg', 'frame1172.jpg', 'frame1173.jpg', 'frame1174.jpg', 'frame1175.jpg', 'frame1176.jpg', 'frame1177.jpg', 'frame1178.jpg', 'frame1179.jpg', 'frame118.jpg', 'frame1180.jpg', 'frame1181.jpg', 'frame1182.jpg', 'frame1183.jpg', 'frame1184.jpg', 'frame1185.jpg', 'frame1186.jpg', 'frame1187.jpg', 'frame1188.jpg', 'frame1189.jpg', 'frame119.jpg', 'frame1190.jpg', 'frame1191.jpg', 'frame1192.jpg', 'frame1193.jpg', 'frame1194.jpg', 'frame1195.jpg', 'frame1196.jpg', 'frame1197.jpg', 'frame1198.jpg', 'frame12.jpg', 'frame120.jpg', 'frame121.jpg', 'frame122.jpg', 'frame123.jpg', 'frame124.jpg', 'frame125.jpg', 'frame126.jpg', 'frame127.jpg', 'frame128.jpg', 'frame129.jpg', 'frame13.jpg', 'frame130.jpg', 'frame131.jpg', 'frame132.jpg', 'frame133.jpg', 'frame134.jpg', 'frame135.jpg', 'frame136.jpg', 'frame137.jpg', 'frame138.jpg', 'frame139.jpg', 'frame14.jpg', 'frame140.jpg', 'frame141.jpg', 'frame142.jpg', 'frame143.jpg', 'frame144.jpg', 'frame145.jpg', 'frame146.jpg', 'frame147.jpg', 'frame148.jpg', 'frame149.jpg', 'frame15.jpg', 'frame150.jpg', 'frame151.jpg', 'frame152.jpg', 'frame153.jpg', 'frame154.jpg', 'frame155.jpg', 'frame156.jpg', 'frame157.jpg', 'frame158.jpg', 'frame159.jpg', 'frame16.jpg', 'frame160.jpg', 'frame161.jpg', 'frame162.jpg', 'frame163.jpg', 'frame164.jpg', 'frame165.jpg', 'frame166.jpg', 'frame167.jpg', 'frame168.jpg', 'frame169.jpg', 'frame17.jpg', 'frame170.jpg', 'frame171.jpg', 'frame172.jpg', 'frame173.jpg', 'frame174.jpg', 'frame175.jpg', 'frame176.jpg', 'frame177.jpg', 'frame178.jpg', 'frame179.jpg', 'frame18.jpg', 'frame180.jpg', 'frame181.jpg', 'frame184.jpg', 'frame185.jpg', 'frame186.jpg', 'frame187.jpg', 'frame188.jpg', 'frame189.jpg', 'frame19.jpg', 'frame190.jpg', 'frame191.jpg', 'frame192.jpg', 'frame193.jpg', 'frame194.jpg', 'frame195.jpg', 'frame196.jpg', 'frame197.jpg', 'frame198.jpg', 'frame199.jpg', 'frame2.jpg', 'frame20.jpg', 'frame200.jpg', 'frame201.jpg', 'frame202.jpg', 'frame203.jpg', 'frame204.jpg', 'frame205.jpg', 'frame206.jpg', 'frame207.jpg', 'frame208.jpg', 'frame209.jpg', 'frame21.jpg', 'frame210.jpg', 'frame211.jpg', 'frame212.jpg', 'frame213.jpg', 'frame214.jpg', 'frame215.jpg', 'frame216.jpg', 'frame217.jpg', 'frame218.jpg', 'frame219.jpg', 'frame22.jpg', 'frame220.jpg', 'frame221.jpg', 'frame222.jpg', 'frame223.jpg', 'frame224.jpg', 'frame225.jpg', 'frame226.jpg', 'frame227.jpg', 'frame228.jpg', 'frame229.jpg', 'frame23.jpg', 'frame230.jpg', 'frame231.jpg', 'frame232.jpg', 'frame233.jpg', 'frame234.jpg', 'frame235.jpg', 'frame236.jpg', 'frame237.jpg', 'frame238.jpg', 'frame239.jpg', 'frame24.jpg', 'frame240.jpg', 'frame241.jpg', 'frame242.jpg', 'frame243.jpg', 'frame244.jpg', 'frame245.jpg', 'frame246.jpg', 'frame247.jpg', 'frame248.jpg', 'frame249.jpg', 'frame25.jpg', 'frame250.jpg', 'frame251.jpg', 'frame252.jpg', 'frame253.jpg', 'frame254.jpg', 'frame255.jpg', 'frame256.jpg', 'frame257.jpg', 'frame258.jpg', 'frame259.jpg', 'frame26.jpg', 'frame260.jpg', 'frame261.jpg', 'frame262.jpg', 'frame263.jpg', 'frame264.jpg', 'frame265.jpg', 'frame266.jpg', 'frame267.jpg', 'frame268.jpg', 'frame269.jpg', 'frame27.jpg', 'frame270.jpg', 'frame271.jpg', 'frame272.jpg', 'frame273.jpg', 'frame274.jpg', 'frame275.jpg', 'frame276.jpg', 'frame277.jpg', 'frame278.jpg', 'frame279.jpg', 'frame28.jpg', 'frame280.jpg', 'frame281.jpg', 'frame282.jpg', 'frame285.jpg', 'frame286.jpg', 'frame287.jpg', 'frame288.jpg', 'frame289.jpg', 'frame29.jpg', 'frame290.jpg', 'frame291.jpg', 'frame292.jpg', 'frame293.jpg', 'frame294.jpg', 'frame295.jpg', 'frame296.jpg', 'frame297.jpg', 'frame298.jpg', 'frame299.jpg', 'frame3.jpg', 'frame30.jpg', 'frame300.jpg', 'frame301.jpg', 'frame302.jpg', 'frame303.jpg', 'frame304.jpg', 'frame305.jpg', 'frame306.jpg', 'frame307.jpg', 'frame308.jpg', 'frame309.jpg', 'frame31.jpg', 'frame310.jpg', 'frame311.jpg', 'frame312.jpg', 'frame313.jpg', 'frame314.jpg', 'frame315.jpg', 'frame316.jpg', 'frame317.jpg', 'frame318.jpg', 'frame319.jpg', 'frame32.jpg', 'frame320.jpg', 'frame321.jpg', 'frame322.jpg', 'frame323.jpg', 'frame324.jpg', 'frame325.jpg', 'frame326.jpg', 'frame327.jpg', 'frame328.jpg', 'frame329.jpg', 'frame33.jpg', 'frame330.jpg', 'frame331.jpg', 'frame332.jpg', 'frame333.jpg', 'frame334.jpg', 'frame335.jpg', 'frame336.jpg', 'frame337.jpg', 'frame338.jpg', 'frame34.jpg', 'frame35.jpg', 'frame36.jpg', 'frame364.jpg', 'frame365.jpg', 'frame366.jpg', 'frame367.jpg', 'frame368.jpg', 'frame369.jpg', 'frame37.jpg', 'frame370.jpg', 'frame371.jpg', 'frame372.jpg', 'frame373.jpg', 'frame374.jpg', 'frame375.jpg', 'frame376.jpg', 'frame377.jpg', 'frame378.jpg', 'frame379.jpg', 'frame38.jpg', 'frame380.jpg', 'frame381.jpg', 'frame382.jpg', 'frame383.jpg', 'frame384.jpg', 'frame385.jpg', 'frame386.jpg', 'frame387.jpg', 'frame388.jpg', 'frame389.jpg', 'frame39.jpg', 'frame390.jpg', 'frame391.jpg', 'frame392.jpg', 'frame393.jpg', 'frame394.jpg', 'frame395.jpg', 'frame396.jpg', 'frame397.jpg', 'frame398.jpg', 'frame399.jpg', 'frame4.jpg', 'frame40.jpg', 'frame400.jpg', 'frame401.jpg', 'frame402.jpg', 'frame403.jpg', 'frame404.jpg', 'frame405.jpg', 'frame406.jpg', 'frame407.jpg', 'frame408.jpg', 'frame409.jpg', 'frame41.jpg', 'frame410.jpg', 'frame413.jpg', 'frame414.jpg', 'frame415.jpg', 'frame416.jpg', 'frame417.jpg', 'frame418.jpg', 'frame419.jpg', 'frame42.jpg', 'frame420.jpg', 'frame421.jpg', 'frame422.jpg', 'frame423.jpg', 'frame424.jpg', 'frame425.jpg', 'frame426.jpg', 'frame427.jpg', 'frame428.jpg', 'frame429.jpg', 'frame430.jpg', 'frame431.jpg', 'frame432.jpg', 'frame433.jpg', 'frame434.jpg', 'frame435.jpg', 'frame436.jpg', 'frame437.jpg', 'frame438.jpg', 'frame439.jpg', 'frame440.jpg', 'frame441.jpg', 'frame442.jpg', 'frame443.jpg', 'frame444.jpg', 'frame445.jpg', 'frame446.jpg', 'frame447.jpg', 'frame448.jpg', 'frame449.jpg', 'frame45.jpg', 'frame450.jpg', 'frame451.jpg', 'frame452.jpg', 'frame453.jpg', 'frame454.jpg', 'frame455.jpg', 'frame456.jpg', 'frame457.jpg', 'frame458.jpg', 'frame459.jpg', 'frame46.jpg', 'frame460.jpg', 'frame461.jpg', 'frame462.jpg', 'frame463.jpg', 'frame464.jpg', 'frame465.jpg', 'frame466.jpg', 'frame467.jpg', 'frame468.jpg', 'frame469.jpg', 'frame47.jpg', 'frame470.jpg', 'frame471.jpg', 'frame472.jpg', 'frame473.jpg', 'frame474.jpg', 'frame475.jpg', 'frame476.jpg', 'frame477.jpg', 'frame478.jpg', 'frame479.jpg', 'frame48.jpg', 'frame480.jpg', 'frame481.jpg', 'frame482.jpg', 'frame483.jpg', 'frame484.jpg', 'frame485.jpg', 'frame486.jpg', 'frame487.jpg', 'frame488.jpg', 'frame489.jpg', 'frame49.jpg', 'frame490.jpg', 'frame491.jpg', 'frame492.jpg', 'frame493.jpg', 'frame494.jpg', 'frame495.jpg', 'frame496.jpg', 'frame497.jpg', 'frame498.jpg', 'frame499.jpg', 'frame5.jpg', 'frame50.jpg', 'frame500.jpg', 'frame501.jpg', 'frame502.jpg', 
+#         'frame503.jpg', 'frame504.jpg', 'frame505.jpg', 'frame506.jpg', 'frame507.jpg', 'frame508.jpg', 'frame509.jpg', 'frame51.jpg', 'frame510.jpg', 'frame511.jpg', 'frame512.jpg', 'frame513.jpg', 'frame514.jpg', 'frame515.jpg', 'frame516.jpg', 'frame517.jpg', 'frame518.jpg', 'frame519.jpg', 'frame52.jpg', 'frame520.jpg', 'frame521.jpg', 'frame522.jpg', 'frame523.jpg', 'frame524.jpg', 'frame525.jpg', 'frame526.jpg', 'frame527.jpg', 'frame528.jpg', 'frame529.jpg', 'frame53.jpg', 'frame530.jpg', 'frame531.jpg', 'frame532.jpg', 'frame533.jpg', 'frame534.jpg', 'frame535.jpg', 'frame536.jpg', 'frame537.jpg', 'frame538.jpg', 'frame539.jpg', 'frame54.jpg', 'frame540.jpg', 'frame541.jpg', 'frame542.jpg', 'frame543.jpg', 'frame544.jpg', 'frame545.jpg', 'frame546.jpg', 'frame547.jpg', 'frame548.jpg', 'frame549.jpg', 'frame55.jpg', 'frame550.jpg', 'frame551.jpg', 'frame552.jpg', 'frame553.jpg', 'frame554.jpg', 'frame555.jpg', 'frame556.jpg', 'frame557.jpg', 'frame558.jpg', 'frame559.jpg', 'frame56.jpg', 'frame560.jpg', 'frame561.jpg', 'frame562.jpg', 'frame563.jpg', 'frame566.jpg', 'frame567.jpg', 'frame568.jpg', 'frame569.jpg', 'frame57.jpg', 'frame570.jpg', 'frame571.jpg', 'frame572.jpg', 'frame573.jpg', 'frame574.jpg', 'frame575.jpg', 'frame576.jpg', 'frame577.jpg', 'frame578.jpg', 'frame579.jpg', 'frame58.jpg', 'frame580.jpg', 'frame581.jpg', 'frame582.jpg', 'frame583.jpg', 'frame584.jpg', 'frame585.jpg', 'frame586.jpg', 'frame587.jpg', 'frame588.jpg', 'frame589.jpg', 'frame59.jpg', 'frame590.jpg', 'frame591.jpg', 'frame592.jpg', 'frame593.jpg', 'frame594.jpg', 'frame595.jpg', 'frame596.jpg', 'frame597.jpg', 'frame598.jpg', 'frame599.jpg', 'frame6.jpg', 'frame60.jpg', 'frame600.jpg', 'frame601.jpg', 'frame602.jpg', 'frame603.jpg', 'frame604.jpg', 'frame605.jpg', 'frame606.jpg', 'frame607.jpg', 'frame608.jpg', 'frame609.jpg', 'frame61.jpg', 'frame610.jpg', 'frame611.jpg', 'frame612.jpg', 'frame613.jpg', 'frame614.jpg', 'frame615.jpg', 'frame616.jpg', 'frame617.jpg', 'frame618.jpg', 'frame619.jpg', 'frame62.jpg', 'frame620.jpg', 'frame621.jpg', 'frame622.jpg', 'frame623.jpg', 'frame624.jpg', 'frame625.jpg', 'frame626.jpg', 'frame627.jpg', 'frame628.jpg', 'frame629.jpg', 'frame63.jpg', 'frame630.jpg', 'frame631.jpg', 'frame632.jpg', 'frame633.jpg', 'frame634.jpg', 'frame635.jpg', 'frame636.jpg', 'frame637.jpg', 'frame638.jpg', 'frame639.jpg', 'frame64.jpg', 'frame640.jpg', 'frame641.jpg', 'frame642.jpg', 'frame643.jpg', 'frame644.jpg', 'frame645.jpg', 'frame646.jpg', 'frame647.jpg', 'frame648.jpg', 'frame649.jpg', 'frame65.jpg', 'frame650.jpg', 'frame651.jpg', 'frame652.jpg', 'frame653.jpg', 'frame654.jpg', 'frame655.jpg', 'frame656.jpg', 'frame657.jpg', 'frame658.jpg', 'frame659.jpg', 'frame66.jpg', 'frame660.jpg', 'frame661.jpg', 'frame662.jpg', 'frame663.jpg', 'frame664.jpg', 'frame665.jpg', 'frame666.jpg', 'frame667.jpg', 'frame668.jpg', 'frame669.jpg', 'frame67.jpg', 'frame670.jpg', 'frame671.jpg', 'frame672.jpg', 'frame673.jpg', 'frame674.jpg', 'frame675.jpg', 'frame676.jpg', 'frame677.jpg', 'frame678.jpg', 'frame679.jpg', 'frame68.jpg', 'frame680.jpg', 'frame681.jpg', 'frame682.jpg', 'frame683.jpg', 'frame684.jpg', 'frame685.jpg', 'frame686.jpg', 'frame687.jpg', 'frame688.jpg', 'frame689.jpg', 'frame69.jpg', 'frame690.jpg', 'frame691.jpg', 'frame692.jpg', 'frame693.jpg', 'frame694.jpg', 'frame695.jpg', 'frame696.jpg', 'frame697.jpg', 'frame698.jpg', 'frame699.jpg', 'frame7.jpg', 'frame70.jpg', 'frame700.jpg', 'frame701.jpg', 'frame702.jpg', 'frame703.jpg', 'frame704.jpg', 'frame705.jpg', 'frame706.jpg', 'frame707.jpg', 'frame708.jpg', 'frame709.jpg', 'frame71.jpg', 'frame710.jpg', 'frame711.jpg', 'frame712.jpg', 'frame713.jpg', 'frame714.jpg', 'frame715.jpg', 'frame716.jpg', 'frame717.jpg', 'frame718.jpg', 'frame719.jpg', 'frame72.jpg', 'frame720.jpg', 'frame721.jpg', 'frame722.jpg', 'frame723.jpg', 'frame724.jpg', 'frame725.jpg', 'frame726.jpg', 'frame727.jpg', 'frame728.jpg', 'frame729.jpg', 'frame73.jpg', 'frame730.jpg', 'frame74.jpg', 'frame75.jpg', 'frame76.jpg', 'frame763.jpg', 'frame764.jpg', 'frame765.jpg', 'frame766.jpg', 'frame767.jpg', 'frame768.jpg', 'frame769.jpg', 'frame77.jpg', 'frame770.jpg', 'frame771.jpg', 'frame772.jpg', 'frame773.jpg', 'frame774.jpg', 'frame78.jpg', 'frame79.jpg', 'frame793.jpg', 'frame794.jpg', 'frame795.jpg', 'frame796.jpg', 'frame797.jpg', 'frame8.jpg', 'frame80.jpg', 'frame800.jpg', 'frame801.jpg', 'frame802.jpg', 'frame803.jpg', 'frame804.jpg', 'frame805.jpg', 'frame806.jpg', 'frame807.jpg', 'frame808.jpg', 'frame809.jpg', 'frame81.jpg', 'frame810.jpg', 'frame811.jpg', 'frame812.jpg', 'frame813.jpg', 'frame814.jpg', 'frame815.jpg', 'frame816.jpg', 'frame817.jpg', 'frame818.jpg', 'frame819.jpg', 'frame82.jpg', 'frame820.jpg', 'frame821.jpg', 'frame822.jpg', 'frame823.jpg', 'frame824.jpg', 'frame825.jpg', 'frame826.jpg', 'frame827.jpg', 'frame828.jpg', 'frame829.jpg', 'frame83.jpg', 'frame830.jpg', 'frame831.jpg', 'frame832.jpg', 'frame833.jpg', 'frame834.jpg', 'frame835.jpg', 'frame836.jpg', 'frame837.jpg', 'frame838.jpg', 'frame839.jpg', 'frame84.jpg', 'frame840.jpg', 'frame841.jpg', 'frame842.jpg', 'frame843.jpg', 'frame844.jpg', 'frame845.jpg', 'frame846.jpg', 'frame847.jpg', 'frame848.jpg', 'frame849.jpg', 'frame85.jpg', 'frame850.jpg', 'frame851.jpg', 'frame852.jpg', 'frame853.jpg', 'frame854.jpg', 'frame855.jpg', 'frame856.jpg', 'frame857.jpg', 'frame858.jpg', 'frame859.jpg', 'frame86.jpg', 'frame860.jpg', 'frame861.jpg', 'frame862.jpg', 'frame863.jpg', 'frame864.jpg', 'frame865.jpg', 'frame866.jpg', 'frame867.jpg', 'frame868.jpg', 'frame869.jpg', 'frame87.jpg', 'frame870.jpg', 'frame871.jpg', 'frame872.jpg', 'frame873.jpg', 'frame874.jpg', 'frame875.jpg', 'frame876.jpg', 'frame877.jpg', 'frame878.jpg', 'frame879.jpg', 'frame88.jpg', 'frame880.jpg', 'frame881.jpg', 'frame882.jpg', 'frame883.jpg', 'frame884.jpg', 'frame885.jpg', 'frame886.jpg', 'frame887.jpg', 'frame888.jpg', 'frame889.jpg', 'frame89.jpg', 'frame890.jpg', 'frame891.jpg', 'frame892.jpg', 'frame893.jpg', 'frame894.jpg', 'frame895.jpg', 'frame896.jpg', 'frame897.jpg', 'frame898.jpg', 'frame899.jpg', 'frame9.jpg', 'frame90.jpg', 'frame900.jpg', 'frame901.jpg', 'frame902.jpg', 'frame903.jpg', 'frame904.jpg', 'frame905.jpg', 'frame906.jpg', 'frame907.jpg', 'frame908.jpg', 'frame909.jpg', 'frame91.jpg', 'frame910.jpg', 'frame911.jpg', 'frame912.jpg', 'frame913.jpg', 'frame914.jpg', 'frame915.jpg', 'frame916.jpg', 'frame917.jpg', 'frame918.jpg', 'frame919.jpg', 'frame92.jpg', 'frame920.jpg', 'frame921.jpg', 'frame922.jpg', 'frame923.jpg', 'frame924.jpg', 'frame925.jpg', 'frame926.jpg', 'frame927.jpg', 'frame928.jpg', 'frame929.jpg', 'frame93.jpg', 'frame930.jpg', 'frame931.jpg', 'frame932.jpg', 'frame933.jpg', 'frame934.jpg', 'frame935.jpg', 'frame936.jpg', 'frame937.jpg', 'frame938.jpg', 'frame939.jpg', 'frame94.jpg', 'frame940.jpg', 'frame941.jpg', 'frame942.jpg', 'frame943.jpg', 'frame944.jpg', 'frame945.jpg', 'frame946.jpg', 'frame947.jpg', 'frame948.jpg', 'frame949.jpg', 'frame95.jpg', 'frame950.jpg', 'frame951.jpg', 'frame952.jpg', 'frame953.jpg', 'frame954.jpg', 'frame955.jpg', 'frame956.jpg', 'frame957.jpg', 'frame958.jpg', 'frame959.jpg', 'frame96.jpg', 'frame960.jpg', 'frame961.jpg', 'frame962.jpg', 'frame963.jpg', 'frame964.jpg', 'frame965.jpg', 'frame966.jpg', 'frame967.jpg', 'frame968.jpg', 'frame969.jpg', 'frame97.jpg', 'frame970.jpg', 'frame971.jpg', 'frame972.jpg', 'frame973.jpg', 'frame974.jpg', 'frame975.jpg', 'frame976.jpg', 'frame977.jpg', 'frame978.jpg', 'frame979.jpg', 'frame98.jpg', 'frame980.jpg', 'frame981.jpg', 'frame982.jpg', 'frame983.jpg', 'frame984.jpg', 'frame985.jpg', 'frame986.jpg', 'frame987.jpg', 'frame988.jpg', 'frame989.jpg', 'frame99.jpg', 'frame990.jpg', 'frame991.jpg', 'frame992.jpg', 'frame993.jpg', 'frame994.jpg', 'frame995.jpg', 'frame996.jpg', 'frame997.jpg', 'frame998.jpg', 'frame999.jpg'
+#     ]
+#         }
+
+# id = ["down.jpg", "front.jpg", "sideleft.jpg", "sideright.jpg",
+#         'frame10.jpg', 'frame100.jpg', 'frame1000.jpg', 'frame1001.jpg', 'frame1002.jpg', 'frame1003.jpg', 'frame1004.jpg', 'frame1005.jpg', 'frame1006.jpg', 'frame1007.jpg', 'frame1008.jpg', 'frame1009.jpg', 'frame101.jpg', 'frame1010.jpg', 'frame1011.jpg', 'frame1012.jpg', 'frame1013.jpg', 'frame1014.jpg', 'frame1015.jpg', 'frame1016.jpg', 'frame1017.jpg', 'frame1018.jpg', 'frame1019.jpg', 'frame102.jpg', 'frame1020.jpg', 'frame1021.jpg', 'frame1022.jpg', 'frame1025.jpg', 'frame1026.jpg', 'frame1027.jpg', 'frame1028.jpg', 'frame1029.jpg', 'frame103.jpg', 'frame1030.jpg', 'frame1031.jpg', 'frame1032.jpg', 'frame1033.jpg', 'frame1034.jpg', 'frame1035.jpg', 'frame1036.jpg', 'frame1037.jpg', 'frame1038.jpg', 'frame1039.jpg', 'frame104.jpg', 'frame1040.jpg', 'frame1041.jpg', 'frame1042.jpg', 'frame1043.jpg', 'frame1044.jpg', 'frame1045.jpg', 'frame1046.jpg', 'frame1047.jpg', 'frame1048.jpg', 'frame1049.jpg', 'frame105.jpg', 'frame1050.jpg', 'frame1051.jpg', 'frame1052.jpg', 'frame1053.jpg', 'frame1054.jpg', 'frame1055.jpg', 'frame1056.jpg', 'frame1057.jpg', 'frame1058.jpg', 'frame1059.jpg', 'frame106.jpg', 'frame1060.jpg', 'frame1061.jpg', 'frame1062.jpg', 'frame1063.jpg', 'frame1064.jpg', 'frame1065.jpg', 'frame1066.jpg', 'frame1067.jpg', 'frame1068.jpg', 'frame1069.jpg', 'frame107.jpg', 'frame1070.jpg', 'frame1071.jpg', 'frame1072.jpg', 'frame1073.jpg', 'frame1074.jpg', 'frame1075.jpg', 'frame1076.jpg', 'frame1077.jpg', 'frame1078.jpg', 'frame1079.jpg', 'frame108.jpg', 'frame1080.jpg', 'frame1081.jpg', 'frame1082.jpg', 'frame1083.jpg', 'frame1084.jpg', 'frame1085.jpg', 'frame1086.jpg', 'frame1087.jpg', 'frame1088.jpg', 'frame1089.jpg', 'frame109.jpg', 'frame1090.jpg', 'frame1091.jpg', 'frame1092.jpg', 'frame1093.jpg', 'frame1094.jpg', 'frame1095.jpg', 'frame1096.jpg', 'frame1097.jpg', 'frame1098.jpg', 'frame1099.jpg', 'frame11.jpg', 'frame110.jpg', 'frame1100.jpg', 'frame1101.jpg', 'frame1102.jpg', 'frame1103.jpg', 'frame1104.jpg', 'frame1105.jpg', 'frame1106.jpg', 'frame1107.jpg', 'frame1108.jpg', 'frame1109.jpg', 'frame111.jpg', 'frame1110.jpg', 'frame1111.jpg', 'frame1112.jpg', 'frame1113.jpg', 'frame1114.jpg', 'frame1115.jpg', 'frame1116.jpg', 'frame1117.jpg', 'frame1118.jpg', 'frame1119.jpg', 'frame112.jpg', 'frame1120.jpg', 'frame1121.jpg', 'frame1122.jpg', 'frame1123.jpg', 'frame1124.jpg', 'frame1125.jpg', 'frame1126.jpg', 'frame1127.jpg', 'frame1128.jpg', 'frame1129.jpg', 'frame113.jpg', 'frame1130.jpg', 'frame1131.jpg', 'frame1132.jpg', 'frame1133.jpg', 'frame1134.jpg', 'frame1135.jpg', 'frame1136.jpg', 'frame1137.jpg', 'frame1138.jpg', 'frame1139.jpg', 'frame114.jpg', 'frame1140.jpg', 'frame1141.jpg', 'frame1142.jpg', 'frame1143.jpg', 'frame1144.jpg', 'frame1145.jpg', 'frame1146.jpg', 'frame1147.jpg', 'frame1148.jpg', 'frame1149.jpg', 'frame115.jpg', 'frame1150.jpg', 'frame1151.jpg', 'frame1152.jpg', 'frame1153.jpg', 'frame1154.jpg', 'frame1155.jpg', 'frame1156.jpg', 'frame1157.jpg', 'frame1158.jpg', 'frame1159.jpg', 'frame116.jpg', 'frame1160.jpg', 'frame1161.jpg', 'frame1162.jpg', 'frame1163.jpg', 'frame1164.jpg', 'frame1165.jpg', 'frame1166.jpg', 'frame1167.jpg', 'frame1168.jpg', 'frame1169.jpg', 'frame117.jpg', 'frame1170.jpg', 'frame1171.jpg', 'frame1172.jpg', 'frame1173.jpg', 'frame1174.jpg', 'frame1175.jpg', 'frame1176.jpg', 'frame1177.jpg', 'frame1178.jpg', 'frame1179.jpg', 'frame118.jpg', 'frame1180.jpg', 'frame1181.jpg', 'frame1182.jpg', 'frame1183.jpg', 'frame1184.jpg', 'frame1185.jpg', 'frame1186.jpg', 'frame1187.jpg', 'frame1188.jpg', 'frame1189.jpg', 'frame119.jpg', 'frame1190.jpg', 'frame1191.jpg', 'frame1192.jpg', 'frame1193.jpg', 'frame1194.jpg', 'frame1195.jpg', 'frame1196.jpg', 'frame1197.jpg', 'frame1198.jpg', 'frame12.jpg', 'frame120.jpg', 'frame121.jpg', 'frame122.jpg', 'frame123.jpg', 'frame124.jpg', 'frame125.jpg', 'frame126.jpg', 'frame127.jpg', 'frame128.jpg', 'frame129.jpg', 'frame13.jpg', 'frame130.jpg', 'frame131.jpg', 'frame132.jpg', 'frame133.jpg', 'frame134.jpg', 'frame135.jpg', 'frame136.jpg', 'frame137.jpg', 'frame138.jpg', 'frame139.jpg', 'frame14.jpg', 'frame140.jpg', 'frame141.jpg', 'frame142.jpg', 'frame143.jpg', 'frame144.jpg', 'frame145.jpg', 'frame146.jpg', 'frame147.jpg', 'frame148.jpg', 'frame149.jpg', 'frame15.jpg', 'frame150.jpg', 'frame151.jpg', 'frame152.jpg', 'frame153.jpg', 'frame154.jpg', 'frame155.jpg', 'frame156.jpg', 'frame157.jpg', 'frame158.jpg', 'frame159.jpg', 'frame16.jpg', 'frame160.jpg', 'frame161.jpg', 'frame162.jpg', 'frame163.jpg', 'frame164.jpg', 'frame165.jpg', 'frame166.jpg', 'frame167.jpg', 'frame168.jpg', 'frame169.jpg', 'frame17.jpg', 'frame170.jpg', 'frame171.jpg', 'frame172.jpg', 'frame173.jpg', 'frame174.jpg', 'frame175.jpg', 'frame176.jpg', 'frame177.jpg', 'frame178.jpg', 'frame179.jpg', 'frame18.jpg', 'frame180.jpg', 'frame181.jpg', 'frame184.jpg', 'frame185.jpg', 'frame186.jpg', 'frame187.jpg', 'frame188.jpg', 'frame189.jpg', 'frame19.jpg', 'frame190.jpg', 'frame191.jpg', 'frame192.jpg', 'frame193.jpg', 'frame194.jpg', 'frame195.jpg', 'frame196.jpg', 'frame197.jpg', 'frame198.jpg', 'frame199.jpg', 'frame2.jpg', 'frame20.jpg', 'frame200.jpg', 'frame201.jpg', 'frame202.jpg', 'frame203.jpg', 'frame204.jpg', 'frame205.jpg', 'frame206.jpg', 'frame207.jpg', 'frame208.jpg', 'frame209.jpg', 'frame21.jpg', 'frame210.jpg', 'frame211.jpg', 'frame212.jpg', 'frame213.jpg', 'frame214.jpg', 'frame215.jpg', 'frame216.jpg', 'frame217.jpg', 'frame218.jpg', 'frame219.jpg', 'frame22.jpg', 'frame220.jpg', 'frame221.jpg', 'frame222.jpg', 'frame223.jpg', 'frame224.jpg', 'frame225.jpg', 'frame226.jpg', 'frame227.jpg', 'frame228.jpg', 'frame229.jpg', 'frame23.jpg', 'frame230.jpg', 'frame231.jpg', 'frame232.jpg', 'frame233.jpg', 'frame234.jpg', 'frame235.jpg', 'frame236.jpg', 'frame237.jpg', 'frame238.jpg', 'frame239.jpg', 'frame24.jpg', 'frame240.jpg', 'frame241.jpg', 'frame242.jpg', 'frame243.jpg', 'frame244.jpg', 'frame245.jpg', 'frame246.jpg', 'frame247.jpg', 'frame248.jpg', 'frame249.jpg', 'frame25.jpg', 'frame250.jpg', 'frame251.jpg', 'frame252.jpg', 'frame253.jpg', 'frame254.jpg', 'frame255.jpg', 'frame256.jpg', 'frame257.jpg', 'frame258.jpg', 'frame259.jpg', 'frame26.jpg', 'frame260.jpg', 'frame261.jpg', 'frame262.jpg', 'frame263.jpg', 'frame264.jpg', 'frame265.jpg', 'frame266.jpg', 'frame267.jpg', 'frame268.jpg', 'frame269.jpg', 'frame27.jpg', 'frame270.jpg', 'frame271.jpg', 'frame272.jpg', 'frame273.jpg', 'frame274.jpg', 'frame275.jpg', 'frame276.jpg', 'frame277.jpg', 'frame278.jpg', 'frame279.jpg', 'frame28.jpg', 'frame280.jpg', 'frame281.jpg', 'frame282.jpg', 'frame285.jpg', 'frame286.jpg', 'frame287.jpg', 'frame288.jpg', 'frame289.jpg', 'frame29.jpg', 'frame290.jpg', 'frame291.jpg', 'frame292.jpg', 'frame293.jpg', 'frame294.jpg', 'frame295.jpg', 'frame296.jpg', 'frame297.jpg', 'frame298.jpg', 'frame299.jpg', 'frame3.jpg', 'frame30.jpg', 'frame300.jpg', 'frame301.jpg', 'frame302.jpg', 'frame303.jpg', 'frame304.jpg', 'frame305.jpg', 'frame306.jpg', 'frame307.jpg', 'frame308.jpg', 'frame309.jpg', 'frame31.jpg', 'frame310.jpg', 'frame311.jpg', 'frame312.jpg', 'frame313.jpg', 'frame314.jpg', 'frame315.jpg', 'frame316.jpg', 'frame317.jpg', 'frame318.jpg', 'frame319.jpg', 'frame32.jpg', 'frame320.jpg', 'frame321.jpg', 'frame322.jpg', 'frame323.jpg', 'frame324.jpg', 'frame325.jpg', 'frame326.jpg', 'frame327.jpg', 'frame328.jpg', 'frame329.jpg', 'frame33.jpg', 'frame330.jpg', 'frame331.jpg', 'frame332.jpg', 'frame333.jpg', 'frame334.jpg', 'frame335.jpg', 'frame336.jpg', 'frame337.jpg', 'frame338.jpg', 'frame34.jpg', 'frame35.jpg', 'frame36.jpg', 'frame364.jpg', 'frame365.jpg', 'frame366.jpg', 'frame367.jpg', 'frame368.jpg', 'frame369.jpg', 'frame37.jpg', 'frame370.jpg', 'frame371.jpg', 'frame372.jpg', 'frame373.jpg', 'frame374.jpg', 'frame375.jpg', 'frame376.jpg', 'frame377.jpg', 'frame378.jpg', 'frame379.jpg', 'frame38.jpg', 'frame380.jpg', 'frame381.jpg', 'frame382.jpg', 'frame383.jpg', 'frame384.jpg', 'frame385.jpg', 'frame386.jpg', 'frame387.jpg', 'frame388.jpg', 'frame389.jpg', 'frame39.jpg', 'frame390.jpg', 'frame391.jpg', 'frame392.jpg', 'frame393.jpg', 'frame394.jpg', 'frame395.jpg', 'frame396.jpg', 'frame397.jpg', 'frame398.jpg', 'frame399.jpg', 'frame4.jpg', 'frame40.jpg', 'frame400.jpg', 'frame401.jpg', 'frame402.jpg', 'frame403.jpg', 'frame404.jpg', 'frame405.jpg', 'frame406.jpg', 'frame407.jpg', 'frame408.jpg', 'frame409.jpg', 'frame41.jpg', 'frame410.jpg', 'frame413.jpg', 'frame414.jpg', 'frame415.jpg', 'frame416.jpg', 'frame417.jpg', 'frame418.jpg', 'frame419.jpg', 'frame42.jpg', 'frame420.jpg', 'frame421.jpg', 'frame422.jpg', 'frame423.jpg', 'frame424.jpg', 'frame425.jpg', 'frame426.jpg', 'frame427.jpg', 'frame428.jpg', 'frame429.jpg', 'frame430.jpg', 'frame431.jpg', 'frame432.jpg', 'frame433.jpg', 'frame434.jpg', 'frame435.jpg', 'frame436.jpg', 'frame437.jpg', 'frame438.jpg', 'frame439.jpg', 'frame440.jpg', 'frame441.jpg', 'frame442.jpg', 'frame443.jpg', 'frame444.jpg', 'frame445.jpg', 'frame446.jpg', 'frame447.jpg', 'frame448.jpg', 'frame449.jpg', 'frame45.jpg', 'frame450.jpg', 'frame451.jpg', 'frame452.jpg', 'frame453.jpg', 'frame454.jpg', 'frame455.jpg', 'frame456.jpg', 'frame457.jpg', 'frame458.jpg', 'frame459.jpg', 'frame46.jpg', 'frame460.jpg', 'frame461.jpg', 'frame462.jpg', 'frame463.jpg', 'frame464.jpg', 'frame465.jpg', 'frame466.jpg', 'frame467.jpg', 'frame468.jpg', 'frame469.jpg', 'frame47.jpg', 'frame470.jpg', 'frame471.jpg', 'frame472.jpg', 'frame473.jpg', 'frame474.jpg', 'frame475.jpg', 'frame476.jpg', 'frame477.jpg', 'frame478.jpg', 'frame479.jpg', 'frame48.jpg', 'frame480.jpg', 'frame481.jpg', 'frame482.jpg', 'frame483.jpg', 'frame484.jpg', 'frame485.jpg', 'frame486.jpg', 'frame487.jpg', 'frame488.jpg', 'frame489.jpg', 'frame49.jpg', 'frame490.jpg', 'frame491.jpg', 'frame492.jpg', 'frame493.jpg', 'frame494.jpg', 'frame495.jpg', 'frame496.jpg', 'frame497.jpg', 'frame498.jpg', 'frame499.jpg', 'frame5.jpg', 'frame50.jpg', 'frame500.jpg', 'frame501.jpg', 'frame502.jpg', 
+#         'frame503.jpg', 'frame504.jpg', 'frame505.jpg', 'frame506.jpg', 'frame507.jpg', 'frame508.jpg', 'frame509.jpg', 'frame51.jpg', 'frame510.jpg', 'frame511.jpg', 'frame512.jpg', 'frame513.jpg', 'frame514.jpg', 'frame515.jpg', 'frame516.jpg', 'frame517.jpg', 'frame518.jpg', 'frame519.jpg', 'frame52.jpg', 'frame520.jpg', 'frame521.jpg', 'frame522.jpg', 'frame523.jpg', 'frame524.jpg', 'frame525.jpg', 'frame526.jpg', 'frame527.jpg', 'frame528.jpg', 'frame529.jpg', 'frame53.jpg', 'frame530.jpg', 'frame531.jpg', 'frame532.jpg', 'frame533.jpg', 'frame534.jpg', 'frame535.jpg', 'frame536.jpg', 'frame537.jpg', 'frame538.jpg', 'frame539.jpg', 'frame54.jpg', 'frame540.jpg', 'frame541.jpg', 'frame542.jpg', 'frame543.jpg', 'frame544.jpg', 'frame545.jpg', 'frame546.jpg', 'frame547.jpg', 'frame548.jpg', 'frame549.jpg', 'frame55.jpg', 'frame550.jpg', 'frame551.jpg', 'frame552.jpg', 'frame553.jpg', 'frame554.jpg', 'frame555.jpg', 'frame556.jpg', 'frame557.jpg', 'frame558.jpg', 'frame559.jpg', 'frame56.jpg', 'frame560.jpg', 'frame561.jpg', 'frame562.jpg', 'frame563.jpg', 'frame566.jpg', 'frame567.jpg', 'frame568.jpg', 'frame569.jpg', 'frame57.jpg', 'frame570.jpg', 'frame571.jpg', 'frame572.jpg', 'frame573.jpg', 'frame574.jpg', 'frame575.jpg', 'frame576.jpg', 'frame577.jpg', 'frame578.jpg', 'frame579.jpg', 'frame58.jpg', 'frame580.jpg', 'frame581.jpg', 'frame582.jpg', 'frame583.jpg', 'frame584.jpg', 'frame585.jpg', 'frame586.jpg', 'frame587.jpg', 'frame588.jpg', 'frame589.jpg', 'frame59.jpg', 'frame590.jpg', 'frame591.jpg', 'frame592.jpg', 'frame593.jpg', 'frame594.jpg', 'frame595.jpg', 'frame596.jpg', 'frame597.jpg', 'frame598.jpg', 'frame599.jpg', 'frame6.jpg', 'frame60.jpg', 'frame600.jpg', 'frame601.jpg', 'frame602.jpg', 'frame603.jpg', 'frame604.jpg', 'frame605.jpg', 'frame606.jpg', 'frame607.jpg', 'frame608.jpg', 'frame609.jpg', 'frame61.jpg', 'frame610.jpg', 'frame611.jpg', 'frame612.jpg', 'frame613.jpg', 'frame614.jpg', 'frame615.jpg', 'frame616.jpg', 'frame617.jpg', 'frame618.jpg', 'frame619.jpg', 'frame62.jpg', 'frame620.jpg', 'frame621.jpg', 'frame622.jpg', 'frame623.jpg', 'frame624.jpg', 'frame625.jpg', 'frame626.jpg', 'frame627.jpg', 'frame628.jpg', 'frame629.jpg', 'frame63.jpg', 'frame630.jpg', 'frame631.jpg', 'frame632.jpg', 'frame633.jpg', 'frame634.jpg', 'frame635.jpg', 'frame636.jpg', 'frame637.jpg', 'frame638.jpg', 'frame639.jpg', 'frame64.jpg', 'frame640.jpg', 'frame641.jpg', 'frame642.jpg', 'frame643.jpg', 'frame644.jpg', 'frame645.jpg', 'frame646.jpg', 'frame647.jpg', 'frame648.jpg', 'frame649.jpg', 'frame65.jpg', 'frame650.jpg', 'frame651.jpg', 'frame652.jpg', 'frame653.jpg', 'frame654.jpg', 'frame655.jpg', 'frame656.jpg', 'frame657.jpg', 'frame658.jpg', 'frame659.jpg', 'frame66.jpg', 'frame660.jpg', 'frame661.jpg', 'frame662.jpg', 'frame663.jpg', 'frame664.jpg', 'frame665.jpg', 'frame666.jpg', 'frame667.jpg', 'frame668.jpg', 'frame669.jpg', 'frame67.jpg', 'frame670.jpg', 'frame671.jpg', 'frame672.jpg', 'frame673.jpg', 'frame674.jpg', 'frame675.jpg', 'frame676.jpg', 'frame677.jpg', 'frame678.jpg', 'frame679.jpg', 'frame68.jpg', 'frame680.jpg', 'frame681.jpg', 'frame682.jpg', 'frame683.jpg', 'frame684.jpg', 'frame685.jpg', 'frame686.jpg', 'frame687.jpg', 'frame688.jpg', 'frame689.jpg', 'frame69.jpg', 'frame690.jpg', 'frame691.jpg', 'frame692.jpg', 'frame693.jpg', 'frame694.jpg', 'frame695.jpg', 'frame696.jpg', 'frame697.jpg', 'frame698.jpg', 'frame699.jpg', 'frame7.jpg', 'frame70.jpg', 'frame700.jpg', 'frame701.jpg', 'frame702.jpg', 'frame703.jpg', 'frame704.jpg', 'frame705.jpg', 'frame706.jpg', 'frame707.jpg', 'frame708.jpg', 'frame709.jpg', 'frame71.jpg', 'frame710.jpg', 'frame711.jpg', 'frame712.jpg', 'frame713.jpg', 'frame714.jpg', 'frame715.jpg', 'frame716.jpg', 'frame717.jpg', 'frame718.jpg', 'frame719.jpg', 'frame72.jpg', 'frame720.jpg', 'frame721.jpg', 'frame722.jpg', 'frame723.jpg', 'frame724.jpg', 'frame725.jpg', 'frame726.jpg', 'frame727.jpg', 'frame728.jpg', 'frame729.jpg', 'frame73.jpg', 'frame730.jpg', 'frame74.jpg', 'frame75.jpg', 'frame76.jpg', 'frame763.jpg', 'frame764.jpg', 'frame765.jpg', 'frame766.jpg', 'frame767.jpg', 'frame768.jpg', 'frame769.jpg', 'frame77.jpg', 'frame770.jpg', 'frame771.jpg', 'frame772.jpg', 'frame773.jpg', 'frame774.jpg', 'frame78.jpg', 'frame79.jpg', 'frame793.jpg', 'frame794.jpg', 'frame795.jpg', 'frame796.jpg', 'frame797.jpg', 'frame8.jpg', 'frame80.jpg', 'frame800.jpg', 'frame801.jpg', 'frame802.jpg', 'frame803.jpg', 'frame804.jpg', 'frame805.jpg', 'frame806.jpg', 'frame807.jpg', 'frame808.jpg', 'frame809.jpg', 'frame81.jpg', 'frame810.jpg', 'frame811.jpg', 'frame812.jpg', 'frame813.jpg', 'frame814.jpg', 'frame815.jpg', 'frame816.jpg', 'frame817.jpg', 'frame818.jpg', 'frame819.jpg', 'frame82.jpg', 'frame820.jpg', 'frame821.jpg', 'frame822.jpg', 'frame823.jpg', 'frame824.jpg', 'frame825.jpg', 'frame826.jpg', 'frame827.jpg', 'frame828.jpg', 'frame829.jpg', 'frame83.jpg', 'frame830.jpg', 'frame831.jpg', 'frame832.jpg', 'frame833.jpg', 'frame834.jpg', 'frame835.jpg', 'frame836.jpg', 'frame837.jpg', 'frame838.jpg', 'frame839.jpg', 'frame84.jpg', 'frame840.jpg', 'frame841.jpg', 'frame842.jpg', 'frame843.jpg', 'frame844.jpg', 'frame845.jpg', 'frame846.jpg', 'frame847.jpg', 'frame848.jpg', 'frame849.jpg', 'frame85.jpg', 'frame850.jpg', 'frame851.jpg', 'frame852.jpg', 'frame853.jpg', 'frame854.jpg', 'frame855.jpg', 'frame856.jpg', 'frame857.jpg', 'frame858.jpg', 'frame859.jpg', 'frame86.jpg', 'frame860.jpg', 'frame861.jpg', 'frame862.jpg', 'frame863.jpg', 'frame864.jpg', 'frame865.jpg', 'frame866.jpg', 'frame867.jpg', 'frame868.jpg', 'frame869.jpg', 'frame87.jpg', 'frame870.jpg', 'frame871.jpg', 'frame872.jpg', 'frame873.jpg', 'frame874.jpg', 'frame875.jpg', 'frame876.jpg', 'frame877.jpg', 'frame878.jpg', 'frame879.jpg', 'frame88.jpg', 'frame880.jpg', 'frame881.jpg', 'frame882.jpg', 'frame883.jpg', 'frame884.jpg', 'frame885.jpg', 'frame886.jpg', 'frame887.jpg', 'frame888.jpg', 'frame889.jpg', 'frame89.jpg', 'frame890.jpg', 'frame891.jpg', 'frame892.jpg', 'frame893.jpg', 'frame894.jpg', 'frame895.jpg', 'frame896.jpg', 'frame897.jpg', 'frame898.jpg', 'frame899.jpg', 'frame9.jpg', 'frame90.jpg', 'frame900.jpg', 'frame901.jpg', 'frame902.jpg', 'frame903.jpg', 'frame904.jpg', 'frame905.jpg', 'frame906.jpg', 'frame907.jpg', 'frame908.jpg', 'frame909.jpg', 'frame91.jpg', 'frame910.jpg', 'frame911.jpg', 'frame912.jpg', 'frame913.jpg', 'frame914.jpg', 'frame915.jpg', 'frame916.jpg', 'frame917.jpg', 'frame918.jpg', 'frame919.jpg', 'frame92.jpg', 'frame920.jpg', 'frame921.jpg', 'frame922.jpg', 'frame923.jpg', 'frame924.jpg', 'frame925.jpg', 'frame926.jpg', 'frame927.jpg', 'frame928.jpg', 'frame929.jpg', 'frame93.jpg', 'frame930.jpg', 'frame931.jpg', 'frame932.jpg', 'frame933.jpg', 'frame934.jpg', 'frame935.jpg', 'frame936.jpg', 'frame937.jpg', 'frame938.jpg', 'frame939.jpg', 'frame94.jpg', 'frame940.jpg', 'frame941.jpg', 'frame942.jpg', 'frame943.jpg', 'frame944.jpg', 'frame945.jpg', 'frame946.jpg', 'frame947.jpg', 'frame948.jpg', 'frame949.jpg', 'frame95.jpg', 'frame950.jpg', 'frame951.jpg', 'frame952.jpg', 'frame953.jpg', 'frame954.jpg', 'frame955.jpg', 'frame956.jpg', 'frame957.jpg', 'frame958.jpg', 'frame959.jpg', 'frame96.jpg', 'frame960.jpg', 'frame961.jpg', 'frame962.jpg', 'frame963.jpg', 'frame964.jpg', 'frame965.jpg', 'frame966.jpg', 'frame967.jpg', 'frame968.jpg', 'frame969.jpg', 'frame97.jpg', 'frame970.jpg', 'frame971.jpg', 'frame972.jpg', 'frame973.jpg', 'frame974.jpg', 'frame975.jpg', 'frame976.jpg', 'frame977.jpg', 'frame978.jpg', 'frame979.jpg', 'frame98.jpg', 'frame980.jpg', 'frame981.jpg', 'frame982.jpg', 'frame983.jpg', 'frame984.jpg', 'frame985.jpg', 'frame986.jpg', 'frame987.jpg', 'frame988.jpg', 'frame989.jpg', 'frame99.jpg', 'frame990.jpg', 'frame991.jpg', 'frame992.jpg', 'frame993.jpg', 'frame994.jpg', 'frame995.jpg', 'frame996.jpg', 'frame997.jpg', 'frame998.jpg', 'frame999.jpg'
+#     ]
+
+# positives = []
+
+# for key, values in idendities.items():
     
-    #print(key)
-    for i in range(0, len(values)-1):
-        for j in range(i+1, len(values)):
-            #print(values[i], " and ", values[j])
-            positive = []
-            positive.append(values[i])
-            positive.append(values[j])
-            positives.append(positive)
+#     #print(key)
+#     for i in range(0, len(values)-1):
+#         for j in range(i+1, len(values)):
+#             #print(values[i], " and ", values[j])
+#             positive = []
+#             positive.append(values[i])
+#             positive.append(values[j])
+#             positives.append(positive)
 
-positives = pd.DataFrame(positives, columns = ["file_x", "file_y"])
-positives["decision"] = "Yes"
+# positives = pd.DataFrame(positives, columns = ["file_x", "file_y"])
+# positives["decision"] = "Yes"
 
-samples_list = list(idendities.values())
+# samples_list = list(idendities.values())
 
 
-negatives = []
+# negatives = []
 
-for i in range(0, len(idendities) - 1):
-    for j in range(i+1, len(idendities)):
-        #print(samples_list[i], " vs ",samples_list[j]) 
-        cross_product = itertools.product(samples_list[i], samples_list[j])
-        cross_product = list(cross_product)
-        #print(cross_product)
+# for i in range(0, len(idendities) - 1):
+#     for j in range(i+1, len(idendities)):
+#         #print(samples_list[i], " vs ",samples_list[j]) 
+#         cross_product = itertools.product(samples_list[i], samples_list[j])
+#         cross_product = list(cross_product)
+#         #print(cross_product)
         
-        for cross_sample in cross_product:
-            #print(cross_sample[0], " vs ", cross_sample[1])
-            negative = []
-            negative.append(cross_sample[0])
-            negative.append(cross_sample[1])
-            negatives.append(negative)
+#         for cross_sample in cross_product:
+#             #print(cross_sample[0], " vs ", cross_sample[1])
+#             negative = []
+#             negative.append(cross_sample[0])
+#             negative.append(cross_sample[1])
+#             negatives.append(negative)
 
-negatives = pd.DataFrame(negatives, columns = ["file_x", "file_y"])
-negatives["decision"] = "No"
+# negatives = pd.DataFrame(negatives, columns = ["file_x", "file_y"])
+# negatives["decision"] = "No"
 
-df = pd.concat([positives, negatives]).reset_index(drop = True)
+# df = pd.concat([positives, negatives]).reset_index(drop = True)
 
-negatives["decision"] = "Yes"
+# negatives["decision"] = "Yes"
 
-negatives.decision.value_counts()
-
-
-download_files(
-    s3_client,
-    "rag-net-v2-0c6f96b8050c43fd-inputs",
-    "/app/input",
-    file_names=id,
-    dir="droneSURF/Active_Morn_L1/3/"
-)
-
-dataset_path = "/app/input/"
+# negatives.decision.value_counts()
 
 
-negatives.file_x = dataset_path + negatives.file_x
-negatives.file_y = dataset_path + negatives.file_y
+# download_files(
+#     s3_client,
+#     "rag-net-v2-0c6f96b8050c43fd-inputs",
+#     "/app/input",
+#     file_names=id,
+#     dir="droneSURF/Active_Morn_L1/3/"
+# )
+
+# dataset_path = "/app/input/"
 
 
-instances = negatives[["file_x", "file_y"]].values.tolist()
+# negatives.file_x = dataset_path + negatives.file_x
+# negatives.file_y = dataset_path + negatives.file_y
+
+
+# instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
 
-print("P3")
-resp_obj3 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
-print("P3 Done")
+# print("P3")
+# resp_obj3 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
+# print("P3 Done")
 
 
-fil = 'output/DeepFaceActiveMornL1/dict3.json'
-s3_client.download_file(
-    "rag-net-v2-0c6f96b8050c43fd-outputs",
-    fil,
-    "/app/output/dict3.json"
-)
+# fil = 'output/DlibActiveMornL1/dict3.json'
+# s3_client.download_file(
+#     "rag-net-v2-0c6f96b8050c43fd-outputs",
+#     fil,
+#     "/app/output/dict3.json"
+# )
 
-with open("/app/output/dict3.json", "w") as outfile:
-    json.dump(resp_obj3, outfile)
+# with open("/app/output/dict3.json", "w") as outfile:
+#     json.dump(resp_obj3, outfile)
 
-s3_client.upload_file("/app/output/dict3.json", 
-"rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict3.json")
+# s3_client.upload_file("/app/output/dict3.json", 
+# "rag-net-v2-0c6f96b8050c43fd-outputs", 
+# "output/DlibActiveMornL1/dict3.json")
 
 
 
@@ -419,7 +419,9 @@ print("P4")
 resp_obj4 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P4 Done")
 
-fil = 'output/DeepFaceActiveMornL1/dict4.json'
+os.mkdir("/app/output")
+
+fil = 'output/DlibActiveMornL1/dict4.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -431,7 +433,7 @@ with open("/app/output/dict4.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict4.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict4.json")
+"output/DlibActiveMornL1/dict4.json")
 
 
 # P5
@@ -517,7 +519,7 @@ resp_obj5 = DeepFace.verify(instances, model_name = model_name, distance_metric 
 print("P5 Done")
 
 
-fil = 'output/DeepFaceActiveMornL1/dict5.json'
+fil = 'output/DlibActiveMornL1/dict5.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -529,7 +531,7 @@ with open("/app/output/dict5.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict5.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict5.json")
+"output/DlibActiveMornL1/dict5.json")
 
 
 # P6
@@ -615,7 +617,7 @@ print("P6")
 resp_obj6 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P6 Done")
 
-fil = 'output/DeepFaceActiveMornL1/dict6.json'
+fil = 'output/DlibActiveMornL1/dict6.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -627,7 +629,7 @@ with open("/app/output/dict6.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict6.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict6.json")
+"output/DlibActiveMornL1/dict6.json")
 
 
 
@@ -712,7 +714,7 @@ resp_obj7 = DeepFace.verify(instances, model_name = model_name, distance_metric 
 print("P7 Done")
 
 
-fil = 'output/DeepFaceActiveMornL1/dict7.json'
+fil = 'output/DlibActiveMornL1/dict7.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -724,7 +726,7 @@ with open("/app/output/dict7.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict7.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict7.json")
+"output/DlibActiveMornL1/dict7.json")
 
 
 
@@ -807,7 +809,7 @@ resp_obj8 = DeepFace.verify(instances, model_name = model_name, distance_metric 
 print("P8 Done")
 
 
-fil = 'output/DeepFaceActiveMornL1/dict8.json'
+fil = 'output/DlibActiveMornL1/dict8.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -819,7 +821,7 @@ with open("/app/output/dict8.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict8.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict8.json")
+"output/DlibActiveMornL1/dict8.json")
 
 
 # P9
@@ -902,7 +904,7 @@ print("P9")
 resp_obj9 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P9 Done")
 
-fil = 'output/DeepFaceActiveMornL1/dict9.json'
+fil = 'output/DlibActiveMornL1/dict9.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -914,7 +916,7 @@ with open("/app/output/dict9.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict9.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict9.json")
+"output/DlibActiveMornL1/dict9.json")
 
 
 # P10
@@ -997,7 +999,7 @@ resp_obj10 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P10 Done")
 
 
-fil = 'output/DeepFaceActiveMornL1/dict10.json'
+fil = 'output/DlibActiveMornL1/dict10.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -1009,7 +1011,7 @@ with open("/app/output/dict10.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict10.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict10.json")
+"output/DlibActiveMornL1/dict10.json")
 
 
 # P11
@@ -1093,7 +1095,7 @@ resp_obj11 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P11 Done")
 
 
-fil = 'output/DeepFaceActiveMornL1/dict11.json'
+fil = 'output/DlibActiveMornL1/dict11.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -1105,7 +1107,7 @@ with open("/app/output/dict11.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict11.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict11.json")
+"output/DlibActiveMornL1/dict11.json")
 
 
 
@@ -1190,7 +1192,7 @@ resp_obj12 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P12 Done")
 
 
-fil = 'output/DeepFaceActiveMornL1/dict12.json'
+fil = 'output/DlibActiveMornL1/dict12.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -1202,7 +1204,7 @@ with open("/app/output/dict12.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict12.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict12.json")
+"output/DlibActiveMornL1/dict12.json")
 
 
 
@@ -1287,7 +1289,7 @@ print("P13")
 resp_obj13 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P13 Done")
 
-fil = 'output/DeepFaceActiveMornL1/dict13.json'
+fil = 'output/DlibActiveMornL1/dict13.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -1299,7 +1301,7 @@ with open("/app/output/dict13.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict13.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict13.json")
+"output/DlibActiveMornL1/dict13.json")
 
 
 
@@ -1386,7 +1388,7 @@ resp_obj14 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P14 Done")
 
 
-fil = 'output/DeepFaceActiveMornL1/dict14.json'
+fil = 'output/DlibActiveMornL1/dict14.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -1398,7 +1400,7 @@ with open("/app/output/dict14.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict14.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict14.json")
+"output/DlibActiveMornL1/dict14.json")
 
 
 
@@ -1483,7 +1485,7 @@ resp_obj15 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P15 Done")
 
 
-fil = 'output/DeepFaceActiveMornL1/dict15.json'
+fil = 'output/DlibActiveMornL1/dict15.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -1495,7 +1497,7 @@ with open("/app/output/dict15.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict15.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict15.json")
+"output/DlibActiveMornL1/dict15.json")
 
 
 # P16
@@ -1580,7 +1582,7 @@ resp_obj16 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P16 Done")
 
 
-fil = 'output/DeepFaceActiveMornL1/dict16.json'
+fil = 'output/DlibActiveMornL1/dict16.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -1592,7 +1594,7 @@ with open("/app/output/dict16.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict16.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict16.json")
+"output/DlibActiveMornL1/dict16.json")
 
 
 
@@ -1682,7 +1684,7 @@ resp_obj17 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P17 Done")
 
 
-fil = 'output/DeepFaceActiveMornL1/dict17.json'
+fil = 'output/DlibActiveMornL1/dict17.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -1694,7 +1696,7 @@ with open("/app/output/dict17.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict17.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict17.json")
+"output/DlibActiveMornL1/dict17.json")
 
 
 
@@ -1783,7 +1785,7 @@ resp_obj18 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P18 Done")
 
 
-fil = 'output/DeepFaceActiveMornL1/dict18.json'
+fil = 'output/DlibActiveMornL1/dict18.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -1795,7 +1797,7 @@ with open("/app/output/dict18.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict18.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict18.json")
+"output/DlibActiveMornL1/dict18.json")
 
 
 # P19
@@ -1880,7 +1882,7 @@ print("P19")
 resp_obj19 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P19 Done")
 
-fil = 'output/DeepFaceActiveMornL1/dict19.json'
+fil = 'output/DlibActiveMornL1/dict19.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -1892,7 +1894,7 @@ with open("/app/output/dict19.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict19.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict19.json")
+"output/DlibActiveMornL1/dict19.json")
 
 
 
@@ -1980,7 +1982,7 @@ resp_obj20 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P20 Done")
 
 
-fil = 'output/DeepFaceActiveMornL1/dict20.json'
+fil = 'output/DlibActiveMornL1/dict20.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -1992,7 +1994,7 @@ with open("/app/output/dict20.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict20.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict20.json")
+"output/DlibActiveMornL1/dict20.json")
 
 
 
@@ -2079,7 +2081,7 @@ resp_obj21 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P21 Done")
 
 
-fil = 'output/DeepFaceActiveMornL1/dict21.json'
+fil = 'output/DlibActiveMornL1/dict21.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -2091,7 +2093,7 @@ with open("/app/output/dict21.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict21.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict21.json")
+"output/DlibActiveMornL1/dict21.json")
 
 
 
@@ -2179,7 +2181,7 @@ resp_obj22 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P22 Done")
 
 
-fil = 'output/DeepFaceActiveMornL1/dict22.json'
+fil = 'output/DlibActiveMornL1/dict22.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -2191,7 +2193,7 @@ with open("/app/output/dict22.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict22.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict22.json")
+"output/DlibActiveMornL1/dict22.json")
 
 
 
@@ -2279,7 +2281,7 @@ resp_obj23 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P23 Done")
 
 
-fil = 'output/DeepFaceActiveMornL1/dict23.json'
+fil = 'output/DlibActiveMornL1/dict23.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -2291,7 +2293,7 @@ with open("/app/output/dict23.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict23.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict23.json")
+"output/DlibActiveMornL1/dict23.json")
 
 
 # P24
@@ -2376,7 +2378,7 @@ resp_obj24 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P24 Done")
 
 
-fil = 'output/DeepFaceActiveMornL1/dict24.json'
+fil = 'output/DlibActiveMornL1/dict24.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -2388,7 +2390,7 @@ with open("/app/output/dict24.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict24.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict24.json")
+"output/DlibActiveMornL1/dict24.json")
 
 
 
@@ -2477,7 +2479,7 @@ resp_obj25 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P25 Done")
 
 
-fil = 'output/DeepFaceActiveMornL1/dict25.json'
+fil = 'output/DlibActiveMornL1/dict25.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -2489,7 +2491,7 @@ with open("/app/output/dict25.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict25.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict25.json")
+"output/DlibActiveMornL1/dict25.json")
 
 
 
@@ -2575,7 +2577,7 @@ print("P26")
 resp_obj26 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P26 Done")
 
-fil = 'output/DeepFaceActiveMornL1/dict26.json'
+fil = 'output/DlibActiveMornL1/dict26.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -2587,7 +2589,7 @@ with open("/app/output/dict26.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict26.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict26.json")
+"output/DlibActiveMornL1/dict26.json")
 
 
 # P27
@@ -2674,7 +2676,7 @@ resp_obj27 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P27 Done")
 
 
-fil = 'output/DeepFaceActiveMornL1/dict27.json'
+fil = 'output/DlibActiveMornL1/dict27.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -2686,7 +2688,7 @@ with open("/app/output/dict27.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict27.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict27.json")
+"output/DlibActiveMornL1/dict27.json")
 
 
 
@@ -2776,7 +2778,7 @@ resp_obj28 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P28 Done")
 
 
-fil = 'output/DeepFaceActiveMornL1/dict28.json'
+fil = 'output/DlibActiveMornL1/dict28.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -2788,7 +2790,7 @@ with open("/app/output/dict28.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict28.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict28.json")
+"output/DlibActiveMornL1/dict28.json")
 
 
 # P29
@@ -2876,7 +2878,7 @@ print("P29 Done")
 
 
 
-fil = 'output/DeepFaceActiveMornL1/dict29.json'
+fil = 'output/DlibActiveMornL1/dict29.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -2888,7 +2890,7 @@ with open("/app/output/dict29.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict29.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict29.json")
+"output/DlibActiveMornL1/dict29.json")
 
 
 
@@ -2977,7 +2979,7 @@ resp_obj30 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P30 Done")
 
 
-fil = 'output/DeepFaceActiveMornL1/dict30.json'
+fil = 'output/DlibActiveMornL1/dict30.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -2989,7 +2991,7 @@ with open("/app/output/dict30.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict30.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict30.json")
+"output/DlibActiveMornL1/dict30.json")
 
 
 
@@ -3076,7 +3078,7 @@ resp_obj31 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P31 Done")
 
 
-fil = 'output/DeepFaceActiveMornL1/dict31.json'
+fil = 'output/DlibActiveMornL1/dict31.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -3088,7 +3090,7 @@ with open("/app/output/dict31.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict31.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict31.json")
+"output/DlibActiveMornL1/dict31.json")
 
 
 # P32
@@ -3172,7 +3174,7 @@ print("P32")
 resp_obj32 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P32 Done")
 
-fil = 'output/DeepFaceActiveMornL1/dict32.json'
+fil = 'output/DlibActiveMornL1/dict32.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -3184,7 +3186,7 @@ with open("/app/output/dict32.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict32.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict32.json")
+"output/DlibActiveMornL1/dict32.json")
 
 
 # P33
@@ -3270,7 +3272,7 @@ print("P33 Done")
 
 
 
-fil = 'output/DeepFaceActiveMornL1/dict33.json'
+fil = 'output/DlibActiveMornL1/dict33.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -3282,7 +3284,7 @@ with open("/app/output/dict33.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict33.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict33.json")
+"output/DlibActiveMornL1/dict33.json")
 
 
 # P34
@@ -3362,7 +3364,7 @@ print("P34")
 resp_obj34 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P34 Done")
 
-fil = 'output/DeepFaceActiveMornL1/dict34.json'
+fil = 'output/DlibActiveMornL1/dict34.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -3374,7 +3376,7 @@ with open("/app/output/dict34.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict34.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict34.json")
+"output/DlibActiveMornL1/dict34.json")
 
 
 
@@ -3459,7 +3461,7 @@ print("P35")
 resp_obj35 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P35 Done")
 
-fil = 'output/DeepFaceActiveMornL1/dict35.json'
+fil = 'output/DlibActiveMornL1/dict35.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -3471,7 +3473,7 @@ with open("/app/output/dict35.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict35.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict35.json")
+"output/DlibActiveMornL1/dict35.json")
 
 
 # P36
@@ -3556,7 +3558,7 @@ resp_obj36 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P36 Done")
 
 
-fil = 'output/DeepFaceActiveMornL1/dict36.json'
+fil = 'output/DlibActiveMornL1/dict36.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -3568,7 +3570,7 @@ with open("/app/output/dict36.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict36.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict36.json")
+"output/DlibActiveMornL1/dict36.json")
 
 
 # P37
@@ -3656,7 +3658,7 @@ resp_obj37 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P37 Done")
 
 
-fil = 'output/DeepFaceActiveMornL1/dict37.json'
+fil = 'output/DlibActiveMornL1/dict37.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -3668,7 +3670,7 @@ with open("/app/output/dict37.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict37.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict37.json")
+"output/DlibActiveMornL1/dict37.json")
 
 
 
@@ -3753,7 +3755,7 @@ print("P38")
 resp_obj38 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P38 Done")
 
-fil = 'output/DeepFaceActiveMornL1/dict38.json'
+fil = 'output/DlibActiveMornL1/dict38.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -3765,7 +3767,7 @@ with open("/app/output/dict38.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict38.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict38.json")
+"output/DlibActiveMornL1/dict38.json")
 
 
 
@@ -3849,7 +3851,7 @@ print("P39")
 resp_obj39 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P39 Done")
 
-fil = 'output/DeepFaceActiveMornL1/dict39.json'
+fil = 'output/DlibActiveMornL1/dict39.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -3861,7 +3863,7 @@ with open("/app/output/dict39.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict39.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict39.json")
+"output/DlibActiveMornL1/dict39.json")
 
 
 
@@ -3947,7 +3949,7 @@ print("P40")
 resp_obj40 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P40 Done")
 
-fil = 'output/DeepFaceActiveMornL1/dict40.json'
+fil = 'output/DlibActiveMornL1/dict40.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -3959,7 +3961,7 @@ with open("/app/output/dict40.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict40.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict40.json")
+"output/DlibActiveMornL1/dict40.json")
 
 
 # P41
@@ -4044,7 +4046,7 @@ resp_obj41 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P41 Done")
 
 
-fil = 'output/DeepFaceActiveMornL1/dict41.json'
+fil = 'output/DlibActiveMornL1/dict41.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -4056,7 +4058,7 @@ with open("/app/output/dict41.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict41.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict41.json")
+"output/DlibActiveMornL1/dict41.json")
 
 
 # P42
@@ -4139,7 +4141,7 @@ print("P42")
 resp_obj42 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P42 Done")
 
-fil = 'output/DeepFaceActiveMornL1/dict42.json'
+fil = 'output/DlibActiveMornL1/dict42.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -4151,7 +4153,7 @@ with open("/app/output/dict42.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict42.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict42.json")
+"output/DlibActiveMornL1/dict42.json")
 
 
 # P43
@@ -4235,7 +4237,7 @@ resp_obj43 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P43 Done")
 
 
-fil = 'output/DeepFaceActiveMornL1/dict43.json'
+fil = 'output/DlibActiveMornL1/dict43.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -4247,7 +4249,7 @@ with open("/app/output/dict43.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict43.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict43.json")
+"output/DlibActiveMornL1/dict43.json")
 
 
 
@@ -4333,7 +4335,7 @@ resp_obj44 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P44 Done")
 
 
-fil = 'output/DeepFaceActiveMornL1/dict44.json'
+fil = 'output/DlibActiveMornL1/dict44.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -4345,7 +4347,7 @@ with open("/app/output/dict44.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict44.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict44.json")
+"output/DlibActiveMornL1/dict44.json")
 
 
 # P45
@@ -4428,7 +4430,7 @@ print("P45")
 resp_obj45 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P45 Done")
 
-fil = 'output/DeepFaceActiveMornL1/dict45.json'
+fil = 'output/DlibActiveMornL1/dict45.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -4440,7 +4442,7 @@ with open("/app/output/dict45.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict45.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict45.json")
+"output/DlibActiveMornL1/dict45.json")
 
 
 # P46
@@ -4524,7 +4526,7 @@ print("P46")
 resp_obj46 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P46 Done")
 
-fil = 'output/DeepFaceActiveMornL1/dict46.json'
+fil = 'output/DlibActiveMornL1/dict46.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -4536,7 +4538,7 @@ with open("/app/output/dict46.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict46.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict46.json")
+"output/DlibActiveMornL1/dict46.json")
 
 
 
@@ -4624,7 +4626,7 @@ resp_obj47 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P47 Done")
 
 
-fil = 'output/DeepFaceActiveMornL1/dict47.json'
+fil = 'output/DlibActiveMornL1/dict47.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -4636,7 +4638,7 @@ with open("/app/output/dict47.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict47.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict47.json")
+"output/DlibActiveMornL1/dict47.json")
 
 
 # P48
@@ -4724,7 +4726,7 @@ resp_obj48 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P48 Done")
 
 
-fil = 'output/DeepFaceActiveMornL1/dict48.json'
+fil = 'output/DlibActiveMornL1/dict48.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -4736,7 +4738,7 @@ with open("/app/output/dict48.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict48.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict48.json")
+"output/DlibActiveMornL1/dict48.json")
 
 
 
@@ -4822,7 +4824,7 @@ print("P49")
 resp_obj49 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P49 Done")
 
-fil = 'output/DeepFaceActiveMornL1/dict49.json'
+fil = 'output/DlibActiveMornL1/dict49.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -4834,7 +4836,7 @@ with open("/app/output/dict49.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict49.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict49.json")
+"output/DlibActiveMornL1/dict49.json")
 
 
 # P50
@@ -4920,7 +4922,7 @@ resp_obj50 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P50 Done")
 
 
-fil = 'output/DeepFaceActiveMornL1/dict50.json'
+fil = 'output/DlibActiveMornL1/dict50.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -4932,7 +4934,7 @@ with open("/app/output/dict50.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict50.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict50.json")
+"output/DlibActiveMornL1/dict50.json")
 
 
 # P51
@@ -5017,7 +5019,7 @@ print("P51")
 resp_obj51 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P51 Done")
 
-fil = 'output/DeepFaceActiveMornL1/dict51.json'
+fil = 'output/DlibActiveMornL1/dict51.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -5029,7 +5031,7 @@ with open("/app/output/dict51.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict51.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict51.json")
+"output/DlibActiveMornL1/dict51.json")
 
 
 # P52
@@ -5114,7 +5116,7 @@ resp_obj52 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P52 Done")
 
 
-fil = 'output/DeepFaceActiveMornL1/dict52.json'
+fil = 'output/DlibActiveMornL1/dict52.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -5126,7 +5128,7 @@ with open("/app/output/dict52.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict52.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict52.json")
+"output/DlibActiveMornL1/dict52.json")
 
 
 # P53
@@ -5208,7 +5210,7 @@ print("P53")
 resp_obj53 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P53 Done")
 
-fil = 'output/DeepFaceActiveMornL1/dict53.json'
+fil = 'output/DlibActiveMornL1/dict53.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -5220,7 +5222,7 @@ with open("/app/output/dict53.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict53.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict53.json")
+"output/DlibActiveMornL1/dict53.json")
 
 
 # P54
@@ -5304,7 +5306,7 @@ print("P54")
 resp_obj54 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P54 Done")
 
-fil = 'output/DeepFaceActiveMornL1/dict54.json'
+fil = 'output/DlibActiveMornL1/dict54.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -5316,7 +5318,7 @@ with open("/app/output/dict54.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict54.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict54.json")
+"output/DlibActiveMornL1/dict54.json")
 
 
 
@@ -5402,7 +5404,7 @@ print("P55")
 resp_obj55 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P55 Done")
 
-fil = 'output/DeepFaceActiveMornL1/dict55.json'
+fil = 'output/DlibActiveMornL1/dict55.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -5414,7 +5416,7 @@ with open("/app/output/dict55.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict55.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict55.json")
+"output/DlibActiveMornL1/dict55.json")
 
 
 # P56
@@ -5497,7 +5499,7 @@ print("P56")
 resp_obj56 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P56 Done")
 
-fil = 'output/DeepFaceActiveMornL1/dict56.json'
+fil = 'output/DlibActiveMornL1/dict56.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -5509,7 +5511,7 @@ with open("/app/output/dict56.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict56.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict56.json")
+"output/DlibActiveMornL1/dict56.json")
 
 
 # P57
@@ -5595,7 +5597,7 @@ resp_obj57 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P57 Done")
 
 
-fil = 'output/DeepFaceActiveMornL1/dict57.json'
+fil = 'output/DlibActiveMornL1/dict57.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -5607,7 +5609,7 @@ with open("/app/output/dict57.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict57.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict57.json")
+"output/DlibActiveMornL1/dict57.json")
 
 
 # P58
@@ -5691,7 +5693,7 @@ print("P58")
 resp_obj58 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P58 Done")
 
-fil = 'output/DeepFaceActiveMornL1/dict58.json'
+fil = 'output/DlibActiveMornL1/dict58.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -5703,4 +5705,4 @@ with open("/app/output/dict58.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict58.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/DeepFaceActiveMornL1/dict58.json")
+"output/DlibActiveMornL1/dict58.json")
