@@ -3481,7 +3481,6 @@ os.mkdir("/app/output")
 # instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
-
 # print("P35")
 # resp_obj35 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 # print("P35 Done")
