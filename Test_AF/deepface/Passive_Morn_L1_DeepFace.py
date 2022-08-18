@@ -4379,6 +4379,7 @@ print("P46")
 resp_obj46 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P46 Done")
 
+os.mkdir("/app/output")
 
 # fil = '/mnt/datasets/rag-net-v2-0c6f96b8050c43fd-outputs/output/DeepFacePassiveMornL1/dict46.json'
 
@@ -4395,8 +4396,6 @@ with open("/app/output/dict46.json", "w") as outfile:
 s3_client.upload_file("/app/output/dict46.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
 "output/DeepFacePassiveMornL1/dict46.json")
-
-
 
 
 # P47
