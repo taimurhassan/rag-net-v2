@@ -2739,7 +2739,6 @@ os.mkdir("/app/output")
 # "output/VGGFacePassiveEvenL2/dict27.json")
 
 
-
 # P28
 idendities = {
     "1": ["down.jpg", "front.jpg", "sideleft.jpg", "sideright.jpg"],
@@ -2815,7 +2814,6 @@ dataset_path = "/app/input/"
 
 negatives.file_x = dataset_path + negatives.file_x
 negatives.file_y = dataset_path + negatives.file_y
-
 
 instances = negatives[["file_x", "file_y"]].values.tolist()
 
