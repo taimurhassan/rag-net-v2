@@ -128,7 +128,6 @@ s3_client = session.client(
 # resp_obj1 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 # print("P1 Done")
 
-os.mkdir("/app/output")
 
 
 # fil = 'output/VGGFacePassiveEvenL2/dict1.json'
@@ -2822,6 +2821,7 @@ print("P28")
 resp_obj28 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P28 Done")
 
+os.mkdir("/app/output")
 
 fil = 'output/VGGFacePassiveEvenL2/dict28.json'
 s3_client.download_file(
