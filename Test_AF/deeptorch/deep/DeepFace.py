@@ -24,7 +24,7 @@ from torchvision.transforms import ToTensor, Resize
 #---------------------------------
 # from basemodels import ShuffleFaceNet, FaceNet, MobileFaceNet
 # from deepface.basemodels import ArcFace, Boosting, VGGFace
-from deep.basemodels import ShuffleFaceNet, FaceNet, MobileFaceNet, ArcFace, PocketNet, ElasticFace, Boosting, VGGFace
+from deep.basemodels import ShuffleFaceNet, FaceNet, MobileFaceNet, ArcFace, PocketNet, ElasticFace, MixFaceNetXS, MixFaceNetM, Boosting, VGGFace
 from deep.extendedmodels import Age, Gender, Race, Emotion
 from deep.commons import functions, realtime, distance as dst
 
@@ -57,6 +57,8 @@ def build_model(model_name):
 		'ArcFace': ArcFace.loadModel,
 		'PocketNet': PocketNet.loadModel,
 		'ElasticFace': ElasticFace.loadModel,
+		'MixFaceNetXS': MixFaceNetXS.loadModel,
+		'MixFaceNetM': MixFaceNetM.loadModel,
 		'Emotion': Emotion.loadModel,
 		'Age': Age.loadModel,
 		'Gender': Gender.loadModel,
@@ -127,7 +129,7 @@ def verify(img1_path, img2_path = '', model_name = 'ShuffleFaceNet', distance_me
 	#--------------------------------
 
 	if model_name == 'Ensemble':
-		model_names = ['ShuffleFaceNet', 'MobileFaceNet', 'FaceNet', 'ArcFace', 'PocketNet', 'ElasticFace']
+		model_names = ['ShuffleFaceNet', 'MobileFaceNet', 'FaceNet', 'ArcFace', 'PocketNet', 'ElasticFace', 'MixFaceNetXS', 'MixFaceNetM']
 		metrics = ["cosine", "euclidean", "euclidean_l2"]
 	else:
 		model_names = []; metrics = []
@@ -789,6 +791,18 @@ def represent(img_path, model_name = 'ShuffleFaceNet', model = None, enforce_det
 		model = ElasticFace.loadModel()
 		target_size = (112, 112)
 		print("ElasticFace was chosen")
+
+	elif model_name == 'MixFaceNetXS':
+		from deep.basemodels import MixFaceNetXS
+		model = MixFaceNetXS.loadModel()
+		target_size = (112, 112)
+		print("MixFaceNetXS was chosen")
+	
+	elif model_name == 'MixFaceNetM':
+		from deep.basemodels import MixFaceNetM
+		model = MixFaceNetM.loadModel()
+		target_size = (112, 112)
+		print("MixFaceNetM was chosen")
 
 
 	#detect and align
