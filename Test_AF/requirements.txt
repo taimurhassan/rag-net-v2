@@ -14,3 +14,13 @@ gdown
 chefboost
 dlib>=19.20.0
 boto3
+
+torch
+easydict
+sklearn
+matplotlib
+pandas
+scikit-image
+menpo
+prettytable
+mxnet==1.6.0
