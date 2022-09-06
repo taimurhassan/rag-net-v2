@@ -346,6 +346,7 @@ s3_client.download_file(
 with open("/app/output/dict3.json", "w") as outfile:
     json.dump(resp_obj3, outfile)
 
+
 s3_client.upload_file("/app/output/dict3.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
 "output/PocketNetActiveEvenL2/dict3.json")
