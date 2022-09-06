@@ -232,8 +232,6 @@ print("P2")
 resp_obj2 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P2 Done")
 
-os.mkdir("/app/output")
-
 fil = 'output/PocketNetActiveMornL2/dict2.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
