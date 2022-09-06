@@ -419,7 +419,6 @@ print("P4")
 resp_obj4 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P4 Done")
 
-
 fil = 'output/PocketNetActiveMornL1/dict4.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
