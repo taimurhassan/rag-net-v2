@@ -6,7 +6,7 @@ from pathlib import Path
 import pickle
 import os
 import json
-from deepface import DeepFace
+from deep import DeepFace
 import boto3
 
 def download_files(s3_client, bucket_name, local_path, file_names, dir):
