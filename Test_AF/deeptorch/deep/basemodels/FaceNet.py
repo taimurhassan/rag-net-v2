@@ -7,7 +7,7 @@ from torch import nn
 from torch.nn import functional as F
 
 import sys
-sys.path.append("C:/Users/mohda/Downloads/DeepFace PyTorch/")
+sys.path.append("/Test_AF/deeptorch/deep")
 
 from deep.facenet_utils.download import download_url_to_file
 

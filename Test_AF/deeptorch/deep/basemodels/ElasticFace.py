@@ -9,7 +9,7 @@ def loadModel(eval=True):
 
     device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
     
-    output_folder = "C:/Users/mohda/Downloads/DeepFace PyTorch/deep/basemodels/Elasticface/weights/ElasticFace-Arc+" # train model output folder
+    output_folder = "/Test_AF/deeptorch/deep/basemodels/Elasticface/weights/ElasticFace-Arc+" # train model output folder
     gpu_id = 0
     
     # type of network to train [iresnet100 | iresnet50]

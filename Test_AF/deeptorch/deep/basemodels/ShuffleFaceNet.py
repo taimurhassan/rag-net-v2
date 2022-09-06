@@ -236,9 +236,9 @@ def loadModel(eval=True):
     device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
     
     if torch.cuda.is_available():
-        ckpt = torch.load('deep/basemodels/Shufflefacenet/best/060.ckpt', map_location=device)
+        ckpt = torch.load('/Test_AF/deeptorch/deep/basemodels/Shufflefacenet/best/060.ckpt', map_location=device)
     else:
-        ckpt = torch.load('deep/basemodels/Shufflefacenet/best/060.ckpt', map_location=device)
+        ckpt = torch.load('/Test_AF/deeptorch/deep/basemodels/Shufflefacenet/best/060.ckpt', map_location=device)
 
     model.load_state_dict(ckpt['net_state_dict'], strict=False)
 

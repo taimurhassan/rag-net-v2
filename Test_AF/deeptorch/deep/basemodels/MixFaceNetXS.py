@@ -11,7 +11,7 @@ def loadModel(eval=True):
     
     device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 
-    output_folder = 'C:/Users/mohda/Downloads/DeepFace PyTorch/deep/basemodels/mixfacenets/weights/MixFaceNet-XS'
+    output_folder = '/Test_AF/deeptorch/deep/basemodels/mixfacenets/weights/MixFaceNet-XS'
 
     #net paramerters
     net_name="mixfacenet"
