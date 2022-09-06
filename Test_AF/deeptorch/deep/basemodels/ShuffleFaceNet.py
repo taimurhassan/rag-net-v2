@@ -291,12 +291,12 @@ def inference(model, img):
     return feat    
 
 
-def get_stats(model):
-    from torchstat import stat
-    statistics = stat(model, (3, 112, 96))
-    print(statistics)
+# def get_stats(model):
+#     from torchstat import stat
+#     statistics = stat(model, (3, 112, 96))
+#     print(statistics)
 
-    return statistics
+#     return statistics
 
 
 

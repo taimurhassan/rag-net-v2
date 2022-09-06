@@ -24,7 +24,8 @@ from torchvision.transforms import ToTensor, Resize
 #---------------------------------
 # from basemodels import ShuffleFaceNet, FaceNet, MobileFaceNet
 # from deepface.basemodels import ArcFace, Boosting, VGGFace
-from deep.basemodels import ShuffleFaceNet, FaceNet, MobileFaceNet, ArcFace, PocketNet, ElasticFace, MixFaceNetXS, MixFaceNetM, Boosting, VGGFace
+# from deep.basemodels import ShuffleFaceNet, FaceNet, MobileFaceNet, ArcFace, PocketNet, ElasticFace, MixFaceNetXS, MixFaceNetM, Boosting, VGGFace
+from deep.basemodels import PocketNet, Boosting
 from deep.extendedmodels import Age, Gender, Race, Emotion
 from deep.commons import functions, realtime, distance as dst
 
@@ -50,15 +51,15 @@ def build_model(model_name):
 	global model_obj #singleton design pattern
 
 	models = {
-		'VGG-Face': VGGFace.loadModel,
-		'ShuffleFaceNet': ShuffleFaceNet.loadModel,
-		'MobileFaceNet': MobileFaceNet.loadModel,
-		'FaceNet': FaceNet.loadModel,
-		'ArcFace': ArcFace.loadModel,
+		# 'VGG-Face': VGGFace.loadModel,
+		# 'ShuffleFaceNet': ShuffleFaceNet.loadModel,
+		# 'MobileFaceNet': MobileFaceNet.loadModel,
+		# 'FaceNet': FaceNet.loadModel,
+		# 'ArcFace': ArcFace.loadModel,
 		'PocketNet': PocketNet.loadModel,
-		'ElasticFace': ElasticFace.loadModel,
-		'MixFaceNetXS': MixFaceNetXS.loadModel,
-		'MixFaceNetM': MixFaceNetM.loadModel,
+		# 'ElasticFace': ElasticFace.loadModel,
+		# 'MixFaceNetXS': MixFaceNetXS.loadModel,
+		# 'MixFaceNetM': MixFaceNetM.loadModel,
 		'Emotion': Emotion.loadModel,
 		'Age': Age.loadModel,
 		'Gender': Gender.loadModel,
@@ -80,7 +81,7 @@ def build_model(model_name):
 
 	return model_obj[model_name]
 
-def verify(img1_path, img2_path = '', model_name = 'ShuffleFaceNet', distance_metric = 'cosine', model = None, enforce_detection = True, detector_backend = 'opencv', align = True, prog_bar = True, normalization = 'base'):
+def verify(img1_path, img2_path = '', model_name = 'PacketNet', distance_metric = 'cosine', model = None, enforce_detection = True, detector_backend = 'opencv', align = True, prog_bar = True, normalization = 'base'):
 
 	"""
 	This function verifies an image pair is same person or different persons.
@@ -129,7 +130,8 @@ def verify(img1_path, img2_path = '', model_name = 'ShuffleFaceNet', distance_me
 	#--------------------------------
 
 	if model_name == 'Ensemble':
-		model_names = ['ShuffleFaceNet', 'MobileFaceNet', 'FaceNet', 'ArcFace', 'PocketNet', 'ElasticFace', 'MixFaceNetXS', 'MixFaceNetM']
+		# model_names = ['ShuffleFaceNet', 'MobileFaceNet', 'FaceNet', 'ArcFace', 'PocketNet', 'ElasticFace', 'MixFaceNetXS', 'MixFaceNetM']
+		model_names = ['PacketNet']
 		metrics = ["cosine", "euclidean", "euclidean_l2"]
 	else:
 		model_names = []; metrics = []
@@ -250,7 +252,7 @@ def verify(img1_path, img2_path = '', model_name = 'ShuffleFaceNet', distance_me
 					"verified": verified
 					, "score": score
 					, "distance": ensemble_features
-					, "model": ["ShuffleFaceNet"]
+					, "model": ["PacketNet"]
 					, "similarity_metric": ["cosine", "euclidean", "euclidean_l2"]
 				}
 
@@ -481,7 +483,7 @@ def analyze(img_path, actions = ('emotion', 'age', 'gender', 'race') , models = 
 		return resp_objects
 
 
-def find(img_path, db_path, model_name ='ShuffleFaceNet', distance_metric = 'cosine', model = None, enforce_detection = True, detector_backend = 'opencv', align = True, prog_bar = True, normalization = 'base', silent=False):
+def find(img_path, db_path, model_name ='PacketNet', distance_metric = 'cosine', model = None, enforce_detection = True, detector_backend = 'opencv', align = True, prog_bar = True, normalization = 'base', silent=False):
 
 	"""
 	This function applies verification several times and find an identity in a database
@@ -541,7 +543,7 @@ def find(img_path, db_path, model_name ='ShuffleFaceNet', distance_metric = 'cos
 		#---------------------------------------
 
 		if model_name == 'Ensemble':
-			model_names = ["ShuffleFaceNet"]
+			model_names = ["PacketNet"]
 			metric_names = ['cosine', 'euclidean', 'euclidean_l2']
 		elif model_name != 'Ensemble':
 			model_names = []; metric_names = []
@@ -731,7 +733,7 @@ def find(img_path, db_path, model_name ='ShuffleFaceNet', distance_metric = 'cos
 
 	return None
 
-def represent(img_path, model_name = 'ShuffleFaceNet', model = None, enforce_detection = True, detector_backend = 'opencv', align = True, normalization = 'base'):
+def represent(img_path, model_name = 'PacketNet', model = None, enforce_detection = True, detector_backend = 'opencv', align = True, normalization = 'base'):
 
 	"""
 	This function represents facial images as vectors.
@@ -756,53 +758,58 @@ def represent(img_path, model_name = 'ShuffleFaceNet', model = None, enforce_det
 	"""
 	device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 
-	if model_name == "ShuffleFaceNet":
-		from deep.basemodels import ShuffleFaceNet
-		model = ShuffleFaceNet.loadModel()
-		target_size = (112, 112)
-		print("ShuffleFaceNet was chosen")
+	# if model_name == "ShuffleFaceNet":
+	# 	from deep.basemodels import ShuffleFaceNet
+	# 	model = ShuffleFaceNet.loadModel()
+	# 	target_size = (112, 112)
+	# 	print("ShuffleFaceNet was chosen")
 
-	elif model_name == "FaceNet":
-		from deep.basemodels import FaceNet
-		model = FaceNet.loadModel()
-		target_size = (112, 112)
-		print("FaceNet was chosen")
+	# elif model_name == "FaceNet":
+	# 	from deep.basemodels import FaceNet
+	# 	model = FaceNet.loadModel()
+	# 	target_size = (112, 112)
+	# 	print("FaceNet was chosen")
 
-	elif model_name == "MobileFaceNet":
-		from deep.basemodels import MobileFaceNet
-		model = MobileFaceNet.loadModel()
-		target_size = (102, 102)
-		print("MobileFaceNet was chosen")
+	# elif model_name == "MobileFaceNet":
+	# 	from deep.basemodels import MobileFaceNet
+	# 	model = MobileFaceNet.loadModel()
+	# 	target_size = (102, 102)
+	# 	print("MobileFaceNet was chosen")
 
-	elif model_name == 'ArcFace':
-		from deep.basemodels import ArcFace
-		model = ArcFace.loadModel()
-		target_size = (112, 112)
-		print("ArcFace was chosen")
+	# elif model_name == 'ArcFace':
+	# 	from deep.basemodels import ArcFace
+	# 	model = ArcFace.loadModel()
+	# 	target_size = (112, 112)
+	# 	print("ArcFace was chosen")
 	
-	elif model_name == 'PocketNet':
-		from deep.basemodels import PocketNet
-		model = PocketNet.loadModel()
-		target_size = (112, 112)
-		print("PocketNet was chosen")
+	# elif model_name == 'PocketNet':
+	# 	from deep.basemodels import PocketNet
+	# 	model = PocketNet.loadModel()
+	# 	target_size = (112, 112)
+	# 	print("PocketNet was chosen")
+	model_name == 'PocketNet'
+	from deep.basemodels import PocketNet
+	model = PocketNet.loadModel()
+	target_size = (112, 112)
+	print("PocketNet was chosen")
 	
-	elif model_name == 'ElasticFace':
-		from deep.basemodels import ElasticFace
-		model = ElasticFace.loadModel()
-		target_size = (112, 112)
-		print("ElasticFace was chosen")
+	# elif model_name == 'ElasticFace':
+	# 	from deep.basemodels import ElasticFace
+	# 	model = ElasticFace.loadModel()
+	# 	target_size = (112, 112)
+	# 	print("ElasticFace was chosen")
 
-	elif model_name == 'MixFaceNetXS':
-		from deep.basemodels import MixFaceNetXS
-		model = MixFaceNetXS.loadModel()
-		target_size = (112, 112)
-		print("MixFaceNetXS was chosen")
+	# elif model_name == 'MixFaceNetXS':
+	# 	from deep.basemodels import MixFaceNetXS
+	# 	model = MixFaceNetXS.loadModel()
+	# 	target_size = (112, 112)
+	# 	print("MixFaceNetXS was chosen")
 	
-	elif model_name == 'MixFaceNetM':
-		from deep.basemodels import MixFaceNetM
-		model = MixFaceNetM.loadModel()
-		target_size = (112, 112)
-		print("MixFaceNetM was chosen")
+	# elif model_name == 'MixFaceNetM':
+	# 	from deep.basemodels import MixFaceNetM
+	# 	model = MixFaceNetM.loadModel()
+	# 	target_size = (112, 112)
+	# 	print("MixFaceNetM was chosen")
 
 
 	#detect and align
@@ -860,7 +867,7 @@ def represent(img_path, model_name = 'ShuffleFaceNet', model = None, enforce_det
 
 	return embedding
 
-def stream(db_path = '', model_name ='ShuffleFaceNet', detector_backend = 'opencv', distance_metric = 'cosine', enable_face_analysis = True, source = 0, time_threshold = 5, frame_threshold = 5):
+def stream(db_path = '', model_name ='PacketNet', detector_backend = 'opencv', distance_metric = 'cosine', enable_face_analysis = True, source = 0, time_threshold = 5, frame_threshold = 5):
 
 	"""
 	This function applies real time face recognition and facial attribute analysis
