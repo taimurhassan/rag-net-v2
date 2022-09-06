@@ -33,7 +33,8 @@ sys.path.append("RAG-NET-V2/deeptorch/deep/")
 def loadModel(eval=True):
     
     # output_folder = "C:/Users/mohda/Downloads/DeepFace PyTorch/deep/basemodels/Pocketnet/weights/PocketNetS-128"
-    output_folder = "basemodels/Pocketnet/weights/PocketNetS-128"
+    # output_folder = "basemodels/Pocketnet/weights/PocketNetS-128"
+    output_folder = "PocketNetS-128"
     embedding_size = 128
     channel=16
     n_layers=18
