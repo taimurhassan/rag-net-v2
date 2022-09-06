@@ -1,4 +1,4 @@
-from deepface.basemodels import VGGFace
+from deep.basemodels import VGGFace
 
 import os
 from pathlib import Path
