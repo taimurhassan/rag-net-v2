@@ -629,7 +629,6 @@ print("P6")
 resp_obj6 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P6 Done")
 
-os.mkdir("/app/output")
 
 fil = 'output/PocketNetActiveEvenL2/dict6.json'
 s3_client.download_file(
