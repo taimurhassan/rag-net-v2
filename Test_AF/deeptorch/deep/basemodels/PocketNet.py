@@ -34,7 +34,7 @@ def loadModel(eval=True):
     
     # output_folder = "C:/Users/mohda/Downloads/DeepFace PyTorch/deep/basemodels/Pocketnet/weights/PocketNetS-128"
     # output_folder = "basemodels/Pocketnet/weights/PocketNetS-128"
-    output_folder = "PocketNetS-128"
+    output_folder = "/Test_AF/deeptorch/deep/basemodels/Pocketnet/weights/PocketNetS-128"
     embedding_size = 128
     channel=16
     n_layers=18
