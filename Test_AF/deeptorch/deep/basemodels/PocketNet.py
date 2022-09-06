@@ -29,7 +29,6 @@ sys.path.append("RAG-NET-V2/deeptorch/deep/")
 
 # genotype = gt.from_str(genotypes["softmax_cifar10"])
 
-
 def loadModel(eval=True):
     
     # output_folder = "C:/Users/mohda/Downloads/DeepFace PyTorch/deep/basemodels/Pocketnet/weights/PocketNetS-128"
