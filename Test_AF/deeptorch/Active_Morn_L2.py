@@ -140,6 +140,7 @@ s3_client.download_file(
     "/app/output/dict1.json"
 )
 
+
 with open("/app/output/dict1.json", "w") as outfile:
     json.dump(resp_obj1, outfile)
 
