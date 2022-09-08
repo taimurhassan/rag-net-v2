@@ -112,7 +112,6 @@ download_files(
 
 dataset_path = "/app/input/"
 
-
 negatives.file_x = dataset_path + negatives.file_x
 negatives.file_y = dataset_path + negatives.file_y
 
