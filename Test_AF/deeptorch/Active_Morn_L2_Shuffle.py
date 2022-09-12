@@ -3897,6 +3897,7 @@ s3_client = session.client(
 # "output/ShuffleFaceNetActiveMornL2/dict39.json")
 
 
+
 # P40
 idendities = {
     "1": ["down.jpg", "front.jpg", "sideleft.jpg", "sideright.jpg"],
