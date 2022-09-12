@@ -3025,6 +3025,7 @@ print("P30")
 resp_obj30 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P30 Done")
 
+os.mkdir("/app/output")
 
 fil = 'output/ShuffleFaceNetPassiveEvenL2/dict30.json'
 s3_client.download_file(
