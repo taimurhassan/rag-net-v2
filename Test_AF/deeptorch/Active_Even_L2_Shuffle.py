@@ -3912,7 +3912,6 @@ print("P39 Done")
 
 os.mkdir("/app/output")
 
-
 fil = 'output/ShuffleFaceNetActiveEvenL2/dict39.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
