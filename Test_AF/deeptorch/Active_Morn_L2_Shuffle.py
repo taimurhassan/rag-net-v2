@@ -4866,7 +4866,6 @@ print("P49 Done")
 
 os.mkdir("/app/output")
 
-
 fil = 'output/ShuffleFaceNetActiveMornL2/dict49.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
