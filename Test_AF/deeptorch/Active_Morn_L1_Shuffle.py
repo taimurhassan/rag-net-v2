@@ -5591,7 +5591,6 @@ negatives.file_y = dataset_path + negatives.file_y
 
 instances = negatives[["file_x", "file_y"]].values.tolist()
 
-
 print("P57")
 resp_obj57 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P57 Done")
