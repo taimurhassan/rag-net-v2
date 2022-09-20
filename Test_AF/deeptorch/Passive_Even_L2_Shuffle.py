@@ -3239,7 +3239,6 @@ s3_client = session.client(
 # "rag-net-v2-0c6f96b8050c43fd-outputs", 
 # "output/ShuffleFaceNetPassiveEvenL2/dict32.json")
 
-
 # P33
 idendities = {
     "1": ["down.jpg", "front.jpg", "sideleft.jpg", "sideright.jpg"],
