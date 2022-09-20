@@ -4106,7 +4106,6 @@ negatives["decision"] = "Yes"
 
 negatives.decision.value_counts()
 
-
 download_files(
     s3_client,
     "rag-net-v2-0c6f96b8050c43fd-inputs",
