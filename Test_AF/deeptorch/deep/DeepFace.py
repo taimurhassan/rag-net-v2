@@ -25,7 +25,7 @@ from torchvision.transforms import ToTensor, Resize
 # from basemodels import ShuffleFaceNet, FaceNet, MobileFaceNet
 # from deepface.basemodels import ArcFace, Boosting, VGGFace
 # from deep.basemodels import ShuffleFaceNet, FaceNet, MobileFaceNet, ArcFace, PocketNet, ElasticFace, MixFaceNetXS, MixFaceNetM, Boosting, VGGFace
-from deep.basemodels import PocketNet, Boosting, ShuffleFaceNet
+from deep.basemodels import PocketNet, Boosting, ShuffleFaceNet, ArcFace
 from deep.commons import functions, distance as dst
 
 import tensorflow as tf
@@ -54,7 +54,7 @@ def build_model(model_name):
 		'ShuffleFaceNet': ShuffleFaceNet.loadModel,
 		# 'MobileFaceNet': MobileFaceNet.loadModel,
 		# 'FaceNet': FaceNet.loadModel,
-		# 'ArcFace': ArcFace.loadModel,
+		'ArcFace': ArcFace.loadModel,
 		'PocketNet': PocketNet.loadModel
 		# 'ElasticFace': ElasticFace.loadModel,
 		# 'MixFaceNetXS': MixFaceNetXS.loadModel,
@@ -336,7 +336,7 @@ def find(img_path, db_path, model_name ='PacketNet', distance_metric = 'cosine',
 		#---------------------------------------
 
 		if model_name == 'Ensemble':
-			model_names = ["PacketNet"]
+			model_names = ["PocketNet"]
 			metric_names = ['cosine', 'euclidean', 'euclidean_l2']
 		elif model_name != 'Ensemble':
 			model_names = []; metric_names = []
@@ -557,10 +557,10 @@ def represent(img_path, model_name = 'PacketNet', model = None, enforce_detectio
 	# 	target_size = (112, 112)
 	# 	print("ShuffleFaceNet was chosen")
 
-	from deep.basemodels import ShuffleFaceNet
-	model = ShuffleFaceNet.loadModel()
-	target_size = (112, 112)
-	print("ShuffleFaceNet was chosen")
+	# from deep.basemodels import ShuffleFaceNet
+	# model = ShuffleFaceNet.loadModel()
+	# target_size = (112, 112)
+	# print("ShuffleFaceNet was chosen")
 
 	# elif model_name == "FaceNet":
 	# 	from deep.basemodels import FaceNet
@@ -574,11 +574,10 @@ def represent(img_path, model_name = 'PacketNet', model = None, enforce_detectio
 	# 	target_size = (102, 102)
 	# 	print("MobileFaceNet was chosen")
 
-	# elif model_name == 'ArcFace':
-	# 	from deep.basemodels import ArcFace
-	# 	model = ArcFace.loadModel()
-	# 	target_size = (112, 112)
-	# 	print("ArcFace was chosen")
+	from deep.basemodels import ArcFace
+	model = ArcFace.loadModel()
+	target_size = (112, 112)
+	print("ArcFace was chosen")
 	
 	# elif model_name == 'PocketNet':
 	# 	from deep.basemodels import PocketNet
