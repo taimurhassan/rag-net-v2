@@ -557,10 +557,10 @@ def represent(img_path, model_name = 'PacketNet', model = None, enforce_detectio
 	# 	target_size = (112, 112)
 	# 	print("ShuffleFaceNet was chosen")
 
-	from deep.basemodels import ShuffleFaceNet
-	model = ShuffleFaceNet.loadModel()
-	target_size = (112, 112)
-	print("ShuffleFaceNet was chosen")
+	# from deep.basemodels import ShuffleFaceNet
+	# model = ShuffleFaceNet.loadModel()
+	# target_size = (112, 112)
+	# print("ShuffleFaceNet was chosen")
 
 	# elif model_name == "FaceNet":
 	# 	from deep.basemodels import FaceNet
@@ -574,10 +574,10 @@ def represent(img_path, model_name = 'PacketNet', model = None, enforce_detectio
 	# 	target_size = (102, 102)
 	# 	print("MobileFaceNet was chosen")
 
-	# from deep.basemodels import ArcFace
-	# model = ArcFace.loadModel()
-	# target_size = (112, 112)
-	# print("ArcFace was chosen")
+	from deep.basemodels import ArcFace
+	model = ArcFace.loadModel()
+	target_size = (112, 112)
+	print("ArcFace was chosen")
 	
 	# elif model_name == 'PocketNet':
 	# 	from deep.basemodels import PocketNet
