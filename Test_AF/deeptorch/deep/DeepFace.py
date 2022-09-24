@@ -25,7 +25,7 @@ from torchvision.transforms import ToTensor, Resize
 # from basemodels import ShuffleFaceNet, FaceNet, MobileFaceNet
 # from deepface.basemodels import ArcFace, Boosting, VGGFace
 # from deep.basemodels import ShuffleFaceNet, FaceNet, MobileFaceNet, ArcFace, PocketNet, ElasticFace, MixFaceNetXS, MixFaceNetM, Boosting, VGGFace
-from deep.basemodels import PocketNet, Boosting, ShuffleFaceNet, ArcFace
+from deep.basemodels import PocketNet, Boosting, ShuffleFaceNet, ArcFace, FaceNet
 from deep.commons import functions, distance as dst
 
 import tensorflow as tf
@@ -53,7 +53,7 @@ def build_model(model_name):
 		# 'VGG-Face': VGGFace.loadModel,
 		'ShuffleFaceNet': ShuffleFaceNet.loadModel,
 		# 'MobileFaceNet': MobileFaceNet.loadModel,
-		# 'FaceNet': FaceNet.loadModel,
+		'FaceNet': FaceNet.loadModel,
 		'ArcFace': ArcFace.loadModel,
 		'PocketNet': PocketNet.loadModel
 		# 'ElasticFace': ElasticFace.loadModel,
@@ -76,7 +76,7 @@ def build_model(model_name):
 
 	return model_obj[model_name]
 
-def verify(img1_path, img2_path = '', model_name = 'PacketNet', distance_metric = 'cosine', model = None, enforce_detection = True, detector_backend = 'opencv', align = True, prog_bar = True, normalization = 'base'):
+def verify(img1_path, img2_path = '', model_name = 'PocketNet', distance_metric = 'cosine', model = None, enforce_detection = True, detector_backend = 'opencv', align = True, prog_bar = True, normalization = 'base'):
 
 	"""
 	This function verifies an image pair is same person or different persons.
@@ -126,7 +126,7 @@ def verify(img1_path, img2_path = '', model_name = 'PacketNet', distance_metric 
 
 	if model_name == 'Ensemble':
 		# model_names = ['ShuffleFaceNet', 'MobileFaceNet', 'FaceNet', 'ArcFace', 'PocketNet', 'ElasticFace', 'MixFaceNetXS', 'MixFaceNetM']
-		model_names = ['PacketNet']
+		model_names = ['PocketNet']
 		metrics = ["cosine", "euclidean", "euclidean_l2"]
 	else:
 		model_names = []; metrics = []
@@ -247,7 +247,7 @@ def verify(img1_path, img2_path = '', model_name = 'PacketNet', distance_metric 
 					"verified": verified
 					, "score": score
 					, "distance": ensemble_features
-					, "model": ["PacketNet"]
+					, "model": ["PocketNet"]
 					, "similarity_metric": ["cosine", "euclidean", "euclidean_l2"]
 				}
 
@@ -276,7 +276,7 @@ def verify(img1_path, img2_path = '', model_name = 'PacketNet', distance_metric 
 		return resp_obj
 
 
-def find(img_path, db_path, model_name ='PacketNet', distance_metric = 'cosine', model = None, enforce_detection = True, detector_backend = 'opencv', align = True, prog_bar = True, normalization = 'base', silent=False):
+def find(img_path, db_path, model_name ='PocketNet', distance_metric = 'cosine', model = None, enforce_detection = True, detector_backend = 'opencv', align = True, prog_bar = True, normalization = 'base', silent=False):
 
 	"""
 	This function applies verification several times and find an identity in a database
@@ -526,7 +526,7 @@ def find(img_path, db_path, model_name ='PacketNet', distance_metric = 'cosine',
 
 	return None
 
-def represent(img_path, model_name = 'PacketNet', model = None, enforce_detection = True, detector_backend = 'opencv', align = True, normalization = 'base'):
+def represent(img_path, model_name = 'FaceNet', model = None, enforce_detection = True, detector_backend = 'opencv', align = True, normalization = 'base'):
 
 	"""
 	This function represents facial images as vectors.
@@ -568,16 +568,21 @@ def represent(img_path, model_name = 'PacketNet', model = None, enforce_detectio
 	# 	target_size = (112, 112)
 	# 	print("FaceNet was chosen")
 
+	from deep.basemodels import FaceNet
+	model = FaceNet.loadModel()
+	target_size = (112, 112)
+	print("FaceNet was chosen")
+
 	# elif model_name == "MobileFaceNet":
 	# 	from deep.basemodels import MobileFaceNet
 	# 	model = MobileFaceNet.loadModel()
 	# 	target_size = (102, 102)
 	# 	print("MobileFaceNet was chosen")
 
-	from deep.basemodels import ArcFace
-	model = ArcFace.loadModel()
-	target_size = (112, 112)
-	print("ArcFace was chosen")
+	# from deep.basemodels import ArcFace
+	# model = ArcFace.loadModel()
+	# target_size = (112, 112)
+	# print("ArcFace was chosen")
 	
 	# elif model_name == 'PocketNet':
 	# 	from deep.basemodels import PocketNet
