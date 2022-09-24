@@ -118,7 +118,6 @@ dataset_path = "/app/input/"
 negatives.file_x = dataset_path + negatives.file_x
 negatives.file_y = dataset_path + negatives.file_y
 
-
 instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
@@ -127,7 +126,6 @@ resp_obj1 = DeepFace.verify(instances, model_name = model_name, distance_metric 
 print("P1 Done")
 
 os.mkdir("/app/output")
-
 
 fil = 'output/ArcAEL1/dict1.json'
 s3_client.download_file(
