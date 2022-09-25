@@ -9,6 +9,7 @@ import json
 from deep import DeepFace
 import boto3
 
+
 def download_files(s3_client, bucket_name, local_path, file_names, dir):
 
     local_path = Path(local_path)
@@ -118,6 +119,7 @@ negatives.file_y = dataset_path + negatives.file_y
 
 
 instances = negatives[["file_x", "file_y"]].values.tolist()
+
 
 print("P1")
 resp_obj1 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
@@ -4326,7 +4328,6 @@ negatives.file_y = dataset_path + negatives.file_y
 
 instances = negatives[["file_x", "file_y"]].values.tolist()
 
-
 print("P44")
 resp_obj44 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P44 Done")
@@ -5587,7 +5588,6 @@ negatives.file_y = dataset_path + negatives.file_y
 
 
 instances = negatives[["file_x", "file_y"]].values.tolist()
-
 
 print("P57")
 resp_obj57 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)

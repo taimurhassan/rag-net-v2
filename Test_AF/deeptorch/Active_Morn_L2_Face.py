@@ -119,16 +119,20 @@ download_files(
 
 dataset_path = "/app/input/"
 
+
 negatives.file_x = dataset_path + negatives.file_x
 negatives.file_y = dataset_path + negatives.file_y
 
+
 instances = negatives[["file_x", "file_y"]].values.tolist()
+
 
 print("P1")
 resp_obj1 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P1 Done")
 
 os.mkdir("/app/output")
+
 
 fil = 'output/FacenetAML2/dict1.json'
 s3_client.download_file(
@@ -3975,6 +3979,7 @@ print("P40")
 resp_obj40 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P40 Done")
 
+
 fil = 'output/FacenetAML2/dict40.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
@@ -4863,6 +4868,7 @@ s3_client.download_file(
     fil,
     "/app/output/dict49.json"
 )
+
 
 with open("/app/output/dict49.json", "w") as outfile:
     json.dump(resp_obj49, outfile)
