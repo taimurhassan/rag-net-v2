@@ -9,7 +9,6 @@ import json
 from deep import DeepFace
 import boto3
 
-
 def download_files(s3_client, bucket_name, local_path, file_names, dir):
 
     local_path = Path(local_path)
