@@ -140,7 +140,6 @@ s3_client.upload_file("/app/output/dict1.json",
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
 "output/ArcAEL1/dict1.json")
 
-
 # P2
 idendities = {
     "1": ["down.jpg", "front.jpg", "sideleft.jpg", "sideright.jpg"],
