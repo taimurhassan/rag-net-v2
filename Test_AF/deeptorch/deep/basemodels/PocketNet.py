@@ -33,7 +33,8 @@ def loadModel(eval=True):
     
     # output_folder = "C:/Users/mohda/Downloads/DeepFace PyTorch/deep/basemodels/Pocketnet/weights/PocketNetS-128"
     # output_folder = "basemodels/Pocketnet/weights/PocketNetS-128"
-    output_folder = "/Test_AF/deeptorch/deep/basemodels/Pocketnet/weights/PocketNetS-128"
+    # output_folder = "/Test_AF/deeptorch/deep/basemodels/Pocketnet/weights/PocketNetS-128"
+    output_folder = "/Test_AF/deeptorch/deep/basemodels/Pocketnet/weights/PocketNetS-128/295672backbone.pth"
     embedding_size = 128
     channel=16
     n_layers=18
@@ -49,15 +50,17 @@ def loadModel(eval=True):
 
     backbone = AugmentCNN(C=channel, n_layers=n_layers, genotype=genotype, stem_multiplier=4,
                        emb=embedding_size).to(device)
+    
+    model = torch.nn.DataParallel(backbone, device_ids=[gpu_id])
                        
-    weights=os.listdir(output_folder)
+    # weights=os.listdir(output_folder)
 
-    for w in weights:
-        if "backbone" in w:
-            backbone=AugmentCNN(C=channel, n_layers=n_layers, genotype=genotype, stem_multiplier=4,
-                    emb=embedding_size).to(f"cuda:{gpu_id}")
-            backbone.load_state_dict(torch.load(os.path.join(output_folder,w)))
-            model = torch.nn.DataParallel(backbone, device_ids=[gpu_id])
+    # for w in weights:
+    #     if "backbone" in w:
+    #         backbone=AugmentCNN(C=channel, n_layers=n_layers, genotype=genotype, stem_multiplier=4,
+    #                 emb=embedding_size).to(f"cuda:{gpu_id}")
+    #         backbone.load_state_dict(torch.load(os.path.join(output_folder,w)))
+    #         model = torch.nn.DataParallel(backbone, device_ids=[gpu_id])
         
     if eval:
         model.eval()

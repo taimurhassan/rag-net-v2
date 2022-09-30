@@ -568,10 +568,10 @@ def represent(img_path, model_name = 'FaceNet', model = None, enforce_detection 
 	# 	target_size = (112, 112)
 	# 	print("FaceNet was chosen")
 
-	from deep.basemodels import FaceNet
-	model = FaceNet.loadModel()
-	target_size = (112, 112)
-	print("FaceNet was chosen")
+	# from deep.basemodels import FaceNet
+	# model = FaceNet.loadModel()
+	# target_size = (112, 112)
+	# print("FaceNet was chosen")
 
 	# elif model_name == "MobileFaceNet":
 	# 	from deep.basemodels import MobileFaceNet
@@ -589,11 +589,11 @@ def represent(img_path, model_name = 'FaceNet', model = None, enforce_detection 
 	# 	model = PocketNet.loadModel()
 	# 	target_size = (112, 112)
 	# 	print("PocketNet was chosen")
-	# model_name == 'PocketNet'
-	# from deep.basemodels import PocketNet
-	# model = PocketNet.loadModel()
-	# target_size = (112, 112)
-	# print("PocketNet was chosen")
+	model_name == 'PocketNet'
+	from deep.basemodels import PocketNet
+	model = PocketNet.loadModel()
+	target_size = (112, 112)
+	print("PocketNet was chosen")
 	
 	# elif model_name == 'ElasticFace':
 	# 	from deep.basemodels import ElasticFace
