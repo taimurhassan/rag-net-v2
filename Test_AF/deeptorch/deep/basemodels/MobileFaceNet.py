@@ -2,7 +2,7 @@
 # sys.path.append('C:/Users/mohda/Downloads/DeepFace PyTorch/deep/basemodels/')
 import os
 import torch
-from deep.basemodels.QuantFace.backbones.mobilefacenet import MobileFaceNet, quantize_model
+from deep.basemodels.QuantFace.backbones.mobilefacenet import MobileFaceNet
 
 
 def loadModel(eval=True):
