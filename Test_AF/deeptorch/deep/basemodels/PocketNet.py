@@ -50,7 +50,9 @@ def loadModel(eval=True):
 
     backbone = AugmentCNN(C=channel, n_layers=n_layers, genotype=genotype, stem_multiplier=4,
                        emb=embedding_size).to(device)
-    
+
+    backbone.load_state_dict(torch.load(output_folder))
+
     model = torch.nn.DataParallel(backbone, device_ids=[gpu_id])
                        
     # weights=os.listdir(output_folder)

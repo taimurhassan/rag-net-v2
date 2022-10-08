@@ -25,7 +25,7 @@ from torchvision.transforms import ToTensor, Resize
 # from basemodels import ShuffleFaceNet, FaceNet, MobileFaceNet
 # from deepface.basemodels import ArcFace, Boosting, VGGFace
 # from deep.basemodels import ShuffleFaceNet, FaceNet, MobileFaceNet, ArcFace, PocketNet, ElasticFace, MixFaceNetXS, MixFaceNetM, Boosting, VGGFace
-from deep.basemodels import PocketNet, Boosting, ShuffleFaceNet, ArcFace, FaceNet
+from deep.basemodels import PocketNet, Boosting, ShuffleFaceNet, ArcFace, FaceNet, MobileFaceNet
 from deep.commons import functions, distance as dst
 
 import tensorflow as tf
@@ -55,7 +55,8 @@ def build_model(model_name):
 		# 'MobileFaceNet': MobileFaceNet.loadModel,
 		'FaceNet': FaceNet.loadModel,
 		'ArcFace': ArcFace.loadModel,
-		'PocketNet': PocketNet.loadModel
+		'PocketNet': PocketNet.loadModel,
+		'MobileFaceNet': MobileFaceNet.loadModel,
 		# 'ElasticFace': ElasticFace.loadModel,
 		# 'MixFaceNetXS': MixFaceNetXS.loadModel,
 		# 'MixFaceNetM': MixFaceNetM.loadModel,
@@ -595,6 +596,12 @@ def represent(img_path, model_name = 'FaceNet', model = None, enforce_detection 
 		model = PocketNet.loadModel()
 		target_size = (112, 112)
 		print("PocketNet was chosen")
+
+	if model_name == 'MobileFaceNet':
+		from deep.basemodels import MobileFaceNet
+		model = MobileFaceNet.loadModel()
+		target_size = (112, 112)
+		print("MobileFaceNet was chosen")
 	
 	# elif model_name == 'ElasticFace':
 	# 	from deep.basemodels import ElasticFace
