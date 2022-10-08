@@ -9,7 +9,7 @@ def loadModel(eval=True):
 
     device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
     
-    output_folder = "/Test_AF/deeptorch/deep/basemodels/QuantFace/weights/MobileFaceNet_FP32/181952backbone.pth"
+    output_folder = "/Test_AF/deeptorch/deep/basemodels/QuantFace/weights/181952backbone.pth"
     gpu_id = 0
     
     # type of network to train [iresnet100 | iresnet50| iresnet18]
