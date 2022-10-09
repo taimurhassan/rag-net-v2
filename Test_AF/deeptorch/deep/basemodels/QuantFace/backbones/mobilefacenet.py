@@ -25,7 +25,7 @@ import math
 #from .common import ECA_Layer, SEBlock, CbamBlock, Identity, GCT
 
 ##################################  Original Arcface Model #############################################################
-from quantization_utils.quant_modules import Quant_Conv2d, Quant_Linear, QuantAct, QuantActPreLu
+# from quantization_utils.quant_modules import Quant_Conv2d, Quant_Linear, QuantAct, QuantActPreLu
 
 
 class Flatten(Module):
@@ -289,48 +289,48 @@ class MobileFaceNet(Module):
         out = self.output_layer(conv_features)
         return out
 
-def quantize_model(model, weight_bit=None, act_bit=None):
-        """
-		Recursively quantize a pretrained single-precision model to int8 quantized model
-		model: pretrained single-precision model
-		"""
-        # if not (weight_bit) and not (act_bit ):
-        #    weight_bit = self.settings.qw
-        #    act_bit = self.settings.qa
-        # quantize convolutional and linear layers
-        if type(model) == nn.Conv2d:
-            quant_mod = Quant_Conv2d(weight_bit=weight_bit)
-            quant_mod.set_param(model)
-            return quant_mod
-        elif type(model) == nn.Linear:
-            quant_mod = Quant_Linear(weight_bit=weight_bit)
-            quant_mod.set_param(model)
-            return quant_mod
-        elif type(model) == nn.PReLU:
-            quant_mod = QuantActPreLu(act_bit=act_bit)
-            quant_mod.set_param(model)
-            return quant_mod
-        # quantize all the activation
-        elif type(model) == nn.ReLU or type(model) == nn.ReLU6 or type(model) == nn.PReLU:
-            return nn.Sequential(*[model, QuantAct(activation_bit=act_bit)])
-        # recursively use the quantized module to replace the single-precision module
-        elif type(model) == nn.Sequential or isinstance(model, nn.Sequential):
-            mods = OrderedDict()
-            for n, m in model.named_children():
-                if isinstance(m, Depth_Wise) and m.residual:
-                    mods[n] = nn.Sequential(
-                        *[quantize_model(m, weight_bit=weight_bit, act_bit=act_bit), QuantAct(activation_bit=act_bit)])
-                else:
-                    mods[n] = quantize_model(m, weight_bit=weight_bit, act_bit=act_bit)
-                # mods.append(self.quantize_model(m))
-            return nn.Sequential(mods)
-        else:
-            q_model = copy.deepcopy(model)
-            for attr in dir(model):
-                mod = getattr(model, attr)
-                if isinstance(mod, nn.Module) and 'norm' not in attr:
-                    setattr(q_model, attr, quantize_model(mod, weight_bit=weight_bit, act_bit=act_bit))
-            return q_model
+# def quantize_model(model, weight_bit=None, act_bit=None):
+#         """
+# 		Recursively quantize a pretrained single-precision model to int8 quantized model
+# 		model: pretrained single-precision model
+# 		"""
+#         # if not (weight_bit) and not (act_bit ):
+#         #    weight_bit = self.settings.qw
+#         #    act_bit = self.settings.qa
+#         # quantize convolutional and linear layers
+#         if type(model) == nn.Conv2d:
+#             quant_mod = Quant_Conv2d(weight_bit=weight_bit)
+#             quant_mod.set_param(model)
+#             return quant_mod
+#         elif type(model) == nn.Linear:
+#             quant_mod = Quant_Linear(weight_bit=weight_bit)
+#             quant_mod.set_param(model)
+#             return quant_mod
+#         elif type(model) == nn.PReLU:
+#             quant_mod = QuantActPreLu(act_bit=act_bit)
+#             quant_mod.set_param(model)
+#             return quant_mod
+#         # quantize all the activation
+#         elif type(model) == nn.ReLU or type(model) == nn.ReLU6 or type(model) == nn.PReLU:
+#             return nn.Sequential(*[model, QuantAct(activation_bit=act_bit)])
+#         # recursively use the quantized module to replace the single-precision module
+#         elif type(model) == nn.Sequential or isinstance(model, nn.Sequential):
+#             mods = OrderedDict()
+#             for n, m in model.named_children():
+#                 if isinstance(m, Depth_Wise) and m.residual:
+#                     mods[n] = nn.Sequential(
+#                         *[quantize_model(m, weight_bit=weight_bit, act_bit=act_bit), QuantAct(activation_bit=act_bit)])
+#                 else:
+#                     mods[n] = quantize_model(m, weight_bit=weight_bit, act_bit=act_bit)
+#                 # mods.append(self.quantize_model(m))
+#             return nn.Sequential(mods)
+#         else:
+#             q_model = copy.deepcopy(model)
+#             for attr in dir(model):
+#                 mod = getattr(model, attr)
+#                 if isinstance(mod, nn.Module) and 'norm' not in attr:
+#                     setattr(q_model, attr, quantize_model(mod, weight_bit=weight_bit, act_bit=act_bit))
+#             return q_model
 
 
 def _calc_width(net):
@@ -344,8 +344,8 @@ def _calc_width(net):
 if __name__ == "__main__":
 
     net = MobileFaceNet()
-    quant=quantize_model(net,8,8)
-    print(quant)
+    # quant=quantize_model(net,8,8)
+    # print(quant)
 
 
 
