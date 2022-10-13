@@ -25,7 +25,7 @@ def download_files(s3_client, bucket_name, local_path, file_names, dir):
             str(file_path)
         )
 
-model_name = "PocketNet"
+model_name = "mobilefacenet"
 distance_metric = "euclidean_l2"
 detector_backend = 'opencv'
 

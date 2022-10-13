@@ -25,7 +25,7 @@ def download_files(s3_client, bucket_name, local_path, file_names, dir):
             str(file_path)
         )
 
-model_name = "ArcFace"
+model_name = "mobilefacenet"
 distance_metric = "euclidean_l2"
 detector_backend = 'opencv'
 
@@ -133,7 +133,7 @@ print("P1 Done")
 os.mkdir("/app/output")
 
 
-fil = 'output/ArcAEL2/dict1.json'
+fil = 'output/MFNAEL2/dict1.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -146,7 +146,7 @@ with open("/app/output/dict1.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict1.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict1.json")
+"output/MFNAEL2/dict1.json")
 
 
 # P2
@@ -234,7 +234,7 @@ resp_obj2 = DeepFace.verify(instances, model_name = model_name, distance_metric 
 print("P2 Done")
 
 
-fil = 'output/ArcAEL2/dict2.json'
+fil = 'output/MFNAEL2/dict2.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -246,7 +246,7 @@ with open("/app/output/dict2.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict2.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict2.json")
+"output/MFNAEL2/dict2.json")
 
 
 
@@ -338,7 +338,7 @@ resp_obj3 = DeepFace.verify(instances, model_name = model_name, distance_metric 
 print("P3 Done")
 
 
-fil = 'output/ArcAEL2/dict3.json'
+fil = 'output/MFNAEL2/dict3.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -351,7 +351,7 @@ with open("/app/output/dict3.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict3.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict3.json")
+"output/MFNAEL2/dict3.json")
 
 
 
@@ -437,7 +437,7 @@ print("P4")
 resp_obj4 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P4 Done")
 
-fil = 'output/ArcAEL2/dict4.json'
+fil = 'output/MFNAEL2/dict4.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -449,7 +449,7 @@ with open("/app/output/dict4.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict4.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict4.json")
+"output/MFNAEL2/dict4.json")
 
 
 # P5
@@ -533,7 +533,7 @@ resp_obj5 = DeepFace.verify(instances, model_name = model_name, distance_metric 
 print("P5 Done")
 
 
-fil = 'output/ArcAEL2/dict5.json'
+fil = 'output/MFNAEL2/dict5.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -545,7 +545,7 @@ with open("/app/output/dict5.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict5.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict5.json")
+"output/MFNAEL2/dict5.json")
 
 
 # P6
@@ -632,7 +632,7 @@ resp_obj6 = DeepFace.verify(instances, model_name = model_name, distance_metric 
 print("P6 Done")
 
 
-fil = 'output/ArcAEL2/dict6.json'
+fil = 'output/MFNAEL2/dict6.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -644,7 +644,7 @@ with open("/app/output/dict6.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict6.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict6.json")
+"output/MFNAEL2/dict6.json")
 
 
 
@@ -731,7 +731,7 @@ resp_obj7 = DeepFace.verify(instances, model_name = model_name, distance_metric 
 print("P7 Done")
 
 
-fil = 'output/ArcAEL2/dict7.json'
+fil = 'output/MFNAEL2/dict7.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -743,7 +743,7 @@ with open("/app/output/dict7.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict7.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict7.json")
+"output/MFNAEL2/dict7.json")
 
 
 
@@ -831,7 +831,7 @@ resp_obj8 = DeepFace.verify(instances, model_name = model_name, distance_metric 
 print("P8 Done")
 
 
-fil = 'output/ArcAEL2/dict8.json'
+fil = 'output/MFNAEL2/dict8.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -843,7 +843,7 @@ with open("/app/output/dict8.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict8.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict8.json")
+"output/MFNAEL2/dict8.json")
 
 
 # P9
@@ -926,7 +926,7 @@ print("P9")
 resp_obj9 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P9 Done")
 
-fil = 'output/ArcAEL2/dict9.json'
+fil = 'output/MFNAEL2/dict9.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -938,7 +938,7 @@ with open("/app/output/dict9.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict9.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict9.json")
+"output/MFNAEL2/dict9.json")
 
 
 # P10
@@ -1022,7 +1022,7 @@ resp_obj10 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P10 Done")
 
 
-fil = 'output/ArcAEL2/dict10.json'
+fil = 'output/MFNAEL2/dict10.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -1034,7 +1034,7 @@ with open("/app/output/dict10.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict10.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict10.json")
+"output/MFNAEL2/dict10.json")
 
 
 # P11
@@ -1120,7 +1120,7 @@ resp_obj11 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P11 Done")
 
 
-fil = 'output/ArcAEL2/dict11.json'
+fil = 'output/MFNAEL2/dict11.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -1132,7 +1132,7 @@ with open("/app/output/dict11.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict11.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict11.json")
+"output/MFNAEL2/dict11.json")
 
 
 
@@ -1219,7 +1219,7 @@ resp_obj12 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P12 Done")
 
 
-fil = 'output/ArcAEL2/dict12.json'
+fil = 'output/MFNAEL2/dict12.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -1231,7 +1231,7 @@ with open("/app/output/dict12.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict12.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict12.json")
+"output/MFNAEL2/dict12.json")
 
 
 
@@ -1320,7 +1320,7 @@ print("P13")
 resp_obj13 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P13 Done")
 
-fil = 'output/ArcAEL2/dict13.json'
+fil = 'output/MFNAEL2/dict13.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -1332,7 +1332,7 @@ with open("/app/output/dict13.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict13.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict13.json")
+"output/MFNAEL2/dict13.json")
 
 
 
@@ -1421,7 +1421,7 @@ resp_obj14 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P14 Done")
 
 
-fil = 'output/ArcAEL2/dict14.json'
+fil = 'output/MFNAEL2/dict14.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -1433,7 +1433,7 @@ with open("/app/output/dict14.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict14.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict14.json")
+"output/MFNAEL2/dict14.json")
 
 
 
@@ -1522,7 +1522,7 @@ resp_obj15 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P15 Done")
 
 
-fil = 'output/ArcAEL2/dict15.json'
+fil = 'output/MFNAEL2/dict15.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -1534,7 +1534,7 @@ with open("/app/output/dict15.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict15.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict15.json")
+"output/MFNAEL2/dict15.json")
 
 
 # P16
@@ -1620,7 +1620,7 @@ resp_obj16 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P16 Done")
 
 
-fil = 'output/ArcAEL2/dict16.json'
+fil = 'output/MFNAEL2/dict16.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -1632,7 +1632,7 @@ with open("/app/output/dict16.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict16.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict16.json")
+"output/MFNAEL2/dict16.json")
 
 
 
@@ -1724,7 +1724,7 @@ resp_obj17 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P17 Done")
 
 
-fil = 'output/ArcAEL2/dict17.json'
+fil = 'output/MFNAEL2/dict17.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -1736,7 +1736,7 @@ with open("/app/output/dict17.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict17.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict17.json")
+"output/MFNAEL2/dict17.json")
 
 
 
@@ -1826,7 +1826,7 @@ resp_obj18 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P18 Done")
 
 
-fil = 'output/ArcAEL2/dict18.json'
+fil = 'output/MFNAEL2/dict18.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -1838,7 +1838,7 @@ with open("/app/output/dict18.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict18.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict18.json")
+"output/MFNAEL2/dict18.json")
 
 
 # P19
@@ -1928,7 +1928,7 @@ print("P19")
 resp_obj19 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P19 Done")
 
-fil = 'output/ArcAEL2/dict19.json'
+fil = 'output/MFNAEL2/dict19.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -1940,7 +1940,7 @@ with open("/app/output/dict19.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict19.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict19.json")
+"output/MFNAEL2/dict19.json")
 
 
 
@@ -2028,7 +2028,7 @@ resp_obj20 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P20 Done")
 
 
-fil = 'output/ArcAEL2/dict20.json'
+fil = 'output/MFNAEL2/dict20.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -2040,7 +2040,7 @@ with open("/app/output/dict20.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict20.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict20.json")
+"output/MFNAEL2/dict20.json")
 
 
 
@@ -2129,7 +2129,7 @@ resp_obj21 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P21 Done")
 
 
-fil = 'output/ArcAEL2/dict21.json'
+fil = 'output/MFNAEL2/dict21.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -2141,7 +2141,7 @@ with open("/app/output/dict21.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict21.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict21.json")
+"output/MFNAEL2/dict21.json")
 
 
 
@@ -2231,7 +2231,7 @@ resp_obj22 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P22 Done")
 
 
-fil = 'output/ArcAEL2/dict22.json'
+fil = 'output/MFNAEL2/dict22.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -2243,7 +2243,7 @@ with open("/app/output/dict22.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict22.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict22.json")
+"output/MFNAEL2/dict22.json")
 
 
 
@@ -2333,7 +2333,7 @@ resp_obj23 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P23 Done")
 
 
-fil = 'output/ArcAEL2/dict23.json'
+fil = 'output/MFNAEL2/dict23.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -2345,7 +2345,7 @@ with open("/app/output/dict23.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict23.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict23.json")
+"output/MFNAEL2/dict23.json")
 
 
 # P24
@@ -2430,7 +2430,7 @@ resp_obj24 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P24 Done")
 
 
-fil = 'output/ArcAEL2/dict24.json'
+fil = 'output/MFNAEL2/dict24.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -2442,7 +2442,7 @@ with open("/app/output/dict24.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict24.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict24.json")
+"output/MFNAEL2/dict24.json")
 
 
 
@@ -2529,7 +2529,7 @@ resp_obj25 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P25 Done")
 
 
-fil = 'output/ArcAEL2/dict25.json'
+fil = 'output/MFNAEL2/dict25.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -2541,7 +2541,7 @@ with open("/app/output/dict25.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict25.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict25.json")
+"output/MFNAEL2/dict25.json")
 
 
 
@@ -2629,7 +2629,7 @@ print("P26")
 resp_obj26 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P26 Done")
 
-fil = 'output/ArcAEL2/dict26.json'
+fil = 'output/MFNAEL2/dict26.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -2641,7 +2641,7 @@ with open("/app/output/dict26.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict26.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict26.json")
+"output/MFNAEL2/dict26.json")
 
 
 # P27
@@ -2726,7 +2726,7 @@ resp_obj27 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P27 Done")
 
 
-fil = 'output/ArcAEL2/dict27.json'
+fil = 'output/MFNAEL2/dict27.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -2738,7 +2738,7 @@ with open("/app/output/dict27.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict27.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict27.json")
+"output/MFNAEL2/dict27.json")
 
 
 
@@ -2826,7 +2826,7 @@ resp_obj28 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P28 Done")
 
 
-fil = 'output/ArcAEL2/dict28.json'
+fil = 'output/MFNAEL2/dict28.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -2838,7 +2838,7 @@ with open("/app/output/dict28.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict28.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict28.json")
+"output/MFNAEL2/dict28.json")
 
 
 # P29
@@ -2924,7 +2924,7 @@ print("P29 Done")
 
 
 
-fil = 'output/ArcAEL2/dict29.json'
+fil = 'output/MFNAEL2/dict29.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -2936,7 +2936,7 @@ with open("/app/output/dict29.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict29.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict29.json")
+"output/MFNAEL2/dict29.json")
 
 
 
@@ -3022,7 +3022,7 @@ resp_obj30 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P30 Done")
 
 
-fil = 'output/ArcAEL2/dict30.json'
+fil = 'output/MFNAEL2/dict30.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -3034,7 +3034,7 @@ with open("/app/output/dict30.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict30.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict30.json")
+"output/MFNAEL2/dict30.json")
 
 
 
@@ -3121,7 +3121,7 @@ resp_obj31 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P31 Done")
 
 
-fil = 'output/ArcAEL2/dict31.json'
+fil = 'output/MFNAEL2/dict31.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -3133,7 +3133,7 @@ with open("/app/output/dict31.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict31.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict31.json")
+"output/MFNAEL2/dict31.json")
 
 
 # P32
@@ -3215,7 +3215,7 @@ print("P32")
 resp_obj32 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P32 Done")
 
-fil = 'output/ArcAEL2/dict32.json'
+fil = 'output/MFNAEL2/dict32.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -3227,7 +3227,7 @@ with open("/app/output/dict32.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict32.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict32.json")
+"output/MFNAEL2/dict32.json")
 
 
 # P33
@@ -3318,7 +3318,7 @@ print("P33 Done")
 
 
 
-fil = 'output/ArcAEL2/dict33.json'
+fil = 'output/MFNAEL2/dict33.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -3330,7 +3330,7 @@ with open("/app/output/dict33.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict33.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict33.json")
+"output/MFNAEL2/dict33.json")
 
 
 
@@ -3421,7 +3421,7 @@ print("P34")
 resp_obj34 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P34 Done")
 
-fil = 'output/ArcAEL2/dict34.json'
+fil = 'output/MFNAEL2/dict34.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -3433,7 +3433,7 @@ with open("/app/output/dict34.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict34.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict34.json")
+"output/MFNAEL2/dict34.json")
 
 
 
@@ -3518,7 +3518,7 @@ print("P35")
 resp_obj35 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P35 Done")
 
-fil = 'output/ArcAEL2/dict35.json'
+fil = 'output/MFNAEL2/dict35.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -3530,7 +3530,7 @@ with open("/app/output/dict35.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict35.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict35.json")
+"output/MFNAEL2/dict35.json")
 
 
 
@@ -3617,7 +3617,7 @@ print("P36 Done")
 
 
 
-fil = 'output/ArcAEL2/dict36.json'
+fil = 'output/MFNAEL2/dict36.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -3629,7 +3629,7 @@ with open("/app/output/dict36.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict36.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict36.json")
+"output/MFNAEL2/dict36.json")
 
 
 # P37
@@ -3717,7 +3717,7 @@ resp_obj37 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P37 Done")
 
 
-fil = 'output/ArcAEL2/dict37.json'
+fil = 'output/MFNAEL2/dict37.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -3729,7 +3729,7 @@ with open("/app/output/dict37.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict37.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict37.json")
+"output/MFNAEL2/dict37.json")
 
 
 
@@ -3814,7 +3814,7 @@ print("P38")
 resp_obj38 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P38 Done")
 
-fil = 'output/ArcAEL2/dict38.json'
+fil = 'output/MFNAEL2/dict38.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -3826,7 +3826,7 @@ with open("/app/output/dict38.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict38.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict38.json")
+"output/MFNAEL2/dict38.json")
 
 
 
@@ -3910,7 +3910,7 @@ print("P39")
 resp_obj39 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P39 Done")
 
-fil = 'output/ArcAEL2/dict39.json'
+fil = 'output/MFNAEL2/dict39.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -3922,7 +3922,7 @@ with open("/app/output/dict39.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict39.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict39.json")
+"output/MFNAEL2/dict39.json")
 
 
 
@@ -4008,7 +4008,7 @@ print("P40")
 resp_obj40 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P40 Done")
 
-fil = 'output/ArcAEL2/dict40.json'
+fil = 'output/MFNAEL2/dict40.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -4020,7 +4020,7 @@ with open("/app/output/dict40.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict40.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict40.json")
+"output/MFNAEL2/dict40.json")
 
 
 # P41
@@ -4107,7 +4107,7 @@ resp_obj41 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P41 Done")
 
 
-fil = 'output/ArcAEL2/dict41.json'
+fil = 'output/MFNAEL2/dict41.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -4119,7 +4119,7 @@ with open("/app/output/dict41.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict41.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict41.json")
+"output/MFNAEL2/dict41.json")
 
 
 # P42
@@ -4207,7 +4207,7 @@ print("P42")
 resp_obj42 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P42 Done")
 
-fil = 'output/ArcAEL2/dict42.json'
+fil = 'output/MFNAEL2/dict42.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -4219,7 +4219,7 @@ with open("/app/output/dict42.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict42.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict42.json")
+"output/MFNAEL2/dict42.json")
 
 
 # P43
@@ -4307,7 +4307,7 @@ resp_obj43 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P43 Done")
 
 
-fil = 'output/ArcAEL2/dict43.json'
+fil = 'output/MFNAEL2/dict43.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -4319,7 +4319,7 @@ with open("/app/output/dict43.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict43.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict43.json")
+"output/MFNAEL2/dict43.json")
 
 
 
@@ -4407,7 +4407,7 @@ resp_obj44 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P44 Done")
 
 
-fil = 'output/ArcAEL2/dict44.json'
+fil = 'output/MFNAEL2/dict44.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -4419,7 +4419,7 @@ with open("/app/output/dict44.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict44.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict44.json")
+"output/MFNAEL2/dict44.json")
 
 
 # P45
@@ -4504,7 +4504,7 @@ print("P45")
 resp_obj45 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P45 Done")
 
-fil = 'output/ArcAEL2/dict45.json'
+fil = 'output/MFNAEL2/dict45.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -4516,7 +4516,7 @@ with open("/app/output/dict45.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict45.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict45.json")
+"output/MFNAEL2/dict45.json")
 
 
 # P46
@@ -4602,7 +4602,7 @@ print("P46")
 resp_obj46 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P46 Done")
 
-fil = 'output/ArcAEL2/dict46.json'
+fil = 'output/MFNAEL2/dict46.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -4614,7 +4614,7 @@ with open("/app/output/dict46.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict46.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict46.json")
+"output/MFNAEL2/dict46.json")
 
 
 
@@ -4701,7 +4701,7 @@ resp_obj47 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P47 Done")
 
 
-fil = 'output/ArcAEL2/dict47.json'
+fil = 'output/MFNAEL2/dict47.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -4713,7 +4713,7 @@ with open("/app/output/dict47.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict47.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict47.json")
+"output/MFNAEL2/dict47.json")
 
 
 # P48
@@ -4801,7 +4801,7 @@ resp_obj48 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P48 Done")
 
 
-fil = 'output/ArcAEL2/dict48.json'
+fil = 'output/MFNAEL2/dict48.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -4813,7 +4813,7 @@ with open("/app/output/dict48.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict48.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict48.json")
+"output/MFNAEL2/dict48.json")
 
 
 
@@ -4899,7 +4899,7 @@ print("P49")
 resp_obj49 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P49 Done")
 
-fil = 'output/ArcAEL2/dict49.json'
+fil = 'output/MFNAEL2/dict49.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -4911,7 +4911,7 @@ with open("/app/output/dict49.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict49.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict49.json")
+"output/MFNAEL2/dict49.json")
 
 
 # P50
@@ -4997,7 +4997,7 @@ resp_obj50 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P50 Done")
 
 
-fil = 'output/ArcAEL2/dict50.json'
+fil = 'output/MFNAEL2/dict50.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -5009,7 +5009,7 @@ with open("/app/output/dict50.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict50.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict50.json")
+"output/MFNAEL2/dict50.json")
 
 
 # P51
@@ -5094,7 +5094,7 @@ print("P51")
 resp_obj51 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P51 Done")
 
-fil = 'output/ArcAEL2/dict51.json'
+fil = 'output/MFNAEL2/dict51.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -5106,7 +5106,7 @@ with open("/app/output/dict51.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict51.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict51.json")
+"output/MFNAEL2/dict51.json")
 
 
 # P52
@@ -5193,7 +5193,7 @@ resp_obj52 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P52 Done")
 
 
-fil = 'output/ArcAEL2/dict52.json'
+fil = 'output/MFNAEL2/dict52.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -5205,7 +5205,7 @@ with open("/app/output/dict52.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict52.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict52.json")
+"output/MFNAEL2/dict52.json")
 
 
 # P53
@@ -5289,7 +5289,7 @@ print("P53")
 resp_obj53 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P53 Done")
 
-fil = 'output/ArcAEL2/dict53.json'
+fil = 'output/MFNAEL2/dict53.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -5301,7 +5301,7 @@ with open("/app/output/dict53.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict53.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict53.json")
+"output/MFNAEL2/dict53.json")
 
 
 # P54
@@ -5386,7 +5386,7 @@ print("P54")
 resp_obj54 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P54 Done")
 
-fil = 'output/ArcAEL2/dict54.json'
+fil = 'output/MFNAEL2/dict54.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -5398,7 +5398,7 @@ with open("/app/output/dict54.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict54.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict54.json")
+"output/MFNAEL2/dict54.json")
 
 
 
@@ -5488,7 +5488,7 @@ print("P55")
 resp_obj55 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P55 Done")
 
-fil = 'output/ArcAEL2/dict55.json'
+fil = 'output/MFNAEL2/dict55.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -5500,7 +5500,7 @@ with open("/app/output/dict55.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict55.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict55.json")
+"output/MFNAEL2/dict55.json")
 
 
 # P56
@@ -5586,7 +5586,7 @@ print("P56")
 resp_obj56 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P56 Done")
 
-fil = 'output/ArcAEL2/dict56.json'
+fil = 'output/MFNAEL2/dict56.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -5598,7 +5598,7 @@ with open("/app/output/dict56.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict56.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict56.json")
+"output/MFNAEL2/dict56.json")
 
 
 # P57
@@ -5689,7 +5689,7 @@ resp_obj57 = DeepFace.verify(instances, model_name = model_name, distance_metric
 print("P57 Done")
 
 
-fil = 'output/ArcAEL2/dict57.json'
+fil = 'output/MFNAEL2/dict57.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -5701,7 +5701,7 @@ with open("/app/output/dict57.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict57.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict57.json")
+"output/MFNAEL2/dict57.json")
 
 
 # P58
@@ -5790,7 +5790,7 @@ print("P58")
 resp_obj58 = DeepFace.verify(instances, model_name = model_name, distance_metric = distance_metric, enforce_detection = False, detector_backend = detector_backend)
 print("P58 Done")
 
-fil = 'output/ArcAEL2/dict58.json'
+fil = 'output/MFNAEL2/dict58.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
@@ -5802,4 +5802,4 @@ with open("/app/output/dict58.json", "w") as outfile:
 
 s3_client.upload_file("/app/output/dict58.json", 
 "rag-net-v2-0c6f96b8050c43fd-outputs", 
-"output/ArcAEL2/dict58.json")
+"output/MFNAEL2/dict58.json")
