@@ -56,7 +56,7 @@ def build_model(model_name):
 		'FaceNet': FaceNet.loadModel,
 		'ArcFace': ArcFace.loadModel,
 		'PocketNet': PocketNet.loadModel,
-		'MobileFaceNet': MobileFaceNet.loadModel,
+		'mobilefacenet': MobileFaceNet.loadModel,
 		# 'ElasticFace': ElasticFace.loadModel,
 		# 'MixFaceNetXS': MixFaceNetXS.loadModel,
 		# 'MixFaceNetM': MixFaceNetM.loadModel,
@@ -597,11 +597,11 @@ def represent(img_path, model_name = 'FaceNet', model = None, enforce_detection 
 		target_size = (112, 112)
 		print("PocketNet was chosen")
 
-	if model_name == 'MobileFaceNet':
+	if model_name == 'mobilefacenet':
 		from deep.basemodels import MobileFaceNet
 		model = MobileFaceNet.loadModel()
 		target_size = (112, 112)
-		print("MobileFaceNet was chosen")
+		print("mobilefacenet was chosen")
 	
 	# elif model_name == 'ElasticFace':
 	# 	from deep.basemodels import ElasticFace
