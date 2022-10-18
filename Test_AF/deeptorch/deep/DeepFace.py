@@ -552,11 +552,11 @@ def represent(img_path, model_name = 'FaceNet', model = None, enforce_detection 
 	"""
 	device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 
-	# if model_name == "ShuffleFaceNet":
-	# 	from deep.basemodels import ShuffleFaceNet
-	# 	model = ShuffleFaceNet.loadModel()
-	# 	target_size = (112, 112)
-	# 	print("ShuffleFaceNet was chosen")
+	if model_name == "ShuffleFaceNet":
+		from deep.basemodels import ShuffleFaceNet
+		model = ShuffleFaceNet.loadModel()
+		target_size = (112, 112)
+		print("ShuffleFaceNet was chosen")
 
 	# from deep.basemodels import ShuffleFaceNet
 	# model = ShuffleFaceNet.loadModel()
