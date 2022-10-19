@@ -121,7 +121,6 @@ dataset_path = "/app/input/"
 negatives.file_x = dataset_path + negatives.file_x
 negatives.file_y = dataset_path + negatives.file_y
 
-
 instances = negatives[["file_x", "file_y"]].values.tolist()
 
 
