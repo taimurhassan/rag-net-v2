@@ -130,7 +130,6 @@ print("P1 Done")
 
 os.mkdir("/app/output")
 
-
 fil = 'output/MAEL2/dict1.json'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
