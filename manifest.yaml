@@ -8,7 +8,7 @@ docker:
 spec:
   operator: tf
   image: rag-net-v2
-  command: python Test_AF/deeptorch/Passive_Even_L1_MFNM.py
+  command: python Test_AF/deeptorch/Passive_Even_L2_MFNM.py
   types:
     Worker:
       replicas: 1
