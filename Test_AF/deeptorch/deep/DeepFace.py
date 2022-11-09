@@ -582,7 +582,7 @@ def represent(img_path, model_name = 'FaceNet', model = None, enforce_detection 
 
 	if model_name == 'ArcFace':
 		from deep.basemodels import ArcFace
-		model = ArcFace.loadModel()
+		model = ArcFace.loadModel(wei='/app/weights/backbone.pth')
 		target_size = (112, 112)
 		print("ArcFace was chosen")
 	

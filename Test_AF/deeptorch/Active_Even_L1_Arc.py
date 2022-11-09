@@ -106,13 +106,23 @@ negatives.decision.value_counts()
 download_files(
     s3_client,
     "rag-net-v2-0c6f96b8050c43fd-inputs",
+    "/app/weights",
+    file_names='backbone.pth',
+    dir="arc"
+)
+
+dataset_path = "/app/input/"
+
+download_files(
+    s3_client,
+    "rag-net-v2-0c6f96b8050c43fd-inputs",
     "/app/input",
     file_names=id,
     dir="droneSURF/Active_Even_L1/1/"
 )
 
-dataset_path = "/app/input/"
 
+dataset_path = "/app/input/"
 
 negatives.file_x = dataset_path + negatives.file_x
 negatives.file_y = dataset_path + negatives.file_y
