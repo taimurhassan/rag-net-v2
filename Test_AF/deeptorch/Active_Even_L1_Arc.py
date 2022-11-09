@@ -108,7 +108,7 @@ download_files(
     "rag-net-v2-0c6f96b8050c43fd-inputs",
     "/app/weights",
     file_names='backbone.pth',
-    dir="arc"
+    dir="arc/"
 )
 
 dataset_path = "/app/input/"
