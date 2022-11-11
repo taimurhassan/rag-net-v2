@@ -7,7 +7,7 @@ import torch
 import deep.basemodels.mixfacenets.backbones.mixnetm as mx
 # import mixfacenets.backbones.mixnetm as mx
 
-def loadModel(eval=True, net='ShuffleMixFaceNetXS'):
+def loadModel(eval=True, net='MixFaceNetM'):
     
     device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 
