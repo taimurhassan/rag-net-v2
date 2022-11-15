@@ -53,7 +53,7 @@ s3_client = session.client(
 
 image = ['front.jpg', 'down.jpg', 'sideright.jpg', 'sideright.jpg']
 
-starting_file = 'start.csv'
+starting_file = ['start.csv']
 
 download_files(
     s3_client,
