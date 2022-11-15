@@ -66,12 +66,15 @@ download_files(
 result = pd.read_csv("/app/input/csv/start.csv")
 
 
+os.mkdir("/app/output")
+
 fil = 'output/PML2MixFaceNetXSFindALL/start.csv'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
     "/app/output/start.csv"
 )
+
 
 
 for img in image:
@@ -540,6 +543,10 @@ for img in image:
             dir="droneSURF/Passive_Morn_L2/"+str(i)+"/"
             )
 
+            
+        if not os.path.exists("/app/input"):
+            os.makedirs("/app/input")
+
 
         download_files(
             s3_client,
@@ -548,6 +555,10 @@ for img in image:
             file_names=image,
             dir="droneSURF/Passive_Morn_L2/1/"
             )
+
+        
+        if not os.path.exists("/app/input/gallery"):
+            os.makedirs("/app/input/gallery")
 
 
         Gallery_Images = '/app/input/gallery/'+img
