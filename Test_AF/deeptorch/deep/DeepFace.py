@@ -353,8 +353,8 @@ def find(img_path, db_path, model_name ='PocketNet', distance_metric = 'cosine',
 
 			if not silent: print("WARNING: Representations for images in ",db_path," folder were previously stored in ", file_name, ". If you added new instances after this file creation, then please delete this file and call find function again. It will create it again.")
 
-			f = open(db_path+'/'+file_name, 'rb')
-			representations = pickle.load(f)
+			# f = open(db_path+'/'+file_name, 'rb')
+			# representations = pickle.load(f)
 
 			if not silent: print("There are ", len(representations)," representations found in ",file_name)
 
@@ -400,9 +400,9 @@ def find(img_path, db_path, model_name ='PocketNet', distance_metric = 'cosine',
 
 				representations.append(instance)
 
-			f = open(db_path+'/'+file_name, "wb")
-			pickle.dump(representations, f)
-			f.close()
+			# f = open(db_path+'/'+file_name, "wb")
+			# pickle.dump(representations, f)
+			# f.close()
 
 			if not silent: print("Representations stored in ",db_path,"/",file_name," file. Please delete this file when you add new identities in your database.")
 
@@ -462,7 +462,7 @@ def find(img_path, db_path, model_name ='PocketNet', distance_metric = 'cosine',
 						if model_name != 'Ensemble':
 							threshold = dst.findThreshold(j, k)
 							df = df.drop(columns = ["%s_representation" % (j)])
-							df = df[df["%s_%s" % (j, k)] <= threshold]
+							# df = df[df["%s_%s" % (j, k)] <= threshold]
 
 							df = df.sort_values(by = ["%s_%s" % (j, k)], ascending=True).reset_index(drop=True)
 
