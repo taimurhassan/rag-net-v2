@@ -562,7 +562,7 @@ for img in image:
 
 
         Gallery_Images = '/app/input/gallery/'+img
-        Probe_Images = '/app/input/'+str(i)
+        Probe_Images = '/app/input/'+str(i)+'/'
 
         model_name = 'MixFaceNet'
         detector_backend = 'opencv'
