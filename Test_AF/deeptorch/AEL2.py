@@ -559,7 +559,7 @@ for img in image:
             "rag-net-v2-0c6f96b8050c43fd-inputs",
             "/app/input",
             file_names=id,
-            dir="droneSURF/Active_Evening_L2/"+str(i)+"/"
+            dir="droneSURF/Active_Even_L2/"+str(i)+"/"
             )
 
             
@@ -572,7 +572,7 @@ for img in image:
             "rag-net-v2-0c6f96b8050c43fd-inputs",
             "/app/input/gallery",
             file_names=image,
-            dir="droneSURF/Active_Evening_L2/1/"
+            dir="droneSURF/Active_Even_L2/1/"
             )
 
         
