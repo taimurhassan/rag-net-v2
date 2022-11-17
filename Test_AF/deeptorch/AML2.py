@@ -550,14 +550,14 @@ for img in image:
         download_files(
             s3_client,
             "rag-net-v2-0c6f96b8050c43fd-inputs",
-            "/app/input",
+            "/app/input/" + str(i),
             file_names=id,
             dir="droneSURF/Active_Morn_L2/"+str(i)+"/"
             )
 
             
-        if not os.path.exists("/app/input"):
-            os.makedirs("/app/input")
+        if not os.path.exists("/app/input/" + str(i)):
+            os.makedirs("/app/input/" + str(i))
 
 
         download_files(
@@ -575,7 +575,7 @@ for img in image:
 
         Gallery_Images = '/app/input/gallery/'+img
         # Probe_Images = '/app/input/'+str(i)+'/'
-        Probe_Images = '/app/input/'
+        Probe_Images = '/app/input/' + str(i)
 
         model_name = 'MixFaceNet'
         detector_backend = 'opencv'
