@@ -51,7 +51,8 @@ s3_client = session.client(
 
 
 # image = ['front.jpg', 'down.jpg', 'sideright.jpg', 'sideright.jpg']
-image = ['front.jpg']
+# image = ['front.jpg']
+image = ['down.jpg', 'sideright.jpg', 'sideright.jpg']
 
 starting_file = ['start.csv']
 
@@ -68,18 +69,18 @@ result = pd.read_csv("/app/input/csv/start.csv")
 
 os.mkdir("/app/output")
 
-fil = 'output/AML1XSCSV/st.csv'
+fil = 'output/AML1XSCSV/conti.csv'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
-    "/app/output/st.csv"
+    "/app/output/conti.csv"
 )
 
 
 
 for img in image:
-    # for i in range(1, 59):
-    for i in range(19, 59):
+    for i in range(1, 59):
+    # for i in range(19, 59):
 
         if i == 1:
             id = ["down.jpg", "front.jpg", "sideleft.jpg", "sideright.jpg",
@@ -563,8 +564,8 @@ for img in image:
         # result = result.sort_values(by = ["M_euclidean_l2"], ascending=True).reset_index(drop=True)
         print(len(result))
 
-        result.to_csv("/app/output/st.csv")
+        result.to_csv("/app/output/conti.csv")
 
-        s3_client.upload_file("/app/output/st.csv", 
+        s3_client.upload_file("/app/output/conti.csv", 
         "rag-net-v2-0c6f96b8050c43fd-outputs", 
-        "output/AML1XSCSV/st.csv")
+        "output/AML1XSCSV/conti.csv")
