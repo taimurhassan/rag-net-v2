@@ -67,11 +67,11 @@ result = pd.read_csv("/app/input/csv/start.csv")
 
 os.mkdir("/app/output")
 
-fil = 'output/AEL1XSCSV/start.csv'
+fil = 'output/AEL1XSCSV/contp2.csv'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
-    "/app/output/start.csv"
+    "/app/output/contp2.csv"
 )
 
 
@@ -526,14 +526,14 @@ for img in image:
         download_files(
             s3_client,
             "rag-net-v2-0c6f96b8050c43fd-inputs",
-            "/app/input",
+            "/app/input/" + str(i),
             file_names=id,
             dir="droneSURF/Active_Even_L1/"+str(i)+"/"
             )
 
             
-        if not os.path.exists("/app/input"):
-            os.makedirs("/app/input")
+        if not os.path.exists("/app/input/" + str(i)):
+            os.makedirs("/app/input/" + str(i))
 
 
         download_files(
@@ -541,7 +541,7 @@ for img in image:
             "rag-net-v2-0c6f96b8050c43fd-inputs",
             "/app/input/gallery",
             file_names=image,
-            dir="droneSURF/Active_Even_L1/1/"
+            dir="droneSURF/Active_Even_L1/2/"
             )
 
         
@@ -551,7 +551,7 @@ for img in image:
 
         Gallery_Images = '/app/input/gallery/'+img
         # Probe_Images = '/app/input/'+str(i)+'/'
-        Probe_Images = '/app/input/'
+        Probe_Images = '/app/input/' + str(i)
 
         model_name = 'MixFaceNet'
         detector_backend = 'opencv'
@@ -566,8 +566,8 @@ for img in image:
         # result = result.sort_values(by = ["M_euclidean_l2"], ascending=True).reset_index(drop=True)
         print(len(result))
 
-        result.to_csv("/app/output/start.csv")
+        result.to_csv("/app/output/contp2.csv")
 
-        s3_client.upload_file("/app/output/start.csv", 
+        s3_client.upload_file("/app/output/contp2.csv", 
         "rag-net-v2-0c6f96b8050c43fd-outputs", 
-        "output/AEL1XSCSV/start.csv")
+        "output/AEL1XSCSV/contp2.csv")
