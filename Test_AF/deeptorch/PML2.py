@@ -49,8 +49,6 @@ s3_client = session.client(
 )
 
 
-
-
 image = ['front.jpg', 'down.jpg', 'sideright.jpg', 'sideright.jpg']
 
 starting_file = ['start.csv']
@@ -68,11 +66,11 @@ result = pd.read_csv("/app/input/csv/start.csv")
 
 os.mkdir("/app/output")
 
-fil = 'output/PML2MixFaceNetXSFindALL/start.csv'
+fil = 'output/PML2MixFaceNetXSFindALL/contp2.csv'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
-    "/app/output/start.csv"
+    "/app/output/contp2.csv"
 )
 
 
@@ -553,7 +551,7 @@ for img in image:
             "rag-net-v2-0c6f96b8050c43fd-inputs",
             "/app/input/gallery",
             file_names=image,
-            dir="droneSURF/Passive_Morn_L2/1/"
+            dir="droneSURF/Passive_Morn_L2/2/"
             )
 
         
@@ -578,8 +576,8 @@ for img in image:
         # result = result.sort_values(by = ["M_euclidean_l2"], ascending=True).reset_index(drop=True)
         print(len(result))
 
-        result.to_csv("/app/output/start.csv")
+        result.to_csv("/app/output/contp2.csv")
 
-        s3_client.upload_file("/app/output/start.csv", 
+        s3_client.upload_file("/app/output/contp2.csv", 
         "rag-net-v2-0c6f96b8050c43fd-outputs", 
-        "output/PML2MixFaceNetXSFindALL/start.csv")
+        "output/PML2MixFaceNetXSFindALL/contp2.csv")
