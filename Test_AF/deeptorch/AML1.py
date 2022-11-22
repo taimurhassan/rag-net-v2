@@ -538,7 +538,7 @@ for j in range(2, 59):
                 "rag-net-v2-0c6f96b8050c43fd-inputs",
                 "/app/input/gallery/" + str(j),
                 file_names=image,
-                dir="droneSURF/Active_Morn_L1/1/"  + str(j) + "/"
+                dir="droneSURF/Active_Morn_L1/"  + str(j) + "/"
                 )
 
             
