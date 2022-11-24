@@ -543,7 +543,6 @@ for j in range(3, 59):
                 file_names=image,
                 dir="droneSURF/Active_Even_L1/" + str(j) + "/"
                 )
-
             
             if not os.path.exists("/app/input/gallery/" + str(j)):
                 os.makedirs("/app/input/gallery/" + str(j))
