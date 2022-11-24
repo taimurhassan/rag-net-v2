@@ -523,7 +523,20 @@ for j in range(3, 59):
                     ]
 
 
-            download_files(
+            # download_files(
+            #     s3_client,
+            #     "rag-net-v2-0c6f96b8050c43fd-inputs",
+            #     "/app/input/" + str(i),
+            #     file_names=id,
+            #     dir="droneSURF/Active_Even_L1/"+str(i)+"/"
+            #     )
+
+                
+            if not os.path.exists("/app/input/" + str(i)):
+                # os.makedirs("/app/input/" + str(i))
+                print("creating folder probe images for: " + str(i))
+
+                download_files(
                 s3_client,
                 "rag-net-v2-0c6f96b8050c43fd-inputs",
                 "/app/input/" + str(i),
@@ -531,21 +544,25 @@ for j in range(3, 59):
                 dir="droneSURF/Active_Even_L1/"+str(i)+"/"
                 )
 
-                
-            if not os.path.exists("/app/input/" + str(i)):
-                os.makedirs("/app/input/" + str(i))
 
-
-            download_files(
+            # download_files(
+            #     s3_client,
+            #     "rag-net-v2-0c6f96b8050c43fd-inputs",
+            #     "/app/input/gallery/" + str(j),
+            #     file_names=image,
+            #     dir="droneSURF/Active_Even_L1/" + str(j) + "/"
+            #     )
+            
+            if not os.path.exists("/app/input/gallery/" + str(j)):
+                # os.makedirs("/app/input/gallery/" + str(j))
+                print("creating folder query images for: " + str(j))
+                download_files(
                 s3_client,
                 "rag-net-v2-0c6f96b8050c43fd-inputs",
-                "/app/input/gallery" + str(j),
+                "/app/input/gallery/" + str(j),
                 file_names=image,
                 dir="droneSURF/Active_Even_L1/" + str(j) + "/"
                 )
-            
-            if not os.path.exists("/app/input/gallery/" + str(j)):
-                os.makedirs("/app/input/gallery/" + str(j))
 
 
             Gallery_Images = '/app/input/gallery/' + str(j) + "/" + img

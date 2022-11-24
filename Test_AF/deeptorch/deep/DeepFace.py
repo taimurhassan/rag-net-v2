@@ -349,62 +349,62 @@ def find(img_path, db_path, model_name ='PocketNet', distance_metric = 'cosine',
 		file_name = "representations_%s.pkl" % (model_name)
 		file_name = file_name.replace("-", "_").lower()
 
-		if path.exists(db_path+"/"+file_name):
+		# if path.exists(db_path+"/"+file_name):
 
-			if not silent: print("WARNING: Representations for images in ",db_path," folder were previously stored in ", file_name, ". If you added new instances after this file creation, then please delete this file and call find function again. It will create it again.")
+		# 	if not silent: print("WARNING: Representations for images in ",db_path," folder were previously stored in ", file_name, ". If you added new instances after this file creation, then please delete this file and call find function again. It will create it again.")
 
-			# f = open(db_path+'/'+file_name, 'rb')
-			# representations = pickle.load(f)
+		# 	# f = open(db_path+'/'+file_name, 'rb')
+		# 	# representations = pickle.load(f)
 
-			if not silent: print("There are ", len(representations)," representations found in ",file_name)
+		# 	if not silent: print("There are ", len(representations)," representations found in ",file_name)
 
-		else: #create representation.pkl from scratch
-			employees = []
+		# else: #create representation.pkl from scratch
+		employees = []
 
-			for r, d, f in os.walk(db_path): # r=root, d=directories, f = files
-				for file in f:
-					if ('.jpg' in file.lower()) or ('.png' in file.lower()):
-						exact_path = r + "/" + file
-						employees.append(exact_path)
+		for r, d, f in os.walk(db_path): # r=root, d=directories, f = files
+			for file in f:
+				if ('.jpg' in file.lower()) or ('.png' in file.lower()):
+					exact_path = r + "/" + file
+					employees.append(exact_path)
 
-			if len(employees) == 0:
-				raise ValueError("There is no image in ", db_path," folder! Validate .jpg or .png files exist in this path.")
+		if len(employees) == 0:
+			raise ValueError("There is no image in ", db_path," folder! Validate .jpg or .png files exist in this path.")
 
-			#------------------------
-			#find representations for db images
+		#------------------------
+		#find representations for db images
 
-			representations = []
+		representations = []
 
-			pbar = tqdm(range(0,len(employees)), desc='Finding representations', disable = prog_bar)
+		pbar = tqdm(range(0,len(employees)), desc='Finding representations', disable = prog_bar)
 
-			#for employee in employees:
-			for index in pbar:
-				employee = employees[index]
+		#for employee in employees:
+		for index in pbar:
+			employee = employees[index]
 
-				instance = []
-				instance.append(employee)
+			instance = []
+			instance.append(employee)
 
-				for j in model_names:
-					custom_model = models[j]
+			for j in model_names:
+				custom_model = models[j]
 
-					representation = represent(img_path = employee
-						, model_name = model_name, model = custom_model
-						, enforce_detection = enforce_detection, detector_backend = detector_backend
-						, align = align
-						, normalization = normalization
-						)
+				representation = represent(img_path = employee
+					, model_name = model_name, model = custom_model
+					, enforce_detection = enforce_detection, detector_backend = detector_backend
+					, align = align
+					, normalization = normalization
+					)
 
-					instance.append(representation)
+				instance.append(representation)
 
-				#-------------------------------
+			#-------------------------------
 
-				representations.append(instance)
+			representations.append(instance)
 
-			# f = open(db_path+'/'+file_name, "wb")
-			# pickle.dump(representations, f)
-			# f.close()
+		# f = open(db_path+'/'+file_name, "wb")
+		# pickle.dump(representations, f)
+		# f.close()
 
-			if not silent: print("Representations stored in ",db_path,"/",file_name," file. Please delete this file when you add new identities in your database.")
+		if not silent: print("Representations stored in ",db_path,"/",file_name," file. Please delete this file when you add new identities in your database.")
 
 		#----------------------------
 		#now, we got representations for facial database
