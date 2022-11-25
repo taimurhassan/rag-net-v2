@@ -564,7 +564,7 @@ for j in ranger(3, 59):
             #     )
 
             
-            f not os.path.exists("/app/input/gallery/" + str(j)):
+            if not os.path.exists("/app/input/gallery/" + str(j)):
                 # os.makedirs("/app/input/gallery")
                 print("creating folder query images for: " + str(j))
                 download_files(
