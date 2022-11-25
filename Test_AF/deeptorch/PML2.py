@@ -74,7 +74,7 @@ s3_client.download_file(
 )
 
 
-for j in ranger(3, 59):
+for j in range(3, 59):
     for img in image:
         for i in range(1, 59):
 
