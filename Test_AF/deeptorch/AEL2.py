@@ -67,15 +67,15 @@ result = pd.read_csv("/app/input/csv/start.csv")
 
 os.mkdir("/app/output")
 
-fil = 'output/AEL2XSCSV/cont.csv'
+fil = 'output/AEL2XSCSV/all.csv'
 s3_client.download_file(
     "rag-net-v2-0c6f96b8050c43fd-outputs",
     fil,
-    "/app/output/cont.csv"
+    "/app/output/all.csv"
 )
 
 
-for j in range(3, 59):
+for j in range(6, 59):
     for img in image:
         for i in range(1, 59):
 
@@ -614,8 +614,8 @@ for j in range(3, 59):
             # result = result.sort_values(by = ["M_euclidean_l2"], ascending=True).reset_index(drop=True)
             print(len(result))
 
-            result.to_csv("/app/output/cont.csv")
+            result.to_csv("/app/output/all.csv")
 
-            s3_client.upload_file("/app/output/cont.csv", 
+            s3_client.upload_file("/app/output/all.csv", 
             "rag-net-v2-0c6f96b8050c43fd-outputs", 
-            "output/AEL2XSCSV/cont.csv")
+            "output/AEL2XSCSV/all.csv")
